@@ -1,0 +1,168 @@
+/* -----------------------------------
+   General Form Styling (Main Wrapper)
+-------------------------------------- */
+.job_filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+}
+
+.showing_jobs {
+    display: none !important; 
+}
+
+/* -----------------------------------
+   Flex Wrapper for All Input Fields
+-------------------------------------- */
+.form_flex_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between individual elements */
+    align-items: flex-start;
+}
+
+/* -----------------------------------
+   Styling: Keywords Input Field
+-------------------------------------- */
+.search_keywords {
+    flex: 1;
+    min-width: 250px; /* Ensure the input doesn't shrink too small */
+}
+
+#search_keywords {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+#search_keywords:focus {
+    outline: none;
+    border-color: #82c473;
+    box-shadow: 0 0 4px rgba(130, 196, 115, 0.5);
+}
+
+/* -----------------------------------
+   Styling: Categories Multi-Select
+-------------------------------------- */
+.search_categories {
+    flex: 1;
+    min-width: 250px; /* Ensure the dropdown doesn't shrink too small */
+    position: relative;
+}
+
+#search_categories.custom-multi-select {
+    appearance: none; /* Remove browser's default dropdown styles */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    overflow-y: auto;
+    max-height: 200px; /* Prevent excessively long dropdowns */
+}
+
+#search_categories.custom-multi-select:hover {
+    border-color: #5170ff;
+}
+
+#search_categories.custom-multi-select:focus {
+    outline: none;
+    border-color: #82c473;
+    box-shadow: 0 0 6px rgba(130, 196, 115, 0.5);
+}
+
+#search_categories.custom-multi-select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+#search_categories.custom-multi-select option:hover {
+    background-color: #5170ff;
+    color: #fff;
+}
+
+/* -----------------------------------
+   Styling: Job Type Select Field
+-------------------------------------- */
+.search_type {
+    flex: 1;
+    min-width: 250px;
+}
+
+#search_types.custom-select {
+    appearance: none; /* Remove browser's default dropdown styles */
+    background-color: #f7f9fc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 48px;
+    overflow: hidden; /* Prevent extra content from showing */
+}
+
+#search_types.custom-select:hover {
+    border-color: #5170ff;
+}
+
+#search_types.custom-select:focus {
+    border-color: #82c473;
+    box-shadow: 0 0 4px rgba(130, 196, 115, 0.5);
+    outline: none;
+}
+
+#search_types.custom-select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+#search_types.custom-select option:hover {
+    background-color: #5170ff;
+    color: #fff;
+}
+
+/* -----------------------------------
+   Styling: Location Input Field
+-------------------------------------- */
+.search_location {
+    flex: 1;
+    min-width: 250px;
+}
+
+#search_location {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+#search_location:focus {
+    outline: none;
+    border-color: #82c473;
+    box-shadow: 0 0 4px rgba(130, 196, 115, 0.5);
+}
+
+/* -----------------------------------
+   Utility Styles
+-------------------------------------- */
+/* Ensure multi-select dropdowns can scroll when necessary */
+.custom-multi-select[multiple], .custom-select[multiple] {
+    max-height: 200px;
+    overflow-y: auto;
+}

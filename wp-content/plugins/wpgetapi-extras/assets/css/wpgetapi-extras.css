@@ -1,0 +1,57 @@
+.wrap.wpgetapi .cmb-type-group .cmb-repeat-group-field.field-actions {
+	border-top: 1px solid #ddd !important;
+	padding: 20px 40px !important;
+}
+.wrap.wpgetapi .cmb-type-group .cmb-repeat-group-field.field-wpdatatables-table,
+.wrap.wpgetapi .cmb-type-group .cmb-repeat-group-field.field-ninjatables-table {
+	border-top: 1px solid #ddd !important;
+	padding: 20px 40px 0px !important;
+}
+.wrap.wpgetapi .cmb-type-group .cmb-repeat-group-field.field-wpdatatables-root,
+.wrap.wpgetapi .cmb-type-group .cmb-repeat-group-field.field-ninjatables-root {
+	border: none !important;
+	padding: 0px 40px 10px !important;
+}
+.wpgetapi .wpdatatables-buttons .button,
+.wpgetapi .ninjatables-buttons .button {
+	margin-right: 15px;
+}
+.wpgetapi .wpdatatables-buttons .processing,
+.wpgetapi .ninjatables-buttons .processing {
+	padding: 8px 0 0;
+}
+.wrap.wpgetapi .cmb-type-group .cmb-remove-field-row {
+	border-top: 1px solid #ddd !important;
+	padding: 20px 20px 10px !important;
+}
+.wrap.wpgetapi .wpgetapi-actions-before {
+	padding: 5px 15px 0;
+	background: #f7f9fc;
+	margin: 0 40px 20px;
+	border-radius: 5px;
+	position: relative;
+}
+.wrap.wpgetapi .wpgetapi-actions-before h3 {
+	position: absolute;
+	top: -8px;
+	background: #fff;
+	border: 1px solid #d9e2eb;
+	line-height: 1;
+	padding: 5px 8px;
+	font-size: 0.7em;
+	left: 20px;
+}
+
+.wrap.wpgetapi .cmb-type-group .cmb-repeat-group-field.field-forms-validation-type,
+.wrap.wpgetapi .cmb-type-group .cmb-repeat-group-field.field-forms-display {
+	border-top: 5px solid #fff !important;
+	padding: 20px 35px !important;
+	margin: 0 -15px !important;
+}
+
+.wrap.wpgetapi .cmb-type-group .wpgetapi-actions-before .cmb-th {
+	width: 22%;
+}
+.wrap.wpgetapi .cmb-type-group .wpgetapi-actions-before .cmb-th+.cmb-td {
+	width: 76%;
+}
