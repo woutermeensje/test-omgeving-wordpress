@@ -25,24 +25,24 @@ do_action( 'job_manager_job_filters_before', $atts );
             <input type="text" name="search_keywords" id="search_keywords" placeholder="<?php esc_attr_e( 'Zoek op woord...', 'wp-job-manager' ); ?>" value="<?php echo esc_attr( $keywords ); ?>" />
         </div>
 
-        <div class="search_categories">
-            <select name="search_categories[]" id="search_categories" class="custom-multi-select" multiple="multiple">
-                <option value=""><?php esc_html_e( 'Kies jouw categorie', 'wp-job-manager' ); ?></option>
+        <div class="search_sectors">
+            <select name="search_sectors[]" id="search_sectors" class="custom-multi-select" multiple="multiple">
+                <option value=""><?php esc_html_e( 'Select a sector', 'textdomain' ); ?></option>
                 <?php
-                $terms = get_terms([
-                    'taxonomy' => 'job_listing_category',
-                    'orderby' => 'name',
-                    'hide_empty' => true,
+                $sectors = get_terms([
+                    'taxonomy'   => 'job_sector',
+                    'hide_empty' => false,
                 ]);
 
-                if ( ! empty( $terms ) ) {
-                    foreach ( $terms as $term ) {
-                        echo '<option value="' . esc_attr( $term->slug ) . '">' . esc_html( $term->name ) . '</option>';
+                if ( ! empty( $sectors ) && ! is_wp_error( $sectors ) ) {
+                    foreach ( $sectors as $sector ) {
+                        echo '<option value="' . esc_attr( $sector->slug ) . '">' . esc_html( $sector->name ) . '</option>';
                     }
                 }
                 ?>
             </select>
         </div>
+
 
         <select id="select-category" class="select2" multiple="multiple">
             <?php foreach ( get_job_listing_types() as $type ) : ?>
@@ -65,3 +65,17 @@ do_action( 'job_manager_job_filters_before', $atts );
 <noscript><?php esc_html_e( 'Your browser does not support JavaScript, or it is disabled. JavaScript must be enabled in order to view listings.', 'wp-job-manager' ); ?></noscript>
 
 
+<script>
+    jQuery(document).ready(function($) {
+
+        $('#search_sectors').select2({
+            placeholder: 'Select a sector',
+            allowClear: true
+        });
+
+        $('#select-category').select2({
+            placeholder: 'Select a category',
+            allowClear: true
+        });
+    });
+</script>

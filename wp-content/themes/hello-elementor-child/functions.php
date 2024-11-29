@@ -59,6 +59,15 @@ function load_select2_assets() {
 add_action( 'wp_enqueue_scripts', 'load_select2_assets' );
 
 
+add_action('init', 'register_custom_job_taxonomies', 11);
+
+function register_custom_job_taxonomies() {
+    // Your taxonomy registration code here
+}
+
+
+
+
 function add_sector_support_to_jobs() {
     register_taxonomy_for_object_type( 'job_sector', 'job_listing' );
 }
@@ -67,32 +76,47 @@ add_action( 'init', 'add_sector_support_to_jobs' );
 
 
 
-
-function register_custom_job_taxonomies() {
-    // Register "Sectors" Taxonomy
-    $sector_labels = [
-        'name'              => _x( 'Sectors', 'taxonomy general name', 'textdomain' ),
-        'singular_name'     => _x( 'Sector', 'taxonomy singular name', 'textdomain' ),
-        'search_items'      => __( 'Search Sectors', 'textdomain' ),
-        'all_items'         => __( 'All Sectors', 'textdomain' ),
-        'edit_item'         => __( 'Edit Sector', 'textdomain' ),
-        'update_item'       => __( 'Update Sector', 'textdomain' ),
-        'add_new_item'      => __( 'Add New Sector', 'textdomain' ),
-        'new_item_name'     => __( 'New Sector Name', 'textdomain' ),
-        'menu_name'         => __( 'Sectors', 'textdomain' ),
+add_action('init', 'register_job_sector');
+function register_job_sector() {
+    $args = [
+        'label'  => esc_html__('Sectors', 'textdomain'),
+        'labels' => [
+            'menu_name'                  => esc_html__('Sectors', 'textdomain'),
+            'all_items'                  => esc_html__('All Sectors', 'textdomain'),
+            'edit_item'                  => esc_html__('Edit Sector', 'textdomain'),
+            'view_item'                  => esc_html__('View Sector', 'textdomain'),
+            'update_item'                => esc_html__('Update Sector', 'textdomain'),
+            'add_new_item'               => esc_html__('Add New Sector', 'textdomain'),
+            'new_item'                   => esc_html__('New Sector', 'textdomain'),
+            'parent_item'                => esc_html__('Parent Sector', 'textdomain'),
+            'parent_item_colon'          => esc_html__('Parent Sector:', 'textdomain'),
+            'search_items'               => esc_html__('Search Sectors', 'textdomain'),
+            'popular_items'              => esc_html__('Popular Sectors', 'textdomain'),
+            'separate_items_with_commas' => esc_html__('Separate sectors with commas', 'textdomain'),
+            'add_or_remove_items'        => esc_html__('Add or remove sectors', 'textdomain'),
+            'choose_from_most_used'      => esc_html__('Choose from the most used sectors', 'textdomain'),
+            'not_found'                  => esc_html__('No sectors found', 'textdomain'),
+            'name'                       => esc_html__('Sectors', 'textdomain'),
+            'singular_name'              => esc_html__('Sector', 'textdomain'),
+        ],
+        'public'               => true,
+        'show_ui'              => true,
+        'show_in_menu'         => true,
+        'show_in_nav_menus'    => true,
+        'show_tagcloud'        => true,
+        'show_in_quick_edit'   => true,
+        'show_admin_column'    => true, // Show in admin job listing columns
+        'show_in_rest'         => true, // Enable REST API support
+        'hierarchical'         => true, // Make it behave like categories
+        'query_var'            => true,
+        'sort'                 => false,
+        'rewrite_no_front'     => false,
+        'rewrite_hierarchical' => false,
+        'rewrite'              => [ 'slug' => 'sector' ] // Custom rewrite slug
     ];
+    register_taxonomy('job_sector', ['job_listing'], $args);
+}
 
-    $sector_args = [
-        'hierarchical'      => true,
-        'labels'            => $sector_labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => [ 'slug' => 'sector' ],
-        'meta_box_cb'       => 'post_categories_meta_box',
-    ];
-
-    register_taxonomy( 'job_sector', 'job_listing', $sector_args );
 
     // Register "Companies" Taxonomy
     $company_labels = [
@@ -168,7 +192,7 @@ function register_custom_job_taxonomies() {
     ];
 
     register_taxonomy( 'job_certification', 'job_listing', $certification_args );
-}
+
 add_action( 'init', 'register_custom_job_taxonomies', 0 );
 
 function child_theme_enqueue_styles() {
@@ -177,4 +201,13 @@ function child_theme_enqueue_styles() {
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style') );
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_styles' );
+
+function enqueue_select2_assets() {
+    // Add Select2 CSS
+    wp_enqueue_style( 'select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css', [], '4.1.0' );
+    
+    // Add Select2 JS
+    wp_enqueue_script( 'select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js', ['jquery'], '4.1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_select2_assets' );
 
