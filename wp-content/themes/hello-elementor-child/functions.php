@@ -16,7 +16,7 @@ add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
          
 if ( !function_exists( 'child_theme_configurator_css' ) ):
     function child_theme_configurator_css() {
-        wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'hello-elementor','hello-elementor','hello-elementor-theme-style','hello-elementor-header-footer' ) );
+        wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'hello-elementor', 'hello-elementor-theme-style', 'hello-elementor-header-footer' ) );
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
@@ -26,7 +26,6 @@ if ( function_exists( 'wp_cache_clear_cache' ) ) {
 }
 
 function custom_job_manager_locate_templates( $template, $template_name, $template_path ) {
-    // Array of templates you want to override
     $custom_templates = [
         'content-job_listing.php',
         'content-single-job_listing-company.php',
@@ -42,7 +41,6 @@ function custom_job_manager_locate_templates( $template, $template_name, $templa
         'job-submit.php',
     ];
 
-    // Check if the template is in our list of custom templates
     if ( in_array( $template_name, $custom_templates ) ) {
         $custom_template = get_stylesheet_directory() . '/wp-job-manager/' . $template_name;
         if ( file_exists( $custom_template ) ) {
@@ -54,14 +52,20 @@ function custom_job_manager_locate_templates( $template, $template_name, $templa
 }
 add_filter( 'job_manager_locate_template', 'custom_job_manager_locate_templates', 10, 3 );
 
-
 function load_select2_assets() {
-    // Enqueue Select2 CSS
     wp_enqueue_style( 'select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css', [], '4.1.0' );
-    // Enqueue Select2 JS
     wp_enqueue_script( 'select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js', ['jquery'], '4.1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'load_select2_assets' );
+
+
+function add_sector_support_to_jobs() {
+    register_taxonomy_for_object_type( 'job_sector', 'job_listing' );
+}
+add_action( 'init', 'add_sector_support_to_jobs' );
+
+
+
 
 
 function register_custom_job_taxonomies() {
@@ -79,13 +83,13 @@ function register_custom_job_taxonomies() {
     ];
 
     $sector_args = [
-        'hierarchical'      => true, // Hierarchical like categories
+        'hierarchical'      => true,
         'labels'            => $sector_labels,
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
         'rewrite'           => [ 'slug' => 'sector' ],
-        'meta_box_cb'       => 'post_tags_meta_box', // Enables the meta box for selection/creation
+        'meta_box_cb'       => 'post_categories_meta_box',
     ];
 
     register_taxonomy( 'job_sector', 'job_listing', $sector_args );
@@ -167,84 +171,10 @@ function register_custom_job_taxonomies() {
 }
 add_action( 'init', 'register_custom_job_taxonomies', 0 );
 
-add_shortcode('kvk_search_by_city', function($atts) {
-    // Haal de waarde van 'plaats' op uit de GET-parameters
-    $plaatsnaam = isset($_GET['plaats']) ? sanitize_text_field($_GET['plaats']) : '';
-
-    // Toon een melding als er geen plaatsnaam is ingevoerd
-    if (empty($plaatsnaam)) {
-        return "Voer een plaatsnaam in om te zoeken naar bedrijven.";
-    }
-
-    // Roep de WPGetAPI shortcode aan met de dynamische plaatsnaam
-    return do_shortcode("[wpgetapi_endpoint api_id='kvk_zoeken_v2' endpoint_id='kvk_zoeken_v2' plaats='{$plaatsnaam}']");
-});
-
-
 function child_theme_enqueue_styles() {
-    // Voeg Google Fonts Poppins toe
     wp_enqueue_style( 'poppins-font', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap', array(), null );
-    
-    // Voeg de stylesheet van de parent en child theme toe (optioneel)
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style') );
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_styles' );
-
-function enqueue_select2_assets() {
-    // Voeg de Select2 CSS toe
-    wp_enqueue_style( 'select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css', array(), null );
-
-    // Voeg de Select2 JS toe
-    wp_enqueue_script( 'select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array('jquery'), null, true );
-
-    // Voeg eigen script toe om Select2 te initialiseren
-    wp_add_inline_script( 'select2-js', "
-      jQuery(document).ready(function($) {
-          $('#select-category').select2({
-              placeholder: 'Select Category',
-              allowClear: true
-          });
-      });
-    ");
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_select2_assets' );
-
-
-function filter_jobs_ajax_handler() {
-    $categories = isset($_POST['categories']) ? array_map('sanitize_text_field', $_POST['categories']) : array();
-
-    // Query voor het ophalen van vacatures
-    $args = array(
-        'post_type' => 'job_listing',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'job_listing_type',
-                'field' => 'term_id',
-                'terms' => $categories,
-            ),
-        ),
-    );
-
-    $query = new WP_Query($args);
-
-    if ($query->have_posts()) {
-        ob_start();
-        while ($query->have_posts()) {
-            $query->the_post();
-            // Pas deze HTML aan naar jouw behoefte
-            echo '<div class="job-item">' . get_the_title() . '</div>';
-        }
-        $html = ob_get_clean();
-
-        wp_send_json_success(array('html' => $html, 'jobs' => $query->posts));
-    } else {
-        wp_send_json_success(array('html' => '', 'jobs' => array()));
-    }
-
-    wp_die();
-}
-add_action('wp_ajax_filter_jobs', 'filter_jobs_ajax_handler');
-add_action('wp_ajax_nopriv_filter_jobs', 'filter_jobs_ajax_handler');
-
 

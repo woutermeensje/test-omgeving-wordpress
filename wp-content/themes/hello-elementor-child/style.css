@@ -124,6 +124,22 @@ body {
   .select2-container--default .select2-selection--multiple .select2-selection__choice:hover {
     background-color: #00a8ff;
   }
+
+  .select2-search__field {
+    display: flex; /* Enables flexbox for centering */
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    height: 100%; /* Ensures the input takes full height */
+    text-align: center; /* Redundant but ensures text alignment */
+    padding: 0; /* Removes extra padding for better centering */
+    box-sizing: border-box; /* Ensures padding/border don't affect centering */
+}
+
+.select2-search__field::placeholder {
+    text-align: center; /* Centers the placeholder text */
+    color: #888; /* Optional: adjust placeholder color */
+}
+
 /* -----------------------------------
    Styling: Location Input Field
 -------------------------------------- */
