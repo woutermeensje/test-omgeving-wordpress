@@ -181,3 +181,70 @@ add_shortcode('kvk_search_by_city', function($atts) {
 });
 
 
+function child_theme_enqueue_styles() {
+    // Voeg Google Fonts Poppins toe
+    wp_enqueue_style( 'poppins-font', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap', array(), null );
+    
+    // Voeg de stylesheet van de parent en child theme toe (optioneel)
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style') );
+}
+add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_styles' );
+
+function enqueue_select2_assets() {
+    // Voeg de Select2 CSS toe
+    wp_enqueue_style( 'select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css', array(), null );
+
+    // Voeg de Select2 JS toe
+    wp_enqueue_script( 'select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array('jquery'), null, true );
+
+    // Voeg eigen script toe om Select2 te initialiseren
+    wp_add_inline_script( 'select2-js', "
+      jQuery(document).ready(function($) {
+          $('#select-category').select2({
+              placeholder: 'Select Category',
+              allowClear: true
+          });
+      });
+    ");
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_select2_assets' );
+
+
+function filter_jobs_ajax_handler() {
+    $categories = isset($_POST['categories']) ? array_map('sanitize_text_field', $_POST['categories']) : array();
+
+    // Query voor het ophalen van vacatures
+    $args = array(
+        'post_type' => 'job_listing',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'job_listing_type',
+                'field' => 'term_id',
+                'terms' => $categories,
+            ),
+        ),
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        ob_start();
+        while ($query->have_posts()) {
+            $query->the_post();
+            // Pas deze HTML aan naar jouw behoefte
+            echo '<div class="job-item">' . get_the_title() . '</div>';
+        }
+        $html = ob_get_clean();
+
+        wp_send_json_success(array('html' => $html, 'jobs' => $query->posts));
+    } else {
+        wp_send_json_success(array('html' => '', 'jobs' => array()));
+    }
+
+    wp_die();
+}
+add_action('wp_ajax_filter_jobs', 'filter_jobs_ajax_handler');
+add_action('wp_ajax_nopriv_filter_jobs', 'filter_jobs_ajax_handler');
+
+

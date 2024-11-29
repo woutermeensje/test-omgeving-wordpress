@@ -1,3 +1,10 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
 /* -----------------------------------
    General Form Styling (Main Wrapper)
 -------------------------------------- */
@@ -91,49 +98,32 @@
 }
 
 /* -----------------------------------
-   Styling: Job Type Select Field
+   Styling: Select Menu - job category dropdown
 -------------------------------------- */
-.search_type {
-    flex: 1;
-    min-width: 250px;
-}
-
-#search_types.custom-select {
-    appearance: none; /* Remove browser's default dropdown styles */
-    background-color: #f7f9fc;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px 15px;
+#select-category {
+    width: 300px;
+    border-radius: 6px;
     font-size: 14px;
-    color: #333;
-    width: 100%;
-    box-sizing: border-box;
-    cursor: pointer;
-    height: 48px;
-    overflow: hidden; /* Prevent extra content from showing */
-}
+  }
 
-#search_types.custom-select:hover {
-    border-color: #5170ff;
-}
-
-#search_types.custom-select:focus {
-    border-color: #82c473;
-    box-shadow: 0 0 4px rgba(130, 196, 115, 0.5);
-    outline: none;
-}
-
-#search_types.custom-select option {
-    padding: 10px;
+  .select2-container .select2-selection--multiple {
+    border: 1px solid #201e1e;
+    border-radius: 6px;
     background-color: #fff;
-    color: #333;
-}
+    padding: 8px;
+  }
 
-#search_types.custom-select option:hover {
-    background-color: #5170ff;
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #201e1e;
     color: #fff;
-}
+    border: none;
+    border-radius: 3px;
+    padding: 3px 6px;
+  }
 
+  .select2-container--default .select2-selection--multiple .select2-selection__choice:hover {
+    background-color: #00a8ff;
+  }
 /* -----------------------------------
    Styling: Location Input Field
 -------------------------------------- */
