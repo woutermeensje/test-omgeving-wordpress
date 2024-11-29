@@ -211,3 +211,22 @@ function enqueue_select2_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_select2_assets' );
 
+add_action('init', 'register_custom_regio_taxonomy', 11);
+
+
+function register_custom_regio_taxonomy() {
+    $args = [
+        'label'  => esc_html__( "Regio's", 'textdomain' ),
+        'labels' => [
+            'menu_name' => esc_html__( "Regio's", 'textdomain' ),
+            'all_items' => esc_html__( "All Regio's", 'textdomain' ),
+        ],
+        'public' => true,
+        'hierarchical' => true, // Makes it behave like categories
+        'show_ui' => true,
+        'show_admin_column' => true, // Adds a column in admin job listing table
+        'rewrite' => [ 'slug' => 'regio' ], // Custom URL slug
+    ];
+
+    register_taxonomy('job_regio', ['job_listing'], $args);
+}

@@ -28,147 +28,67 @@ body {
     align-items: flex-start;
 }
 
+
+/* -----------------------------------
+   Search Basic Design
+-------------------------------------- */
+.search-basic {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Stack elements horizontally */
+    gap: 10px; /* Add 10px gap between elements */
+    width: 100%; /* Make sure it spans the full width */
+}
+
+.search-basic > div {
+    width: 100%; /* Each child div takes up the full width */
+}
+
+.search-basic input[type="text"],
+.search-basic input[type="submit"] {
+    width: 100%; /* Inputs and buttons span full width */
+    padding: 10px; /* Add padding for a better look */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+    font-size: 16px; /* Adjust font size for better readability */
+}
+
+.search-basic input[type="submit"] {
+    background-color: #0073e6; /* Add button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.search-basic input[type="submit"]:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+
+
 /* -----------------------------------
    Styling: Keywords Input Field
 -------------------------------------- */
-.search_keywords {
-    flex: 1;
-    min-width: 250px; /* Ensure the input doesn't shrink too small */
-}
 
-#search_keywords {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-}
 
-#search_keywords:focus {
-    outline: none;
-    border-color: #82c473;
-    box-shadow: 0 0 4px rgba(130, 196, 115, 0.5);
-}
+
+
 
 /* -----------------------------------
    Styling: Categories Multi-Select
 -------------------------------------- */
-.search_categories {
-    flex: 1;
-    min-width: 250px; /* Ensure the dropdown doesn't shrink too small */
-    position: relative;
-}
 
-#search_categories.custom-multi-select {
-    appearance: none; /* Remove browser's default dropdown styles */
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 10px;
-    font-size: 14px;
-    color: #333;
-    width: 100%;
-    box-sizing: border-box;
-    height: auto;
-    overflow-y: auto;
-    max-height: 200px; /* Prevent excessively long dropdowns */
-}
-
-#search_categories.custom-multi-select:hover {
-    border-color: #5170ff;
-}
-
-#search_categories.custom-multi-select:focus {
-    outline: none;
-    border-color: #82c473;
-    box-shadow: 0 0 6px rgba(130, 196, 115, 0.5);
-}
-
-#search_categories.custom-multi-select option {
-    padding: 10px;
-    background-color: #fff;
-    color: #333;
-}
-
-#search_categories.custom-multi-select option:hover {
-    background-color: #5170ff;
-    color: #fff;
-}
 
 /* -----------------------------------
    Styling: Select Menu - job category dropdown
 -------------------------------------- */
-#select-category {
-    width: 300px;
-    border-radius: 6px;
-    font-size: 14px;
-  }
 
-  .select2-container .select2-selection--multiple {
-    border: 1px solid #201e1e;
-    border-radius: 6px;
-    background-color: #fff;
-    padding: 8px;
-  }
-
-  .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #201e1e;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    padding: 3px 6px;
-  }
-
-  .select2-container--default .select2-selection--multiple .select2-selection__choice:hover {
-    background-color: #00a8ff;
-  }
-
-  .select2-search__field {
-    display: flex; /* Enables flexbox for centering */
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
-    height: 100%; /* Ensures the input takes full height */
-    text-align: center; /* Redundant but ensures text alignment */
-    padding: 0; /* Removes extra padding for better centering */
-    box-sizing: border-box; /* Ensures padding/border don't affect centering */
-}
-
-.select2-search__field::placeholder {
-    text-align: center; /* Centers the placeholder text */
-    color: #888; /* Optional: adjust placeholder color */
-}
 
 /* -----------------------------------
    Styling: Location Input Field
 -------------------------------------- */
-.search_location {
-    flex: 1;
-    min-width: 250px;
-}
-
-#search_location {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-}
-
-#search_location:focus {
-    outline: none;
-    border-color: #82c473;
-    box-shadow: 0 0 4px rgba(130, 196, 115, 0.5);
-}
 
 /* -----------------------------------
    Utility Styles
 -------------------------------------- */
 /* Ensure multi-select dropdowns can scroll when necessary */
-.custom-multi-select[multiple], .custom-select[multiple] {
-    max-height: 200px;
-    overflow-y: auto;
-}
