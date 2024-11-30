@@ -21,6 +21,7 @@ do_action( 'job_manager_job_filters_before', $atts );
     
         <?php do_action( 'job_manager_job_filters_start', $atts ); ?>
 
+
         <!-- Basic Search -->
         <div class="search-basic">
 
@@ -94,6 +95,68 @@ do_action( 'job_manager_job_filters_before', $atts );
                 </select>
             </div>
 
+
+             <!-- Job Names -->
+            <div class="search_job_names">
+                <select name="search_job_names[]" id="search_job_names" class="custom-multi-select" multiple="multiple">
+                    <option value=""><?php esc_html_e( "Select a job name", 'textdomain' ); ?></option>
+                    <?php
+                    $job_names = get_terms([
+                        'taxonomy'   => 'job_name',
+                        'hide_empty' => false,
+                    ]);
+
+                    if ( ! empty( $job_names ) && ! is_wp_error( $job_names ) ) {
+                        foreach ( $job_names as $job_name ) {
+                            echo '<option value="' . esc_attr( $job_name->slug ) . '">' . esc_html( $job_name->name ) . '</option>';
+                        }
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <!-- Salary Ranges -->
+            <div class="search_salary_ranges">
+                <select name="search_salary_ranges[]" id="search_salary_ranges" class="custom-multi-select" multiple="multiple">
+                    <option value=""><?php esc_html_e( "Select a salary range", 'textdomain' ); ?></option>
+
+                    <!-- Numeric Salary Ranges -->
+                    <optgroup label="Salarisschalen">
+                        <?php
+                        $numeric_ranges = [
+                            '€2.000 - €3.000',
+                            '€3.000 - €4.000',
+                            '€4.000 - €5.000',
+                            '€5.000 - €6.000',
+                            '€6.000 - €8.000',
+                            '€8.000 - €12.000',
+                            '€5.000+'
+                        ];
+
+                        foreach ( $numeric_ranges as $range ) {
+                            $term = get_term_by( 'name', $range, 'salary_range' );
+                            if ( $term ) {
+                                echo '<option value="' . esc_attr( $term->slug ) . '">' . esc_html( $term->name ) . '</option>';
+                            }
+                        }
+                        ?>
+                    </optgroup>
+
+                    <!-- Other Options -->
+                    <optgroup label="Overige opties">
+                        <?php
+                        $other_ranges = ['Op basis van CAO inschaling', 'Vrijwilligersvergoeding', 'Stage vergoeding'];
+                        foreach ( $other_ranges as $range ) {
+                            $term = get_term_by( 'name', $range, 'salary_range' );
+                            if ( $term ) {
+                                echo '<option value="' . esc_attr( $term->slug ) . '">' . esc_html( $term->name ) . '</option>';
+                            }
+                        }
+                        ?>
+                    </optgroup>
+                </select>
+            </div>
+
             <!-- Job Types -->
             <div class="search_categories">
                 <select id="select-category" class="select2" multiple="multiple">
@@ -105,6 +168,8 @@ do_action( 'job_manager_job_filters_before', $atts );
                 </select>
             </div>
         </div>
+
+      
 
         <?php do_action( 'job_manager_job_filters_end', $atts ); ?>
 
@@ -135,6 +200,18 @@ do_action( 'job_manager_job_filters_before', $atts );
         // Initialize Select2 for Regios
         $('#search_regios').select2({
             placeholder: 'Select a regio',
+            allowClear: true
+        });
+
+        // Initialize Select2 for search job names
+        $('#search_job_names').select2({
+            placeholder: 'Beroep',
+            allowClear: true
+        });
+
+        // Initialize Select2 for salarys ranges
+        $('#search_salary_ranges').select2({
+            placeholder: 'Select a salary range',
             allowClear: true
         });
     });

@@ -3,6 +3,20 @@ body {
 }
 
 
+@font-face {
+    font-family: 'Balgin Bold';
+    src: url('fonts/Balgin-Bold.woff2') format('woff2'),
+         url('fonts/Balgin-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.h2 {
+	font-style: extra-bold !important; 
+	font-size: 15px !important; 
+}
 
 
 /* -----------------------------------
@@ -12,10 +26,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Space between rows */
+    margin-bottom: 0px; 
 }
 
 .showing_jobs {
     display: none !important; 
+}
+
+form.job_filters {
+	background: white; 
 }
 
 /* -----------------------------------
@@ -37,11 +56,15 @@ body {
     flex-direction: row; /* Stack elements horizontally */
     gap: 10px; /* Add 10px gap between elements */
     width: 100%; /* Make sure it spans the full width */
+    border: 1px solid #0a6b8d; /* Add a light border */
+    border-radius: 5px; 
+    padding: 10px; /* Add padding for a better look */
 }
 
 .search-basic > div {
-    width: 100%; /* Each child div takes up the full width */
+    width: 100%; /* Each child div takes up 70% width */
 }
+
 
 .search-basic input[type="text"],
 .search-basic input[type="submit"] {
@@ -51,8 +74,13 @@ body {
     font-size: 16px; /* Adjust font size for better readability */
 }
 
+.input#search_keywords {
+    border: none !important; /* Removes the border */
+    outline: none; /* Removes the outline when focused */
+}
+
 .search-basic input[type="submit"] {
-    background-color: #0073e6; /* Add button background color */
+    background-color: #0a6b8d; /* Add button background color */
     color: #ffffff; /* Button text color */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
@@ -67,10 +95,20 @@ body {
 
 
 /* -----------------------------------
-   Styling: Keywords Input Field
+   Styling: Extra filters
 -------------------------------------- */
 
+.extra-filters {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Stack elements horizontally */
+    gap: 10px; /* Add 10px gap between elements */
+    width: 100%; /* Make sure it spans the full width */
+    margin-top: 0px;
+}
 
+.extra-filters > div {
+    width: 100%; /* Each child div takes up 70% width */
+}
 
 
 

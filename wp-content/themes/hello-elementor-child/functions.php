@@ -230,3 +230,84 @@ function register_custom_regio_taxonomy() {
 
     register_taxonomy('job_regio', ['job_listing'], $args);
 }
+
+
+add_action('init', 'register_custom_job_name_taxonomy', 11);
+
+function register_custom_job_name_taxonomy() {
+    $args = [
+        'label'  => esc_html__('Job Names', 'textdomain'),
+        'labels' => [
+            'menu_name'     => esc_html__('Job Names', 'textdomain'),
+            'all_items'     => esc_html__('All Job Names', 'textdomain'),
+            'edit_item'     => esc_html__('Edit Job Name', 'textdomain'),
+            'view_item'     => esc_html__('View Job Name', 'textdomain'),
+            'update_item'   => esc_html__('Update Job Name', 'textdomain'),
+            'add_new_item'  => esc_html__('Add New Job Name', 'textdomain'),
+            'new_item_name' => esc_html__('New Job Name', 'textdomain'),
+            'search_items'  => esc_html__('Search Job Names', 'textdomain'),
+        ],
+        'public'            => true,
+        'hierarchical'      => false, // Behaves like tags
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => [ 'slug' => 'job-name' ],
+        'show_in_rest'      => true, // Enables REST API support
+        'meta_box_cb'       => 'post_tags_meta_box', // Enables term selection via dropdown
+    ];
+
+    register_taxonomy('job_name', ['job_listing'], $args);
+}
+
+
+
+
+add_action('init', 'register_salary_range_taxonomy', 11);
+
+function register_salary_range_taxonomy() {
+    $args = [
+        'label'  => esc_html__('Salary Ranges', 'textdomain'),
+        'labels' => [
+            'menu_name'     => esc_html__('Salary Ranges', 'textdomain'),
+            'all_items'     => esc_html__('All Salary Ranges', 'textdomain'),
+            'edit_item'     => esc_html__('Edit Salary Range', 'textdomain'),
+            'view_item'     => esc_html__('View Salary Range', 'textdomain'),
+            'update_item'   => esc_html__('Update Salary Range', 'textdomain'),
+            'add_new_item'  => esc_html__('Add New Salary Range', 'textdomain'),
+            'new_item_name' => esc_html__('New Salary Range', 'textdomain'),
+            'search_items'  => esc_html__('Search Salary Ranges', 'textdomain'),
+        ],
+        'public'            => true,
+        'hierarchical'      => false, // Behaves like tags
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => [ 'slug' => 'salary-range' ],
+        'show_in_rest'      => true, // Enables REST API support
+    ];
+
+    register_taxonomy('salary_range', ['job_listing'], $args);
+}
+
+
+add_action('init', function() {
+    $ranges = [
+        '€2.000 - €3.000',
+        '€3.000 - €4.000',
+        '€4.000 - €5.000',
+        '€5.000 - €6.000',
+        '€6.000 - €8.000',
+        '€8.000 - €12.000',
+        '€5.000+',
+        'Op basis van CAO inschaling',
+        'Vrijwilligersvergoeding',
+        'Stage vergoeding'
+    ];
+
+    foreach ( $ranges as $range ) {
+        if ( ! term_exists( $range, 'salary_range' ) ) {
+            wp_insert_term( $range, 'salary_range' );
+        }
+    }
+});
