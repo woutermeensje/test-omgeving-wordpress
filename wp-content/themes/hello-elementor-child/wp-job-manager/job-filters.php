@@ -216,3 +216,101 @@ do_action( 'job_manager_job_filters_before', $atts );
         });
     });
 </script>
+
+
+<style>
+
+    /* Container styling for the dropdown */
+.search_sectors {
+    width: 100%; /* Make it responsive */
+}
+
+/* Select2 dropdown styling */
+.search_sectors .select2-container {
+    width: 100% !important; /* Ensure it spans the full width of the container */
+    font-family: Poppins; /* Use a clean font */
+    font-size: 15px; /* Standard font size */
+    color: #f3f3f3;
+}
+
+/* Input box styling */
+.search_sectors .select2-container--default .select2-selection--multiple {
+    background-color: white; /* Light gray background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding inside the input */
+    min-height: 40px; /* Ensure consistent height */
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Input hover effect */
+.search_sectors .select2-container--default .select2-selection--multiple:hover {
+    border-color: #0073e6; /* Change border color on hover */
+}
+
+/* Selected items styling */
+.search_sectors .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #0073e6; /* Blue background for selected items */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Slightly rounded edges */
+    padding: 3px 10px; /* Add spacing inside tags */
+    margin: 2px; /* Space between tags */
+    font-size: 12px; /* Smaller font size for tags */
+}
+
+/* Remove button on selected items */
+.search_sectors .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff; /* White remove button */
+    margin-right: 5px; /* Space around remove button */
+    font-size: 12px; /* Smaller size for remove icon */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Placeholder styling */
+.search_sectors .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field {
+    color: black; /* Placeholder text color */
+}
+
+/* Dropdown styling */
+.search_sectors .select2-container--default .select2-results__option {
+    padding: 8px 10px; /* Add padding inside dropdown options */
+    font-size: 14px; /* Standard font size */
+}
+
+/* Highlighted option in dropdown */
+.search_sectors .select2-container--default .select2-results__option--highlighted {
+    background-color: #0073e6; /* Blue highlight */
+    color: #fff; /* White text */
+}
+
+/* Style the dropdown wrapper */
+.dropdown-wrapper {
+    position: relative; /* To position the icon inside the wrapper */
+    display: inline-block;
+    width: 100%;
+}
+
+/* Add dropdown icon to the right side of the input */
+.search_sectors .select2-container--default .select2-selection--multiple:after {
+    content: '\25BC'; /* Unicode character for a downward arrow */
+    font-size: 12px; /* Size of the arrow */
+    color: #aaa; /* Arrow color */
+    position: absolute;
+    right: 10px; /* Position it 10px from the right edge */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Align vertically */
+    pointer-events: none; /* Prevent the icon from interfering with user interactions */
+}
+
+/* Positioning for the Select2 container to ensure the icon appears inside */
+.search_sectors .select2-container--default .select2-selection--multiple {
+    position: relative; /* Set position to relative to allow absolute positioning of the icon */
+    padding-right: 30px; /* Add space for the icon inside the input */
+}
+
+input.select2-search__field {
+    font-weight: 800; 
+}
+
+</style>
