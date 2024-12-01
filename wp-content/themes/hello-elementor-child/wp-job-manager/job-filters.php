@@ -48,7 +48,7 @@ do_action( 'job_manager_job_filters_before', $atts );
             <!-- Submit Button -->
             <?php if ( apply_filters( 'job_manager_job_filters_show_submit_button', true ) ) : ?>
                 <div class="search_submit">
-                    <input type="submit" value="<?php esc_attr_e( 'Search Jobs', 'wp-job-manager' ); ?>">
+                    <input type="submit" value="<?php esc_attr_e( 'Doorzoek Vacatures', 'wp-job-manager' ); ?>">
                 </div>
             <?php endif; ?>
         </div>
@@ -225,18 +225,24 @@ do_action( 'job_manager_job_filters_before', $atts );
     width: 100%; /* Make it responsive */
 }
 
+.select2-container--default .select2-search--inline .select2-search__field::placeholder {
+    color: #333333; /* Placeholder text color */
+    font-size: 14px; /* Font size */
+    font-weight: 700; /* Bold font weight */
+}
+
 /* Select2 dropdown styling */
 .search_sectors .select2-container {
     width: 100% !important; /* Ensure it spans the full width of the container */
     font-family: Poppins; /* Use a clean font */
     font-size: 15px; /* Standard font size */
-    color: #f3f3f3;
+    color: black;
 }
 
 /* Input box styling */
 .search_sectors .select2-container--default .select2-selection--multiple {
     background-color: white; /* Light gray background */
-    border: 1px solid #ddd; /* Light border */
+    border: 1px solid #0a6b8d; /* Light border */
     border-radius: 5px; /* Rounded corners */
     padding: 5px; /* Padding inside the input */
     min-height: 40px; /* Ensure consistent height */
@@ -245,7 +251,8 @@ do_action( 'job_manager_job_filters_before', $atts );
 
 /* Input hover effect */
 .search_sectors .select2-container--default .select2-selection--multiple:hover {
-    border-color: #0073e6; /* Change border color on hover */
+    border-color: #0a6b8d; /* Change border color on hover */
+    border-width: 2px; /* Make border 2px on hover */
 }
 
 /* Selected items styling */
@@ -280,7 +287,7 @@ do_action( 'job_manager_job_filters_before', $atts );
 
 /* Highlighted option in dropdown */
 .search_sectors .select2-container--default .select2-results__option--highlighted {
-    background-color: #0073e6; /* Blue highlight */
+    background-color: #0a6b8d; /* Blue highlight */
     color: #fff; /* White text */
 }
 
@@ -295,7 +302,7 @@ do_action( 'job_manager_job_filters_before', $atts );
 .search_sectors .select2-container--default .select2-selection--multiple:after {
     content: '\25BC'; /* Unicode character for a downward arrow */
     font-size: 12px; /* Size of the arrow */
-    color: #aaa; /* Arrow color */
+    color: black; /* Arrow color */
     position: absolute;
     right: 10px; /* Position it 10px from the right edge */
     top: 50%; /* Vertically center */
@@ -309,8 +316,5 @@ do_action( 'job_manager_job_filters_before', $atts );
     padding-right: 30px; /* Add space for the icon inside the input */
 }
 
-input.select2-search__field {
-    font-weight: 800; 
-}
 
 </style>

@@ -123,9 +123,20 @@ form.job_filters {
 
 
 /* -----------------------------------
-   Styling: Categories Multi-Select
+   Submit button
 -------------------------------------- */
 
+.search_submit {
+    font-family: Balgin Bold; 
+    background: #0a6b8d; 
+}
+
+.search_submit:hover {
+    font-family: Balgin Bold; 
+    border: 2px solid #0a6b8d;
+    background: white !important; 
+    color: #0a6b8d; 
+}
 
 /* -----------------------------------
    Styling: Select Menu - job category dropdown
