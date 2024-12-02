@@ -320,3 +320,31 @@ function my_child_theme_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'my_child_theme_enqueue_styles');
 
 
+// Add custom field for job listing image
+function add_job_listing_image_field($fields) {
+    $fields['_job_listing_image'] = array(
+        'label'       => __('Job Listing Image', 'wp-job-manager'),
+        'type'        => 'file', // Allows image upload
+        'description' => __('Upload an image for this job listing.', 'wp-job-manager'),
+        'priority'    => 2, // Determines order of the field
+    );
+
+    return $fields;
+}
+add_filter('job_manager_job_listing_data_fields', 'add_job_listing_image_field');
+
+
+// Save the custom job listing image field
+function save_job_listing_image($post_id, $post) {
+    if (isset($_FILES['_job_listing_image']) && !empty($_FILES['_job_listing_image']['name'])) {
+        require_once(ABSPATH . 'wp-admin/includes/file.php');
+        $uploaded = media_handle_upload('_job_listing_image', $post_id);
+
+        if (!is_wp_error($uploaded)) {
+            update_post_meta($post_id, '_job_listing_image', $uploaded);
+        }
+    }
+}
+add_action('job_manager_save_job_listing', 'save_job_listing_image', 10, 2);
+
+

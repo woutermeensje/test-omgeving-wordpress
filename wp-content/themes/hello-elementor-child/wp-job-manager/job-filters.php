@@ -1,3 +1,5 @@
+<body>
+
 <?php
 /**
  * Filters in `[jobs]` shortcode.
@@ -17,10 +19,13 @@ wp_enqueue_script( 'wp-job-manager-ajax-filters' );
 do_action( 'job_manager_job_filters_before', $atts );
 ?>
 
+
+    
+
+
 <form class="job_filters">
     
         <?php do_action( 'job_manager_job_filters_start', $atts ); ?>
-
 
         <!-- Basic Search -->
         <div class="search-basic">
@@ -52,6 +57,9 @@ do_action( 'job_manager_job_filters_before', $atts );
                 </div>
             <?php endif; ?>
         </div>
+        
+    
+
 
    
 
@@ -169,13 +177,13 @@ do_action( 'job_manager_job_filters_before', $atts );
             </div>
         </div>
 
-      
-
         <?php do_action( 'job_manager_job_filters_end', $atts ); ?>
 
      
-   
 </form>
+
+
+</body>
 
 <?php do_action( 'job_manager_job_filters_after', $atts ); ?>
 
@@ -315,6 +323,12 @@ do_action( 'job_manager_job_filters_before', $atts );
     position: relative; /* Set position to relative to allow absolute positioning of the icon */
     padding-right: 30px; /* Add space for the icon inside the input */
 }
+
+
+
+
+
+
 
 
 </style>
