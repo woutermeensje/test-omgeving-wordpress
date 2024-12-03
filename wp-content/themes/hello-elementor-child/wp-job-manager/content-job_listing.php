@@ -23,6 +23,8 @@
                         <p class="job-location"><?php the_job_location(true); ?></p>
                     </div>
                     <div class="job-meta-container">
+		
+
                         <?php do_action('job_listing_meta_start'); ?>
                         <?php do_action('job_listing_meta_end'); ?>
                         <?php the_job_publish_date(); ?>
@@ -167,15 +169,6 @@ ul.meta li.job-type {
     }
 }
 
-
-.job-listing-image img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
 
 </style>

@@ -59,17 +59,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 			?>
 		<?php endif; ?>
 
-		<div class="job-post-image">
-			<?php
-		$image_id = get_post_meta(get_the_ID(), '_job_listing_image', true);
-		if ($image_id) :
-			$image_url = wp_get_attachment_url($image_id);
-			?>
-			<div class="job-listing-image">
-				<img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
-			</div>
-		<?php endif; ?>
-	</div>
+
 
 
 
@@ -166,5 +156,7 @@ body {
         text-align: center;
     }
 }
+
+
 
 </style>
