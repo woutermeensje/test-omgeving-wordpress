@@ -6,42 +6,65 @@
 </head>
 <body class="body-class">
     <div class="main-container">
-	
+        <div class="content-container">
+            <!-- Job Listings Section -->
+            <div class="jobs-list-container">
+                <ul class="job-list">
+                    <li class="job-listing" <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr($post->geolocation_long); ?>" data-latitude="<?php echo esc_attr($post->geolocation_lat); ?>">
+                        <?php 
+                        // Display Cover Image if available
+                        $cover_image_id = get_post_meta(get_the_ID(), '_cover_image', true); 
+                        if ($cover_image_id) : 
+                            $cover_image_url = wp_get_attachment_image_url($cover_image_id, 'large'); 
+                        ?>
+                            <div class="job-cover-image">
+                                <img src="<?php echo esc_url($cover_image_url); ?>" alt="<?php the_title_attribute(); ?>" class="cover-image">
+                            </div>
+                        <?php endif; ?>
 
+                        <!-- Thumbnail Image -->
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>" class="rounded-image">
+                        <?php endif; ?>
 
-        <ul class="job-list">
-            <li class="job-listing" <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr($post->geolocation_long); ?>" data-latitude="<?php echo esc_attr($post->geolocation_lat); ?>">
-                <?php if (has_post_thumbnail()) : ?>
-                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>" class="rounded-image">
-                <?php endif; ?>
-                <div class="job-details-container">
-                    <div class="job-info-container">
-                        <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
-                        <h3 class="job-title">
-                            <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
-                        </h3>
-                        <p class="job-location"><?php the_job_location(true); ?></p>
-                    </div>
-                    <div class="job-meta-container">
-		
+                        <div class="job-details-container">
+                            <div class="job-info-container">
+                                <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
+                                <h2 class="job-title">
+                                    <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
+                                </h2>
+                                <p class="job-location"><?php the_job_location(true); ?></p>
+                            </div>
+                            <div class="job-meta-container">
+                                <?php do_action('job_listing_meta_start'); ?>
+                                <?php do_action('job_listing_meta_end'); ?>
+                                <?php the_job_publish_date(); ?>
+                                <ul class="meta">
+                                    <?php if (get_option('job_manager_enable_types')) : ?>
+                                        <?php $types = wpjm_get_the_job_types(); ?>
+                                        <?php if (!empty($types)) : foreach ($types as $type) : ?>
+                                            <li class="job-type <?php echo esc_attr(sanitize_title($type->slug)); ?>">
+                                                <?php echo esc_html($type->name); ?>
+                                            </li>
+                                        <?php endforeach; endif; ?>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-                        <?php do_action('job_listing_meta_start'); ?>
-                        <?php do_action('job_listing_meta_end'); ?>
-                        <?php the_job_publish_date(); ?>
-                        <ul class="meta">
-                            <?php if (get_option('job_manager_enable_types')) : ?>
-                                <?php $types = wpjm_get_the_job_types(); ?>
-                                <?php if (!empty($types)) : foreach ($types as $type) : ?>
-                                    <li class="job-type <?php echo esc_attr(sanitize_title($type->slug)); ?>">
-                                        <?php echo esc_html($type->name); ?>
-                                    </li>
-                                <?php endforeach; endif; ?>
-                            <?php endif; ?>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        </ul>
+            <!-- Sidebar Section -->
+            <div class="side-bar-jobs">
+                <h3>Featured Jobs</h3>
+                <ul>
+                    <li>Job 1</li>
+                    <li>Job 2</li>
+                    <li>Job 3</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
@@ -49,13 +72,33 @@
 
 
 <style>
-
-	/* General Body Styling */
-
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
 /* Main Container */
 .main-container {
- margin-top: 20px; 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Flex Container for Job Listings and Sidebar */
+.content-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Job Listings Section */
+.jobs-list-container {
+    flex: 3; /* 75% width */
 }
 
 /* Job List */
@@ -63,16 +106,18 @@ ul.job-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 /* Job Listing */
 li.job-listing {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     margin-bottom: 20px;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
     background: #fff;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -82,7 +127,7 @@ li.job-listing:hover {
     transform: translateY(-5px);
 }
 
-/* Job Image */
+/* Job Image (Thumbnail) */
 .rounded-image {
     flex-shrink: 0;
     width: 80px;
@@ -93,14 +138,31 @@ li.job-listing:hover {
     margin-right: 20px;
 }
 
+/* Job Cover Image */
+.job-cover-image {
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.job-cover-image img.cover-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* Job Details Container */
 .job-details-container {
     flex-grow: 1;
 }
 
 /* Job Info Container */
-.job-info-container h3 {
+.job-info-container h2 {
     margin: 5px 0;
+    font-weight: bold;
+    color: #333333;
 }
 
 .company-name-job-listing {
@@ -148,13 +210,44 @@ ul.meta li.job-type {
     font-size: 12px;
     color: #fff;
     background-color: #007bff;
-    padding: 5px 10px;
+    padding: 0px 0px;
     border-radius: 16px;
     display: inline-block;
 }
 
+/* Sidebar Section */
+.side-bar-jobs {
+    flex: 1; /* 25% width */
+    background: rgba(10, 107, 141, 0.8);
+    padding: 00px;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.side-bar-jobs h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.side-bar-jobs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-bar-jobs ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
     li.job-listing {
         flex-direction: column;
         text-align: center;
@@ -167,8 +260,10 @@ ul.meta li.job-type {
     .job-meta-container ul.meta {
         justify-content: center;
     }
+
+    .side-bar-jobs {
+        margin-top: 20px;
+    }
 }
-
-
-
 </style>
+

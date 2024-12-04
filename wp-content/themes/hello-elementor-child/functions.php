@@ -75,7 +75,6 @@ add_action( 'init', 'add_sector_support_to_jobs' );
 
 
 
-
 add_action('init', 'register_job_sector');
 function register_job_sector() {
     $args = [
@@ -320,31 +319,64 @@ function my_child_theme_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'my_child_theme_enqueue_styles');
 
 
-// Add custom field for job listing image
-function add_job_listing_image_field($fields) {
-    $fields['_job_listing_image'] = array(
-        'label'       => __('Job Listing Image', 'wp-job-manager'),
-        'type'        => 'file', // Allows image upload
-        'description' => __('Upload an image for this job listing.', 'wp-job-manager'),
-        'priority'    => 2, // Determines order of the field
+add_filter('job_manager_job_listing_data_fields', 'admin_add_cover_image_field');
+function admin_add_cover_image_field($fields)
+{
+    $fields['_cover_image'] = array(
+        'label' => __('Cover Image', 'job_manager'),
+        'type'  => 'file',
     );
-
     return $fields;
 }
-add_filter('job_manager_job_listing_data_fields', 'add_job_listing_image_field');
 
 
-// Save the custom job listing image field
-function save_job_listing_image($post_id, $post) {
-    if (isset($_FILES['_job_listing_image']) && !empty($_FILES['_job_listing_image']['name'])) {
+add_action('job_manager_save_job_listing', 'save_cover_image_field', 10, 2);
+function save_cover_image_field($post_id, $post)
+{
+    if (isset($_FILES['_cover_image']) && !empty($_FILES['_cover_image']['name'])) {
         require_once(ABSPATH . 'wp-admin/includes/file.php');
-        $uploaded = media_handle_upload('_job_listing_image', $post_id);
+
+        // Handle the upload and get the attachment ID
+        $uploaded = media_handle_upload('_cover_image', $post_id);
 
         if (!is_wp_error($uploaded)) {
-            update_post_meta($post_id, '_job_listing_image', $uploaded);
+            update_post_meta($post_id, '_cover_image', $uploaded); // Save attachment ID
+            error_log('Cover Image Saved with ID: ' . $uploaded); // Debug log
+        } else {
+            error_log('Cover Image Upload Error: ' . $uploaded->get_error_message()); // Debug log
         }
     }
 }
-add_action('job_manager_save_job_listing', 'save_job_listing_image', 10, 2);
 
+function fix_cover_image_meta() {
+    // Query job listings
+    $query = new WP_Query(array(
+        'post_type' => 'job_listing',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+    ));
 
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $post_id = get_the_ID();
+
+            // Get the current value of '_cover_image'
+            $cover_image_url = get_post_meta($post_id, '_cover_image', true);
+
+            // If the meta value is a URL, get the attachment ID
+            if (filter_var($cover_image_url, FILTER_VALIDATE_URL)) {
+                $attachment_id = attachment_url_to_postid($cover_image_url);
+
+                if ($attachment_id) {
+                    update_post_meta($post_id, '_cover_image', $attachment_id); // Update meta with ID
+                    error_log("Updated Cover Image Meta for Post {$post_id} to Attachment ID {$attachment_id}");
+                } else {
+                    error_log("Failed to find Attachment ID for URL: {$cover_image_url}");
+                }
+            }
+        }
+        wp_reset_postdata();
+    }
+}
+add_action('init', 'fix_cover_image_meta');
