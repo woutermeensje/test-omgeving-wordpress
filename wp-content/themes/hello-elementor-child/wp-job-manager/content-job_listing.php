@@ -148,7 +148,6 @@ li.job-listing:hover {
 }
 
 .job-cover-image img.cover-image {
-    width: 100%;
     height: auto;
     object-fit: cover;
 }

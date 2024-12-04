@@ -141,11 +141,8 @@ form.job_filters {
     flex-direction: row; /* Stack elements horizontally */
     gap: 10px; /* Add 10px gap between elements */
     width: 100%; /* Make sure it spans the full width */
-    border: 1px solid #0a6b8d; /* Add a light border */
     border-radius: 5px; 
     padding: 25px; 
-    background: rgba(10, 107, 141, 0.5); 
-
 }
 
 .extra-filters > div {
