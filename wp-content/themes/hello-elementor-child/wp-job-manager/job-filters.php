@@ -58,11 +58,6 @@ do_action( 'job_manager_job_filters_before', $atts );
             <?php endif; ?>
         </div>
         
-    
-
-
-   
-
         <!-- Extra Filters -->
         <div class="extra-filters">
             <!-- Sectors -->
@@ -103,7 +98,6 @@ do_action( 'job_manager_job_filters_before', $atts );
                 </select>
             </div>
 
-
              <!-- Job Names -->
             <div class="search_job_names">
                 <select name="search_job_names[]" id="search_job_names" class="custom-multi-select" multiple="multiple">
@@ -122,8 +116,6 @@ do_action( 'job_manager_job_filters_before', $atts );
                     ?>
                 </select>
             </div>
-
-           
 
             <!-- Job Types -->
             <div class="search_categories">

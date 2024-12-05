@@ -49,8 +49,7 @@ strong {
     padding: 35px 35px 0 35px; /* Add padding for top, left, and right, but bottom 0 */
     border-radius: 15px; /* Rounded corners */
     margin-top: 0px; 
-    background: white; 
-
+    background: black; 
 }
 
 .showing_jobs {
@@ -157,22 +156,4 @@ form.job_filters {
     font-size: 13px; /* Adjust font size for better readability */
 }
 
-/* -----------------------------------
-   Submit button
--------------------------------------- */
 
-
-
-/* -----------------------------------
-   Styling: Select Menu - job category dropdown
--------------------------------------- */
-
-
-/* -----------------------------------
-   Styling: Location Input Field
--------------------------------------- */
-
-/* -----------------------------------
-   Utility Styles
--------------------------------------- */
-/* Ensure multi-select dropdowns can scroll when necessary */

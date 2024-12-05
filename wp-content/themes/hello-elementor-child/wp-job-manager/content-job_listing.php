@@ -22,12 +22,21 @@
                             </div>
                         <?php endif; ?>
 
-                        <!-- Thumbnail Image -->
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>" class="rounded-image">
-                        <?php endif; ?>
+                       
 
                         <div class="job-details-container">
+                            <div class="logo">
+                                <!-- Thumbnail Image -->
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>" class="rounded-image">
+                               <?php endif; ?>
+                            </div>
+                        
+                            <div class="job-info-container-one">        
+                                
+                            
+
+                          
                             <div class="job-info-container">
                                 <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
                                 <h2 class="job-title">
@@ -50,20 +59,12 @@
                                     <?php endif; ?>
                                 </ul>
                             </div>
+                           
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <!-- Sidebar Section -->
-            <div class="side-bar-jobs">
-                <h3>Featured Jobs</h3>
-                <ul>
-                    <li>Job 1</li>
-                    <li>Job 2</li>
-                    <li>Job 3</li>
-                </ul>
-            </div>
         </div>
     </div>
 </body>
@@ -92,14 +93,18 @@ body {
 .content-container {
     display: flex;
     gap: 20px;
-    width: 100%;
+    width: 80%;
     max-width: 1200px;
 }
+
+
 
 /* Job Listings Section */
 .jobs-list-container {
     flex: 3; /* 75% width */
 }
+
+
 
 /* Job List */
 ul.job-list {
@@ -127,6 +132,11 @@ li.job-listing:hover {
     transform: translateY(-5px);
 }
 
+.rounded-image {
+    margin-left: -50%;
+    align-self: center;
+}
+
 /* Job Image (Thumbnail) */
 .rounded-image {
     flex-shrink: 0;
@@ -143,8 +153,10 @@ li.job-listing:hover {
     width: 100%;
     max-height: 250px;
     overflow: hidden;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .job-cover-image img.cover-image {
@@ -154,7 +166,8 @@ li.job-listing:hover {
 
 /* Job Details Container */
 .job-details-container {
-    flex-grow: 1;
+    width: 100%;
+    display: flex; 
 }
 
 /* Job Info Container */
@@ -171,15 +184,24 @@ li.job-listing:hover {
 }
 
 .job-title {
-    font-size: 18px;
+    font-size: 45px;
     font-weight: 600;
     color: #007bff;
     margin: 0;
+    font-family: Balgin Bold; 
 }
 
 .job-title a {
     text-decoration: none;
     color: #007bff;
+}
+
+h2.job-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    font-family: Balgin Bold;
+    color: black; 
 }
 
 .job-title a:hover {
