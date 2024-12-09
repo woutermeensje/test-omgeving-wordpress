@@ -93,8 +93,8 @@ body {
 .content-container {
     display: flex;
     gap: 20px;
-    width: 80%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px; /* Increased max-width to make it wider */
 }
 
 
@@ -278,6 +278,9 @@ ul.meta li.job-type {
         margin: 0 auto 10px auto;
     }
 
+    .logo {
+        border: 2px solid #0a6b8d;
+    }
     .job-meta-container ul.meta {
         justify-content: center;
     }
