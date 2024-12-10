@@ -6,7 +6,6 @@
 </head>
 <body class="body-class">
     <div class="main-container">
-        <div class="content-container">
             <!-- Job Listings Section -->
             <div class="jobs-list-container">
                 <ul class="job-list">
@@ -22,6 +21,9 @@
                             </div>
                         <?php endif; ?>
 
+
+                        
+
                        
 
                         <div class="job-details-container">
@@ -34,8 +36,6 @@
                         
                             <div class="job-info-container-one">        
                                 
-                            
-
                           
                             <div class="job-info-container">
                                 <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
@@ -63,7 +63,7 @@
                         </div>
                     </li>
                 </ul>
-            </div>
+           
 
         </div>
     </div>
@@ -86,22 +86,14 @@ body {
 .main-container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    
 }
-
-/* Flex Container for Job Listings and Sidebar */
-.content-container {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    max-width: 1400px; /* Increased max-width to make it wider */
-}
-
 
 
 /* Job Listings Section */
 .jobs-list-container {
-    flex: 3; /* 75% width */
+  margin: 0px; 
+  padding: 0px; 
 }
 
 
@@ -112,6 +104,7 @@ ul.job-list {
     margin: 0;
     padding: 0;
     width: 100%;
+    
 }
 
 /* Job Listing */
@@ -119,12 +112,13 @@ li.job-listing {
     display: flex;
     align-items: center;
     padding: 0px;
-    margin-bottom: 20px;
-    border: 1px solid #f3f3f3;
+    border: 2px solid #0a6b8d;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     background: #fff;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+    height: 300px; 
 }
 
 li.job-listing:hover {
@@ -151,12 +145,9 @@ li.job-listing:hover {
 /* Job Cover Image */
 .job-cover-image {
     width: 100%;
-    max-height: 250px;
+    max-height: 100%;
     overflow: hidden;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    
 }
 
 .job-cover-image img.cover-image {
