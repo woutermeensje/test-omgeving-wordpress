@@ -21,9 +21,6 @@
                             </div>
                         <?php endif; ?>
 
-
-                        
-
                        
 
                         <div class="job-details-container">
@@ -279,6 +276,13 @@ ul.meta li.job-type {
     .side-bar-jobs {
         margin-top: 20px;
     }
+
+    .logo {
+        display: none !important; /* Hides the logo on screens smaller than 768px */
+    }
 }
+
+
+
 </style>
 
