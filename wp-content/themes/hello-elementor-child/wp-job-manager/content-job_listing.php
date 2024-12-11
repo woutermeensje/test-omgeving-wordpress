@@ -19,29 +19,34 @@
                             <div class="job-cover-image">
                                 <img src="<?php echo esc_url($cover_image_url); ?>" alt="<?php the_title_attribute(); ?>" class="cover-image">
                             </div>
-
-                            
                         <?php endif; ?>
-
                         
                         <div class="rounded-image">
                                 <?php the_company_logo(); ?>
                         </div>
 
                         <div class="job-details-container">
+                        <div class="vacature-content">
 
-                          
-                            <div class="job-info-container">
-                                <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
-                                <h2 class="job-title">
+                        <div class="job-date"> 
+                                    <p><?php echo date_i18n('l j F', strtotime(get_the_date()), true); ?></p>
+                                </div>
+                                                           <h2 class="job-title">
                                     <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
                                 </h2>
+
+                                <div class="job_text">
+                                    <p><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
+                                </div>
+
+                                <div class="vacature-meta"> 
                                 <p class="job-location"><?php the_job_location(true); ?></p>
-                            </div>
+                           
                             <div class="job-meta-container">
                                 <?php do_action('job_listing_meta_start'); ?>
                                 <?php do_action('job_listing_meta_end'); ?>
-                                <?php the_job_publish_date(); ?>
+                                <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
+
                                 <ul class="meta">
                                     <?php if (get_option('job_manager_enable_types')) : ?>
                                         <?php $types = wpjm_get_the_job_types(); ?>
@@ -53,7 +58,8 @@
                                     <?php endif; ?>
                                 </ul>
                             </div>
-                           
+                            </div>
+                            </div>
                      
                     </li>
                 </ul>
@@ -136,7 +142,6 @@ li.job-listing:hover {
 }
 
 
-
 /* Job Cover Image */
 .job-cover-image {
     width: 100%;
@@ -154,21 +159,11 @@ li.job-listing:hover {
     width: 100%;
 }
 
-.job-info-container {
-
-}
-
-/* Job Info Container */
-.job-info-container h2 {
-    
-    font-weight: bold;
-    color: #333333;
-}
-
 .company-name-job-listing {
-    font-size: 14px;
-    color: #555;
-    font-weight: 500;
+    font-family: Poppins; 
+	font-size: 13px !important; 
+	color: #333333 !important;
+	font-weight: 200 !important; 
 }
 
 .job-title {
@@ -180,9 +175,20 @@ li.job-listing:hover {
 }
 
 .job-title a {
+    color: #333333;
+    font-family: Balgin Bold; 
+    font-size: 30px;
     text-decoration: none;
-    color: #007bff;
 }
+
+p {
+    font-size: 14px;
+    color: #333;
+    font-family: Poppins;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
 
 h2.job-title {
     font-size: 24px;
@@ -193,7 +199,25 @@ h2.job-title {
 }
 
 .job-title a:hover {
-    text-decoration: underline;
+    color: #0a6b8d; 
+}
+
+.vacature-meta {
+    display: flex; /* Enable Flexbox layout */
+    
+}
+
+.vacature-content {
+	margin-left: 75px !important; 
+    margin-right: 25px; 
+    
+}
+
+h3.company-name-job-listing {
+	font-family: Poppins; 
+	font-weight: 300;
+	font-size: 15px; 
+	color: #0a6b8d; 
 }
 
 .job-location {
@@ -203,7 +227,9 @@ h2.job-title {
 
 /* Job Meta Container */
 .job-meta-container {
-    margin-top: 15px;
+    display: flex; /* Enable Flexbox layout */
+    justify-content: space-between; /* Distribute items with equal space between */
+    gap: 10px; /* Optional: Add consistent spacing between items */
 }
 
 ul.meta {
@@ -216,12 +242,10 @@ ul.meta {
 }
 
 ul.meta li.job-type {
-    font-size: 12px;
-    color: #fff;
-    background-color: #007bff;
-    padding: 0px 0px;
-    border-radius: 16px;
-    display: inline-block;
+    font-size: 15px;
+    color: #333;
+    font-family: Poppins; 
+    font-weight: 300; 
 }
 
 /* Sidebar Section */
