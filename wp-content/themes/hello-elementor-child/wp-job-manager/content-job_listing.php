@@ -19,20 +19,17 @@
                             <div class="job-cover-image">
                                 <img src="<?php echo esc_url($cover_image_url); ?>" alt="<?php the_title_attribute(); ?>" class="cover-image">
                             </div>
+
+                            
                         <?php endif; ?>
 
-                       
+                        
+                        <div class="rounded-image">
+                                <?php the_company_logo(); ?>
+                        </div>
 
                         <div class="job-details-container">
-                            <div class="logo">
-                                <!-- Thumbnail Image -->
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>" class="rounded-image">
-                               <?php endif; ?>
-                            </div>
-                        
-                            <div class="job-info-container-one">        
-                                
+
                           
                             <div class="job-info-container">
                                 <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
@@ -57,7 +54,7 @@
                                 </ul>
                             </div>
                            
-                        </div>
+                     
                     </li>
                 </ul>
            
@@ -98,10 +95,9 @@ body {
 /* Job List */
 ul.job-list {
     list-style: none;
-    margin: 0;
+    margin: 0 auto; /* Center the div */
     padding: 0;
-    width: 100%;
-    
+    width: 90%;
 }
 
 /* Job Listing */
@@ -115,7 +111,8 @@ li.job-listing {
     background: #fff;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     margin-top: 30px;
-    height: 300px; 
+    height: 325px; 
+    position: relative; 
 }
 
 li.job-listing:hover {
@@ -123,28 +120,28 @@ li.job-listing:hover {
     transform: translateY(-5px);
 }
 
+
+
+
 .rounded-image {
-    margin-left: -50%;
-    align-self: center;
+    position: absolute; /* Allows it to overlap the container */
+    width: 10%; /* Width of the rounded image */
+    height: auto; /* Keep aspect ratio */
+    left: 45%; /* Horizontally center */
+    top: 50%; /* Start positioning at the middle */
+    transform: translateY(-50%); /* Adjust vertically to center */
+    z-index: 1; /* Ensure it overlaps other elements */
+    margin: auto; /* Optional: Center for additional cases */
+    
 }
 
-/* Job Image (Thumbnail) */
-.rounded-image {
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #eaeaea;
-    margin-right: 20px;
-}
+
 
 /* Job Cover Image */
 .job-cover-image {
     width: 100%;
     max-height: 100%;
     overflow: hidden;
-    
 }
 
 .job-cover-image img.cover-image {
@@ -155,12 +152,15 @@ li.job-listing:hover {
 /* Job Details Container */
 .job-details-container {
     width: 100%;
-    display: flex; 
+}
+
+.job-info-container {
+
 }
 
 /* Job Info Container */
 .job-info-container h2 {
-    margin: 5px 0;
+    
     font-weight: bold;
     color: #333333;
 }
@@ -266,7 +266,42 @@ ul.meta li.job-type {
         margin: 0 auto 10px auto;
     }
 
-    .logo {
+    .rounded-image {
+        border: 2px solid yellow;
+    }
+    .job-meta-container ul.meta {
+        justify-content: center;
+    }
+
+    .side-bar-jobs {
+        margin-top: 20px;
+    }
+
+    .rounded-image {
+        display: none !important; /* Hides the logo on screens smaller than 768px */
+    }
+
+    .job-cover-image {
+        display: none;
+    }
+}
+
+/* Hide Logo on All Screens Smaller Than Desktop */
+@media only screen and (max-width: 1024px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    li.job-listing {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rounded-image {
+        margin: 0 auto 10px auto;
+    }
+
+    .rounded-image {
         border: 2px solid #0a6b8d;
     }
     .job-meta-container ul.meta {
@@ -277,8 +312,12 @@ ul.meta li.job-type {
         margin-top: 20px;
     }
 
-    .logo {
+    .rounded-image {
         display: none !important; /* Hides the logo on screens smaller than 768px */
+    }
+
+    .job-cover-image {
+        display: none;
     }
 }
 
