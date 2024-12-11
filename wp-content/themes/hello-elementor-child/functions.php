@@ -380,3 +380,6 @@ function fix_cover_image_meta() {
     }
 }
 add_action('init', 'fix_cover_image_meta');
+
+
+
