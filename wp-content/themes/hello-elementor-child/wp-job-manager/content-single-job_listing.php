@@ -48,7 +48,15 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
         <div class="content-part-job-description">
 
+
+
         <div class="div-test">
+
+        <div>
+            <?php the_job_location(); ?>
+            <?php the_job_publish_date(); ?>
+            
+        </div>
                         <?php
                             /**
                              * single_job_listing_start hook

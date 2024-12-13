@@ -22,6 +22,9 @@ global $post;
 
 do_action( 'single_job_listing_meta_before' ); ?>
 
+<div class="meta-strook">
+
+
 <ul class="job-listing-meta meta">
 	<?php do_action( 'single_job_listing_meta_start' ); ?>
 
@@ -55,4 +58,15 @@ do_action( 'single_job_listing_meta_before' ); ?>
 	<?php do_action( 'single_job_listing_meta_end' ); ?>
 </ul>
 
+</div>
+
 <?php do_action( 'single_job_listing_meta_after' ); ?>
+
+
+
+<style>
+
+
+
+
+</style>
