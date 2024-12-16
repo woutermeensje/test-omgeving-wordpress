@@ -383,3 +383,12 @@ add_action('init', 'fix_cover_image_meta');
 
 
 
+add_filter('job_manager_job_listing_data_fields', 'add_company_logo_field');
+function add_company_logo_field($fields) {
+    $fields['_company_logo'] = array(
+        'label' => __('Company Logo', 'job_manager'),
+        'type'  => 'file',
+        'description' => __('Upload the company logo.', 'job_manager'),
+    );
+    return $fields;
+}

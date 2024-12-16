@@ -298,6 +298,22 @@ do_action( 'job_manager_job_filters_before', $atts );
         transform: translateY(-50%); /* Align vertically */
         pointer-events: none; /* Prevent the icon from interfering with user interactions */
     }
-</style>
+
+
+
+
+    @media only screen and (max-width: 768px) {
+    .extra-filters {
+        display: block; /* Stack filters vertically */
+    }
+
+    .extra-filters > div {
+        margin-bottom: 15px; /* Space between stacked filters */
+    }
+
+    select.custom-multi-select {
+        font-size: 16px; /* Slightly larger font for easier tapping */
+    }
+}
 
 </style>
