@@ -22,8 +22,11 @@
                         <?php endif; ?>
                         
                         <div class="rounded-image">
+                            <div class="logo-wrapper">
                                 <?php the_company_logo(); ?>
+                            </div>
                         </div>
+
 
                         <div class="job-details-container">
                         <div class="vacature-content">
@@ -39,26 +42,30 @@
                                     <p><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
                                 </div>
 
-                                <div class="vacature-meta"> 
-                                <p class="job-location"><?php the_job_location(true); ?></p>
-                           
+                            <div class="vacature-meta"> 
                             <div class="job-meta-container">
-                                <?php do_action('job_listing_meta_start'); ?>
-                                <?php do_action('job_listing_meta_end'); ?>
-                                <h3 class="company-name-job-listing"><?php the_company_name(); ?></h3>
 
-                                <ul class="meta">
-                                    <?php if (get_option('job_manager_enable_types')) : ?>
-                                        <?php $types = wpjm_get_the_job_types(); ?>
-                                        <?php if (!empty($types)) : foreach ($types as $type) : ?>
-                                            <li class="job-type <?php echo esc_attr(sanitize_title($type->slug)); ?>">
-                                                <?php echo esc_html($type->name); ?>
-                                            </li>
-                                        <?php endforeach; endif; ?>
-                                    <?php endif; ?>
-                                </ul>
-                            </div>
-                            </div>
+                                
+                           
+                                        <?php do_action('job_listing_meta_start'); ?>
+                                        <?php do_action('job_listing_meta_end'); ?>
+                                    
+                                        <p class="company-name-job-listing"><?php the_company_name(); ?></p>
+
+                                        <ul class="meta">
+                                            <?php if (get_option('job_manager_enable_types')) : ?>
+                                                <?php $types = wpjm_get_the_job_types(); ?>
+                                                <?php if (!empty($types)) : foreach ($types as $type) : ?>
+                                                    <li class="job-type <?php echo esc_attr(sanitize_title($type->slug)); ?>">
+                                                        <?php echo esc_html($type->name); ?>
+                                                    </li>
+                                                <?php endforeach; endif; ?>
+                                            <?php endif; ?>
+                                        </ul>
+
+                                        <?php the_job_location(true); ?>
+                                    </div>
+                                </div>
                             </div>
                      
                     </li>
@@ -130,16 +137,27 @@ li.job-listing:hover {
 
 
 .rounded-image {
-    position: absolute; /* Allows it to overlap the container */
-    width: 10%; /* Width of the rounded image */
-    height: auto; /* Keep aspect ratio */
-    left: 45%; /* Horizontally center */
-    top: 50%; /* Start positioning at the middle */
-    transform: translateY(-50%); /* Adjust vertically to center */
-    z-index: 1; /* Ensure it overlaps other elements */
-    margin: auto; /* Optional: Center for additional cases */
-    
+    position: absolute; /* Keeps overlap positioning */
+    width: 10%; /* Width of the container */
+    height: auto; /* Keeps the aspect ratio */
+    left: 45%; /* Centers horizontally */
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%); /* Centers vertically using transform */
+    z-index: 1; /* Keeps the correct stacking order */
+    margin: auto; /* No change here */
+    border-radius: 5px; /* Rounded corners for the container */
+    border: 2px solid #0a6b8d; /* Adds a border */
+    overflow: hidden; /* Ensures the logo doesn't overflow the container */
 }
+
+.logo-wrapper img {
+    width: 100%; /* Make the image fill the container width */
+    height: 100%; /* Make the image fill the container height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+    display: block; /* Prevents inline spacing issues */
+    background: white; 
+}
+
 
 
 /* Job Cover Image */
@@ -162,8 +180,8 @@ li.job-listing:hover {
 .company-name-job-listing {
     font-family: Poppins; 
 	font-size: 13px !important; 
-	color: #333333 !important;
-	font-weight: 200 !important; 
+	color: #0a6b8d !important;
+	font-weight: 500 !important; 
 }
 
 .job-title {
@@ -204,25 +222,16 @@ h2.job-title {
 
 .vacature-meta {
     display: flex; /* Enable Flexbox layout */
-    
+    align-items: center; /* Center items vertically */
 }
 
 .vacature-content {
 	margin-left: 75px !important; 
     margin-right: 25px; 
-    
-}
-
-h3.company-name-job-listing {
-	font-family: Poppins; 
-	font-weight: 300;
-	font-size: 15px; 
-	color: #0a6b8d; 
 }
 
 .job-location {
-    font-size: 14px;
-    color: #777;
+    margin: auto; 
 }
 
 /* Job Meta Container */
@@ -230,6 +239,7 @@ h3.company-name-job-listing {
     display: flex; /* Enable Flexbox layout */
     justify-content: space-between; /* Distribute items with equal space between */
     gap: 10px; /* Optional: Add consistent spacing between items */
+    align-items: center; 
 }
 
 ul.meta {
@@ -243,9 +253,9 @@ ul.meta {
 
 ul.meta li.job-type {
     font-size: 15px;
-    color: #333;
+    color: #0a6b8d;
     font-family: Poppins; 
-    font-weight: 300; 
+    font-weight: 500; 
 }
 
 /* Sidebar Section */

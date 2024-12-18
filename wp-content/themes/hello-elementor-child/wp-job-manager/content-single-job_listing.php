@@ -50,25 +50,27 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 
-        <div class="div-test">
+    
 
-        <div>
-            <?php the_job_location(); ?>
-            <?php the_job_publish_date(); ?>
+        <div class="top-div">
+
+
+        <div class="meta-information-single">
+            <p><?php the_job_publish_date(); ?></p>
+            <p><?php the_job_type(); ?></p>
+            <p><?php the_company_name(); ?></p>
+            <p><?php the_job_location(); ?></p> 
+        </div>
+           
             
-        </div>
-                        <?php
-                            /**
-                             * single_job_listing_start hook
-                             *
-                             * @hooked job_listing_meta_display - 20
-                             * @hooked job_listing_company_display - 30
-                             */
-                            do_action( 'single_job_listing_start' );
-                        ?>
-        </div>
-                      
-                 
+            
+
+            
+       
+                 <div class="job-title">
+                    <h1><?php wpjm_the_job_title(); ?></h1>
+
+                 </div>
 
 
                 <div class="job_description">
@@ -98,6 +100,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 <?php endif; ?>
 
+
 	
 </body>
 </html>
@@ -105,10 +108,6 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 <style>
-
-    .div-test [
-        background: red;
-    ]
 
 	/* General Body Styling */
 body {
@@ -143,8 +142,26 @@ body {
     object-fit: contain; /* Ensure the entire image fits within the container */
 }
 
+.meta-information-single {
+    display: flex; 
+    position: left; 
+
+}
+
+.meta-information-single p {
+    font-family: Poppins;
+    color: #333333;
+    font-weight: 200;
+    margin-right: 10px; /* Add space between the elements */
+}
 
 
+.job-title {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0a6b8d;
+    font-family: Balgin Bold;
+    padding-top: 20px;
+}
 
 
 
