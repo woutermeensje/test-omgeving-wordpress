@@ -34,3 +34,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'job_application_end', $apply ); ?>
 	</div>
 <?php endif; ?>
+
+
+<style>
+
+
+</style>

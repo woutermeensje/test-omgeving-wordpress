@@ -62,10 +62,6 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
             <p><?php the_job_location(); ?></p> 
         </div>
            
-            
-            
-
-            
        
                  <div class="job-title">
                     <h1><?php wpjm_the_job_title(); ?></h1>
@@ -89,8 +85,6 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
                 ?>
             <?php endif; ?>
         </div>
-
-
 
 
 	</div>
