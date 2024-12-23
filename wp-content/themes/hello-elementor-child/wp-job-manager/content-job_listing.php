@@ -61,7 +61,7 @@
                                             <?php endif; ?>
                                         </ul>
 
-                                        <?php the_job_location(true); ?>
+                                        <p class="job-location"><?php the_job_location(true); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ li.job-listing:hover {
     z-index: 1; /* Keeps the correct stacking order */
     margin: auto; /* No change here */
     border-radius: 5px; /* Rounded corners for the container */
-    border: 2px solid #0a6b8d; /* Adds a border */
+    border: 1px solid #0a6b8d; /* Adds a border */
     overflow: hidden; /* Ensures the logo doesn't overflow the container */
 }
 
@@ -230,6 +230,10 @@ h2.job-title {
 
 .job-location {
     margin: auto; 
+    font-size: 13px !important; 
+    color: #333  !important; 
+    font-family: Poppins  !important; 
+    font-weight: 200  !important; 
 }
 
 /* Job Meta Container */
