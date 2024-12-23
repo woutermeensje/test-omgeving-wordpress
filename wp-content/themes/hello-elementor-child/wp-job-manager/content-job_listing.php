@@ -95,7 +95,6 @@ body {
 .main-container {
     display: flex;
     justify-content: center;
-    
 }
 
 
@@ -295,26 +294,49 @@ ul.meta li.job-type {
 @media only screen and (max-width: 768px) {
     .content-container {
         flex-direction: column;
+        
     }
 
-    li.job-listing {
-        flex-direction: column;
-        text-align: center;
+    .li.job-listing {
+        margin-top: 0px !important;  
     }
 
-    .rounded-image {
-        margin: 0 auto 10px auto;
+    .vacature-content {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important; 
+        margin-top: 0px !important;  
+
     }
 
-    .rounded-image {
-        border: 2px solid yellow;
-    }
+    
     .job-meta-container ul.meta {
-        justify-content: center;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-top: 0px !important;  
+
     }
 
-    .side-bar-jobs {
-        margin-top: 20px;
+    .job-meta-container ul.meta li.job-type {
+        font-size: 12px;
+    }
+
+    div.job-details-container {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+
+
+    h2.job-title {
+        font-size: 20px;
+        font-family: Poppins !important; 
+    }
+
+    a {
+        font-size: 20px !important;
+        font-family: Balgin Bold !important; 
+        font-weight: 500;
+        color: #0a6b8d !important; 
     }
 
     .rounded-image {
@@ -322,44 +344,18 @@ ul.meta li.job-type {
     }
 
     .job-cover-image {
-        display: none;
+        display: none !important;;
+    }
+
+    .jobs-list-container {
+        margin: 0px; 
+    }
+
+    a.google_map_link {
+        display: none !important; 
     }
 }
 
-/* Hide Logo on All Screens Smaller Than Desktop */
-@media only screen and (max-width: 1024px) {
-    .content-container {
-        flex-direction: column;
-    }
-
-    li.job-listing {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .rounded-image {
-        margin: 0 auto 10px auto;
-    }
-
-    .rounded-image {
-        border: 2px solid #0a6b8d;
-    }
-    .job-meta-container ul.meta {
-        justify-content: center;
-    }
-
-    .side-bar-jobs {
-        margin-top: 20px;
-    }
-
-    .rounded-image {
-        display: none !important; /* Hides the logo on screens smaller than 768px */
-    }
-
-    .job-cover-image {
-        display: none;
-    }
-}
 
 
 
