@@ -299,6 +299,8 @@ ul.meta li.job-type {
 
     .li.job-listing {
         margin-top: 0px !important;  
+        padding-top: 0px !important;
+        padding-bottom: 0px !important; 
     }
 
     .vacature-content {
@@ -323,9 +325,9 @@ ul.meta li.job-type {
     div.job-details-container {
         padding-top: 0px;
         padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
-
-
 
     h2.job-title {
         font-size: 20px;
@@ -349,6 +351,8 @@ ul.meta li.job-type {
 
     .jobs-list-container {
         margin: 0px; 
+        padding-top: 0px !important;
+        padding-bottom: 0px !important; 
     }
 
     a.google_map_link {
