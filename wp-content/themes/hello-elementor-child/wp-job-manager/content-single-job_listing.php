@@ -150,8 +150,9 @@ body {
 
 .meta-information-single p {
     font-family: Poppins;
-    color: #333333;
-    font-weight: 200;
+    font-size: 15px; 
+    color: #0a6b8d;
+    font-weight: 500;
     margin-right: 10px; /* Add space between the elements */
 }
 

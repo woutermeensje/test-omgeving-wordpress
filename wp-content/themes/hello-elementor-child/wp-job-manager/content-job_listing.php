@@ -44,8 +44,6 @@
 
                             <div class="vacature-meta"> 
                             <div class="job-meta-container">
-
-                                
                            
                                         <?php do_action('job_listing_meta_start'); ?>
                                         <?php do_action('job_listing_meta_end'); ?>
@@ -180,8 +178,8 @@ li.job-listing:hover {
 .company-name-job-listing {
     font-family: Poppins; 
 	font-size: 13px !important; 
-	color: #0a6b8d !important;
-	font-weight: 500 !important; 
+	color: #333 !important;
+	font-weight: 200 !important; 
 }
 
 .job-title {
