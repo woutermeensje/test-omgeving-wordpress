@@ -173,7 +173,6 @@ do_action( 'job_manager_job_filters_before', $atts );
 </script>
 
 
-<style>
 
 
 <style>
@@ -299,12 +298,152 @@ do_action( 'job_manager_job_filters_before', $atts );
         pointer-events: none; /* Prevent the icon from interfering with user interactions */
     }
 
+    /* -----------------------------------
+   General Form Styling (Main Wrapper)
+-------------------------------------- */
+.job_filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+    margin-bottom: 0px; /* Add your background image */
+    padding: 35px 35px 0 35px; /* Add padding for top, left, and right, but bottom 0 */
+    border-radius: 15px; /* Rounded corners */
+    margin-top: 0px; 
+    background: black; 
+}
+
+.showing_jobs {
+    display: none !important; 
+}
+
+form.job_filters {
+	background: white; 
+    background: transparent; /* Remove background color */
+
+}
+
+/* -----------------------------------
+   Flex Wrapper for All Input Fields
+-------------------------------------- */
+.form_flex_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between individual elements */
+    align-items: flex-start;
+}
+
+
+/* -----------------------------------
+   Search Basic Design
+-------------------------------------- */
+.search-basic {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Stack elements horizontally */
+    gap: 10px; /* Add 10px gap between elements */
+    width: 100%; /* Make sure it spans the full width */
+    border-radius: 5px; 
+    padding: 25px; /* Add padding for a better look */
+    box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.15);
+    margin: auto; 
+    border: 1px solid #0a6b8d; /* Light border */
+}
+
+.search-basic > div {
+    width: 100%; /* Each child div takes up 70% width */
+}
+
+
+.search-basic input[type="text"],
+.search-basic input[type="submit"] {
+    width: 100%; /* Inputs and buttons span full width */
+    padding: 10px; /* Add padding for a better look */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+    font-size: 16px; /* Adjust font size for better readability */
+}
+
+.input#search_keywords {
+    border: none !important; /* Removes the border */
+    outline: none; /* Removes the outline when focused */
+}
+
+.search-basic input[type="submit"] {
+    background-color: #0a6b8d; /* Add button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.search-basic input[type="submit"]:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+
+.search_submit input[type="submit"] {
+    background-color: #0a6b8d; /* Primary button color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Text weight */
+    padding: 12px 24px; /* Padding for size */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.search_submit input[type="submit"]:hover {
+    background-color: #0a6b8d; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.search_submit input[type="submit"]:active {
+    background-color: #0a6b8d; /* Even darker blue when clicked */
+    transform: translateY(0); /* Reset lift on click */
+}
+
+.search_submit {
+    text-align: center; /* Center-align the button in its container */
+}
+
+
+/* -----------------------------------
+   Styling: Extra filters
+-------------------------------------- */
+
+.extra-filters {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Stack elements horizontally */
+    gap: 10px; /* Add 10px gap between elements */
+    width: 100%; /* Make sure it spans the full width */
+    border-radius: 5px; 
+    padding: 25px; 
+}
+
+.extra-filters > div {
+    width: 100%; /* Each child div takes up 70% width */
+}
+
+.text-in-form {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    font-size: 13px; /* Adjust font size for better readability */
+}
+
+
+
+
 
 
 
     @media only screen and (max-width: 768px) {
     .extra-filters {
         display: block; /* Stack filters vertically */
+        box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.15);
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #0a6b8d; /* Light border */
     }
 
     .extra-filters > div {
@@ -313,6 +452,17 @@ do_action( 'job_manager_job_filters_before', $atts );
 
     select.custom-multi-select {
         font-size: 16px; /* Slightly larger font for easier tapping */
+    }
+
+    .search-basic {
+        display: block; 
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #0a6b8d; /* Light border */
+    }
+
+    .search-basic  > div{ 
+        padding: 15px;
+
     }
 }
 
