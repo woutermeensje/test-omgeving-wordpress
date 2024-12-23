@@ -373,6 +373,7 @@ form.job_filters {
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth hover effect */
+    font-family: Balgin Bold; /* Use a clean font */
 }
 
 .search-basic input[type="submit"]:hover {
