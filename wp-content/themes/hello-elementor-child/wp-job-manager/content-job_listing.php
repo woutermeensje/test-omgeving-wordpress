@@ -68,14 +68,15 @@
                      
                     </li>
                 </ul>
+
+                
            
 
         </div>
-
         
     </div>
 
-
+                                                 
 </body>
 </html>
 
@@ -292,16 +293,38 @@ ul.meta li.job-type {
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
+    
+    .jobs-list-container {
+        width: 100%; /* Default to full width */
+        max-width: 600px; /* Set the maximum width */
+        min-width: 320px; /* Set the minimum width */
+        margin: 0 auto; /* Center it if the width is less than 100% */
+        padding: 10px; /* Optional: Add some padding */
+    }
+
+    .jobs-list:hover {
+        
+    }
+    
+    
     .content-container {
         flex-direction: column;
-        
     }
 
     .li.job-listing {
         margin-top: 0px !important;  
         padding-top: 0px !important;
         padding-bottom: 0px !important; 
+        
     }
+
+    .job-details-container {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+   
 
     .vacature-content {
         padding-top: 0px !important;
@@ -357,6 +380,9 @@ ul.meta li.job-type {
 
     a.google_map_link {
         display: none !important; 
+    }
+
+    p {
     }
 }
 

@@ -85,14 +85,15 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
                 ?>
             <?php endif; ?>
         </div>
+        <?php else : ?>
 
-
-	</div>
-<?php else : ?>
-
-	<?php get_job_manager_template_part( 'access-denied', 'single-job_listing' ); ?>
+<?php get_job_manager_template_part( 'access-denied', 'single-job_listing' ); ?>
 
 <?php endif; ?>
+
+	</div>
+
+
 
 
 	
@@ -102,6 +103,11 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 <style>
+
+
+h1.entry-title {
+    display: none; 
+}
 
 	/* General Body Styling */
 body {
@@ -155,6 +161,7 @@ body {
     padding-bottom: 10px;
     border-bottom: 2px solid #0a6b8d;
     font-family: Balgin Bold;
+    font-size: 20px !important; 
     padding-top: 20px;
 }
 
@@ -184,6 +191,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: #333;
+    margin-top: 20px !important; 
 
 }
 
@@ -221,6 +229,20 @@ body {
     font-family: Balgin Bold; 
 }
 
+
+
+input.application_button.button {
+	background: #0a6b8d;
+	border: 1px solid #0a6b8d; 
+	color: white !important; 
+}
+
+input.application_button.button:hover {
+	background: white;
+	border: 1px solid white; 
+	color: #0a6b8d !important; 
+	border: 1px solid #0a6b8d; 
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .single_job_listing {
