@@ -105,8 +105,6 @@ body {
   padding: 0px; 
 }
 
-
-
 /* Job List */
 ul.job-list {
     list-style: none;
@@ -134,8 +132,6 @@ li.job-listing:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 }
-
-
 
 
 .rounded-image {
@@ -332,13 +328,11 @@ ul.meta li.job-type {
         margin-top: 0px !important;  
 
     }
-
     
     .job-meta-container ul.meta {
         padding-top: 0px !important;
         padding-bottom: 0px !important;
         margin-top: 0px !important;  
-
     }
 
     .job-meta-container ul.meta li.job-type {

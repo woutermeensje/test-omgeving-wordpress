@@ -29,7 +29,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post;
 
 if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
+
+<div class="custom-top-section">
+        <p>This is content added above the single job listing.</p>
+    </div>
+
+    <div>
 	<div class="single_job_listing">
+       
+
+
+       
         <div class="cover-image-top">
             <?php 
                             // Display Cover Image if available
@@ -48,12 +58,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
         <div class="content-part-job-description">
 
-
-
-    
-
         <div class="top-div">
-
 
         <div class="meta-information-single">
             <p><?php the_job_publish_date(); ?></p>
@@ -85,18 +90,65 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
                 ?>
             <?php endif; ?>
         </div>
+        </div>
+
+       
+    
         <?php else : ?>
 
 <?php get_job_manager_template_part( 'access-denied', 'single-job_listing' ); ?>
 
+
+
+
 <?php endif; ?>
 
-	</div>
+</div>
+
+
+<div class="recent-jobs-container">
+    <ul class="recent-jobs-list">
+        <?php
+        // Query for recent jobs
+        $recent_jobs = new WP_Query(array(
+            'post_type'      => 'job_listing',
+            'posts_per_page' => 5, // Adjust the number of jobs as needed
+            'orderby'        => 'date',
+            'order'          => 'DESC',
+        ));
+
+        if ($recent_jobs->have_posts()) :
+            while ($recent_jobs->have_posts()) : $recent_jobs->the_post(); ?>
+                <li class="recent-job-item">
+
+                 <!-- Job Logo -->
+                 <div class="rounded-image">
+                        <div class="logo-wrapper">
+                            <?php the_company_logo(); ?>
+                        </div>
+                    </div>
+                  
+
+                    <div class="recent-job-content">
+                        <h3 class="recent-job-title"><?php the_title(); ?></h3>
+                        
+                        <p class="recent-job-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+                    </div>
+
+                    <h4><?php the_company_name(); ?></h4>
+                    <!-- Button to Job -->
+                    <a href="<?php the_permalink(); ?>" class="recent-job-button">View Job</a>
+                </li>
+            <?php endwhile;
+            wp_reset_postdata(); // Reset the query
+        else : ?>
+            <li class="no-jobs-found">No recent jobs found.</li>
+        <?php endif; ?>
+    </ul>
+</div>
 
 
 
-
-	
 </body>
 </html>
 
@@ -149,19 +201,22 @@ body {
 }
 
 .meta-information-single p {
-    font-family: Poppins;
+    font-family: Balgin Bold;
     font-size: 15px; 
-    color: #0a6b8d;
-    font-weight: 500;
+    color: white;
+    font-weight: 300;
     margin-right: 10px; /* Add space between the elements */
+    background-color: #0a6b8d;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 
-.job-title {
+.job-title h1 {
     padding-bottom: 10px;
     border-bottom: 2px solid #0a6b8d;
     font-family: Balgin Bold;
-    font-size: 20px !important; 
+    font-size: 25px !important; 
     padding-top: 20px;
 }
 
@@ -187,7 +242,7 @@ body {
 /* Job Description Section */
 .job_description {
     font-family: Poppins;  
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.6;
     color: #333;
@@ -246,7 +301,11 @@ input.application_button.button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .single_job_listing {
-        padding: 15px;
+        width: 100%; /* Default to full width */
+        max-width: 600px; /* Set the maximum width */
+        min-width: 320px; /* Set the minimum width */
+        margin: 0 auto; /* Center it if the width is less than 100% */
+        padding: 10px; /* Optional: Add some padding */
     }
 
     .single_job_listing .job-application .application_button {
@@ -255,6 +314,61 @@ input.application_button.button:hover {
     }
 }
 
+.recent-jobs-container {
+    max-width: 80%;
+    margin: 40px auto;
+    
+}
+
+.recent-jobs-list {
+    list-style: none;
+    padding: 0;
+}
+
+
+.recent-job-item {
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #0a6b8d;
+    decoration: none; 
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    display: flex; 
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.recent-job-content h3 {
+    font-family: Balgin Bold;
+    font-size: 20px;
+    color: #333333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.recent-job-content p {
+    font-family: Poppins; 
+    font-size: 13px;
+    font-weight: 200; 
+    color: #333333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    color: #ffffff; 
+    font-family: Balgin Bold;
+    font-size: 15px;
+}
+
+.rounded-image .logo-wrapper img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
 
 
 </style>
+
