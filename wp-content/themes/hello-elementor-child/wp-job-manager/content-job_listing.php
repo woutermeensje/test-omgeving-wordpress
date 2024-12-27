@@ -126,6 +126,7 @@ li.job-listing {
     margin-top: 30px;
     height: 325px; 
     position: relative; 
+
 }
 
 li.job-listing:hover {
@@ -146,6 +147,8 @@ li.job-listing:hover {
     border-radius: 5px; /* Rounded corners for the container */
     border: 1px solid #0a6b8d; /* Adds a border */
     overflow: hidden; /* Ensures the logo doesn't overflow the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+
 }
 
 .logo-wrapper img {
@@ -154,6 +157,8 @@ li.job-listing:hover {
     object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
     display: block; /* Prevents inline spacing issues */
     background: white; 
+    padding: 5px; 
+    border-radius: 6px; 
 }
 
 

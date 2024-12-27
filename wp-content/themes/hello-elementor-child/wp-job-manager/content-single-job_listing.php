@@ -382,15 +382,18 @@ input.application_button.button:hover {
     font-size: 15px;
 }
 
+
+
 .rounded-image .logo-wrapper img {
     max-height: 50%;
     max-width: 50%;
     border-radius: 0%;
     object-fit: cover;
     margin-bottom: 10px;
-    border: 1px solid #0a6b8d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     border-radius: 5px;
     margin-right: 0px; 
+    padding: 10px; 
 }
 
 .logo-and-title {
