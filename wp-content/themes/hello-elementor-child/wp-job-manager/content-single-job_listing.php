@@ -174,12 +174,37 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 <style>
 
+body {
+    font-family: Poppins; 
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.custom-top-section {
+    background-color: #0a6b8d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Balgin Bold;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 100vw; /* Full viewport width */
+    position: relative; /* Ensure it stays within its parent context */
+    left: 0; /* Align to the left edge */
+   
+}
+
 
 h1.entry-title {
     display: none; 
 }
 
-	/* General Body Styling */
+
 
 /* Single Job Listing Container */
 .single_job_listing {
@@ -415,19 +440,7 @@ a.job-listing-link {
 }
 
 
-.custom-top-section {
-    background-color: #0a6b8d;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: Balgin Bold;
-    font-size: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    width: 100vw; /* Full viewport width */
-    margin: 0; /* Remove default margins */
 
-}
 
 </style>
 
