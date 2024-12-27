@@ -119,7 +119,10 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
         if ($recent_jobs->have_posts()) :
             while ($recent_jobs->have_posts()) : $recent_jobs->the_post(); ?>
+
                 <li class="recent-job-item">
+                <a href="<?php the_job_permalink(); ?>" class="job-listing-link">
+
 
             
                 <div class="logo-and-title">
@@ -147,12 +150,16 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
                     <div class="recent-job-company">
                     
                     </div>
-                    <!-- Button to Job -->
-                    <a href="<?php the_permalink(); ?>" class="recent-job-button">View Job</a>
+                   
+                    
+                   
+                    </a>
                 </li>
+              
             <?php endwhile;
             wp_reset_postdata(); // Reset the query
         else : ?>
+
             <li class="no-jobs-found">No recent jobs found.</li>
         <?php endif; ?>
     </ul>
@@ -323,6 +330,14 @@ input.application_button.button:hover {
         width: 100%;
         text-align: center;
     }
+
+    .rounded-image .logo-wrapper img {
+        display: none; 
+    }
+
+    .recent-jobs-list  {
+        max-width: 100%;
+    }
 }
 
 .recent-jobs-container {
@@ -350,9 +365,9 @@ input.application_button.button:hover {
     margin-top: 15px; 
     margin-bottom: 15px;   
     display: flex; 
-    justify-content: space-between;
     padding: 20px;
-
+    justify-content: left; /* Center other flex items */
+    align-items: left; /* Align items vertically */
 }
 
 .recent-job-content {
@@ -365,8 +380,12 @@ input.application_button.button:hover {
     color: #333333;
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 
+a.job-listing-link {
+  text-decoration: none;
+}
 .recent-job-content p {
     font-family: Poppins; 
     font-size: 13px;
@@ -398,6 +417,7 @@ input.application_button.button:hover {
 
 .logo-and-title {
     display: flex; 
+    
 }
 
 
