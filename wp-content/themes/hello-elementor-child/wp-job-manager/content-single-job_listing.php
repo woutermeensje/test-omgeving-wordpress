@@ -180,13 +180,6 @@ h1.entry-title {
 }
 
 	/* General Body Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
 /* Single Job Listing Container */
 .single_job_listing {
@@ -422,7 +415,19 @@ a.job-listing-link {
 }
 
 
+.custom-top-section {
+    background-color: #0a6b8d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Balgin Bold;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 100vw; /* Full viewport width */
+    margin: 0; /* Remove default margins */
 
+}
 
 </style>
 
