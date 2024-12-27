@@ -121,7 +121,9 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
             while ($recent_jobs->have_posts()) : $recent_jobs->the_post(); ?>
                 <li class="recent-job-item">
 
-                 <!-- Job Logo -->
+            
+                <div class="logo-and-title">
+               
                  <div class="rounded-image">
                         <div class="logo-wrapper">
                             <?php the_company_logo(); ?>
@@ -130,12 +132,21 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
                   
 
                     <div class="recent-job-content">
-                        <h3 class="recent-job-title"><?php the_title(); ?></h3>
-                        
-                        <p class="recent-job-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+                        <div>
+                            <h3 class="recent-job-title">
+                            <?php the_title(); ?> | <?php the_company_name(); ?>
+                            </h3>
+                             <?php the_job_location(); ?>
+                            
+                          
+                             </div>
+                       
+                        <p class="recent-job-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
                     </div>
 
-                    <h4><?php the_company_name(); ?></h4>
+                    <div class="recent-job-company">
+                    
+                    </div>
                     <!-- Button to Job -->
                     <a href="<?php the_permalink(); ?>" class="recent-job-button">View Job</a>
                 </li>
@@ -172,7 +183,7 @@ body {
 
 /* Single Job Listing Container */
 .single_job_listing {
-    max-width: 80%;
+    max-width: 90%;
     margin: 40px auto;
     background: #ffffff;
     border-radius: 5px;
@@ -315,7 +326,7 @@ input.application_button.button:hover {
 }
 
 .recent-jobs-container {
-    max-width: 80%;
+    max-width: 90%;
     margin: 40px auto;
     
 }
@@ -325,6 +336,11 @@ input.application_button.button:hover {
     padding: 0;
 }
 
+.recent-job-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 
 .recent-job-item {
     background: #ffffff;
@@ -332,15 +348,20 @@ input.application_button.button:hover {
     border: 1px solid #0a6b8d;
     decoration: none; 
     margin-top: 15px; 
-    margin-bottom: 15px;
+    margin-bottom: 15px;   
     display: flex; 
     justify-content: space-between;
     padding: 20px;
+
+}
+
+.recent-job-content {
+    margin: auto;
 }
 
 .recent-job-content h3 {
     font-family: Balgin Bold;
-    font-size: 20px;
+    font-size: 18px;
     color: #333333;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -355,19 +376,28 @@ input.application_button.button:hover {
     margin-bottom: 5px;
 }
 
-h4 {
-    color: #ffffff; 
+.recent-job-company h4 {
+    color: #333333; 
     font-family: Balgin Bold;
     font-size: 15px;
 }
 
 .rounded-image .logo-wrapper img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    max-height: 50%;
+    max-width: 50%;
+    border-radius: 0%;
     object-fit: cover;
     margin-bottom: 10px;
+    border: 1px solid #0a6b8d;
+    border-radius: 5px;
+    margin-right: 0px; 
 }
+
+.logo-and-title {
+    display: flex; 
+}
+
+
 
 
 </style>
