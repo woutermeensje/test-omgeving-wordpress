@@ -22,12 +22,15 @@ do_action( 'job_manager_job_filters_before', $atts );
 
     
 
-
 <form class="job_filters">
     
         <?php do_action( 'job_manager_job_filters_start', $atts ); ?>
 
         <!-- Basic Search -->
+
+        <div>
+
+    
         <div class="search-basic">
 
             <div class="search_keywords">
@@ -56,8 +59,11 @@ do_action( 'job_manager_job_filters_before', $atts );
                     <input type="submit" value="<?php esc_attr_e( 'Doorzoek Vacatures', 'wp-job-manager' ); ?>">
                 </div>
             <?php endif; ?>
+
+          
         </div>
-        
+        <p class="text-under-filter">Stel een job alert in!<strong>Of plaats een vacature in ons netwerk!</strong></p>
+        </div>
         <!-- Extra Filters -->
         <div class="extra-filters">
             <!-- Sectors -->
@@ -130,9 +136,8 @@ do_action( 'job_manager_job_filters_before', $atts );
         </div>
 
         <?php do_action( 'job_manager_job_filters_end', $atts ); ?>
-
-     
 </form>
+
 
 
 </body>
@@ -346,6 +351,7 @@ form.job_filters {
     box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.15);
     margin: auto; 
     border: 1px solid #0a6b8d; /* Light border */
+    background: white; 
 }
 
 .search-basic > div {
@@ -466,5 +472,11 @@ form.job_filters {
 
     }
 }
+
+.text-under-filter {
+    margin: auto; 
+    text-align: center; /* Center the text */
+}
+
 
 </style>

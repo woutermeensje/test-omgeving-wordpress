@@ -34,7 +34,7 @@
                         <div class="job-date"> 
                                     <p><?php echo date_i18n('l j F', strtotime(get_the_date()), true); ?></p>
                                 </div>
-                                                           <h2 class="job-title">
+                                <h2 class="job-title">
                                     <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
                                 </h2>
 
@@ -118,9 +118,9 @@ li.job-listing {
     display: flex;
     align-items: center;
     padding: 0px;
-    border: 2px solid #0a6b8d;
+    border: 1px solid #0a6b8d;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
+    border-radius: 0px;
     background: #fff;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     margin-top: 30px;
@@ -197,7 +197,7 @@ li.job-listing:hover {
 .job-title a {
     color: #333333;
     font-family: Balgin Bold; 
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
 }
 
@@ -210,13 +210,7 @@ p {
 }
 
 
-h2.job-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-    font-family: Balgin Bold;
-    color: black; 
-}
+
 
 .job-title a:hover {
     color: #0a6b8d; 
@@ -319,24 +313,17 @@ ul.meta li.job-type {
     }
 
     .job-details-container {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+      
     }
    
 
     .vacature-content {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important; 
-        margin-top: 0px !important;  
+     
 
     }
     
     .job-meta-container ul.meta {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-        margin-top: 0px !important;  
+     
     }
 
     .job-meta-container ul.meta li.job-type {
@@ -344,10 +331,7 @@ ul.meta li.job-type {
     }
 
     div.job-details-container {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+       
     }
 
     h2.job-title {
@@ -371,9 +355,7 @@ ul.meta li.job-type {
     }
 
     .jobs-list-container {
-        margin: 0px; 
-        padding-top: 0px !important;
-        padding-bottom: 0px !important; 
+      
     }
 
     a.google_map_link {
