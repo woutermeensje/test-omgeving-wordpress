@@ -408,11 +408,12 @@ a.job-listing-link {
     max-width: 50%;
     border-radius: 0%;
     object-fit: cover;
-    margin-bottom: 10px;
+    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     border-radius: 5px;
-    margin-right: 0px; 
-    padding: 10px; 
+    margin: auto; 
+    padding: 2px; 
+    background: #0a6b8d; 
 }
 
 .logo-and-title {

@@ -145,7 +145,6 @@ li.job-listing:hover {
     z-index: 1; /* Keeps the correct stacking order */
     margin: auto; /* No change here */
     border-radius: 5px; /* Rounded corners for the container */
-    border: 1px solid #0a6b8d; /* Adds a border */
     overflow: hidden; /* Ensures the logo doesn't overflow the container */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 
@@ -156,8 +155,8 @@ li.job-listing:hover {
     height: 100%; /* Make the image fill the container height */
     object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
     display: block; /* Prevents inline spacing issues */
-    background: white; 
-    padding: 5px; 
+    background: #0a6b8d; 
+    padding: 2px; 
     border-radius: 6px; 
 }
 

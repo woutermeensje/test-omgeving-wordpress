@@ -2,17 +2,16 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0; /* Removes any default browser margin */
     padding: 0; /* Removes any default browser padding */
-    width: 100%; /* Ensures the body spans the full page width */
-    height: 100%; /* Ensures the body spans the full page height */
     overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevents horizontal scrolling due to misaligned elements */
-}
+        width: 100%; /* Set the width of the body */
+        max-width: 1200px; /* Optional: Limit the maximum width */
+        margin: 0 auto; /* Center the body horizontally */
+    }
+    
 
 
 @font-face {
