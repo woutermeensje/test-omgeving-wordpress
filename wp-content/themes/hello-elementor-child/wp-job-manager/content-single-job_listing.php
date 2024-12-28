@@ -158,6 +158,24 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
     </ul>
 </div>
 
+<div class="job-contact-form">
+    <h2>Stel een vraag over deze vacature</h2>
+    <form action="" method="post" id="job-contact-form">
+        <label for="first_name">Voornaam:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="email">E-mailadres:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Uw vraag:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="hidden" name="job_id" value="<?php echo esc_attr($post->ID); ?>">
+        <button type="submit" name="submit_question">Verstuur Vraag</button>
+    </form>
+</div>
+
+
 <div class="custom-bottom-section">
 <p>
     Stel je vraag via het team van Sustainablejobs.nl.
@@ -242,7 +260,6 @@ h1.entry-title {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker and stronger shadow effect */
     padding: 25px;
 }
-
 
 .cover-image-top {
     position: relative;
@@ -532,6 +549,17 @@ a.job-listing-link {
     font-size: 18px;
     margin: auto; 
 }
+
+
+.job-contact-form {
+    max-width: 80%;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker and stronger shadow effect */
+    padding: 25px;
+}
+
 
 
 
