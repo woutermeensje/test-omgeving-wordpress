@@ -1,13 +1,3 @@
-html, body {
-    font-family: 'Poppins', sans-serif;
-    width: 100% !important; /* Set the width of the body */
-    max-width: 1200px !important; /* Optional: Limit the maximum width */
-    margin: 0 auto ; /* Center the body horizontally */
-    margin: 0 !important; /* Override Elementor's styles */
-    padding: 0 !important;
-}
-    
-
 
 
 

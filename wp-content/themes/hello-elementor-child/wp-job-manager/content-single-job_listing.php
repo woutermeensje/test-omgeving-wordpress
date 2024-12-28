@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 
@@ -36,8 +37,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
     <div>
 	<div class="single_job_listing">
-       
-
+    
 
        
         <div class="cover-image-top">
@@ -174,29 +174,29 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 <style>
 
-body {
-    font-family: Poppins; 
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
+
+
+main#content {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-width: 100vw; /* Full viewport width */
+    width: 100%; /* Full width */
+
 }
 
 
-.custom-top-section {
+.custom-top-section p {
     background-color: #0a6b8d;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: Balgin Bold;
-    font-size: 20px;
-    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    width: 100vw; /* Full viewport width */
-    position: relative; /* Ensure it stays within its parent context */
-    left: 0; /* Align to the left edge */
-   
+}
+
+.custom-top-section p {
+    padding-top: 15px; 
+    padding-bottom: 15px;
+    color: white;
+    text-align: center;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 18px;
+    
 }
 
 
