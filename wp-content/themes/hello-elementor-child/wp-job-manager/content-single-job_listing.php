@@ -213,7 +213,7 @@ a.google_map_link {
 
 .button-top-section {
     background-color: #b9d1b3;
-    color: white;
+    color: #0a6b8d;
     border: none;
     padding: 10px 20px;
     margin-left: auto;
@@ -275,6 +275,19 @@ h1.entry-title {
     border-radius: 5px;
     padding: 5px 10px;
 }
+
+.meta-information-single p:hover {
+    font-family: Balgin Bold;
+    font-size: 15px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    font-weight: 300;
+    margin-right: 10px; /* Add space between the elements */
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
 
 
 .job-title h1 {
