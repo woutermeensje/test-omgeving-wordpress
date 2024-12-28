@@ -43,21 +43,11 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
     <div>
 	<div class="single_job_listing">
     
-        <div class="cover-image-top">
-            <?php 
-                            // Display Cover Image if available
-                            $cover_image_id = get_post_meta(get_the_ID(), '_cover_image', true); 
-                            if ($cover_image_id) : 
-                                $cover_image_url = wp_get_attachment_image_url($cover_image_id, 'large'); 
-                            ?>
-                                <div class="job-cover-image">
-                                    <img src="<?php echo esc_url($cover_image_url); ?>" alt="<?php the_title_attribute(); ?>" class="cover-image">
-                                </div>
-                            <?php endif; ?>
+        
             <?php if ( get_option( 'job_manager_hide_expired_content', 1 ) && 'expired' === $post->post_status ) : ?>
                 <div class="job-manager-info"><?php _e( 'This listing has expired.', 'wp-job-manager' ); ?></div>
             <?php else : ?>
-        </div>
+       
 
         <div class="content-part-job-description">
 
@@ -168,6 +158,15 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
     </ul>
 </div>
 
+<div class="custom-bottom-section">
+<p>
+    Stel je vraag via het team van Sustainablejobs.nl.
+</p>
+<button>
+
+</button>
+</div>
+
 
 
 </body>
@@ -176,32 +175,38 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 <style>
-
-
-
 main#content {
     width: 100%; 
 }
 
-
-.custom-top-section  {
+.custom-top-section {
     background-color: #0a6b8d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 18px;
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Adjust left margin for full stretch */
+    position: relative; /* Ensure proper stacking */
+    left: 0; /* Ensure it aligns with the viewport */
     display: flex; 
-    padding-top: 15px; 
-    padding-bottom: 15px;
-    justify-content: space-between ;
 }
+
 
 .custom-top-section p {
     color: white;
     text-align: center;
     font-family: "Balgin Bold", sans-serif;
     font-size: 18px;
+    margin: auto; 
 }
 
 .button-top-section {
-    background-color: #ffdd00;
-    color: #0a6b8d;
+    background-color: #b9d1b3;
+    color: white;
     border: none;
     padding: 10px 20px;
     margin-left: auto;
@@ -223,11 +228,12 @@ h1.entry-title {
 
 /* Single Job Listing Container */
 .single_job_listing {
-    max-width: 90%;
+    max-width: 80%;
     margin: 40px auto;
     background: #ffffff;
     border-radius: 5px;
-    border: 1px solid #0a6b8d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker and stronger shadow effect */
+    padding: 25px;
 }
 
 
@@ -371,10 +377,33 @@ input.application_button.button:hover {
     .recent-jobs-list  {
         max-width: 100%;
     }
+
+    .custom-top-section p {
+    color: white;
+    text-align: center;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 14px;
+    margin: auto; 
+}
+
+    .button-top-section {
+        background-color: #b9d1b3;
+        color: #0a6b8d;
+        border: none;
+        padding: 10px 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-family: "Balgin Bold", sans-serif;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 }
 
 .recent-jobs-container {
-    max-width: 90%;
+    max-width: 80%;
     margin: 40px auto;
     
 }
@@ -454,6 +483,32 @@ a.job-listing-link {
     
 }
 
+.custom-bottom-section {
+    background-color: #0a6b8d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 18px;
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Adjust left margin for full stretch */
+    position: relative; /* Ensure proper stacking */
+    left: 0; /* Ensure it aligns with the viewport */
+    display: flex; 
+    position: sticky; /* Makes the div sticky */
+    bottom: 0; /* Sticks to the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.custom-bottom-section p {
+    color: white;
+    text-align: center;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 18px;
+    margin: auto; 
+}
 
 
 
