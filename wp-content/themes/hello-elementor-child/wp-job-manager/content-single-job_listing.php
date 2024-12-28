@@ -1,10 +1,12 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
+    
+
 
 <body>
 
@@ -32,14 +34,15 @@ global $post;
 if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 <div class="custom-top-section">
-        <p>This is content added above the single job listing.</p>
+        <p>Bekijk alle vacatures op Sustainablejobs.nl</p>
+        <button class="button-top-section">
+            Alle Vacatures
+        </button>        
     </div>
 
     <div>
 	<div class="single_job_listing">
     
-
-       
         <div class="cover-image-top">
             <?php 
                             // Display Cover Image if available
@@ -177,26 +180,38 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 main#content {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    max-width: 100vw; /* Full viewport width */
-    width: 100%; /* Full width */
-
+    width: 100%; 
 }
 
 
-.custom-top-section p {
+.custom-top-section  {
     background-color: #0a6b8d;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-.custom-top-section p {
+    display: flex; 
     padding-top: 15px; 
     padding-bottom: 15px;
+    justify-content: space-between ;
+}
+
+.custom-top-section p {
     color: white;
     text-align: center;
     font-family: "Balgin Bold", sans-serif;
     font-size: 18px;
-    
+}
+
+.button-top-section {
+    background-color: #ffdd00;
+    color: #0a6b8d;
+    border: none;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 
