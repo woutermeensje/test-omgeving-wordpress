@@ -62,7 +62,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
            
        
                  <div class="job-title">
-                    <h1><?php wpjm_the_job_title(); ?></h1>
+                    <h1><?php wpjm_the_job_title(); ?> | <?php the_company_name(); ?></h1>
 
                  </div>
 
@@ -179,6 +179,13 @@ main#content {
     width: 100%; 
 }
 
+a.google_map_link {
+    text-decoration: none; 
+    font-family: Balgin Bold !important;
+    color: #0a6b8d !important;
+    font-size: 15px;
+}
+
 .custom-top-section {
     background-color: #0a6b8d;
     color: white;
@@ -260,10 +267,11 @@ h1.entry-title {
 .meta-information-single p {
     font-family: Balgin Bold;
     font-size: 15px; 
-    color: white;
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
     font-weight: 300;
     margin-right: 10px; /* Add space between the elements */
-    background-color: #0a6b8d;
+    background-color: white;
     border-radius: 5px;
     padding: 5px 10px;
 }
@@ -273,7 +281,7 @@ h1.entry-title {
     padding-bottom: 10px;
     border-bottom: 2px solid #0a6b8d;
     font-family: Balgin Bold;
-    font-size: 25px !important; 
+    font-size: 20px !important; 
     padding-top: 20px;
 }
 
