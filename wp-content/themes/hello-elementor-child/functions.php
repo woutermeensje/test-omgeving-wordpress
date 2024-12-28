@@ -392,3 +392,38 @@ function add_company_logo_field($fields) {
     );
     return $fields;
 }
+
+
+add_action('init', 'handle_job_contact_form_submission');
+
+function handle_job_contact_form_submission() {
+    if (isset($_POST['submit_question'])) {
+        // Valideer gegevens
+        $first_name = sanitize_text_field($_POST['first_name']);
+        $email = sanitize_email($_POST['email']);
+        $message = sanitize_textarea_field($_POST['message']);
+        $job_id = intval($_POST['job_id']);
+
+        // Haal het e-mailadres van de contactpersoon op
+        $contact_email = get_post_meta($job_id, '_application', true);
+
+        if (!empty($contact_email)) {
+            // Stuur de e-mail
+            $subject = 'Vraag over vacature #' . $job_id;
+            $body = "Naam: $first_name\nE-mail: $email\n\nVraag:\n$message";
+            $headers = ['Content-Type: text/plain; charset=UTF-8', 'From: ' . $email];
+
+            wp_mail($contact_email, $subject, $body, $headers);
+
+            // Succesbericht
+            add_action('wp_footer', function() {
+                echo '<script>alert("Uw vraag is succesvol verstuurd!");</script>';
+            });
+        } else {
+            // Foutbericht als er geen contactpersoon is
+            add_action('wp_footer', function() {
+                echo '<script>alert("Er is geen contactpersoon voor deze vacature.");</script>';
+            });
+        }
+    }
+}

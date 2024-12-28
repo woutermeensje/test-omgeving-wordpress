@@ -560,6 +560,41 @@ a.job-listing-link {
     padding: 25px;
 }
 
+.job-contact-form h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0a6b8d;
+}
+
+.job-contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.job-contact-form input,
+.job-contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.job-contact-form button {
+    background-color: #0a6b8d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.job-contact-form button:hover {
+    background-color: #0073a9;
+}
 
 
 
