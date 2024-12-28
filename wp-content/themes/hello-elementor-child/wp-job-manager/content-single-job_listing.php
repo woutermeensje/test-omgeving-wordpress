@@ -274,6 +274,8 @@ h1.entry-title {
     background-color: white;
     border-radius: 5px;
     padding: 5px 10px;
+    cursor: pointer; 
+
 }
 
 .meta-information-single p:hover {
