@@ -636,6 +636,7 @@ a.job-listing-link {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker and stronger shadow effect */
     padding: 25px;
+    width: 50%; 
 }
 
 .job-contact-form h2 {
