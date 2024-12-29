@@ -34,13 +34,13 @@ global $post;
 if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 <div class="custom-top-section">
-        <p>Bekijk alle vacatures op Sustainablejobs.nl</p>
+        <p>Ontvang wekelijkse onze vacatures</p>
 
         <div class="custom-top-section-form">
             <form action=""></form>
-            <input type="text" placeholder="Zoek naar vacatures" class="search-input">
+            <input type="text" placeholder="E-mailadres.." class="search-input">
             <button class="button-top-section">
-                Alle Vacatures
+                Bevestigen
             </button>  
         </div>
               
@@ -167,14 +167,12 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 <div class="job-contact-form">
     <h2>Stel een vraag over deze vacature</h2>
     <form action="" method="post" id="job-contact-form">
-        <label for="first_name">Voornaam:</label>
-        <input type="text" id="first_name" name="first_name" required>
 
-        <label for="email">E-mailadres:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Uw vraag:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+    <div class="form-group">
+        <input type="text" id="first_name" name="first_name" placeholder="Voornaam" required>
+        <input type="email" id="email" name="email" placeholder="Email"  required>
+    </div>
+        <textarea id="message" name="message" rows="5" placeholder="Type hier je vraag" required></textarea>
 
         <input type="hidden" name="job_id" value="<?php echo esc_attr($post->ID); ?>">
         <button type="submit" name="submit_question">Verstuur Vraag</button>
@@ -199,6 +197,8 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 <style>
+
+
 main#content {
     width: 100%; 
 }
@@ -232,11 +232,14 @@ a.google_map_link {
     text-align: center;
     font-family: "Balgin Bold", sans-serif;
     font-size: 18px;
-    margin: auto; 
+    margin-left: auto; 
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px; 
 }
 
 .button-top-section {
-    background-color: #b9d1b3;
+    background-color: #e0d0e1;
     color: #0a6b8d;
     border: none;
     padding: 10px 20px;
@@ -250,17 +253,32 @@ a.google_map_link {
     transition: background-color 0.3s ease;
 }
 
+.button-top-section:hover {
+    background-color: #e0d0e1;
+    color: #0a6b8d;
+    border: none;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
 .custom-top-section-form {
     display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    margin-left: 0px; 
     margin: auto; 
 
 }
 
 .search-input {
     padding: 10px;
-    border: 1px solid ;
+    border: 1px solid #e0d0e1 !important;
     border-radius: 5px;
     font-size: 15px;
     margin-right: 10px;
@@ -268,10 +286,23 @@ a.google_map_link {
     font-weight: 500;
 }
 
+input[type=text]:focus {outline:none;}
+
+
 .search-input:focus {
-    border-color: #0a6b8d; /* Blue border */
-    outline: none;
-    box-shadow: 0 0 5px rgba(10, 107, 141, 0.5); /* Blue shadow */
+    border-color: #e0d0e1; /* Blue border */
+}
+
+.search-input:active {
+    border-color: #e0d0e1; /* Blue border */
+    border: 1px solid #e0d0e1 !important;
+
+}
+
+.search-input:hover {
+    border-color: #e0d0e1; /* Blue border */
+    border: 1px solid #e0d0e1 !important;
+
 }
 
 
@@ -445,6 +476,11 @@ input.application_button.button:hover {
         min-width: 320px; /* Set the minimum width */
         margin: 0 auto; /* Center it if the width is less than 100% */
         padding: 10px; /* Optional: Add some padding */
+    }
+
+    .recent-jobs-container {
+        width: 100%; /* Default to full width */
+        margin: 0 auto; /* Center it if the width is less than 100% */
     }
 
     .single_job_listing .job-application .application_button {
@@ -638,6 +674,45 @@ a.job-listing-link {
     background-color: #0073a9;
 }
 
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Add space between the input fields */
+
+}
+
+.job-contact-form h2 {
+    font-family: Balgin Bold;
+    font-size: 20px;
+}
+
+.form-group input {
+    flex: 1; /* Each input takes equal space */
+    max-width: 50%; /* Ensure inputs are 50% of the container width */
+    padding: 10px; /* Add padding inside inputs */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Round input corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.job-contact-form button {
+    background-color: #0a6b8d; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding inside the button */
+    font-size: 16px; /* Font size for the button text */
+    font-family: Balgin Bold; /* Font family */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.job-contact-form button:hover {
+    background-color: #0073a9; /* Darker blue on hover */
+    color: white; /* Ensure text remains visible */
+}
 
 
 </style>
