@@ -35,9 +35,15 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 <div class="custom-top-section">
         <p>Bekijk alle vacatures op Sustainablejobs.nl</p>
-        <button class="button-top-section">
-            Alle Vacatures
-        </button>        
+
+        <div class="custom-top-section-form">
+            <form action=""></form>
+            <input type="text" placeholder="Zoek naar vacatures" class="search-input">
+            <button class="button-top-section">
+                Alle Vacatures
+            </button>  
+        </div>
+              
     </div>
 
     <div>
@@ -238,11 +244,47 @@ a.google_map_link {
     margin-right: auto;
     display: block;
     font-family: "Balgin Bold", sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.custom-top-section-form {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: auto; 
+
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 10px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.search-input:focus {
+    border-color: #0a6b8d; /* Blue border */
+    outline: none;
+    box-shadow: 0 0 5px rgba(10, 107, 141, 0.5); /* Blue shadow */
+}
+
+
+.search-input::placeholder {
+    color: #888; /* Change placeholder text color */
+    font-size: 14px; /* Adjust font size */
+    font-style: italic; /* Optional: Make it italic */
+    font-family: Poppins;
+    opacity: 0.7; /* Adjust the opacity */
+}
+
+
+
 
 
 h1.entry-title {
