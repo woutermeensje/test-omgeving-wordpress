@@ -182,10 +182,10 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 <div class="custom-bottom-section">
 <p>
-    Stel je vraag via het team van Sustainablejobs.nl.
+    Maak een account aan in onze database!
 </p>
 <button>
-
+    Account aanmaken
 </button>
 </div>
 
