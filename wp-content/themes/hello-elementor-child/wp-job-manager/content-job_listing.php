@@ -336,7 +336,7 @@ ul.meta li.job-type {
 
     h2.job-title {
         font-size: 20px;
-        font-family: Poppins !important; 
+        font-family: Poppins !important;
     }
 
     a {
