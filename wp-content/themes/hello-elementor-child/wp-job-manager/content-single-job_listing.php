@@ -77,9 +77,19 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
                     <?php wpjm_the_job_description(); ?>
                 </div>
 
-                <?php if ( candidates_can_apply() ) : ?>
-                    <?php get_job_manager_template( 'job-application.php' ); ?>
-                <?php endif; ?>
+                <?php 
+                    // Fetch the company website URL from the job meta field
+                    $company_website = get_post_meta( $post->ID, '_company_website', true ); 
+
+                    if ( ! empty( $company_website ) ) : ?>
+                        <div class="job-apply-button">
+                            <a href="<?php echo esc_url( $company_website ); ?>" class="apply-button" target="_blank">
+                                Apply on Company Website
+                            </a>
+                        </div>
+                    <?php else : ?>
+                        <p>No application link available.</p>
+                    <?php endif; ?>
 
                 <?php
                     /**
@@ -365,7 +375,6 @@ h1.entry-title {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer; 
-
 }
 
 .meta-information-single p:hover {
@@ -477,6 +486,38 @@ input.application_button.button:hover {
         margin: 0 auto; /* Center it if the width is less than 100% */
         padding: 10px; /* Optional: Add some padding */
     }
+
+
+.meta-information-single {
+    display: flex; 
+    position: left; 
+
+}
+
+.meta-information-single p {
+    font-family: Balgin Bold;
+    font-size: 13px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    font-weight: 300;
+    margin-right: 10px; /* Add space between the elements */
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer; 
+}
+
+.meta-information-single p:hover {
+    font-family: Balgin Bold;
+    font-size: 13px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    font-weight: 300;
+    margin-right: 10px; /* Add space between the elements */
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px;
+}
 
     .recent-jobs-container {
         width: 100%; /* Default to full width */
