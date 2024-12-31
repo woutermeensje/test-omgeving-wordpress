@@ -84,7 +84,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
                     if ( ! empty( $company_website ) ) : ?>
                         <div class="job-apply-button">
                             <a href="<?php echo esc_url( $company_website ); ?>" class="apply-button" target="_blank">
-                                Apply on Company Website
+                                Bezoek de sollicitatiepagina
                             </a>
                         </div>
                     <?php else : ?>
@@ -755,6 +755,31 @@ a.job-listing-link {
     background-color: #0073a9; /* Darker blue on hover */
     color: white; /* Ensure text remains visible */
 }
+
+.job-apply-button a {
+    padding: 15px; 
+    background: #0a6b8d;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: Balgin Bold;
+    text-decoration: none; 
+    border: 1px solid #0a6b8d;
+}
+
+
+.job-apply-button a:hover {
+    padding: 15px; 
+    background: white;
+    color: #0a6b8d; ;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: Balgin Bold;
+    text-decoration: none; 
+    border: 1px solid #0a6b8d
+}
+
+
 
 
 </style>
