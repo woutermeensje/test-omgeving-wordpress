@@ -371,7 +371,7 @@ h1.entry-title {
     border: 1px solid #0a6b8d;
     font-weight: 300;
     margin-right: 10px; /* Add space between the elements */
-    background-color: white;
+    background-color: #b9d1b3;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer; 
@@ -758,13 +758,13 @@ a.job-listing-link {
 
 .job-apply-button a {
     padding: 15px; 
-    background: #0a6b8d;
-    color: white;
+    background: #e0d0e1;
+    color: #0a6b8d;
     border-radius: 5px;
     margin-top: 20px;
     font-family: Balgin Bold;
     text-decoration: none; 
-    border: 1px solid #0a6b8d;
+    border: 2px solid #0a6b8d;
 }
 
 
