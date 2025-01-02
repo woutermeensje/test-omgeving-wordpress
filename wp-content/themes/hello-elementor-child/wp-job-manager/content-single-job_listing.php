@@ -389,8 +389,6 @@ h1.entry-title {
     padding: 5px 10px;
 }
 
-
-
 .job-title h1 {
     padding-bottom: 10px;
     border-bottom: 2px solid #0a6b8d;
@@ -398,8 +396,6 @@ h1.entry-title {
     font-size: 20px !important; 
     padding-top: 20px;
 }
-
-
 
 .content-part-job-description {
     padding: 20px;
