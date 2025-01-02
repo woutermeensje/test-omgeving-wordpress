@@ -427,3 +427,37 @@ function handle_job_contact_form_submission() {
         }
     }
 }
+
+
+add_filter('job_manager_get_listings', 'handle_custom_job_filters', 10, 2);
+
+function handle_custom_job_filters($query_args, $args) {
+    // Handle "job_sector" filter
+    if (!empty($_GET['search_sectors'])) {
+        $query_args['tax_query'][] = array(
+            'taxonomy' => 'job_sector',
+            'field'    => 'slug',
+            'terms'    => $_GET['search_sectors'],
+        );
+    }
+
+    // Handle "job_regio" filter
+    if (!empty($_GET['search_regios'])) {
+        $query_args['tax_query'][] = array(
+            'taxonomy' => 'job_regio',
+            'field'    => 'slug',
+            'terms'    => $_GET['search_regios'],
+        );
+    }
+
+    // Handle "job_name" filter
+    if (!empty($_GET['search_job_names'])) {
+        $query_args['tax_query'][] = array(
+            'taxonomy' => 'job_name',
+            'field'    => 'slug',
+            'terms'    => $_GET['search_job_names'],
+        );
+    }
+
+    return $query_args;
+}
