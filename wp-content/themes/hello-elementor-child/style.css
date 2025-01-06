@@ -7,27 +7,50 @@ html, body {
 p {
     font-family: Poppins;
     font-size: 15px;
-    font-weight: 200; 
+    font-weight: 400; 
+    color: #333333; 
+}
+
+li {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400; 
+    color: #333333; 
+    margin: 0 0 1.5em 1.5em; /* Space below list and indentation */
+    padding: 0;
+    list-style-type: disc; /* Default bullet style */
 }
 
 h1  {
     font-family: Balgin Bold;
     font-size: 25px;
+    line-height: 0.8;
+    color: #333333; 
 }
 
 h2 {
     font-family: Balgin Bold;
     font-size: 20px;
+    line-height: 0.8;
+    color: #333333; 
 }
 
 h3 {
     font-family: Balgin Bold;
     font-size: 18px;
+    line-height: 0.8;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    color: #333333; 
 }
 
 h4 {
     font-family: Balgin Bold;
     font-size: 16px;
+    line-height: 0.8;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    color: #333333; 
 }
 
 

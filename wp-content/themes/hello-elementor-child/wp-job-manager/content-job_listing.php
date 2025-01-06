@@ -50,16 +50,14 @@
                                     
                                         <p class="company-name-job-listing"><?php the_company_name(); ?></p>
 
-                                        <ul class="meta">
+                                        <p class="job-type">
                                             <?php if (get_option('job_manager_enable_types')) : ?>
                                                 <?php $types = wpjm_get_the_job_types(); ?>
                                                 <?php if (!empty($types)) : foreach ($types as $type) : ?>
-                                                    <li class="job-type <?php echo esc_attr(sanitize_title($type->slug)); ?>">
-                                                        <?php echo esc_html($type->name); ?>
-                                                    </li>
+                                                    <?php echo esc_html($type->name); ?>
                                                 <?php endforeach; endif; ?>
                                             <?php endif; ?>
-                                        </ul>
+                                        </p>
 
                                         <p class="job-location"><?php the_job_location(true); ?></p>
                                     </div>
@@ -240,6 +238,13 @@ p {
     justify-content: space-between; /* Distribute items with equal space between */
     gap: 10px; /* Optional: Add consistent spacing between items */
     align-items: center; 
+}
+
+.job-meta-container p {
+    font-family: Poppins; 
+	font-size: 13px !important; 
+	color: #333 !important;
+	font-weight: 200 !important; 
 }
 
 ul.meta {
