@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Balgin Bold';
+    src: url('fonts/Balgin-Bold.woff2') format('woff2'),
+         url('fonts/Balgin-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html, body {
     width: 100%; /* Ensure the website spans the entire viewport */
     max-width: 100vw; /* Prevent horizontal overflow */
@@ -70,11 +79,45 @@ h5 {
 }
 
 
-@font-face {
-    font-family: 'Balgin Bold';
-    src: url('fonts/Balgin-Bold.woff2') format('woff2'),
-         url('fonts/Balgin-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+
+/* Basic Link Styling */
+a {
+    color: #3a98b8; /* Default blue */
+    text-decoration: none !important; 
+    font-weight: 500; /* Makes the link bold */
+}
+
+/* Hover State */
+a:hover {
+    color: #1aa5d6; /* Darker blue on hover */
+
+}
+
+/* Visited Link */
+a:visited {
+    color: #6c757d; /* Grayish color for visited links */
+}
+
+/* Active Link */
+a:active {
+    color: #1aa5d6; /* Red when the link is active (clicked) */
+    text-decoration: none;
+}
+
+/* Focused Link */
+a:focus {
+    outline: 2px dashed #e0d0e1; /* Adds a focus outline for accessibility */
+    outline-offset: 2px;
+}
+
+/* Styling Specific Links */
+.special {
+    color: #28a745; /* Green for a special link */
+    font-style: italic; /* Italic text */
+}
+
+.special:hover {
+    color: #155724; /* Darker green on hover */
+    text-decoration: underline;
 }
 
