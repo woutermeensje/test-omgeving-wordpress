@@ -84,7 +84,7 @@ h5 {
 a {
     color: #3a98b8; /* Default blue */
     text-decoration: none !important; 
-    font-weight: 500; /* Makes the link bold */
+    font-weight: 400; /* Makes the link bold */
 }
 
 /* Hover State */
