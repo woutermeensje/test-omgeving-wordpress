@@ -207,9 +207,6 @@ p {
     margin-bottom: 10px; 
 }
 
-
-
-
 .job-title a:hover {
     color: #0a6b8d; 
 }

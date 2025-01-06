@@ -190,6 +190,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 </div>
 
 
+<!--
 <div class="custom-bottom-section">
 <p>
     Maak een account aan in onze database!
@@ -198,6 +199,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
     Account aanmaken
 </button>
 </div>
+-->
 
 
 
