@@ -101,10 +101,7 @@ a:active {
 }
 
 /* Focused Link */
-a:focus {
-    outline: 2px dashed #e0d0e1; /* Adds a focus outline for accessibility */
-    outline-offset: 2px;
-}
+
 
 /* Styling Specific Links */
 .special {
