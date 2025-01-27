@@ -79,10 +79,10 @@
         <h2 class="job-title">
             <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
         </h2>
-        <div class="job_text">
-            <p><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
+        <div class="job_text-mobile">
+            <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
         </div>
-        <p class="company-name"><?php the_company_name(); ?></p>
+        <p class="company-name-mobile"><?php the_company_name(); ?></p>
     </div>
 
 </body>
@@ -300,23 +300,38 @@ ul.meta li.job-type {
        /* CSS to hide and style the mobile job listings */
        .mobile-job-listings {
             display: none; /* Hide by default */
-            padding: 20px;
-            background-color: #f9f9f9; /* Light background color */
-            border-radius: 8px;
-            margin: 10px;
+            background-color: white; /* Light background color */
+            border-radius: 5px;
+            margin: 25px; 
+            padding: 15px; /* Add some padding */
+            border: 1px solid #0a6b8d;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        .mobile-job-listings:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
         .mobile-job-listings h2.job-title {
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 15px;
             margin-bottom: 10px;
         }
 
-        .mobile-job-listings .job_text {
+
+        .mobile-job-listings .job_text-mobile {
             font-size: 14px;
             color: #555;
         }
+
+        .company-name-mobile {
+            font-size: 15px;
+            font-family: Poppins;
+            font-weight: 700;
+            color: #0a6b8d;
+        }
+
+    
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
@@ -405,6 +420,19 @@ ul.meta li.job-type {
     .mobile-job-listings {
         display: block; 
     }
+
+    .mobile-job-listings h2.job-title a {
+        font-family: Poppins !important; 
+        font-size: 16px !important;
+        color: #333333 !important; 
+        font-weight: 700; 
+}
+
+.mobile-job-listings h2.job-title a:hover {
+        font-family: Poppins !important; 
+}
+
+   
 }
 
 
