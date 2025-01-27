@@ -74,7 +74,17 @@
         
     </div>
 
-                                                 
+                
+    <div class="mobile-job-listings">
+        <h2 class="job-title">
+            <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
+        </h2>
+        <div class="job_text">
+            <p><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
+        </div>
+        <p class="company-name"><?php the_company_name(); ?></p>
+    </div>
+
 </body>
 </html>
 
@@ -287,9 +297,34 @@ ul.meta li.job-type {
     font-size: 16px;
 }
 
+       /* CSS to hide and style the mobile job listings */
+       .mobile-job-listings {
+            display: none; /* Hide by default */
+            padding: 20px;
+            background-color: #f9f9f9; /* Light background color */
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-job-listings h2.job-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .mobile-job-listings .job_text {
+            font-size: 14px;
+            color: #555;
+        }
+
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
     
+
+    .main-container {
+        display: none; 
+    }
     .jobs-list-container {
         width: 100%; /* Default to full width */
         max-width: 600px; /* Set the maximum width */
@@ -365,6 +400,10 @@ ul.meta li.job-type {
     }
 
     p {
+    }
+
+    .mobile-job-listings {
+        display: block; 
     }
 }
 
