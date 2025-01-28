@@ -303,7 +303,7 @@ ul.meta li.job-type {
             background-color: white; /* Light background color */
             border-radius: 5px;
             margin: 25px; 
-            padding: 15px; /* Add some padding */
+            padding: 10px; /* Add some padding */
             border: 1px solid #0a6b8d;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -316,6 +316,12 @@ ul.meta li.job-type {
         .mobile-job-listings h2.job-title {
             font-size: 15px;
             margin-bottom: 10px;
+        }
+
+        .mobile-job-listings h2.job-title:hover {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: #0a6b8d !important;
         }
 
 
