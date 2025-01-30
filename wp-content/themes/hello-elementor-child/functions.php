@@ -219,16 +219,18 @@ function register_custom_regio_taxonomy() {
         'labels' => [
             'menu_name' => esc_html__( "Regio's", 'textdomain' ),
             'all_items' => esc_html__( "All Regio's", 'textdomain' ),
+            'edit_item' => esc_html__( "Edit Regio", 'textdomain' ),
+            'view_item' => esc_html__( "View Regio", 'textdomain' ),
+            'update_item' => esc_html__( "Update Regio", 'textdomain' ),
+            'add_new_item' => esc_html__( "Add New Regio", 'textdomain' ),
+            'new_item_name' => esc_html__( "New Regio Name", 'textdomain' ),
+            'search_items' => esc_html__( "Search Regio's", 'textdomain' ),
         ],
-        'public' => true,
-        'hierarchical' => true, // Makes it behave like categories
-        'show_ui' => true,
-        'show_admin_column' => true, // Adds a column in admin job listing table
-        'rewrite' => [ 'slug' => 'regio' ], // Custom URL slug
     ];
 
     register_taxonomy('job_regio', ['job_listing'], $args);
 }
+
 
 
 add_action('init', 'register_custom_job_name_taxonomy', 11);
@@ -246,14 +248,13 @@ function register_custom_job_name_taxonomy() {
             'new_item_name' => esc_html__('New Job Name', 'textdomain'),
             'search_items'  => esc_html__('Search Job Names', 'textdomain'),
         ],
-        'public'            => true,
-        'hierarchical'      => false, // Behaves like tags
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => [ 'slug' => 'job-name' ],
-        'show_in_rest'      => true, // Enables REST API support
-        'meta_box_cb'       => 'post_tags_meta_box', // Enables term selection via dropdown
+        'public' => true,
+        'hierarchical' => true, // Acts like categories
+        'show_ui' => true,
+        'show_admin_column' => true, // Show in admin jobs table
+        'rewrite' => [ 'slug' => 'regio' ], // Custom URL slug
+        'show_in_rest' => true, // Enable for Gutenberg support
+        'meta_box_cb' => 'post_categories_meta_box', // ✅ FIX: Add category-like UI
     ];
 
     register_taxonomy('job_name', ['job_listing'], $args);
