@@ -432,32 +432,47 @@ function handle_job_contact_form_submission() {
 add_filter('job_manager_get_listings', 'handle_custom_job_filters', 10, 2);
 
 function handle_custom_job_filters($query_args, $args) {
-    // Handle "job_sector" filter
-    if (!empty($_GET['search_sectors'])) {
+    // Use $_POST instead of $_GET
+    if (!empty($_POST['search_sectors'])) {
         $query_args['tax_query'][] = array(
             'taxonomy' => 'job_sector',
             'field'    => 'slug',
-            'terms'    => $_GET['search_sectors'],
+            'terms'    => $_POST['search_sectors'],
         );
     }
 
-    // Handle "job_regio" filter
-    if (!empty($_GET['search_regios'])) {
+    if (!empty($_POST['search_regios'])) {
         $query_args['tax_query'][] = array(
             'taxonomy' => 'job_regio',
             'field'    => 'slug',
-            'terms'    => $_GET['search_regios'],
+            'terms'    => $_POST['search_regios'],
         );
     }
 
-    // Handle "job_name" filter
-    if (!empty($_GET['search_job_names'])) {
+    if (!empty($_POST['search_job_names'])) {
         $query_args['tax_query'][] = array(
             'taxonomy' => 'job_name',
             'field'    => 'slug',
-            'terms'    => $_GET['search_job_names'],
+            'terms'    => $_POST['search_job_names'],
         );
     }
 
     return $query_args;
 }
+
+
+
+function custom_job_manager_ajax_filters() {
+    add_action( 'wp_ajax_get_job_listings', array( 'WP_Job_Manager_Ajax', 'get_listings' ) );
+    add_action( 'wp_ajax_nopriv_get_job_listings', array( 'WP_Job_Manager_Ajax', 'get_listings' ) );
+}
+add_action( 'init', 'custom_job_manager_ajax_filters' );
+
+
+function debug_wp_job_manager_filters($query_args, $args) {
+    error_log("Custom Job Filters: " . print_r($_POST, true)); // Log all filters
+    error_log("Query Arguments: " . print_r($query_args, true)); // Log final query
+
+    return $query_args;
+}
+add_filter('job_manager_get_listings', 'debug_wp_job_manager_filters', 11, 2);
