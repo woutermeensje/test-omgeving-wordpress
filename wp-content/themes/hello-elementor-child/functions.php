@@ -476,4 +476,19 @@ function debug_wp_job_manager_filters($query_args, $args) {
 
     return $query_args;
 }
-add_filter('job_manager_get_listings', 'debug_wp_job_manager_filters', 11, 2);
+
+add_filter('job_manager_get_listings', 'debug_wp_job_manager_response', 999, 2);
+
+function debug_wp_job_manager_response($query_args, $args) {
+    error_log("📌 Job Listings AJAX Query Arguments: " . print_r($query_args, true));
+    return $query_args;
+}
+
+add_action('wp_ajax_get_job_listings', 'debug_job_manager_ajax_response', 1);
+add_action('wp_ajax_nopriv_get_job_listings', 'debug_job_manager_ajax_response', 1);
+
+function debug_job_manager_ajax_response() {
+    error_log("✅ WP Job Manager AJAX Triggered!");
+    WP_Job_Manager_Ajax::get_listings();
+    wp_die();
+}
