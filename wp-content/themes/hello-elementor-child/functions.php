@@ -433,33 +433,52 @@ function handle_job_contact_form_submission() {
 add_filter('job_manager_get_listings', 'handle_custom_job_filters', 10, 2);
 
 function handle_custom_job_filters($query_args, $args) {
-    // Use $_POST instead of $_GET
-    if (!empty($_POST['search_sectors'])) {
-        $query_args['tax_query'][] = array(
+    $tax_query = [];
+
+    // Debugging: Log received filters
+    error_log("📌 Received AJAX Filters: " . print_r($_POST, true));
+
+    // Ensure filters exist before processing
+    if (!empty($_POST['search_sectors']) && is_array($_POST['search_sectors'])) {
+        error_log("✅ Applying job_sector filter: " . print_r($_POST['search_sectors'], true));
+        $tax_query[] = [
             'taxonomy' => 'job_sector',
             'field'    => 'slug',
-            'terms'    => $_POST['search_sectors'],
-        );
+            'terms'    => array_map('sanitize_text_field', $_POST['search_sectors']),
+            'operator' => 'IN'
+        ];
     }
 
-    if (!empty($_POST['search_regios'])) {
-        $query_args['tax_query'][] = array(
+    if (!empty($_POST['search_regios']) && is_array($_POST['search_regios'])) {
+        error_log("✅ Applying job_regio filter: " . print_r($_POST['search_regios'], true));
+        $tax_query[] = [
             'taxonomy' => 'job_regio',
             'field'    => 'slug',
-            'terms'    => $_POST['search_regios'],
-        );
+            'terms'    => array_map('sanitize_text_field', $_POST['search_regios']),
+            'operator' => 'IN'
+        ];
     }
 
-    if (!empty($_POST['search_job_names'])) {
-        $query_args['tax_query'][] = array(
+    if (!empty($_POST['search_job_names']) && is_array($_POST['search_job_names'])) {
+        error_log("✅ Applying job_name filter: " . print_r($_POST['search_job_names'], true));
+        $tax_query[] = [
             'taxonomy' => 'job_name',
             'field'    => 'slug',
-            'terms'    => $_POST['search_job_names'],
-        );
+            'terms'    => array_map('sanitize_text_field', $_POST['search_job_names']),
+            'operator' => 'IN'
+        ];
     }
+
+    if (!empty($tax_query)) {
+        $query_args['tax_query'] = ['relation' => 'AND', $tax_query]; // Ensure proper tax query format
+    }
+
+    // Debugging: Log final query arguments
+    error_log("✅ Final WP Job Manager Query (with tax_query): " . print_r($query_args, true));
 
     return $query_args;
 }
+
 
 
 
@@ -491,4 +510,33 @@ function debug_job_manager_ajax_response() {
     error_log("✅ WP Job Manager AJAX Triggered!");
     WP_Job_Manager_Ajax::get_listings();
     wp_die();
+}
+
+
+function validate_terms($taxonomy, $terms) {
+    if (empty($terms)) return [];
+
+    $valid_terms = [];
+    foreach ($terms as $term_slug) {
+        $term = get_term_by('slug', sanitize_text_field($term_slug), $taxonomy);
+        if ($term) {
+            $valid_terms[] = $term->slug;
+        } else {
+            error_log("❌ Invalid Term in $taxonomy: " . $term_slug);
+        }
+    }
+    return $valid_terms;
+}
+
+// Apply this in the job filter function:
+if (!empty($_POST['search_sectors'])) {
+    $valid_sectors = validate_terms('job_sector', $_POST['search_sectors']);
+    if (!empty($valid_sectors)) {
+        $tax_query[] = [
+            'taxonomy' => 'job_sector',
+            'field'    => 'slug',
+            'terms'    => $valid_sectors,
+            'operator' => 'IN'
+        ];
+    }
 }

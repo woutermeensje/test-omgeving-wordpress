@@ -125,7 +125,8 @@ do_action( 'job_manager_job_filters_before', $atts );
 
             <!-- Job Types -->
             <div class="search_categories">
-                <select id="select-category" class="select2" multiple="multiple">
+                <select name="search_categories[]" id="select-category" class="select2" multiple="multiple">
+
                     <?php foreach ( get_job_listing_types() as $type ) : ?>
                         <option value="<?php echo esc_attr( $type->term_taxonomy_id ); ?>">
                             <?php echo esc_html( $type->name ); ?>

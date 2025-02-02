@@ -1,0 +1,1184 @@
+[02-Feb-2025 19:29:48 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:29:56 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:32:21 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => adviseur
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=adviseur&search_location=&search_regios%5B%5D=belgie&search_job_names%5B%5D=adviseur-vastgoed
+)
+
+[02-Feb-2025 19:32:21 UTC] ✅ Final WP Job Manager Query: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => adviseur
+)
+
+[02-Feb-2025 19:32:21 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => adviseur
+)
+
+[02-Feb-2025 19:32:24 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => adviseur
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=adviseur&search_location=&search_sectors%5B%5D=natuur-milieu&search_regios%5B%5D=belgie&search_job_names%5B%5D=adviseur-vastgoed
+)
+
+[02-Feb-2025 19:32:24 UTC] ✅ Final WP Job Manager Query: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => adviseur
+)
+
+[02-Feb-2025 19:32:24 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => adviseur
+)
+
+[02-Feb-2025 19:32:35 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&search_sectors%5B%5D=natuur-milieu&search_regios%5B%5D=belgie&search_job_names%5B%5D=adviseur-vastgoed
+)
+
+[02-Feb-2025 19:32:35 UTC] ✅ Final WP Job Manager Query: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:32:35 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:18 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[02-Feb-2025 19:40:18 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:18 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:25 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [search_categories] => Array
+        (
+            [0] => 2
+        )
+
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&search_sectors%5B%5D=mobiliteit&search_regios%5B%5D=belgie&search_job_names%5B%5D=adviseur-ecologie&search_categories%5B%5D=2
+)
+
+[02-Feb-2025 19:40:25 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 2
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:25 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 2
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:25 UTC] PHP Notice:  Trying to get property 'slug' of non-object in /var/www/html/wp-content/plugins/wp-job-manager/wp-job-manager-functions.php on line 608
+[02-Feb-2025 19:40:38 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[02-Feb-2025 19:40:38 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:38 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:41 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[02-Feb-2025 19:40:41 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:40:41 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:41:01 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [search_categories] => Array
+        (
+            [0] => 5
+        )
+
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&search_categories%5B%5D=5
+)
+
+[02-Feb-2025 19:41:01 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 5
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:41:01 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 5
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:41:01 UTC] PHP Notice:  Trying to get property 'slug' of non-object in /var/www/html/wp-content/plugins/wp-job-manager/wp-job-manager-functions.php on line 608
+[02-Feb-2025 19:41:07 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[02-Feb-2025 19:41:07 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:41:07 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:41:15 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [search_categories] => Array
+        (
+            [0] => 2
+        )
+
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&search_categories%5B%5D=2
+)
+
+[02-Feb-2025 19:41:15 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 2
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:41:15 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 2
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:41:15 UTC] PHP Notice:  Trying to get property 'slug' of non-object in /var/www/html/wp-content/plugins/wp-job-manager/wp-job-manager-functions.php on line 608
+[02-Feb-2025 19:45:19 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[02-Feb-2025 19:45:19 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:45:19 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:45:49 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [search_categories] => Array
+        (
+            [0] => 5
+        )
+
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&search_categories%5B%5D=5
+)
+
+[02-Feb-2025 19:45:49 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 5
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:45:49 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+            [0] => Array
+                (
+                    [taxonomy] => job_listing_category
+                    [field] => term_id
+                    [terms] => Array
+                        (
+                            [0] => 5
+                        )
+
+                    [include_children] => 1
+                    [operator] => IN
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[02-Feb-2025 19:45:49 UTC] PHP Notice:  Trying to get property 'slug' of non-object in /var/www/html/wp-content/plugins/wp-job-manager/wp-job-manager-functions.php on line 608
