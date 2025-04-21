@@ -547,33 +547,46 @@ add_action('wp_ajax_nopriv_process_smart_search', 'handle_smart_search');
 function handle_smart_search() {
     $input = sanitize_text_field($_POST['query']);
 
-    $prompt = "Je bent een slimme AI die vacaturefilters genereert op basis van vrije invoer.
-Zet de gebruikersinput om in JSON met de volgende velden:
-- keywords (string, optioneel)
-- location (string, optioneel)
-- sectors (array, optioneel)
+    $prompt = "Je bent een slimme AI die vacaturezoekopdrachten omzet naar filters in JSON-formaat.
 
-Als de gebruiker bijvoorbeeld 'alle vacatures' of 'ik wil alles zien' typt, laat je alle velden leeg.
+Je output is altijd een geldig JSON-object met de volgende velden:
+- keywords: functietermen of trefwoorden (string)
+- location: plaatsnaam (string)
+- job_type: array met types zoals: fulltime, parttime, stage, bijbaan, freelance, traineeship, vrijwilligerswerk
 
-Voorbeeld input:
-'Parttime duurzame baan in Utrecht'
+Let op:
+- Als de gebruiker bijvoorbeeld 'naast mijn studie' zegt, gebruik 'bijbaan' als job_type.
+- Als iemand 'vrijwillig werk' of 'stage' noemt, herken dat ook.
+- Als iemand 'alle vacatures' zoekt, geef alle velden leeg terug.
+
+Voorbeelden:
+
+Input: 'Ik zoek een parttime communicatiebaan in Amsterdam'
 Output:
 {
-  \"keywords\": \"duurzame baan\",
-  \"location\": \"Utrecht\",
-  \"sectors\": [\"duurzaamheid\"]
+  \"keywords\": \"communicatie\",
+  \"location\": \"Amsterdam\",
+  \"job_type\": [\"parttime\"]
 }
 
-Voorbeeld input:
-'Ik wil alle vacatures zien'
+Input: 'Stage in Utrecht over duurzaamheid'
+Output:
+{
+  \"keywords\": \"duurzaamheid, duurzaam, milieu\",
+  \"location\": \"Utrecht\",
+  \"job_type\": [\"stage\"]
+}
+
+Input: 'Alle vacatures'
 Output:
 {
   \"keywords\": \"\",
   \"location\": \"\",
-  \"sectors\": []
+  \"job_type\": []
 }
 
 Gebruikersinput: \"$input\"";
+
 
 
     $response = wp_remote_post('https://api.openai.com/v1/chat/completions', [

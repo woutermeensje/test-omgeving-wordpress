@@ -7,6 +7,8 @@ wp_enqueue_script( 'wp-job-manager-ajax-filters' );
 ?>
 
 <style>
+    
+    
     .ai-search-wrapper {
         position: relative;
         margin-bottom: 10px;
@@ -53,7 +55,7 @@ wp_enqueue_script( 'wp-job-manager-ajax-filters' );
             <input 
                 type="text" 
                 id="smart_search_input" 
-                placeholder="Typ je wens: ‘duurzame marketingbaan in Amsterdam’"
+                placeholder="Doorzoek alle vacatures als volgt: ‘duurzame marketingbaan in Amsterdam’"
             />
         </div>
 
