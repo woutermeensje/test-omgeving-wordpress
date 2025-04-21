@@ -1680,3 +1680,2826 @@
     [fields] => all
 )
 
+[21-Apr-2025 09:26:58 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 09:26:58 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:26:58 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:08 UTC] Automatic updates starting...
+[21-Apr-2025 09:43:08 UTC]   Automatic plugin updates starting...
+[21-Apr-2025 09:43:08 UTC]   Automatic plugin updates complete.
+[21-Apr-2025 09:43:08 UTC]   Automatic theme updates starting...
+[21-Apr-2025 09:43:08 UTC]   Automatic theme updates complete.
+[21-Apr-2025 09:43:08 UTC] Automatic updates complete.
+[21-Apr-2025 09:43:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/wp-includes/class-wpdb.php on line 3156
+[21-Apr-2025 09:43:09 UTC] PHP Notice:  Undefined index: version_comment in /var/www/html/wp-content/plugins/elementor/modules/system-info/reporters/server.php on line 289
+[21-Apr-2025 09:43:09 UTC] PHP Notice:  Trying to get property 'Value' of non-object in /var/www/html/wp-content/plugins/elementor/modules/system-info/reporters/server.php on line 289
+[21-Apr-2025 09:43:28 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_location=
+)
+
+[21-Apr-2025 09:43:28 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:28 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:30 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_location=
+)
+
+[21-Apr-2025 09:43:30 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:30 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:44 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_location=
+)
+
+[21-Apr-2025 09:43:44 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:44 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:52 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 572
+[21-Apr-2025 09:43:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 572
+[21-Apr-2025 09:43:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 572
+[21-Apr-2025 09:43:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 572
+[21-Apr-2025 09:43:53 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_location=
+)
+
+[21-Apr-2025 09:43:53 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:53 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:59 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_location=
+)
+
+[21-Apr-2025 09:43:59 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:43:59 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:49:02 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 09:49:02 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:49:02 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:49:47 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 09:49:47 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:49:47 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:49:58 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:49:58 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:49:58 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:49:58 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:51:59 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 09:51:59 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:51:59 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:52:11 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:13 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:13 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:13 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:13 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:14 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:14 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:14 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:52:14 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:59:03 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 09:59:03 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:59:03 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 09:59:15 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:59:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:59:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 09:59:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:00:19 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:00:19 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:00:19 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:00:24 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:00:24 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:00:24 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:00:24 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:01:20 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:01:20 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:01:20 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:01:25 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:01:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:01:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:01:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:01:51 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:01:51 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:01:51 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:02:01 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:02:01 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:02:01 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:02:25 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:29 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:29 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:29 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:29 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:35 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:02:35 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:02:35 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:02:45 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:45 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:45 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:45 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:02:55 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:02:55 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:02:55 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:08:01 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:08:01 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:08:01 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:08:09 UTC] PHP Notice:  Undefined index: choices in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:08:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:08:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:08:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/themes/hello-elementor-child/functions.php on line 581
+[21-Apr-2025 10:11:36 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:11:36 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:11:36 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:11:44 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => marketing
+    [search_location] => Amsterdam
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=marketing&search_location=Amsterdam
+)
+
+[21-Apr-2025 10:11:44 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => marketing
+)
+
+[21-Apr-2025 10:11:44 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => marketing
+)
+
+[21-Apr-2025 10:11:57 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => energietransitie
+    [search_location] => Amsterdam
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=energietransitie&search_location=Amsterdam
+)
+
+[21-Apr-2025 10:11:57 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => energietransitie
+)
+
+[21-Apr-2025 10:11:57 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => energietransitie
+)
+
+[21-Apr-2025 10:12:03 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => energietransitie
+    [search_location] => Amsterdam
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=energietransitie&search_location=Amsterdam
+)
+
+[21-Apr-2025 10:12:03 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => energietransitie
+)
+
+[21-Apr-2025 10:12:03 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => energietransitie
+)
+
+[21-Apr-2025 10:12:06 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => energietransitie
+    [search_location] => Amsterdam
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=energietransitie&search_location=Amsterdam
+)
+
+[21-Apr-2025 10:12:06 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => energietransitie
+)
+
+[21-Apr-2025 10:12:06 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => energietransitie
+)
+
+[21-Apr-2025 10:12:13 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => alle banen
+    [search_location] => Amsterdam
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=alle%20banen&search_location=Amsterdam
+)
+
+[21-Apr-2025 10:12:13 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => alle banen
+)
+
+[21-Apr-2025 10:12:13 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => alle banen
+)
+
+[21-Apr-2025 10:12:18 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => alle banen
+    [search_location] => Amsterdam
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=alle%20banen&search_location=Amsterdam
+)
+
+[21-Apr-2025 10:12:18 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => alle banen
+)
+
+[21-Apr-2025 10:12:18 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+            [0] => Array
+                (
+                    [relation] => OR
+                    [0] => Array
+                        (
+                            [relation] => OR
+                            [0] => Array
+                                (
+                                    [key] => geolocation_formatted_address
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => _job_location
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => geolocation_state_long
+                                    [value] => Amsterdam
+                                    [compare] => like
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => alle banen
+)
+
+[21-Apr-2025 10:15:43 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:15:43 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:15:43 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:15:50 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:15:50 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:15:50 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:16:11 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[21-Apr-2025 10:16:11 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:16:11 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[21-Apr-2025 10:16:20 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => stages
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=stages&search_location=
+)
+
+[21-Apr-2025 10:16:20 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => stages
+)
+
+[21-Apr-2025 10:16:20 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => stages
+)
+
+[21-Apr-2025 10:16:25 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => stages
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=stages&search_location=
+)
+
+[21-Apr-2025 10:16:25 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => stages
+)
+
+[21-Apr-2025 10:16:25 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+    [s] => stages
+)
+

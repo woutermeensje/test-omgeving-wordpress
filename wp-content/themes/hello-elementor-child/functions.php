@@ -540,3 +540,79 @@ if (!empty($_POST['search_sectors'])) {
         ];
     }
 }
+
+add_action('wp_ajax_process_smart_search', 'handle_smart_search');
+add_action('wp_ajax_nopriv_process_smart_search', 'handle_smart_search');
+
+function handle_smart_search() {
+    $input = sanitize_text_field($_POST['query']);
+
+    $prompt = "Je bent een slimme AI die vacaturefilters genereert op basis van vrije invoer.
+Zet de gebruikersinput om in JSON met de volgende velden:
+- keywords (string, optioneel)
+- location (string, optioneel)
+- sectors (array, optioneel)
+
+Als de gebruiker bijvoorbeeld 'alle vacatures' of 'ik wil alles zien' typt, laat je alle velden leeg.
+
+Voorbeeld input:
+'Parttime duurzame baan in Utrecht'
+Output:
+{
+  \"keywords\": \"duurzame baan\",
+  \"location\": \"Utrecht\",
+  \"sectors\": [\"duurzaamheid\"]
+}
+
+Voorbeeld input:
+'Ik wil alle vacatures zien'
+Output:
+{
+  \"keywords\": \"\",
+  \"location\": \"\",
+  \"sectors\": []
+}
+
+Gebruikersinput: \"$input\"";
+
+
+    $response = wp_remote_post('https://api.openai.com/v1/chat/completions', [
+        'headers' => [
+            'Content-Type'  => 'application/json',
+            'Authorization' => 'Bearer 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',
+        ],
+        'body' => json_encode([
+            'model' => 'gpt-3.5-turbo',
+            'messages' => [
+                ['role' => 'system', 'content' => 'Je zet natuurlijke taal om naar gestructureerde vacaturefilters.'],
+                ['role' => 'user', 'content' => $prompt],
+            ],
+            'temperature' => 0.3,
+        ]),
+    ]);
+
+    // Check op response fouten
+    if (is_wp_error($response)) {
+        error_log('OpenAI API fout: ' . $response->get_error_message());
+        wp_send_json_error(['error' => 'GPT API mislukt']);
+    }
+
+    $body = json_decode(wp_remote_retrieve_body($response), true);
+
+    // Check of response structuur klopt
+    if (!isset($body['choices'][0]['message']['content'])) {
+        error_log('GPT output ongeldig: ' . print_r($body, true));
+        wp_send_json_error(['error' => 'Ongeldige GPT response structuur']);
+    }
+
+    $json = $body['choices'][0]['message']['content'];
+    $parsed = json_decode($json, true);
+
+    // Check of JSON goed geparsed is
+    if (is_null($parsed)) {
+        error_log('JSON decode mislukt. Inhoud: ' . $json);
+        wp_send_json_error(['error' => 'GPT gaf geen geldige JSON terug']);
+    }
+
+    wp_send_json($parsed);
+}

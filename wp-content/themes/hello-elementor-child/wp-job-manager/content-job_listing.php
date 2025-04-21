@@ -2,7 +2,6 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/job_manager/custom-job-manager.css" rel="stylesheet">
 </head>
 <body class="body-class">
     <div class="main-container">
@@ -440,8 +439,6 @@ ul.meta li.job-type {
 
    
 }
-
-
 
 
 </style>

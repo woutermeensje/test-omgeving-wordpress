@@ -1,486 +1,184 @@
-<body>
-
 <?php
-/**
- * Filters in `[jobs]` shortcode.
- *
- * This template can be overridden by copying it to yourtheme/job_manager/job-filters.php.
- *
- * @package wp-job-manager
- * @version 1.38.0
- */
-
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit;
 }
 
 wp_enqueue_script( 'wp-job-manager-ajax-filters' );
-
-do_action( 'job_manager_job_filters_before', $atts );
 ?>
 
-
-    
-
-<form class="job_filters">
-    
-        <?php do_action( 'job_manager_job_filters_start', $atts ); ?>
-
-        <!-- Basic Search -->
-
-        <div>
-
-    
-        <div class="search-basic">
-
-            <div class="search_keywords">
-                <input 
-                    type="text" 
-                    name="search_keywords" 
-                    id="search_keywords" 
-                    placeholder="<?php esc_attr_e( 'Zoek op woord...', 'wp-job-manager' ); ?>" 
-                    value="<?php echo esc_attr( $keywords ); ?>" 
-                />
-            </div>
-
-            <div class="search_location">
-                <input 
-                    type="text" 
-                    name="search_location" 
-                    id="search_location" 
-                    placeholder="<?php esc_attr_e( 'Stad of plaats', 'wp-job-manager' ); ?>" 
-                    value="<?php echo esc_attr( $location ); ?>" 
-                />
-            </div>
-
-            <!-- Submit Button -->
-            <?php if ( apply_filters( 'job_manager_job_filters_show_submit_button', true ) ) : ?>
-                <div class="search_submit">
-                    <input type="submit" value="<?php esc_attr_e( 'Doorzoek Vacatures', 'wp-job-manager' ); ?>">
-                </div>
-            <?php endif; ?>
-
-          
-        </div>
-        <p class="text-under-filter">Stel een job alert in!<strong>Of plaats een vacature in ons netwerk!</strong></p>
-        </div>
-        <!-- Extra Filters -->
-        <div class="extra-filters">
-            <!-- Sectors -->
-            <div class="search_sectors">
-                <select name="search_sectors[]" id="search_sectors" class="custom-multi-select" multiple="multiple">
-                    <option value=""><?php esc_html_e( 'Select a sector', 'textdomain' ); ?></option>
-                    <?php
-                    $sectors = get_terms([
-                        'taxonomy'   => 'job_sector',
-                        'hide_empty' => false,
-                    ]);
-
-                    if ( ! empty( $sectors ) && ! is_wp_error( $sectors ) ) {
-                        foreach ( $sectors as $sector ) {
-                            echo '<option value="' . esc_attr( $sector->slug ) . '">' . esc_html( $sector->name ) . '</option>';
-                        }
-                    }
-                    ?>
-                </select>
-            </div>
-
-            <!-- Regios -->
-            <div class="search_regios">
-                <select name="search_regios[]" id="search_regios" class="custom-multi-select" multiple="multiple">
-                    <option value=""><?php esc_html_e( "Select a regio", 'textdomain' ); ?></option>
-                    <?php
-                    $regios = get_terms([
-                        'taxonomy'   => 'job_regio',
-                        'hide_empty' => false,
-                    ]);
-
-                    if ( ! empty( $regios ) && ! is_wp_error( $regios ) ) {
-                        foreach ( $regios as $regio ) {
-                            echo '<option value="' . esc_attr( $regio->slug ) . '">' . esc_html( $regio->name ) . '</option>';
-                        }
-                    }
-                    ?>
-                </select>
-            </div>
-
-             <!-- Job Names -->
-            <div class="search_job_names">
-                <select name="search_job_names[]" id="search_job_names" class="custom-multi-select" multiple="multiple">
-                    <option value=""><?php esc_html_e( "Select a job name", 'textdomain' ); ?></option>
-                    <?php
-                    $job_names = get_terms([
-                        'taxonomy'   => 'job_name',
-                        'hide_empty' => false,
-                    ]);
-
-                    if ( ! empty( $job_names ) && ! is_wp_error( $job_names ) ) {
-                        foreach ( $job_names as $job_name ) {
-                            echo '<option value="' . esc_attr( $job_name->slug ) . '">' . esc_html( $job_name->name ) . '</option>';
-                        }
-                    }
-                    ?>
-                </select>
-            </div>
-
-            <!-- Job Types -->
-            <div class="search_categories">
-                <select name="search_categories[]" id="select-category" class="select2" multiple="multiple">
-
-                    <?php foreach ( get_job_listing_types() as $type ) : ?>
-                        <option value="<?php echo esc_attr( $type->term_taxonomy_id ); ?>">
-                            <?php echo esc_html( $type->name ); ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-        </div>
-
-        <?php do_action( 'job_manager_job_filters_end', $atts ); ?>
-</form>
-
-
-
-</body>
-
-<?php do_action( 'job_manager_job_filters_after', $atts ); ?>
-
-<noscript>
-    <?php esc_html_e( 'Your browser does not support JavaScript, or it is disabled. JavaScript must be enabled in order to view listings.', 'wp-job-manager' ); ?>
-</noscript>
-
-<script>
-    jQuery(document).ready(function($) {
-        // Initialize Select2 for Sectors
-        $('#search_sectors').select2({
-            placeholder: 'Sectoren',
-            allowClear: true
-        });
-
-        // Initialize Select2 for Job Types
-        $('#select-category').select2({
-            placeholder: 'Type baan',
-            allowClear: true
-        });
-
-        // Initialize Select2 for Regios
-        $('#search_regios').select2({
-            placeholder: 'Select a regio',
-            allowClear: true
-        });
-
-        // Initialize Select2 for search job names
-        $('#search_job_names').select2({
-            placeholder: 'Beroep',
-            allowClear: true
-        });
-
-    });
-</script>
-
-
-
-
 <style>
-    /* Container styling for all dropdowns */
-    .search_sectors, .search_regios, .search_job_names, .search_salary_ranges, .search_categories {
-        width: 100%; /* Make it responsive */
+    .ai-search-wrapper {
+        position: relative;
+        margin-bottom: 10px;
     }
 
-    .select2-container--default .select2-search--inline .select2-search__field::placeholder {
-        color: #8A8A8A; /* Placeholder text color */
-        font-size: 16px; /* Font size */
-        font-weight: 300; /* Bold font weight */
-        font-family: 'Poppins', sans-serif; /* Use a clean font */
+    .ai-search-wrapper input {
+        width: 100%;
+        padding: 15px 15px 15px 45px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
     }
 
-    /* Select2 dropdown styling for all dropdowns */
-    .search_sectors .select2-container,
-    .search_regios .select2-container,
-    .search_job_names .select2-container,
-    .search_salary_ranges .select2-container,
-    .search_categories .select2-container {
-        width: 100% !important; /* Ensure it spans the full width of the container */
-        font-family: Poppins; /* Use a clean font */
-        font-size: 15px; /* Standard font size */
-        color: black;
-    }
-
-    /* Input box styling */
-    .search_sectors .select2-container--default .select2-selection--multiple,
-    .search_regios .select2-container--default .select2-selection--multiple,
-    .search_job_names .select2-container--default .select2-selection--multiple,
-    .search_salary_ranges .select2-container--default .select2-selection--multiple,
-    .search_categories .select2-container--default .select2-selection--multiple {
-        background-color: white; /* Light gray background */
-        border: 1px solid #0a6b8d; /* Light border */
-        border-radius: 5px; /* Rounded corners */
-        padding: 5px; /* Padding inside the input */
-        min-height: 40px; /* Ensure consistent height */
-        transition: border-color 0.3s ease; /* Smooth transition */
-        position: relative; /* Set position to relative for icon adjustments */
-        padding-right: 30px; /* Space for dropdown icon */
-    }
-
-    /* Input hover effect */
-    .search_sectors .select2-container--default .select2-selection--multiple:hover,
-    .search_regios .select2-container--default .select2-selection--multiple:hover,
-    .search_job_names .select2-container--default .select2-selection--multiple:hover,
-    .search_salary_ranges .select2-container--default .select2-selection--multiple:hover,
-    .search_categories .select2-container--default .select2-selection--multiple:hover {
-        border-color: #0a6b8d; /* Change border color on hover */
-        border-width: 2px; /* Make border 2px on hover */
-    }
-
-    /* Selected items styling */
-    .search_sectors .select2-container--default .select2-selection--multiple .select2-selection__choice,
-    .search_regios .select2-container--default .select2-selection--multiple .select2-selection__choice,
-    .search_job_names .select2-container--default .select2-selection--multiple .select2-selection__choice,
-    .search_salary_ranges .select2-container--default .select2-selection--multiple .select2-selection__choice,
-    .search_categories .select2-container--default .select2-selection--multiple .select2-selection__choice {
-        background-color: #0073e6; /* Blue background for selected items */
-        color: #fff; /* White text */
-        border: none; /* Remove border */
-        border-radius: 3px; /* Slightly rounded edges */
-        padding: 3px 10px; /* Add spacing inside tags */
-        margin: 2px; /* Space between tags */
-        font-size: 12px; /* Smaller font size for tags */
-    }
-
-    /* Remove button on selected items */
-    .search_sectors .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
-    .search_regios .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
-    .search_job_names .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
-    .search_salary_ranges .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
-    .search_categories .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-        color: #fff; /* White remove button */
-        margin-right: 5px; /* Space around remove button */
-        font-size: 12px; /* Smaller size for remove icon */
-        cursor: pointer; /* Pointer cursor on hover */
-    }
-
-    /* Placeholder styling */
-    .search_sectors .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field,
-    .search_regios .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field,
-    .search_job_names .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field,
-    .search_salary_ranges .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field,
-    .search_categories .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field {
-        color: black; /* Placeholder text color */
-    }
-
-    /* Dropdown styling */
-    .search_sectors .select2-container--default .select2-results__option,
-    .search_regios .select2-container--default .select2-results__option,
-    .search_job_names .select2-container--default .select2-results__option,
-    .search_salary_ranges .select2-container--default .select2-results__option,
-    .search_categories .select2-container--default .select2-results__option {
-        padding: 8px 10px; /* Add padding inside dropdown options */
-        font-size: 14px; /* Standard font size */
-    }
-
-    /* Highlighted option in dropdown */
-    .search_sectors .select2-container--default .select2-results__option--highlighted,
-    .search_regios .select2-container--default .select2-results__option--highlighted,
-    .search_job_names .select2-container--default .select2-results__option--highlighted,
-    .search_salary_ranges .select2-container--default .select2-results__option--highlighted,
-    .search_categories .select2-container--default .select2-results__option--highlighted {
-        background-color: #0a6b8d; /* Blue highlight */
-        color: #fff; /* White text */
-    }
-
-    /* Add dropdown icon */
-    .search_sectors .select2-container--default .select2-selection--multiple:after,
-    .search_regios .select2-container--default .select2-selection--multiple:after,
-    .search_job_names .select2-container--default .select2-selection--multiple:after,
-    .search_salary_ranges .select2-container--default .select2-selection--multiple:after,
-    .search_categories .select2-container--default .select2-selection--multiple:after {
-        content: '\25BC'; /* Unicode character for a downward arrow */
-        font-size: 12px; /* Size of the arrow */
-        color: black; /* Arrow color */
+    .ai-search-wrapper .ai-search-icon {
         position: absolute;
-        right: 10px; /* Position it 10px from the right edge */
-        top: 50%; /* Vertically center */
-        transform: translateY(-50%); /* Align vertically */
-        pointer-events: none; /* Prevent the icon from interfering with user interactions */
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #888;
     }
 
-    /* -----------------------------------
-   General Form Styling (Main Wrapper)
--------------------------------------- */
-.job_filters {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between rows */
-    margin-bottom: 0px; /* Add your background image */
-    padding: 35px 35px 0 35px; /* Add padding for top, left, and right, but bottom 0 */
-    border-radius: 15px; /* Rounded corners */
-    margin-top: 0px; 
-    background: black; 
-}
-
-.showing_jobs {
-    display: none !important; 
-}
-
-form.job_filters {
-	background: white; 
-    background: transparent; /* Remove background color */
-
-}
-
-/* -----------------------------------
-   Flex Wrapper for All Input Fields
--------------------------------------- */
-.form_flex_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Space between individual elements */
-    align-items: flex-start;
-}
-
-
-/* -----------------------------------
-   Search Basic Design
--------------------------------------- */
-.search-basic {
-    display: flex; /* Enable flexbox layout */
-    flex-direction: row; /* Stack elements horizontally */
-    gap: 10px; /* Add 10px gap between elements */
-    width: 100%; /* Make sure it spans the full width */
-    border-radius: 5px; 
-    padding: 25px; /* Add padding for a better look */
-    box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.15);
-    margin: auto; 
-    border: 1px solid #0a6b8d; /* Light border */
-    background: white; 
-}
-
-.search-basic > div {
-    width: 100%; /* Each child div takes up 70% width */
-}
-
-
-.search-basic input[type="text"],
-.search-basic input[type="submit"] {
-    width: 100%; /* Inputs and buttons span full width */
-    padding: 10px; /* Add padding for a better look */
-    box-sizing: border-box; /* Ensure padding doesn't affect total width */
-    font-size: 16px; /* Adjust font size for better readability */
-}
-
-.input#search_keywords {
-    border: none !important; /* Removes the border */
-    outline: none; /* Removes the outline when focused */
-}
-
-.search-basic input[type="submit"] {
-    background-color: #0a6b8d; /* Add button background color */
-    color: #ffffff; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    font-family: Balgin Bold; /* Use a clean font */
-}
-
-.search-basic input[type="submit"]:hover {
-    background-color: #005bb5; /* Darker shade on hover */
-}
-
-
-.search_submit input[type="submit"] {
-    background-color: #0a6b8d; /* Primary button color */
-    color: #fff; /* Text color */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Text weight */
-    padding: 12px 24px; /* Padding for size */
-    border: none; /* Remove border */
-    border-radius: 8px; /* Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
-}
-
-.search_submit input[type="submit"]:hover {
-    background-color: #0a6b8d; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-}
-
-.search_submit input[type="submit"]:active {
-    background-color: #0a6b8d; /* Even darker blue when clicked */
-    transform: translateY(0); /* Reset lift on click */
-}
-
-.search_submit {
-    text-align: center; /* Center-align the button in its container */
-}
-
-
-/* -----------------------------------
-   Styling: Extra filters
--------------------------------------- */
-
-.extra-filters {
-    display: flex; /* Enable flexbox layout */
-    flex-direction: row; /* Stack elements horizontally */
-    gap: 10px; /* Add 10px gap between elements */
-    width: 100%; /* Make sure it spans the full width */
-    border-radius: 5px; 
-    padding: 25px; 
-}
-
-.extra-filters > div {
-    width: 100%; /* Each child div takes up 70% width */
-}
-
-.text-in-form {
-    margin-top: 0px;
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    font-size: 13px; /* Adjust font size for better readability */
-}
-
-
-
-
-
-
-
-    @media only screen and (max-width: 768px) {
-    .extra-filters {
-        display: block; /* Stack filters vertically */
-        box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.15);
-        border-radius: 5px; /* Rounded corners */
-        border: 1px solid #0a6b8d; /* Light border */
+    .ai-search-suggestions {
+        font-family: Poppins, sans-serif;
+        font-size: 13px;
+        color: #666;
+        margin-top: 5px;
+        margin-bottom: 20px;
     }
 
-    .extra-filters > div {
-        margin-bottom: 15px; /* Space between stacked filters */
+    .ai-search-suggestions span {
+        background: #f1f1f1;
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin-right: 5px;
+        display: inline-block;
     }
-
-    select.custom-multi-select {
-        font-size: 16px; /* Slightly larger font for easier tapping */
-    }
-
-    .search-basic {
-        display: block; 
-        border-radius: 5px; /* Rounded corners */
-        border: 1px solid #0a6b8d; /* Light border */
-    }
-
-    .search-basic  > div{ 
-        padding: 15px;
-
-    }
-}
-
-.text-under-filter {
-    margin: auto; 
-    text-align: center; /* Center the text */
-}
-
-
 </style>
 
+<form class="job_filters" style="margin-bottom: 20px;">
+    <div class="ai-search-bar-wrapper">
+        <div class="ai-search-wrapper">
+            <span class="ai-search-icon">🔍</span>
+            <input 
+                type="text" 
+                id="smart_search_input" 
+                placeholder="Typ je wens: ‘duurzame marketingbaan in Amsterdam’"
+            />
+        </div>
 
+        <div class="ai-search-suggestions">
+            Voorbeelden:
+            <span>parttime baan in Utrecht</span>
+            <span>duurzame stage communicatie</span>
+            <span>freelance installateur in Rotterdam</span>
+        </div>
+    </div>
 
+    <!-- Verborgen velden -->
+    <input type="hidden" name="search_keywords" id="search_keywords" value="">
+    <input type="hidden" name="search_location" id="search_location" value="">
+    <select name="search_sectors[]" id="search_sectors" style="display:none;" multiple="multiple">
+        <?php
+        $sectors = get_terms([
+            'taxonomy'   => 'job_sector',
+            'hide_empty' => false,
+        ]);
+        if ( ! empty( $sectors ) && ! is_wp_error( $sectors ) ) {
+            foreach ( $sectors as $sector ) {
+                echo '<option value="' . esc_attr( $sector->slug ) . '">' . esc_html( $sector->name ) . '</option>';
+            }
+        }
+        ?>
+    </select>
+</form>
+
+<div id="ai_summary_output" style="margin-bottom: 30px; display: none; padding: 15px; border-left: 4px solid #0a6b8d; background: #f0f8ff; font-family: Poppins, sans-serif; font-size: 15px; opacity: 0; transition: opacity 0.5s ease;"></div>
+
+<button id="reset_search" style="display:none; padding: 10px 20px; background: #0a6b8d; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: Poppins; font-size: 14px; margin-bottom: 30px;">
+    🔁 Nieuwe zoekopdracht
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('smart_search_input');
+    const form = document.querySelector('.job_filters');
+    const summary = document.getElementById('ai_summary_output');
+    const resetBtn = document.getElementById('reset_search');
+
+    input.focus(); // Autofocus
+
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+
+            const userInput = input.value;
+
+            fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    action: 'process_smart_search',
+                    query: userInput
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log("AI response:", data);
+
+                if (!data || typeof data !== 'object') {
+                    console.error('Ongeldige AI response:', data);
+                    return;
+                }
+
+                // Filters vullen
+                if (data.keywords && document.getElementById('search_keywords')) {
+                    document.getElementById('search_keywords').value = data.keywords;
+                }
+
+                if (data.location && document.getElementById('search_location')) {
+                    document.getElementById('search_location').value = data.location;
+                }
+
+                if (Array.isArray(data.sectors) && document.getElementById('search_sectors')) {
+                    const select = document.getElementById('search_sectors');
+                    data.sectors.forEach(slug => {
+                        const option = select.querySelector(`option[value="${slug}"]`);
+                        if (option) option.selected = true;
+                    });
+                }
+
+                // Samenvatting tonen
+                let summaryText = '<strong>We filteren op:</strong><br>';
+
+                if (data.keywords) {
+                    summaryText += '🔎 Trefwoorden: <strong>' + data.keywords + '</strong><br>';
+                }
+                if (data.location) {
+                    summaryText += '📍 Locatie: <strong>' + data.location + '</strong><br>';
+                }
+                if (data.sectors && data.sectors.length > 0) {
+                    summaryText += '🏷️ Sectoren: <strong>' + data.sectors.join(', ') + '</strong>';
+                }
+
+                summary.innerHTML = summaryText;
+                summary.style.display = 'block';
+                setTimeout(() => summary.style.opacity = '1', 50);
+                resetBtn.style.display = 'inline-block';
+
+                form.dispatchEvent(new Event('submit'));
+            })
+            .catch(error => {
+                console.error('Fout tijdens AI-verwerking:', error);
+            });
+        }
+    });
+
+    resetBtn.addEventListener('click', function() {
+        input.value = '';
+        document.getElementById('search_keywords').value = '';
+        document.getElementById('search_location').value = '';
+        document.getElementById('search_sectors').selectedIndex = -1;
+        summary.style.opacity = '0';
+        setTimeout(() => {
+            summary.style.display = 'none';
+            resetBtn.style.display = 'none';
+        }, 400);
+
+        form.dispatchEvent(new Event('submit'));
+        input.focus(); // Focus opnieuw
+    });
+});
+</script>
