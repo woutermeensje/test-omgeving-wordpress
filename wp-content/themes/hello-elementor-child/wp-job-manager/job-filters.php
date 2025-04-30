@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #f9f9f9;
+    background-color: white;
     border: 1px solid #0a6b8d;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
 
