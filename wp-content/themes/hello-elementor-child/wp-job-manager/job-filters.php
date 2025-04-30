@@ -4,183 +4,195 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 wp_enqueue_script( 'wp-job-manager-ajax-filters' );
+
+do_action( 'job_manager_job_filters_before', $atts );
 ?>
 
-<style>
-    
-    
-    .ai-search-wrapper {
-        position: relative;
-        margin-bottom: 10px;
-    }
+<form class="job_filters">
 
-    .ai-search-wrapper input {
-        width: 100%;
-        padding: 15px 15px 15px 45px;
-        font-size: 16px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-    }
-
-    .ai-search-wrapper .ai-search-icon {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 18px;
-        color: #888;
-    }
-
-    .ai-search-suggestions {
-        font-family: Poppins, sans-serif;
-        font-size: 13px;
-        color: #666;
-        margin-top: 5px;
-        margin-bottom: 20px;
-    }
-
-    .ai-search-suggestions span {
-        background: #f1f1f1;
-        border-radius: 4px;
-        padding: 4px 8px;
-        margin-right: 5px;
-        display: inline-block;
-    }
-</style>
-
-<form class="job_filters" style="margin-bottom: 20px;">
-    <div class="ai-search-bar-wrapper">
-        <div class="ai-search-wrapper">
-            <span class="ai-search-icon">🔍</span>
+   <!-- Titel boven de zoekvelden -->
+   <div class="filter-header" style="padding: 0 20px 10px 20px;">
+        <h2>
+            Doorzoek de Openstaande Vacatures!
+        </h2>
+        <p>
+            Of schrijf je in voor de vacature nieuwsbrief! 
+        </p>
+    </div>
+    <div class="search-basic">
+        <div class="search_keywords">
             <input 
                 type="text" 
-                id="smart_search_input" 
-                placeholder="Doorzoek alle vacatures als volgt: ‘duurzame marketingbaan in Amsterdam’"
+                name="search_keywords" 
+                id="search_keywords" 
+                placeholder="Functienaam, sector of onderwerp.." 
+                value="<?php echo esc_attr( $keywords ); ?>" 
             />
         </div>
 
-        <div class="ai-search-suggestions">
-            Voorbeelden:
-            <span>parttime baan in Utrecht</span>
-            <span>duurzame stage communicatie</span>
-            <span>freelance installateur in Rotterdam</span>
+        <div class="search_location">
+            <input 
+                type="text" 
+                name="search_location" 
+                id="search_location" 
+                placeholder="Stad of plaats" 
+                value="<?php echo esc_attr( $location ); ?>" 
+            />
         </div>
     </div>
 
-    <!-- Verborgen velden -->
-    <input type="hidden" name="search_keywords" id="search_keywords" value="">
-    <input type="hidden" name="search_location" id="search_location" value="">
-    <select name="search_sectors[]" id="search_sectors" style="display:none;" multiple="multiple">
-        <?php
-        $sectors = get_terms([
-            'taxonomy'   => 'job_sector',
-            'hide_empty' => false,
-        ]);
-        if ( ! empty( $sectors ) && ! is_wp_error( $sectors ) ) {
-            foreach ( $sectors as $sector ) {
-                echo '<option value="' . esc_attr( $sector->slug ) . '">' . esc_html( $sector->name ) . '</option>';
-            }
-        }
-        ?>
-    </select>
 </form>
-
-<div id="ai_summary_output" style="margin-bottom: 30px; display: none; padding: 15px; border-left: 4px solid #0a6b8d; background: #f0f8ff; font-family: Poppins, sans-serif; font-size: 15px; opacity: 0; transition: opacity 0.5s ease;"></div>
-
-<button id="reset_search" style="display:none; padding: 10px 20px; background: #0a6b8d; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: Poppins; font-size: 14px; margin-bottom: 30px;">
-    🔁 Nieuwe zoekopdracht
-</button>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const input = document.getElementById('smart_search_input');
     const form = document.querySelector('.job_filters');
-    const summary = document.getElementById('ai_summary_output');
-    const resetBtn = document.getElementById('reset_search');
+    const keywordInput = document.getElementById('search_keywords');
+    const locationInput = document.getElementById('search_location');
 
-    input.focus(); // Autofocus
-
-    input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-
-            const userInput = input.value;
-
-            fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams({
-                    action: 'process_smart_search',
-                    query: userInput
-                })
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log("AI response:", data);
-
-                if (!data || typeof data !== 'object') {
-                    console.error('Ongeldige AI response:', data);
-                    return;
-                }
-
-                // Filters vullen
-                if (data.keywords && document.getElementById('search_keywords')) {
-                    document.getElementById('search_keywords').value = data.keywords;
-                }
-
-                if (data.location && document.getElementById('search_location')) {
-                    document.getElementById('search_location').value = data.location;
-                }
-
-                if (Array.isArray(data.sectors) && document.getElementById('search_sectors')) {
-                    const select = document.getElementById('search_sectors');
-                    data.sectors.forEach(slug => {
-                        const option = select.querySelector(`option[value="${slug}"]`);
-                        if (option) option.selected = true;
-                    });
-                }
-
-                // Samenvatting tonen
-                let summaryText = '<strong>We filteren op:</strong><br>';
-
-                if (data.keywords) {
-                    summaryText += '🔎 Trefwoorden: <strong>' + data.keywords + '</strong><br>';
-                }
-                if (data.location) {
-                    summaryText += '📍 Locatie: <strong>' + data.location + '</strong><br>';
-                }
-                if (data.sectors && data.sectors.length > 0) {
-                    summaryText += '🏷️ Sectoren: <strong>' + data.sectors.join(', ') + '</strong>';
-                }
-
-                summary.innerHTML = summaryText;
-                summary.style.display = 'block';
-                setTimeout(() => summary.style.opacity = '1', 50);
-                resetBtn.style.display = 'inline-block';
-
-                form.dispatchEvent(new Event('submit'));
-            })
-            .catch(error => {
-                console.error('Fout tijdens AI-verwerking:', error);
-            });
-        }
-    });
-
-    resetBtn.addEventListener('click', function() {
-        input.value = '';
-        document.getElementById('search_keywords').value = '';
-        document.getElementById('search_location').value = '';
-        document.getElementById('search_sectors').selectedIndex = -1;
-        summary.style.opacity = '0';
-        setTimeout(() => {
-            summary.style.display = 'none';
-            resetBtn.style.display = 'none';
-        }, 400);
-
-        form.dispatchEvent(new Event('submit'));
-        input.focus(); // Focus opnieuw
+    [keywordInput, locationInput].forEach(input => {
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                form.dispatchEvent(new Event('submit', { bubbles: true }));
+            }
+        });
     });
 });
 </script>
+
+
+
+<?php do_action( 'job_manager_job_filters_after', $atts ); ?>
+<noscript>
+    <?php esc_html_e( 'Your browser does not support JavaScript, or it is disabled. JavaScript must be enabled in order to view listings.', 'wp-job-manager' ); ?>
+</noscript>
+
+<script>
+jQuery(document).ready(function($) {
+    $('#search_sectors').select2({
+        placeholder: 'Sectoren',
+        allowClear: true
+    });
+
+    $('#select-category').select2({
+        placeholder: 'Type baan',
+        allowClear: true
+    });
+
+    $('#search_regios').select2({
+        placeholder: 'Select a regio',
+        allowClear: true
+    });
+
+    $('#search_job_names').select2({
+        placeholder: 'Beroep',
+        allowClear: true
+    });
+});
+</script>
+
+<style>
+/* Container blijft 100% breed */
+.job_filters {
+    width: 90%;
+    padding: 20px 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #0a6b8d;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+
+}
+
+.filter-header {
+    padding: 0 20px 10px 20px;
+}
+
+.filter-header p {
+    font-family: Poppins; 
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+
+/* Flexbox voor de twee velden */
+.search-basic {
+    display: flex; 
+    justify-content: left;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Beide velden naast elkaar */
+.search_location,
+.search_keywords {
+    flex-basis: 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .search-basic {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-basic > div {
+        max-width: 90%;
+        flex-basis: 90%;
+    }
+}
+
+/* Inputvelden gestyled met schaduw en icon ruimte */
+.search-basic input[type="text"] {
+    width: 100%;
+    padding: 12px 14px 12px 38px; /* ruimte voor icoon links */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background-color: white;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-basic input[type="text"]::placeholder {
+    color: #777;
+}
+
+/* Focus state */
+.search-basic input[type="text"]:focus {
+    outline: none;
+    border-color: #0a6b8d;
+    box-shadow: 0 2px 8px rgba(10, 107, 141, 0.25);
+}
+
+/* Vergrootglas icoon */
+.search_keywords::before {
+    content: '🔍';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #0a6b8d;
+    pointer-events: none;
+}
+
+/* Locatie icoon */
+.search_location::before {
+    content: '📍';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #0a6b8d;
+    pointer-events: none;
+}
+</style>

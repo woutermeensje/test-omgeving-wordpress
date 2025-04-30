@@ -552,12 +552,7 @@ function handle_smart_search() {
 Je output is altijd een geldig JSON-object met de volgende velden:
 - keywords: functietermen of trefwoorden (string)
 - location: plaatsnaam (string)
-- job_type: array met types zoals: fulltime, parttime, stage, bijbaan, freelance, traineeship, vrijwilligerswerk
 
-Let op:
-- Als de gebruiker bijvoorbeeld 'naast mijn studie' zegt, gebruik 'bijbaan' als job_type.
-- Als iemand 'vrijwillig werk' of 'stage' noemt, herken dat ook.
-- Als iemand 'alle vacatures' zoekt, geef alle velden leeg terug.
 
 Voorbeelden:
 
@@ -566,7 +561,6 @@ Output:
 {
   \"keywords\": \"communicatie\",
   \"location\": \"Amsterdam\",
-  \"job_type\": [\"parttime\"]
 }
 
 Input: 'Stage in Utrecht over duurzaamheid'
@@ -574,7 +568,6 @@ Output:
 {
   \"keywords\": \"duurzaamheid, duurzaam, milieu\",
   \"location\": \"Utrecht\",
-  \"job_type\": [\"stage\"]
 }
 
 Input: 'Alle vacatures'
@@ -582,7 +575,6 @@ Output:
 {
   \"keywords\": \"\",
   \"location\": \"\",
-  \"job_type\": []
 }
 
 Gebruikersinput: \"$input\"";
