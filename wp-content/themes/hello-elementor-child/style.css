@@ -1,3 +1,17 @@
+/*
+Theme Name: Job Board Thema
+Theme URI: https://jouwdomein.nl/ (optioneel)
+Author: Jouw Naam
+Author URI: https://jouwdomein.nl/ (optioneel)
+Description: Een op maat gemaakt job board thema.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: job-board-thema
+*/
+
+
+
 @font-face {
     font-family: 'Balgin Bold';
     src: url('fonts/Balgin-Bold.woff2') format('woff2'),
