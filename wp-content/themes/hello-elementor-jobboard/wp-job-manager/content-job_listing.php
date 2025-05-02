@@ -50,9 +50,10 @@
     width: 80px;
     height: 80px;
     object-fit: contain;
-    border-radius: 6px;
-    background: #f4f4f4;
-    padding: 5px;
+    border: 1px solid #0a6b8d; /* originele randkleur */
+    border-radius: 5px;
+    background: #0a6b8d;
+
 }
 
 .job-details {
@@ -63,11 +64,11 @@
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 8px;
-    color: #0a6b8d; /* consistent met randkleur */
+    color: #333333; /* consistent met randkleur */
 }
 
 .job-title a {
-    color: #0a6b8d;
+    color: #333333;
     text-decoration: none;
 }
 

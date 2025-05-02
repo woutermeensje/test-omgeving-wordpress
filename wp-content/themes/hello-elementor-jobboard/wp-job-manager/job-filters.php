@@ -10,22 +10,22 @@ do_action( 'job_manager_job_filters_before', $atts );
 
 <form class="job_filters">
 
-   <!-- Titel boven de zoekvelden -->
-   <div class="filter-header" style="padding: 0 20px 10px 20px;">
-        <h2>
-            Doorzoek de Openstaande Vacatures!
-        </h2>
-        <p>
-            Of schrijf je in voor de vacature nieuwsbrief! 
-        </p>
-    </div>
+<!-- Title above the search fields -->
+<div class="filter-header" style="padding: 0 20px 10px 20px;">
+      <h2>
+            Search the All Open Positions!
+      </h2>
+      <p>
+            Or sign up for the job newsletter! 
+      </p>
+ </div>
     <div class="search-basic">
         <div class="search_keywords">
             <input 
                 type="text" 
                 name="search_keywords" 
                 id="search_keywords" 
-                placeholder="Functienaam, sector of onderwerp.." 
+                placeholder="Job title, sector, or topic.." 
                 value="<?php echo esc_attr( $keywords ); ?>" 
             />
         </div>
@@ -35,7 +35,7 @@ do_action( 'job_manager_job_filters_before', $atts );
                 type="text" 
                 name="search_location" 
                 id="search_location" 
-                placeholder="Stad of plaats" 
+                placeholder="City or place" 
                 value="<?php echo esc_attr( $location ); ?>" 
             />
         </div>
