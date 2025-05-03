@@ -79,7 +79,7 @@ get_header();
         <h2>Open Positions</h2>
         <?php
         // Voeg op de pagina zelf een shortcode toe zoals: [company_jobs slug="bedrijf-x"]
-        echo do_shortcode('[company_jobs]');
+        echo do_shortcode('[jobs]');
         ?>
     </div>
 
