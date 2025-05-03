@@ -16,7 +16,7 @@ do_action( 'job_manager_job_filters_before', $atts );
             Search the All Open Positions!
       </h2>
     <p>
-        Or <a href="https://sustainablejobs.com/sustainability-jobs-newsletter/" target="_blank" rel="noopener noreferrer">sign up for the job newsletter!</a>
+        Or <a href="https://sustainablejobs.com/sustainability-jobs-newsletter/" target="_blank" rel="noopener noreferrer">sign up for the job newsletter! 📩</a>
     </p>
  </div>
     <div class="search-basic">
