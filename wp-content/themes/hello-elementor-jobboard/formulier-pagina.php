@@ -154,9 +154,9 @@ body {
                 <label for="package">Package</label>
                 <select name="package" id="package" required>
                     <option value="">Select a package</option>
-                    <option value="Basic Package">Basic Package – €95</option>
-                    <option value="Standard Package">Standard Package – €195</option>
-                    <option value="Premium Package">Premium Package – €295</option>
+                    <option value="Basic Package">Freemiun</option>
+                    <option value="Standard Package">Standard Listing – $275 USD</option>
+                    <option value="Premium Package">Featuered Listing – $375 USD</option>
                 </select>
             </div>
         </div>

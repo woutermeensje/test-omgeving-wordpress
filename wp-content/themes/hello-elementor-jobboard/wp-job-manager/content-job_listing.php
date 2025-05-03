@@ -68,7 +68,7 @@
 }
 
 .job-title a {
-    color: #333333;
+    color: #;
     text-decoration: none;
 }
 
