@@ -28231,3 +28231,87 @@ Stack trace:
 #2 /var/www/html/index.php(17): require('/var/www/html/w...')
 #3 {main}
   thrown in /var/www/html/wp-content/themes/hello-elementor-jobboard/formulier-pagina.php on line 108
+[03-May-2025 11:58:07 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[03-May-2025 11:58:08 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[03-May-2025 11:58:08 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[03-May-2025 11:58:41 UTC] PHP Fatal error:  Out of memory (allocated 37421056) (tried to allocate 3870720 bytes) in /var/www/html/wp-includes/functions.php on line 4334
+[03-May-2025 11:58:41 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 950
