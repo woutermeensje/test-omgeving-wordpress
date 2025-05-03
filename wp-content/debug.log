@@ -27915,3 +27915,91 @@ Error occurred at line 4108 in Function <code>handle_error</code>. Error message
     [fields] => all
 )
 
+[03-May-2025 10:48:14 UTC] Automatic updates starting...
+[03-May-2025 10:48:15 UTC]   Automatic plugin updates starting...
+[03-May-2025 10:48:15 UTC]   Automatic plugin updates complete.
+[03-May-2025 10:48:15 UTC]   Automatic theme updates starting...
+[03-May-2025 10:48:15 UTC]   Automatic theme updates complete.
+[03-May-2025 10:48:15 UTC] Automatic updates complete.
+[03-May-2025 10:48:16 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[03-May-2025 10:48:16 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[03-May-2025 10:48:16 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
