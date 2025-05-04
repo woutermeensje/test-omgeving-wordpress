@@ -16,7 +16,7 @@ do_action( 'job_manager_job_filters_before', $atts );
             Doorzoek de Openstaande Vacatures!
         </h2>
         <p>
-            Of schrijf je in voor de vacature nieuwsbrief! 
+            Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank">vacature nieuwsbrief</a>! 
         </p>
     </div>
     <div class="search-basic">
@@ -112,6 +112,13 @@ jQuery(document).ready(function($) {
 .filter-header p {
     font-family: Poppins; 
     font-size: 15px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.filter-header h2 {
+    font-family: Balgin Bold; 
+    font-size: 25px;
     color: #333333;
     margin-bottom: 10px;
 }

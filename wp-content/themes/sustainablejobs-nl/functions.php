@@ -11,6 +11,11 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('poppins-font', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap', [], null);
 });
 
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style('custom-fonts', get_stylesheet_directory_uri() . '/fonts/fonts.css');
+});
+
+
 /**
  * ✅ LOAD SELECT2
  */
