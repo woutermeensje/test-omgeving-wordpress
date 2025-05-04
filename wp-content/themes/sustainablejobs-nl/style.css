@@ -1,11 +1,15 @@
 /*
-Theme Name: Hello Elementor Child
+Theme Name: Sustainablejobs NL
+Theme URI: https://sustainablejobs.nl/
+Description: Child theme voor Sustainablejobs.nl gebaseerd op Hello Elementor.
+Author: [Jouw naam of bedrijf]
+Author URI: https://sustainablejobs.nl/
 Template: hello-elementor
-Description: Child theme voor Hello Elementor
-Author: Jouw Naam
 Version: 1.0
+Text Domain: sustainablejobs-nl
 */
 
+@import url("../hello-elementor/style.css");
 
 
 @font-face {

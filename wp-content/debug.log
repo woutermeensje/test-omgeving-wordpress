@@ -29717,3 +29717,167 @@ Stack trace:
     [fields] => all
 )
 
+[04-May-2025 17:51:24 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[04-May-2025 17:51:24 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[04-May-2025 17:51:24 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[04-May-2025 17:52:28 UTC] 📌 Received AJAX Filters: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=
+)
+
+[04-May-2025 17:52:28 UTC] ✅ Final WP Job Manager Query (with tax_query): Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
+[04-May-2025 17:52:28 UTC] 📌 Job Listings AJAX Query Arguments: Array
+(
+    [post_type] => job_listing
+    [post_status] => Array
+        (
+            [0] => publish
+            [1] => expired
+        )
+
+    [ignore_sticky_posts] => 1
+    [offset] => 0
+    [posts_per_page] => 10
+    [orderby] => Array
+        (
+            [menu_order] => ASC
+            [date] => DESC
+            [ID] => DESC
+        )
+
+    [order] => DESC
+    [tax_query] => Array
+        (
+        )
+
+    [meta_query] => Array
+        (
+        )
+
+    [update_post_term_cache] => 
+    [update_post_meta_cache] => 
+    [cache_results] => 
+    [fields] => all
+)
+
