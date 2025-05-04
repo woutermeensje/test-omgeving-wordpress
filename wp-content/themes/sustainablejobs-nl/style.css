@@ -128,3 +128,43 @@ a:active {
     text-decoration: underline;
 }
 
+.simple-job-listings {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.simple-job {
+    background: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #0a6b8d;
+    border-radius: 4px;
+}
+
+.simple-job h3 {
+    margin: 0 0 10px;
+    font-family: 'Balgin Bold', sans-serif;
+    font-size: 18px;
+}
+
+.simple-job h3 a {
+    text-decoration: none;
+    color: #0a6b8d;
+}
+
+.simple-job h3 a:hover {
+    text-decoration: underline;
+}
+
+.simple-location {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.simple-excerpt {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}

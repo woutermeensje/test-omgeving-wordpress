@@ -79,8 +79,8 @@ get_header(); ?>
     <div class="company-section" id="company-jobs">
         <h2>Open Positions</h2>
         <?php
-        // Voeg op de pagina zelf een shortcode toe zoals: [company_jobs slug="bedrijf-x"]
-        echo do_shortcode('[jobs]');
+        $company_slug = sanitize_title(get_the_title());
+        echo do_shortcode('[company_jobs_simple slug="' . $company_slug . '"]');
         ?>
     </div>
 

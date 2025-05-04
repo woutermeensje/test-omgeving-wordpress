@@ -29909,3 +29909,7 @@ Error occurred at line 4108 in Function <code>handle_error</code>. Error message
 [04-May-2025 18:11:59 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 65536 bytes) in /var/www/html/wp-content/plugins/wordpress-seo/admin/class-asset.php on line 194
 [04-May-2025 18:11:59 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 65536 bytes) in Unknown on line 0
 [04-May-2025 18:12:00 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wordpress-seo/src/helpers/image-helper.php on line 214
+[04-May-2025 19:10:35 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-admin/includes/media.php on line 2763
+[04-May-2025 19:10:36 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 948
+[04-May-2025 19:14:08 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[04-May-2025 19:14:08 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085

@@ -122,9 +122,83 @@ add_action('init', function() {
     }
 });
 
+
+
+function shortcode_company_jobs_simple($atts) {
+    $atts = shortcode_atts([
+        'slug' => ''
+    ], $atts, 'company_jobs_simple');
+
+    if (empty($atts['slug'])) {
+        return '<p>⚠️ Geen bedrijf opgegeven.</p>';
+    }
+
+    $jobs = new WP_Query([
+        'post_type' => 'job_listing',
+        'posts_per_page' => 10,
+        'tax_query' => [[
+            'taxonomy' => 'job_company',
+            'field'    => 'slug',
+            'terms'    => $atts['slug']
+        ]]
+    ]);
+
+    ob_start();
+
+    if ($jobs->have_posts()) {
+        echo '<div class="simple-job-listings">';
+        while ($jobs->have_posts()) {
+            $jobs->the_post();
+            $location = get_the_job_location();
+            echo '<div class="simple-job">';
+            echo '<h3><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
+            if ($location) echo '<p class="simple-location">' . esc_html($location) . '</p>';
+            echo '<p class="simple-excerpt">' . wp_trim_words(get_the_excerpt(), 20, '...') . '</p>';
+            echo '</div>';
+        }
+        echo '</div>';
+    } else {
+        echo '<p>Er zijn momenteel geen vacatures van dit bedrijf.</p>';
+    }
+
+    wp_reset_postdata();
+    return ob_get_clean();
+}
+add_shortcode('company_jobs_simple', 'shortcode_company_jobs_simple');
+
+
 /**
  * ✅ AJAX FILTER SUPPORT (WP Job Manager)
  * Bevat jouw smart search en filtering logica. Deze kun je hieronder gewoon herhalen uit je huidige functions.php.
  * Denk aan: handle_custom_job_filters(), handle_smart_search(), validate_terms() etc.
  */
 
+ add_action('init', 'register_job_company_taxonomy');
+
+ function register_job_company_taxonomy() {
+     $labels = [
+         'name'              => _x( 'Companies', 'taxonomy general name', 'textdomain' ),
+         'singular_name'     => _x( 'Company', 'taxonomy singular name', 'textdomain' ),
+         'search_items'      => __( 'Search Companies', 'textdomain' ),
+         'all_items'         => __( 'All Companies', 'textdomain' ),
+         'edit_item'         => __( 'Edit Company', 'textdomain' ),
+         'update_item'       => __( 'Update Company', 'textdomain' ),
+         'add_new_item'      => __( 'Add New Company', 'textdomain' ),
+         'new_item_name'     => __( 'New Company Name', 'textdomain' ),
+         'menu_name'         => __( 'Companies', 'textdomain' ),
+     ];
+ 
+     $args = [
+         'hierarchical'      => false,
+         'labels'            => $labels,
+         'show_ui'           => true,
+         'show_admin_column' => true,
+         'query_var'         => true,
+         'rewrite'           => [ 'slug' => 'company' ],
+         'meta_box_cb'       => 'post_tags_meta_box',
+         'show_in_rest'      => true, // voor blokeditor en API
+     ];
+ 
+     register_taxonomy( 'job_company', 'job_listing', $args );
+ }
+ 
