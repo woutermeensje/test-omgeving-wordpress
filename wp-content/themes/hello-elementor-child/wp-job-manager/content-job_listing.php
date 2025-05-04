@@ -4,88 +4,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="body-class">
-    <div class="main-container">
-            <!-- Job Listings Section -->
-            <div class="jobs-list-container">
-                <ul class="job-list">
-                    <li class="job-listing" <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr($post->geolocation_long); ?>" data-latitude="<?php echo esc_attr($post->geolocation_lat); ?>">
-                        <?php 
-                        // Display Cover Image if available
-                        $cover_image_id = get_post_meta(get_the_ID(), '_cover_image', true); 
-                        if ($cover_image_id) : 
-                            $cover_image_url = wp_get_attachment_image_url($cover_image_id, 'large'); 
-                        ?>
-                            <div class="job-cover-image">
-                                <img src="<?php echo esc_url($cover_image_url); ?>" alt="<?php the_title_attribute(); ?>" class="cover-image">
-                            </div>
-                        <?php endif; ?>
+
+<div class="main-container">
+    <!-- Job Listings Section -->
+    <div class="jobs-list-container">
+        <ul class="job-list">
+            <li class="job-listing" <?php job_listing_class(); ?> 
+                data-longitude="<?php echo esc_attr($post->geolocation_long); ?>" 
+                data-latitude="<?php echo esc_attr($post->geolocation_lat); ?>">
+
+                <?php 
+                // Cover image
+                $cover_image_id = get_post_meta(get_the_ID(), '_cover_image', true); 
+                if ($cover_image_id) : 
+                    $cover_image_url = wp_get_attachment_image_url($cover_image_id, 'large'); 
+                ?>
+                    <div class="job-cover-image">
+                        <img src="<?php echo esc_url($cover_image_url); ?>" 
+                             alt="<?php the_title_attribute(); ?>" 
+                             class="cover-image" loading="lazy" />
+                    </div>
+                <?php endif; ?>
+
+                <!-- Company logo -->
+                <?php if (has_post_thumbnail() || get_the_company_logo()) : ?>
+                    <div class="rounded-image">
+                        <div class="logo-wrapper">
+                            <?php the_company_logo(); ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <div class="job-details-container">
+                    <div class="vacature-content">
                         
-                        <div class="rounded-image">
-                            <div class="logo-wrapper">
-                                <?php the_company_logo(); ?>
-                            </div>
+                        <!-- Date -->
+                        <div class="job-date"> 
+                            <p><?php echo date_i18n('l j F', strtotime(get_the_date()), true); ?></p>
                         </div>
 
+                        <!-- Title -->
+                        <h2 class="job-title">
+                            <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
+                        </h2>
 
-                        <div class="job-details-container">
-                        <div class="vacature-content">
+                        <!-- Excerpt -->
+                        <div class="job_text">
+                            <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+                        </div>
 
-                        <div class="job-date"> 
-                                    <p><?php echo date_i18n('l j F', strtotime(get_the_date()), true); ?></p>
-                                </div>
-                                <h2 class="job-title">
-                                    <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
-                                </h2>
-
-                                <div class="job_text">
-                                    <p><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
-                                </div>
-
-                            <div class="vacature-meta"> 
+                        <!-- Meta (Company, Type, Location) -->
+                        <div class="vacature-meta"> 
                             <div class="job-meta-container">
-                           
-                                        <?php do_action('job_listing_meta_start'); ?>
-                                        <?php do_action('job_listing_meta_end'); ?>
-                                    
-                                        <p class="company-name-job-listing"><?php the_company_name(); ?></p>
+                                <?php do_action('job_listing_meta_start'); ?>
 
-                                        <p class="job-type">
-                                            <?php if (get_option('job_manager_enable_types')) : ?>
-                                                <?php $types = wpjm_get_the_job_types(); ?>
-                                                <?php if (!empty($types)) : foreach ($types as $type) : ?>
-                                                    <?php echo esc_html($type->name); ?>
-                                                <?php endforeach; endif; ?>
-                                            <?php endif; ?>
-                                        </p>
+                                <p class="company-name-job-listing"><?php the_company_name(); ?></p>
 
-                                        <p class="job-location"><?php the_job_location(true); ?></p>
-                                    </div>
-                                </div>
+                                <p class="job-type">
+                                    <?php if (get_option('job_manager_enable_types')) :
+                                        $types = wpjm_get_the_job_types();
+                                        if (!empty($types)) :
+                                            foreach ($types as $type) :
+                                                echo esc_html($type->name) . ' ';
+                                            endforeach;
+                                        endif;
+                                    endif; ?>
+                                </p>
+
+                                <p class="job-location"><?php the_job_location(true); ?></p>
+
+                                <?php do_action('job_listing_meta_end'); ?>
                             </div>
-                     
-                    </li>
-                </ul>
+                        </div>
+                    </div>
+                </div>
 
-                
-           
-
-        </div>
-        
+            </li>
+        </ul>
     </div>
+</div>
 
-                
-    <div class="mobile-job-listings">
-        <h2 class="job-title">
-            <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
-        </h2>
-        <div class="job_text-mobile">
-            <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
-        </div>
-        <p class="company-name-mobile"><?php the_company_name(); ?></p>
+<!-- Mobile View -->
+<div class="mobile-job-listings">
+    <h2 class="job-title">
+        <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
+    </h2>
+    <div class="job_text-mobile">
+        <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
     </div>
+    <p class="company-name-mobile"><?php the_company_name(); ?></p>
+</div>
 
 </body>
 </html>
+
 
 
 
