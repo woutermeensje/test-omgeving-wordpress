@@ -201,4 +201,5 @@ add_shortcode('company_jobs_simple', 'shortcode_company_jobs_simple');
  
      register_taxonomy( 'job_company', 'job_listing', $args );
  }
+
  

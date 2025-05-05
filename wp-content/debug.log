@@ -29913,3 +29913,23 @@ Error occurred at line 4108 in Function <code>handle_error</code>. Error message
 [04-May-2025 19:10:36 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 948
 [04-May-2025 19:14:08 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
 [04-May-2025 19:14:08 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[04-May-2025 19:43:08 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 282
+[04-May-2025 19:43:08 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-May-2025 19:43:09 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 282
+[04-May-2025 19:43:09 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-May-2025 19:43:14 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 282
+[04-May-2025 19:43:14 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-May-2025 19:43:27 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 282
+[04-May-2025 19:43:27 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-May-2025 19:43:40 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 282
+[04-May-2025 19:43:40 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-May-2025 19:45:08 UTC] PHP Fatal error:  Cannot redeclare register_custom_job_taxonomies() (previously declared in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php:57) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 177
+[04-May-2025 19:47:09 UTC] PHP Fatal error:  Cannot redeclare register_custom_job_taxonomies() (previously declared in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php:57) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 206
+[04-May-2025 19:47:16 UTC] PHP Fatal error:  Cannot redeclare register_custom_job_taxonomies() (previously declared in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php:57) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 179
+[05-May-2025 05:59:53 UTC] Automatic updates starting...
+[05-May-2025 05:59:53 UTC]   Automatic plugin updates starting...
+[05-May-2025 05:59:53 UTC]   Automatic plugin updates complete.
+[05-May-2025 05:59:53 UTC]   Automatic theme updates starting...
+[05-May-2025 05:59:53 UTC]   Automatic theme updates complete.
+[05-May-2025 05:59:53 UTC] Automatic updates complete.
+[05-May-2025 06:58:58 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-admin/includes/media.php on line 2894
