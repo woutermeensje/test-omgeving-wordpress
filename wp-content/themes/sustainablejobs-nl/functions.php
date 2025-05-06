@@ -164,10 +164,6 @@ add_filter('job_manager_job_listing_data_fields', function($fields) {
         'label' => __('Cover Image', 'job_manager'),
         'type'  => 'file',
     ];
-    $fields['_company_logo'] = [
-        'label' => __('Company Logo', 'job_manager'),
-        'type'  => 'file',
-        'description' => __('Upload the company logo.', 'job_manager'),
-    ];
+   
     return $fields;
 });

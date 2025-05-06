@@ -13,18 +13,17 @@
                 data-longitude="<?php echo esc_attr($post->geolocation_long); ?>" 
                 data-latitude="<?php echo esc_attr($post->geolocation_lat); ?>">
 
+               
                 <?php 
-                // Cover image
-                $cover_image_id = get_post_meta(get_the_ID(), '_cover_image', true); 
-                if ($cover_image_id) : 
-                    $cover_image_url = wp_get_attachment_image_url($cover_image_id, 'large'); 
-                ?>
+                $cover_image_url = get_post_meta(get_the_ID(), '_cover_image', true); 
+                if ($cover_image_url) : ?>
                     <div class="job-cover-image">
                         <img src="<?php echo esc_url($cover_image_url); ?>" 
                              alt="<?php the_title_attribute(); ?>" 
                              class="cover-image" loading="lazy" />
                     </div>
                 <?php endif; ?>
+                
 
                 <!-- Company logo -->
                 <?php if (has_post_thumbnail() || get_the_company_logo()) : ?>
@@ -209,19 +208,13 @@ li.job-listing:hover {
 	font-weight: 200 !important; 
 }
 
-.job-title {
-    font-size: 45px;
-    font-weight: 600;
-    color: #007bff;
+h2.job-title a {
+    line-height: 1.2; /* smaller = tighter line spacing */
     margin: 0;
-    font-family: Balgin Bold; 
-}
-
-.job-title a {
-    color: #333333;
-    font-family: Balgin Bold; 
-    font-size: 25px;
-    text-decoration: none;
+    padding: 0;
+    font-family: Balgin Bold !important;
+    font-size: 24px !important;
+    color: #333333 !important;
 }
 
 p {
@@ -410,6 +403,7 @@ ul.meta li.job-type {
     h2.job-title {
         font-size: 20px;
         font-family: Poppins !important;
+       
     }
 
     a {
