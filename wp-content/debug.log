@@ -30033,3 +30033,9 @@ Stack trace:
 [06-May-2025 15:15:50 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 529
 [06-May-2025 15:15:50 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 528
 [06-May-2025 15:15:54 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 520
+[06-May-2025 15:20:46 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-admin/includes/media.php on line 1820
+[06-May-2025 15:20:46 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor-pro/modules/query-control/module.php on line 28
+[06-May-2025 15:20:49 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-admin/includes/media.php on line 1820
+[06-May-2025 15:20:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wordpress-seo/src/helpers/image-helper.php on line 182
+[06-May-2025 15:20:51 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wordpress-seo/src/helpers/image-helper.php on line 160
+[06-May-2025 15:20:51 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 929
