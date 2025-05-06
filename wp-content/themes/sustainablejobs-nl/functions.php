@@ -49,23 +49,23 @@ add_filter('job_manager_locate_template', function($template, $template_name) {
  * ✅ CUSTOM TAXONOMIES
  */
 add_action('init', function() {
-    // Companies
+    // Organisaties (was job_company)
     register_taxonomy('job_company', 'job_listing', [
         'labels' => [
-            'name' => __('Companies', 'textdomain'),
-            'singular_name' => __('Company', 'textdomain'),
-            'menu_name' => __('Companies', 'textdomain'),
-            'all_items' => __('All Companies', 'textdomain'),
-            'add_new_item' => __('Add New Company', 'textdomain'),
-            'edit_item' => __('Edit Company', 'textdomain'),
-            'view_item' => __('View Company', 'textdomain'),
-            'search_items' => __('Search Companies', 'textdomain'),
+            'name' => __('Organisaties', 'textdomain'),
+            'singular_name' => __('Organisatie', 'textdomain'),
+            'menu_name' => __('Organisaties', 'textdomain'),
+            'all_items' => __('Alle Organisaties', 'textdomain'),
+            'add_new_item' => __('Nieuwe Organisatie toevoegen', 'textdomain'),
+            'edit_item' => __('Bewerk Organisatie', 'textdomain'),
+            'view_item' => __('Bekijk Organisatie', 'textdomain'),
+            'search_items' => __('Zoek Organisaties', 'textdomain'),
         ],
         'hierarchical' => true,
         'show_ui' => true,
         'show_admin_column' => true,
         'show_in_rest' => true,
-        'rewrite' => ['slug' => 'company'],
+        'rewrite' => ['slug' => 'organisatie'],
     ]);
 
     // Sectors
@@ -144,6 +144,16 @@ add_action('init', function() {
         'show_in_rest' => true,
         'rewrite' => ['slug' => 'salaris'],
     ]);
+
+    // Vakgebied
+    register_taxonomy('vakgebied', ['job_listing'], [
+        'label' => __('Vakgebied', 'sustainablejobs'),
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'rewrite' => ['slug' => 'vakgebied'],
+    ]);
 });
 
 /**
@@ -161,5 +171,3 @@ add_filter('job_manager_job_listing_data_fields', function($fields) {
     ];
     return $fields;
 });
-
-/** Rest of the file remains unchanged... */

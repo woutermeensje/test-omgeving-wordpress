@@ -29946,3 +29946,20 @@ Error occurred at line 4108 in Function <code>handle_error</code>. Error message
 [05-May-2025 13:50:25 UTC] PHP Fatal error:  Out of memory (allocated 10485760) (tried to allocate 65536 bytes) in /var/www/html/wp-includes/class-wp-hook.php on line 324
 [05-May-2025 13:50:25 UTC] PHP Fatal error:  Out of memory (allocated 10485760) (tried to allocate 65536 bytes) in Unknown on line 0
 [05-May-2025 13:50:25 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wordpress-seo/src/helpers/image-helper.php on line 284
+[05-May-2025 14:29:57 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[05-May-2025 14:29:57 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[05-May-2025 14:30:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 950
+[06-May-2025 05:14:58 UTC] Automatic updates starting...
+[06-May-2025 05:14:59 UTC]   Automatic plugin updates starting...
+[06-May-2025 05:14:59 UTC]   Automatic plugin updates complete.
+[06-May-2025 05:14:59 UTC]   Automatic theme updates starting...
+[06-May-2025 05:14:59 UTC]   Automatic theme updates complete.
+[06-May-2025 05:14:59 UTC] Automatic updates complete.
+[06-May-2025 12:25:32 UTC] Automatic updates starting...
+[06-May-2025 12:25:32 UTC]   Automatic plugin updates starting...
+[06-May-2025 12:25:32 UTC]   Automatic plugin updates complete.
+[06-May-2025 12:25:32 UTC]   Automatic theme updates starting...
+[06-May-2025 12:25:32 UTC]   Automatic theme updates complete.
+[06-May-2025 12:25:32 UTC] Automatic updates complete.
+[06-May-2025 12:47:47 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[06-May-2025 12:47:47 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085

@@ -9,7 +9,7 @@
     <!-- Job Listings Section -->
     <div class="jobs-list-container">
         <ul class="job-list">
-            <li class="job-listing" <?php job_listing_class(); ?> 
+            <li class="job-listing" <?php job_listing_class(); ?>
                 data-longitude="<?php echo esc_attr($post->geolocation_long); ?>" 
                 data-latitude="<?php echo esc_attr($post->geolocation_lat); ?>">
 
@@ -143,8 +143,10 @@ li.job-listing {
     background: #fff;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     margin-top: 30px;
-    height: 325px; 
+  
     position: relative; 
+    max-height: 325px;
+    min-height: 325px;
 
 }
 
@@ -184,13 +186,15 @@ li.job-listing:hover {
 /* Job Cover Image */
 .job-cover-image {
     width: 100%;
-    max-height: 100%;
+    max-height: 323px;
     overflow: hidden;
 }
 
 .job-cover-image img.cover-image {
-    height: auto;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 /* Job Details Container */
