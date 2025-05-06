@@ -167,3 +167,23 @@ add_filter('job_manager_job_listing_data_fields', function($fields) {
    
     return $fields;
 });
+
+
+
+
+
+function mailtrap($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = 'sandbox.smtp.mailtrap.io';
+    $phpmailer->SMTPAuth   = true;
+    $phpmailer->Port       = 2525;
+    $phpmailer->Username   = 'b6d34b29407f59';
+    $phpmailer->Password   = 'b8b12918c85377';
+    $phpmailer->SMTPSecure = 'tls';
+    $phpmailer->From       = 'support@sustainablejobs.nl';
+    $phpmailer->FromName   = 'Sustainable Jobs';
+}
+add_action('phpmailer_init', 'mailtrap');
+
+
+  
