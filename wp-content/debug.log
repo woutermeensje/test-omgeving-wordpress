@@ -30048,3 +30048,29 @@ Stack trace:
 [07-May-2025 14:54:57 UTC]   Automatic theme updates starting...
 [07-May-2025 14:54:58 UTC]   Automatic theme updates complete.
 [07-May-2025 14:54:58 UTC] Automatic updates complete.
+[07-May-2025 19:49:23 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[07-May-2025 19:50:54 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor-pro/modules/assets-manager/asset-types/fonts-manager.php on line 166
+[07-May-2025 19:50:54 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1647
+[07-May-2025 19:50:54 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1647
+[07-May-2025 19:50:54 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1647
+[07-May-2025 19:50:54 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1647
+[07-May-2025 19:50:55 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1647
+[07-May-2025 19:50:55 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1647
+[07-May-2025 20:12:08 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:12:08 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:14:02 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:14:02 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:14:10 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:14:10 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:14:11 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:14:11 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:15:13 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:15:13 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:11 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:11 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:45 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:45 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:47 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:47 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:48 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[07-May-2025 20:16:48 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
