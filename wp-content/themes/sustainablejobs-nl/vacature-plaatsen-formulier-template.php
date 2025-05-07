@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verzenden'])) {
 
     $headers = ['Content-Type: text/plain; charset=UTF-8'];
 
-    $to = 'test@example.com'; // testadres dat je in Mailtrap accepteert
+    $to = 'support@sustainablejobs.nl'; // testadres dat je in Mailtrap accepteert
     $subject = 'New job submitted via form';
     $headers = ['Content-Type: text/plain; charset=UTF-8'];
     

@@ -30039,3 +30039,12 @@ Stack trace:
 [06-May-2025 15:20:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wordpress-seo/src/helpers/image-helper.php on line 182
 [06-May-2025 15:20:51 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wordpress-seo/src/helpers/image-helper.php on line 160
 [06-May-2025 15:20:51 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/admin/class-wp-job-manager-settings.php on line 929
+[07-May-2025 14:54:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/wp-includes/class-wpdb.php on line 3156
+[07-May-2025 14:54:54 UTC] PHP Notice:  Undefined index: version_comment in /var/www/html/wp-content/plugins/elementor/modules/system-info/reporters/server.php on line 289
+[07-May-2025 14:54:54 UTC] PHP Notice:  Trying to get property 'Value' of non-object in /var/www/html/wp-content/plugins/elementor/modules/system-info/reporters/server.php on line 289
+[07-May-2025 14:54:57 UTC] Automatic updates starting...
+[07-May-2025 14:54:57 UTC]   Automatic plugin updates starting...
+[07-May-2025 14:54:57 UTC]   Automatic plugin updates complete.
+[07-May-2025 14:54:57 UTC]   Automatic theme updates starting...
+[07-May-2025 14:54:58 UTC]   Automatic theme updates complete.
+[07-May-2025 14:54:58 UTC] Automatic updates complete.
