@@ -16,7 +16,8 @@ do_action( 'job_manager_job_filters_before', $atts );
             Doorzoek de Openstaande Vacatures!
         </h2>
         <p>
-            Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank">vacature nieuwsbrief</a>! 
+            Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief</a>
+! 
         </p>
     </div>
     <div class="search-basic">
@@ -121,6 +122,20 @@ jQuery(document).ready(function($) {
     font-size: 25px;
     color: #333333;
     margin-bottom: 10px;
+}
+
+/* Linkstijl buiten Elementor */
+.filter-header a.unstyled-newsletter-link {
+    color: #0a6b8d !important;
+    text-decoration: underline;
+    font-weight: 400;
+    font-family: Poppins, sans-serif;
+
+}
+
+.filter-header a.unstyled-newsletter-link:hover {
+    color: var(--color-roze) !important;
+    text-decoration: none; 
 }
 
 

@@ -176,13 +176,6 @@ add_action('wp_enqueue_scripts', 'child_theme_gravity_forms_styles');
 
 
 
-add_action('gform_enqueue_scripts', function() {
-    if (is_page()) { // or is_singular(), or target a specific form page
-        wp_enqueue_script('editor');
-        wp_enqueue_script('quicktags');
-        wp_enqueue_style('editor-buttons');
-    }
-}, 20);
 
 
 

@@ -70,7 +70,15 @@
                                     endif; ?>
                                 </p>
 
-                                <p class="job-location"><?php the_job_location(true); ?></p>
+                                <?php 
+                                $location = get_the_job_location();
+                                $google_maps_link = 'https://www.google.com/maps/search/' . urlencode($location);
+                                ?>
+                                <p class="job-location custom-location-link">
+                                    <a href="<?php echo esc_url($google_maps_link); ?>" class="unstyled-location-link" target="_blank" rel="noopener noreferrer">
+                                        <?php echo esc_html($location); ?>
+                                    </a>
+                                </p>
 
                                 <?php do_action('job_listing_meta_end'); ?>
                             </div>
@@ -448,6 +456,21 @@ ul.meta li.job-type {
 }
 
    
+}
+
+
+/* Specifieke stijl voor de locatie-link */
+.custom-location-link a.unstyled-location-link {
+    color: #333333 !important;
+    font-weight: 200;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+}
+
+.custom-location-link a.unstyled-location-link:hover {
+    color: #0a6b8d !important;
+    text-decoration: underline;
 }
 
 
