@@ -178,14 +178,26 @@ li.job-listing:hover {
 
 }
 
+/* Logo wrapper styling */
+.logo-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: white; /* White background for transparent logos */
+    padding: 3px;
+    border: 2px solid var(--color-donkerblauw) !important; /* Border around the logo */
+    border-radius: 0px !important; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Ensure all logos scale properly inside the container */
 .logo-wrapper img {
-    width: 100%; /* Make the image fill the container width */
-    height: 100%; /* Make the image fill the container height */
-    object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
-    display: block; /* Prevents inline spacing issues */
-    background: #0a6b8d; 
-    padding: 2px; 
-    border-radius: 6px; 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    display: block;
 }
 
 
@@ -212,8 +224,8 @@ li.job-listing:hover {
 .company-name-job-listing {
     font-family: Poppins; 
 	font-size: 13px !important; 
-	color: #333 !important;
-	font-weight: 200 !important; 
+	color:  #0A6B8D !important; /   * B
+	font-weight: 400 !important; 
 }
 
 h2.job-title a {
@@ -249,10 +261,10 @@ p {
 
 .job-location {
     margin: auto; 
-    font-size: 13px !important; 
-    color: #333  !important; 
-    font-family: Poppins  !important; 
-    font-weight: 200  !important; 
+    font-family: Poppins; 
+	font-size: 15px !important; 
+	color: var(--color-donkerblauw) !important;
+	font-weight: 400 !important; 
 }
 
 /* Job Meta Container */
@@ -265,9 +277,9 @@ p {
 
 .job-meta-container p {
     font-family: Poppins; 
-	font-size: 13px !important; 
-	color: #333 !important;
-	font-weight: 200 !important; 
+	font-size: 15px !important; 
+	color: var(--color-donkerblauw) !important;
+	font-weight: 400 !important; 
 }
 
 ul.meta {
@@ -461,11 +473,10 @@ ul.meta li.job-type {
 
 /* Specifieke stijl voor de locatie-link */
 .custom-location-link a.unstyled-location-link {
-    color: #333333 !important;
-    font-weight: 200;
-    text-decoration: none;
-    font-family: Poppins, sans-serif;
-    font-size: 13px;
+    font-family: Poppins; 
+	font-size: 15px !important; 
+	color: var(--color-donkerblauw) !important;
+	font-weight: 700 !important; 
 }
 
 .custom-location-link a.unstyled-location-link:hover {
