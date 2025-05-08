@@ -276,10 +276,10 @@ p {
 }
 
 .job-meta-container p {
-    font-family: Poppins; 
-	font-size: 15px !important; 
-	color: var(--color-donkerblauw) !important;
-	font-weight: 400 !important; 
+     font-family: Poppins; 
+	font-size: 14px !important; 
+	color: #333333 !important;
+	font-weight: 300 !important; 
 }
 
 ul.meta {
@@ -473,10 +473,10 @@ ul.meta li.job-type {
 
 /* Specifieke stijl voor de locatie-link */
 .custom-location-link a.unstyled-location-link {
-    font-family: Poppins; 
-	font-size: 15px !important; 
-	color: var(--color-donkerblauw) !important;
-	font-weight: 700 !important; 
+     font-family: Poppins; 
+	font-size: 14px !important; 
+	color: #333333 !important;
+	font-weight: 300 !important; 
 }
 
 .custom-location-link a.unstyled-location-link:hover {
