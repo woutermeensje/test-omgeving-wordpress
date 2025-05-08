@@ -6,22 +6,19 @@ if (!defined('ABSPATH')) exit;
  * ✅ ENQUEUE STYLES
  */
 add_action('wp_enqueue_scripts', function() {
+    // Parent & child styles
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', ['parent-style'], wp_get_theme()->get('Version'));
+
+    // Fonts
     wp_enqueue_style('poppins-font', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap', [], null);
-});
-
-add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('custom-fonts', get_stylesheet_directory_uri() . '/fonts/fonts.css');
+
+    // Gravity Forms custom styles
+    wp_enqueue_style('child-gf-styles', get_stylesheet_directory_uri() . '/css/gravity-forms.css');
 });
 
-/**
- * ✅ LOAD SELECT2
- */
-add_action('wp_enqueue_scripts', function() {
-    wp_enqueue_style('select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css', [], '4.1.0');
-    wp_enqueue_script('select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js', ['jquery'], '4.1.0', true);
-});
+
 
 /**
  * ✅ WP JOB MANAGER: CUSTOM TEMPLATE OVERRIDES
@@ -170,20 +167,6 @@ add_filter('job_manager_job_listing_data_fields', function($fields) {
 
 
 
-add_action('wp_head', function () {
-    ?>
-    <!-- Hard load Select2 in de HEAD -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <?php
-}, 100);
-
-add_action('wp_enqueue_scripts', function () {
-    // Forceer verwijderen van scripts-theme.min.js
-    wp_dequeue_script('gform_gravityforms_theme');
-    wp_deregister_script('gform_gravityforms_theme');
-}, 100);
-
 
 
 function child_theme_gravity_forms_styles() {
@@ -200,3 +183,6 @@ add_action('gform_enqueue_scripts', function() {
         wp_enqueue_style('editor-buttons');
     }
 }, 20);
+
+
+
