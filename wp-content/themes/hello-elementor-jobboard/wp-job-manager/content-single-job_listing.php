@@ -33,6 +33,8 @@ global $post;
 
 if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
+
+
 <div class="custom-top-section">
         <p>Ontvang wekelijkse onze vacatures</p>
 
@@ -222,33 +224,8 @@ a.google_map_link {
     font-size: 15px;
 }
 
-.custom-top-section {
-    background-color: #0a6b8d;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: "Balgin Bold", sans-serif;
-    font-size: 18px;
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    width: 100vw; /* Full viewport width */
-    margin-left: calc(-50vw + 50%); /* Adjust left margin for full stretch */
-    position: relative; /* Ensure proper stacking */
-    left: 0; /* Ensure it aligns with the viewport */
-    display: flex; 
-}
 
 
-.custom-top-section p {
-    color: white;
-    text-align: center;
-    font-family: "Balgin Bold", sans-serif;
-    font-size: 18px;
-    margin-left: auto; 
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 0px; 
-}
 
 .button-top-section {
     background-color: #e0d0e1;
@@ -346,7 +323,7 @@ h1.entry-title {
     margin: 40px auto;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15); /* Darker and stronger shadow effect */   
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15); /* Darker and stronger shadow effect */  
 }
 
 .cover-image-top {
@@ -423,7 +400,7 @@ h1.entry-title {
 .job_description {
     font-family: Poppins;  
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.6;
     color: #333;
     margin-top: 20px !important; 

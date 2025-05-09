@@ -1,489 +1,199 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="body-class">
-
-<div class="main-container">
-    <!-- Job Listings Section -->
-    <div class="jobs-list-container">
-        <ul class="job-list">
-            <li class="job-listing" <?php job_listing_class(); ?>
-                data-longitude="<?php echo esc_attr($post->geolocation_long); ?>" 
-                data-latitude="<?php echo esc_attr($post->geolocation_lat); ?>">
-
-               
-                <?php 
-                $cover_image_url = get_post_meta(get_the_ID(), '_cover_image', true); 
-                if ($cover_image_url) : ?>
-                    <div class="job-cover-image">
-                        <img src="<?php echo esc_url($cover_image_url); ?>" 
-                             alt="<?php the_title_attribute(); ?>" 
-                             class="cover-image" loading="lazy" />
-                    </div>
-                <?php endif; ?>
-                
-
-                <!-- Company logo -->
-                <?php if (has_post_thumbnail() || get_the_company_logo()) : ?>
-                    <div class="rounded-image">
-                        <div class="logo-wrapper">
-                            <?php the_company_logo(); ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
-                <div class="job-details-container">
-                    <div class="vacature-content">
-                        
-                        <!-- Date -->
-                        <div class="job-date"> 
-                            <p><?php echo date_i18n('l j F', strtotime(get_the_date()), true); ?></p>
-                        </div>
-
-                        <!-- Title -->
-                        <h2 class="job-title">
-                            <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
-                        </h2>
-
-                        <!-- Excerpt -->
-                        <div class="job_text">
-                            <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
-                        </div>
-
-                        <!-- Meta (Company, Type, Location) -->
-                        <div class="vacature-meta"> 
-                            <div class="job-meta-container">
-                                <?php do_action('job_listing_meta_start'); ?>
-
-                                <p class="company-name-job-listing"><?php the_company_name(); ?></p>
-
-                                <p class="job-type">
-                                    <?php if (get_option('job_manager_enable_types')) :
-                                        $types = wpjm_get_the_job_types();
-                                        if (!empty($types)) :
-                                            foreach ($types as $type) :
-                                                echo esc_html($type->name) . ' ';
-                                            endforeach;
-                                        endif;
-                                    endif; ?>
-                                </p>
-
-                                <?php 
-                                $location = get_the_job_location();
-                                $google_maps_link = 'https://www.google.com/maps/search/' . urlencode($location);
-                                ?>
-                                <p class="job-location custom-location-link">
-                                    <a href="<?php echo esc_url($google_maps_link); ?>" class="unstyled-location-link" target="_blank" rel="noopener noreferrer">
-                                        <?php echo esc_html($location); ?>
-                                    </a>
-                                </p>
-
-                                <?php do_action('job_listing_meta_end'); ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </li>
-        </ul>
+<li class="job-listing-simple" <?php job_listing_class(); ?>>
+    <div class="job-logo">
+        <?php the_company_logo(); ?>
     </div>
-</div>
-
-<!-- Mobile View -->
-<div class="mobile-job-listings">
-    <h2 class="job-title">
-        <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
-    </h2>
-    <div class="job_text-mobile">
-        <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
+    <div class="job-details">
+        <div class="job-title-line">
+            <h2 class="job-title">
+                <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
+            </h2>
+            <span class="job-date"><?php the_job_publish_date(); ?></span>
+        </div>
+        <div class="job-meta">
+            <?php
+            $terms = wp_get_post_terms(get_the_ID(), 'job_company');
+            if (!empty($terms) && !is_wp_error($terms)) {
+                foreach ($terms as $term) {
+                    echo '<span class="company-name">' . esc_html($term->name) . '</span>';
+                }
+            }
+            ?>
+            <span class="job-location"><?php the_job_location(); ?></span>
+            <span class="job-type">
+                <?php if (get_option('job_manager_enable_types')) : ?>
+                    <?php $types = wpjm_get_the_job_types(); ?>
+                    <?php if (!empty($types)) : foreach ($types as $type) : ?>
+                        <?php echo esc_html($type->name); ?>
+                    <?php endforeach; endif; ?>
+                <?php endif; ?>
+            </span>
+        </div>
+        <div class="job-description">
+            <?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?>
+        </div>
     </div>
-    <p class="company-name-mobile"><?php the_company_name(); ?></p>
-</div>
-
-</body>
-</html>
-
+</li>
 
 
 
 <style>
-/* General Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
 
-/* Main Container */
-.main-container {
+
+    .job-listing-simple {
     display: flex;
-    justify-content: center;
-}
-
-
-/* Job Listings Section */
-.jobs-list-container {
-  margin: 0px; 
-  padding: 0px; 
-}
-
-/* Job List */
-ul.job-list {
-    list-style: none;
-    margin: 0 auto; /* Center the div */
-    padding: 0;
+    align-items: center;
+    gap: 20px;
+    padding: 8px;
+    margin: 0 auto 28px auto;
     width: 90%;
-}
-
-/* Job Listing */
-li.job-listing {
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    border: 1px solid #0a6b8d;
+    border: 1px solid white;
+    background-color: #ffffff;
+    border-radius: 5px;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
-    border-radius: 0px;
-    background: #fff;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    margin-top: 30px;
-  
-    position: relative; 
-    max-height: 325px;
-    min-height: 325px;
+    transition: all 0.2s ease-in-out;
+}
+
+.job-listing-simple:hover { 
+        border: 1px solid #0A6B8D; /* aangepast */
+}
+
+/* Logo blok */
+.job-logo {
+    flex-shrink: 0;
+    margin-left: -50px;
+    background-color: white; 
+}
+
+.job-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;    
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s ease-in-out;
 
 }
 
-li.job-listing:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-}
-
-
-.rounded-image {
-    position: absolute; /* Keeps overlap positioning */
-    width: 10%; /* Width of the container */
-    height: auto; /* Keeps the aspect ratio */
-    left: 45%; /* Centers horizontally */
-    top: 50%; /* Centers vertically */
-    transform: translateY(-50%); /* Centers vertically using transform */
-    z-index: 1; /* Keeps the correct stacking order */
-    margin: auto; /* No change here */
-    border-radius: 5px; /* Rounded corners for the container */
-    overflow: hidden; /* Ensures the logo doesn't overflow the container */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-
-}
-
-/* Logo wrapper styling */
-.logo-wrapper {
-    width: 100%;
-    height: 100%;
-    background-color: white; /* White background for transparent logos */
-    padding: 3px;
-    border: 2px solid var(--color-donkerblauw) !important; /* Border around the logo */
-    border-radius: 0px !important; /* Rounded corners */
+/* Details blok */
+.job-details {
+    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    flex-direction: column;
+    gap: 8px;
 }
 
-/* Ensure all logos scale properly inside the container */
-.logo-wrapper img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Maintain aspect ratio without cropping */
-    display: block;
+/* Job titel */
+.job-title {
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Balgin Bold', sans-serif;
+    margin-bottom: 5px;
 }
 
-
-
-/* Job Cover Image */
-.job-cover-image {
-    width: 100%;
-    max-height: 323px;
-    overflow: hidden;
-}
-
-.job-cover-image img.cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Job Details Container */
-.job-details-container {
-    width: 100%;
-}
-
-.company-name-job-listing {
-    font-family: Poppins; 
-	font-size: 13px !important; 
-	color:  #0A6B8D !important; /   * B
-	font-weight: 400 !important; 
-}
-
-h2.job-title a {
-    line-height: 1.2; /* smaller = tighter line spacing */
-    margin: 0;
-    padding: 0;
-    font-family: Balgin Bold !important;
-    font-size: 24px !important;
-    color: #333333 !important;
-}
-
-p {
-    font-size: 14px;
-    color: #333;
-    font-family: Poppins;
-    margin-top: 10px;
-    margin-bottom: 10px; 
+.job-title a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
 .job-title a:hover {
-    color: #0a6b8d; 
-}
-
-.vacature-meta {
-    display: flex; /* Enable Flexbox layout */
-    align-items: center; /* Center items vertically */
-}
-
-.vacature-content {
-	margin-left: 75px !important; 
-    margin-right: 25px; 
-}
-
-.job-location {
-    margin: auto; 
-    font-family: Poppins; 
-	font-size: 15px !important; 
-	color: var(--color-donkerblauw) !important;
-	font-weight: 400 !important; 
-}
-
-/* Job Meta Container */
-.job-meta-container {
-    display: flex; /* Enable Flexbox layout */
-    justify-content: space-between; /* Distribute items with equal space between */
-    gap: 10px; /* Optional: Add consistent spacing between items */
-    align-items: center; 
-}
-
-.job-meta-container p {
-     font-family: Poppins; 
-	font-size: 14px !important; 
-	color: #333333 !important;
-	font-weight: 300 !important; 
-}
-
-ul.meta {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-ul.meta li.job-type {
-    font-size: 15px;
-    color: #0a6b8d;
-    font-family: Poppins; 
-    font-weight: 500; 
-}
-
-/* Sidebar Section */
-.side-bar-jobs {
-    flex: 1; /* 25% width */
-    background: rgba(10, 107, 141, 0.8);
-    padding: 00px;
-    border-radius: 8px;
-    color: #fff;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
-}
-
-.side-bar-jobs h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.side-bar-jobs ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.side-bar-jobs ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-       /* CSS to hide and style the mobile job listings */
-       .mobile-job-listings {
-            display: none; /* Hide by default */
-            background-color: white; /* Light background color */
-            border-radius: 5px;
-            margin: 25px; 
-            padding: 10px; /* Add some padding */
-            border: 1px solid #0a6b8d;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .mobile-job-listings:hover {
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .mobile-job-listings h2.job-title {
-            font-size: 15px;
-            margin-bottom: 10px;
-        }
-
-        .mobile-job-listings h2.job-title:hover {
-            font-size: 15px;
-            margin-bottom: 10px;
-            color: #0a6b8d !important;
-        }
-
-
-        .mobile-job-listings .job_text-mobile {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .company-name-mobile {
-            font-size: 15px;
-            font-family: Poppins;
-            font-weight: 700;
-            color: #0a6b8d;
-        }
-
-    
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    
-
-    .main-container {
-        display: none; 
-    }
-    .jobs-list-container {
-        width: 100%; /* Default to full width */
-        max-width: 600px; /* Set the maximum width */
-        min-width: 320px; /* Set the minimum width */
-        margin: 0 auto; /* Center it if the width is less than 100% */
-        padding: 10px; /* Optional: Add some padding */
-    }
-
-    .jobs-list:hover {
-        
-    }
-    
-    
-    .content-container {
-        flex-direction: column;
-    }
-
-    .li.job-listing {
-        margin-top: 0px !important;  
-        padding-top: 0px !important;
-        padding-bottom: 0px !important; 
-        
-    }
-
-    .job-details-container {
-      
-    }
-   
-
-    .vacature-content {
-     
-
-    }
-    
-    .job-meta-container ul.meta {
-     
-    }
-
-    .job-meta-container ul.meta li.job-type {
-        font-size: 12px;
-    }
-
-    div.job-details-container {
-       
-    }
-
-    h2.job-title {
-        font-size: 20px;
-        font-family: Poppins !important;
-       
-    }
-
-    a {
-        font-size: 20px !important;
-        font-family: Balgin Bold !important; 
-        font-weight: 500;
-        color: #0a6b8d !important; 
-    }
-
-    .rounded-image {
-        display: none !important; /* Hides the logo on screens smaller than 768px */
-    }
-
-    .job-cover-image {
-        display: none !important;;
-    }
-
-    .jobs-list-container {
-      
-    }
-
-    a.google_map_link {
-        display: none !important; 
-    }
-
-    p {
-    }
-
-    .mobile-job-listings {
-        display: block; 
-    }
-
-    .mobile-job-listings h2.job-title a {
-        font-family: Poppins !important; 
-        font-size: 16px !important;
-        color: #333333 !important; 
-        font-weight: 700; 
-}
-
-.mobile-job-listings h2.job-title a:hover {
-        font-family: Poppins !important; 
-}
-
-   
-}
-
-
-/* Specifieke stijl voor de locatie-link */
-.custom-location-link a.unstyled-location-link {
-     font-family: Poppins; 
-	font-size: 14px !important; 
-	color: #333333 !important;
-	font-weight: 300 !important; 
-}
-
-.custom-location-link a.unstyled-location-link:hover {
-    color: #0a6b8d !important;
+    color: #0A6B8D;
     text-decoration: underline;
 }
 
+/* Meta info */
+.job-meta {
+ 
+}
+
+
+.company-name {
+    font-family: Balgin Bold;
+    font-size: 12px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
+}
+
+a.google_map_link {
+    font-family: Balgin Bold;
+    font-size: 12px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px; 
+}
+
+.job-type {
+    font-family: Balgin Bold;
+    font-size: 12px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
+}
+
+
+/* Beschrijving */
+.job-description {
+    font-size: 14px; 
+    line-height: 1.7;
+    color: #333333;
+    font-family: Poppins, sans-serif;
+    max-width: 100%;
+    font-weight: 200;
+}
+
+
+.job-title-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.job-date {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #0a6b8d;
+    font-weight: 700;
+}
+/* Responsief design */
+@media only screen and (max-width: 768px) {
+    .job-listing-simple {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .job-logo img {
+        display: none; 
+    }
+
+    .job-title {
+        font-size: 1.25rem;
+    }
+
+    .job-meta {
+        font-size: 0.95rem;
+    }
+
+    .job-date {
+       display: none; 
+    }
+}
 
 </style>
-

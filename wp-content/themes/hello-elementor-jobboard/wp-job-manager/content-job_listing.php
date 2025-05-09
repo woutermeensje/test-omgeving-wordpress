@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 14px;
+    padding: 8px;
     margin: 0 auto 28px auto;
     width: 90%;
     border: 1px solid white;
@@ -94,7 +94,6 @@
 .job-meta {
  
 }
-
 
 
 .company-name {
