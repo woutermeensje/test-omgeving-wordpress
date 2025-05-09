@@ -338,12 +338,15 @@ h1.entry-title {
 
 /* Single Job Listing Container */
 .single_job_listing {
-    max-width: 80%;
+    width: 960px; 
+    max-width: 100%; /* Set the maximum width */
+    min-width: 320px; /* Set the minimum width */
+    margin: 0 auto; /* Center it if the width is less than 100% */
+    padding: 24px; /* Optional: Add some padding */
     margin: 40px auto;
-    background: #ffffff;
+    background: white;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker and stronger shadow effect */
-    padding: 25px;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15); /* Darker and stronger shadow effect */   
 }
 
 .cover-image-top {
@@ -517,10 +520,6 @@ input.application_button.button:hover {
     padding: 5px;
 }
 
-    .recent-jobs-container {
-        width: 100%; /* Default to full width */
-        margin: 0 auto; /* Center it if the width is less than 100% */
-    }
 
     .single_job_listing .job-application .application_button {
         width: 100%;
@@ -560,8 +559,10 @@ input.application_button.button:hover {
 }
 
 .recent-jobs-container {
-    max-width: 80%;
-    margin: 40px auto;
+    width: 960px; 
+    max-width: 100%; /* Set the maximum width */
+    min-width: 320px; /* Set the minimum width */
+    margin: 0 auto; /* Center it if the width is less than 100% */
     
 }
 
@@ -570,16 +571,13 @@ input.application_button.button:hover {
     padding: 0;
 }
 
-.recent-job-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
+
 
 
 .recent-job-item {
     background: #ffffff;
     border-radius: 5px;
-    border: 1px solid #0a6b8d;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15); /* Darker and stronger shadow effect */   
     decoration: none; 
     margin-top: 15px; 
     margin-bottom: 15px;   
@@ -587,6 +585,10 @@ input.application_button.button:hover {
     padding: 20px;
     justify-content: left; /* Center other flex items */
     align-items: left; /* Align items vertically */
+}
+
+.recent-job-item:hover {
+    border: 1px solid #0A6B8D; /* aangepast */
 }
 
 .recent-job-content {

@@ -7,8 +7,8 @@
             <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
         </h2>
         <div class="job-meta">
-            <span class="company-name"><?php the_company_name(); ?></span> |
-            <span class="job-location"><?php the_job_location(); ?></span> |
+            <span class="company-name"><?php the_company_name(); ?></span>
+            <span class="job-location"><?php the_job_location(); ?></span>
             <span class="job-type">
                 <?php if (get_option('job_manager_enable_types')) : ?>
                     <?php $types = wpjm_get_the_job_types(); ?>
@@ -28,88 +28,140 @@
 <style>
     .job-listing-simple {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 14px;
+    margin: 0 auto 28px auto;
     width: 90%;
-    max-width: 1200px;
-    margin: 0 auto 20px auto;
-    border: 1px solid #0a6b8d; /* originele kleur */
-    background-color: #fff;
-    border-radius: 0px;
-    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15); /* originele shadow */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 1px solid white;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
 }
 
-.job-listing-simple:hover {
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* hover effect zoals origineel */
-    transform: translateY(-5px);
+.job-listing-simple:hover { 
+        border: 1px solid #0A6B8D; /* aangepast */
+}
+
+/* Logo blok */
+.job-logo {
+    flex-shrink: 0;
+    margin-left: -50px;
+    background-color: white; 
 }
 
 .job-logo img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    border: 1px solid #0a6b8d; /* originele randkleur */
+    width: 100px;
+    height: 100px;
+    object-fit: fill;    
     border-radius: 5px;
-    background: #0a6b8d;
+    padding: 12px;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s ease-in-out;
 
 }
 
+/* Details blok */
 .job-details {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
+/* Job titel */
 .job-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 8px;
-    color: #333333; /* consistent met randkleur */
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Balgin Bold', sans-serif;
+    margin-bottom: 5px;
 }
 
 .job-title a {
-    color: #;
+    color: #333333;
     text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
 .job-title a:hover {
+    color: #0A6B8D;
     text-decoration: underline;
 }
 
+/* Meta info */
 .job-meta {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 10px;
-    font-weight: 300;
+ 
 }
+
+
 
 .company-name {
-    font-weight: 500;
+    font-family: Balgin Bold;
+    font-size: 12px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
 }
 
+a.google_map_link {
+    font-family: Balgin Bold;
+    font-size: 12px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px; 
+}
+
+.job-type {
+    font-family: Balgin Bold;
+    font-size: 12px; 
+    color: #0a6b8d;
+    border: 1px solid #0a6b8d;
+    background-color: #b9d1b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
+}
+
+
+/* Beschrijving */
 .job-description {
-    font-size: 14px;
-    color: #333;
-    font-family: Poppins; 
-    font-weight: 300;
-    line-height: 1.5;
-
+    font-size: 14px; 
+    line-height: 1.7;
+    color: #333333;
+    font-family: Poppins, sans-serif;
+    max-width: 100%;
+    font-weight: 200;
 }
 
-/* Mobiel */
+/* Responsief design */
 @media only screen and (max-width: 768px) {
     .job-listing-simple {
         flex-direction: column;
         align-items: flex-start;
+        padding: 20px;
     }
 
     .job-logo img {
-        width: 60px;
-        height: 60px;
+        display: none; 
     }
 
     .job-title {
-        font-size: 18px;
+        font-size: 1.25rem;
+    }
+
+    .job-meta {
+        font-size: 0.95rem;
     }
 }
 
