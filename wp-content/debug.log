@@ -37302,3 +37302,5 @@ Error occurred at line 4108 in Function <code>handle_error</code>. Error message
 [10-May-2025 05:53:58 UTC]   Automatic theme updates starting...
 [10-May-2025 05:53:58 UTC]   Automatic theme updates complete.
 [10-May-2025 05:53:58 UTC] Automatic updates complete.
+[10-May-2025 06:01:11 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-May-2025 06:01:11 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085

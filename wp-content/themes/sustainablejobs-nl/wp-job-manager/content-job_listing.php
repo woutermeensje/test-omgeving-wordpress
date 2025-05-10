@@ -115,7 +115,7 @@
     font-size: 12px; 
     color: #0a6b8d;
     border: 1px solid #0a6b8d;
-    background-color: #b9d1b3;
+    background-color: #E0D0E1;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer; 
@@ -137,9 +137,9 @@ a.google_map_link {
 .job-type {
     font-family: Balgin Bold;
     font-size: 12px; 
-    color: #0a6b8d;
+    color: #b9d1b3;
     border: 1px solid #0a6b8d;
-    background-color: #b9d1b3;
+    background-color: #0a6b8d;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer; 
