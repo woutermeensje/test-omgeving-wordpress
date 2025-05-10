@@ -30,7 +30,7 @@
             </span>
         </div>
         <div class="job-description">
-            <?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?>
+            <?php echo wp_trim_words(get_the_excerpt(), 12, '...'); ?>
         </div>
     </div>
 </li>
@@ -193,8 +193,8 @@ a.google_map_link {
         padding: 20px;
     }
 
-    .job-logo img {
-        display: none; 
+    .job-logo {
+        margin-left: 0;
     }
 
     .job-title {

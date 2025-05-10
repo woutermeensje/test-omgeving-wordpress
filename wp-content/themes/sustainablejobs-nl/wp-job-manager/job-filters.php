@@ -115,13 +115,18 @@ jQuery(document).ready(function($) {
     font-size: 15px;
     color: #333333;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .filter-header h2 {
     font-family: Balgin Bold; 
     font-size: 25px;
     color: #333333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    display: inline;
+    background: linear-gradient(transparent 60%, #E0D0E1 60%);
+    font-weight: bold;
+    border-radius: 2px;
 }
 
 /* Linkstijl buiten Elementor */
