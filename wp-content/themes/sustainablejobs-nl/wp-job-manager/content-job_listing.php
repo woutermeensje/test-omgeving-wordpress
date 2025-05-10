@@ -88,7 +88,7 @@
 
 /* Job titel */
 .job-title {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.2;
     color: #333333;
     margin-bottom: 5px;
@@ -175,9 +175,9 @@ a.google_map_link {
 
 .job-date {
     font-family: Poppins, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #0a6b8d;
-    font-weight: 700;
+    font-weight: 2ß00;
 }
 /* Responsief design */
 @media only screen and (max-width: 768px) {
