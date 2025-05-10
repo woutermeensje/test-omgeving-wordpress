@@ -19,6 +19,14 @@ add_action('wp_enqueue_scripts', function() {
 });
 
 
+// Laad Google Fonts (Inter)
+wp_enqueue_style(
+    'sustainablejobs-google-fonts',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+    false
+);
+
+
 
 /**
  * ✅ WP JOB MANAGER: CUSTOM TEMPLATE OVERRIDES

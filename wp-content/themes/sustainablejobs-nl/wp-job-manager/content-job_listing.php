@@ -34,6 +34,9 @@
     </div>
 </li>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
 
 
 <style>
@@ -88,7 +91,9 @@
 .job-title {
     font-size: 18px;
     line-height: 1.2;
-    font-family: 'Balgin Bold', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400 !important;
+    color: #333333;
     margin-bottom: 5px;
 }
 
@@ -111,7 +116,8 @@
 
 
 .company-name {
-    font-family: Balgin Bold;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
     font-size: 12px; 
     color: #0a6b8d;
     border: 1px solid #0a6b8d;
@@ -123,7 +129,8 @@
 }
 
 a.google_map_link {
-    font-family: Balgin Bold;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
     font-size: 12px; 
     color: #0a6b8d;
     border: 1px solid #0a6b8d;
@@ -135,7 +142,8 @@ a.google_map_link {
 }
 
 .job-type {
-    font-family: Balgin Bold;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
     font-size: 12px; 
     color: #b9d1b3;
     border: 1px solid #0a6b8d;
