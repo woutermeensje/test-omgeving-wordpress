@@ -185,12 +185,3 @@ add_action('wp_enqueue_scripts', 'child_theme_gravity_forms_styles');
 
 
 
-// Verwijder jQuery op de frontend
-add_action('wp_enqueue_scripts', 'remove_jquery_from_frontend', 100);
-function remove_jquery_from_frontend() {
-    if (!is_admin()) {
-        wp_deregister_script('jquery');
-        wp_deregister_script('jquery-core');
-        wp_deregister_script('jquery-migrate');
-    }
-}
