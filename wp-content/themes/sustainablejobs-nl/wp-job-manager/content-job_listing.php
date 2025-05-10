@@ -7,7 +7,7 @@
             <h2 class="job-title">
                 <a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
             </h2>
-            <span class="job-date"><?php the_job_publish_date(); ?></span>
+            <span class="job-date"><?php echo get_the_date('d-m-Y'); ?></span>
         </div>
         <div class="job-meta">
             <?php
@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 8px;
+    padding: 16px;
     margin: 0 auto 28px auto;
     width: 90%;
     border: 1px solid white;
@@ -105,7 +105,8 @@
 
 /* Meta info */
 .job-meta {
- 
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 

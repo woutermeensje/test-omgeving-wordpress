@@ -37290,3 +37290,15 @@ Error occurred at line 4108 in Function <code>handle_error</code>. Error message
 [09-May-2025 20:26:37 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
 [09-May-2025 20:33:07 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
 [09-May-2025 20:33:07 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[09-May-2025 20:39:55 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[09-May-2025 20:39:55 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[09-May-2025 20:51:10 UTC] PHP Fatal error:  Out of memory (allocated 12582912) (tried to allocate 114688 bytes) in /var/www/html/wp-content/plugins/elementor-pro/modules/call-to-action/widgets/call-to-action.php on line 1184
+[09-May-2025 20:51:10 UTC] PHP Fatal error:  Out of memory (allocated 12582912) (tried to allocate 61440 bytes) in /var/www/html/wp-includes/functions.php on line 5427
+[09-May-2025 20:51:10 UTC] PHP Fatal error:  Unknown: Cannot use output buffering in output buffering display handlers in Unknown on line 0
+[09-May-2025 20:53:22 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1644
+[10-May-2025 05:53:58 UTC] Automatic updates starting...
+[10-May-2025 05:53:58 UTC]   Automatic plugin updates starting...
+[10-May-2025 05:53:58 UTC]   Automatic plugin updates complete.
+[10-May-2025 05:53:58 UTC]   Automatic theme updates starting...
+[10-May-2025 05:53:58 UTC]   Automatic theme updates complete.
+[10-May-2025 05:53:58 UTC] Automatic updates complete.
