@@ -76,7 +76,7 @@
     height: 100px;
     object-fit: contain;
     border-radius: 5px;
-    padding: 12px;
+    padding: 6px;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
     border: 1px solid #e0e0e0;
     transition: all 0.2s ease-in-out;
