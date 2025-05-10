@@ -61,22 +61,28 @@
 
 /* Logo blok */
 .job-logo {
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
     margin-left: -50px;
-    background-color: white; 
+    background-color: white;
 }
+
 
 .job-logo img {
     width: 100px;
     height: 100px;
-    object-fit: fill;    
+    object-fit: contain;
     border-radius: 5px;
-    padding: 12px;
+    padding: 0px;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
     border: 1px solid #e0e0e0;
     transition: all 0.2s ease-in-out;
-
+    background-color: white;
 }
+
 
 /* Details blok */
 .job-details {

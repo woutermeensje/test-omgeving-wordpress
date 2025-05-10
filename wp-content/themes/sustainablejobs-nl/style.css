@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-
 /*
 Theme Name: Sustainablejobs NL
 Theme URI: https://sustainablejobs.nl/
@@ -16,12 +15,14 @@ Text Domain: sustainablejobs-nl
 
 
 @font-face {
-    font-family: 'Balgin Bold';
-    src: url('fonts/Balgin-Bold.woff2') format('woff2'),
-         url('fonts/Balgin-Bold.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Balgin-Bold';
+    src: url('/wp-content/themes/sustainablejobs-nl/fonts/Balgin-Bold.woff2') format('woff2'),
+         url('/wp-content/themes/sustainablejobs-nl/fonts/Balgin-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
+
 
 
 
