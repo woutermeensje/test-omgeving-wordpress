@@ -13,7 +13,7 @@ do_action( 'job_manager_job_filters_before', $atts );
    <!-- Titel boven de zoekvelden -->
    <div class="filter-header" style="padding: 0 20px 10px 20px;">
         <h2>
-            Doorzoek de Openstaande Vacatures!
+            Bekijk alle Duurzame Vacatures in ons Netwerk!
         </h2>
         <p>
             Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief</a>
@@ -161,12 +161,12 @@ jQuery(document).ready(function($) {
 @media (max-width: 768px) {
     .search-basic {
         flex-direction: column;
-        align-items: center;
+        
     }
 
     .search-basic > div {
-        max-width: 90%;
-        flex-basis: 90%;
+        max-width: 100%;
+        flex-basis: 1000%;
     }
 }
 
