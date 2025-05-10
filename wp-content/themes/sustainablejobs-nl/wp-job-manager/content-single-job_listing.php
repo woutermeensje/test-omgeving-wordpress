@@ -523,12 +523,11 @@ a.job-listing-link {
     max-width: 50%;
     border-radius: 0%;
     object-fit: cover;
-    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     border-radius: 5px;
     margin: auto; 
     padding: 2px; 
-    background: #0a6b8d; 
+    background: white; 
 }
 
 .logo-and-title {
