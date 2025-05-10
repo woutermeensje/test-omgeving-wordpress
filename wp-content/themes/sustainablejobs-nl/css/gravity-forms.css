@@ -1,12 +1,14 @@
 /* Gravity Forms custom styling for Sustainablejobs.nl */
 
 @font-face {
-    font-family: 'Balgin Bold';
-    src: url('fonts/Balgin-Bold.woff2') format('woff2'),
-         url('fonts/Balgin-Bold.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Balgin-Bold';
+    src: url('/wp-content/themes/sustainablejobs-nl/fonts/Balgin-Bold.woff2') format('woff2'),
+         url('/wp-content/themes/sustainablejobs-nl/fonts/Balgin-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
+
 
 :root {
     --color-groen: #92E9AB;

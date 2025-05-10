@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+
 /*
 Theme Name: Sustainablejobs NL
 Theme URI: https://sustainablejobs.nl/
@@ -12,6 +13,7 @@ Text Domain: sustainablejobs-nl
 */
 
 @import url("../hello-elementor/style.css");
+
 
 
 @font-face {
