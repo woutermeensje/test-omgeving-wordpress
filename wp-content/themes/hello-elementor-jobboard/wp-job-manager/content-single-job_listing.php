@@ -1,176 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    
-
-
-<body>
-
-
 <?php
-/**
- * Single job listing.
- *
- * This template can be overridden by copying it to yourtheme/job_manager/content-single-job_listing.php.
- *
- * @see         https://wpjobmanager.com/document/template-overrides/
- * @author      Automattic
- * @package     wp-job-manager
- * @category    Template
- * @since       1.0.0
- * @version     1.37.0
- */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 global $post;
 
 if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
-
+<style>.custom-top-section { display: none !important; }</style>
 
 <div class="custom-top-section">
-        <p>Ontvang wekelijkse onze vacatures</p>
-
-        <div class="custom-top-section-form">
-            <form action=""></form>
-            <input type="text" placeholder="E-mailadres.." class="search-input">
-            <button class="button-top-section">
-                Bevestigen
-            </button>  
-        </div>
-              
+    <p>Ontvang wekelijkse onze vacatures</p>
+    <div class="custom-top-section-form">
+        <form action=""></form>
+        <input type="text" placeholder="E-mailadres.." class="search-input">
+        <button class="button-top-section">Bevestigen</button>  
     </div>
+</div>
 
-    <div>
-	<div class="single_job_listing">
-    
-        
-            <?php if ( get_option( 'job_manager_hide_expired_content', 1 ) && 'expired' === $post->post_status ) : ?>
-                <div class="job-manager-info"><?php _e( 'This listing has expired.', 'wp-job-manager' ); ?></div>
-            <?php else : ?>
-       
-
-        <div class="content-part-job-description">
-
-        <div class="top-div">
-
-        <div class="meta-information-single">
-            <p><?php the_job_publish_date(); ?></p>
-            <p><?php the_job_type(); ?></p>
-            <p><?php the_company_name(); ?></p>
-            <p><?php the_job_location(); ?></p> 
-        </div>
-           
-       
-                 <div class="job-title">
-                    <h1><?php wpjm_the_job_title(); ?> | <?php the_company_name(); ?></h1>
-
-                 </div>
-
-
-                <div class="job_description">
-                    <?php wpjm_the_job_description(); ?>
-                </div>
-
-                <?php 
-                    // Fetch the company website URL from the job meta field
-                    $company_website = get_post_meta( $post->ID, '_company_website', true ); 
-
-                    if ( ! empty( $company_website ) ) : ?>
+<div>
+    <div class="single_job_listing">
+        <?php if ( get_option( 'job_manager_hide_expired_content', 1 ) && 'expired' === $post->post_status ) : ?>
+            <div class="job-manager-info"><?php _e( 'This listing has expired.', 'wp-job-manager' ); ?></div>
+        <?php else : ?>
+            <div class="content-part-job-description">
+                <div class="top-div">
+                    <div class="meta-information-single">
+                        <p><?php the_job_publish_date(); ?></p>
+                        <p><?php the_job_type(); ?></p>
+                        <p><?php the_company_name(); ?></p>
+                        <p><?php the_job_location(); ?></p> 
+                    </div>
+                    <div class="job-title">
+                        <h1><?php wpjm_the_job_title(); ?> | <?php the_company_name(); ?></h1>
+                    </div>
+                    <div class="job_description">
+                        <?php wpjm_the_job_description(); ?>
+                    </div>
+                    <?php $company_website = get_post_meta( $post->ID, '_company_website', true ); ?>
+                    <?php if ( ! empty( $company_website ) ) : ?>
                         <div class="job-apply-button">
-                            <a href="<?php echo esc_url( $company_website ); ?>" class="apply-button" target="_blank">
-                                Bezoek de sollicitatiepagina
-                            </a>
+                            <a href="<?php echo esc_url( $company_website ); ?>" class="apply-button" target="_blank">Bezoek de sollicitatiepagina</a>
                         </div>
                     <?php else : ?>
                         <p>No application link available.</p>
                     <?php endif; ?>
-
-                <?php
-                    /**
-                     * single_job_listing_end hook
-                     */
-                    do_action( 'single_job_listing_end' );
-                ?>
-            <?php endif; ?>
-        </div>
-        </div>
-
-       
-    
-        <?php else : ?>
-
-<?php get_job_manager_template_part( 'access-denied', 'single-job_listing' ); ?>
-
-
-
-
+                    <?php do_action( 'single_job_listing_end' ); ?>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+<?php else : ?>
+    <?php get_job_manager_template_part( 'access-denied', 'single-job_listing' ); ?>
 <?php endif; ?>
-
 </div>
-
 
 <div class="recent-jobs-container">
     <ul class="recent-jobs-list">
         <?php
-        // Query for recent jobs
-        $recent_jobs = new WP_Query(array(
+        $recent_jobs = new WP_Query([
             'post_type'      => 'job_listing',
-            'posts_per_page' => 5, // Adjust the number of jobs as needed
+            'posts_per_page' => 5,
             'orderby'        => 'date',
             'order'          => 'DESC',
-        ));
+        ]);
 
         if ($recent_jobs->have_posts()) :
             while ($recent_jobs->have_posts()) : $recent_jobs->the_post(); ?>
-
                 <li class="recent-job-item">
-                <a href="<?php the_job_permalink(); ?>" class="job-listing-link">
-
-
-            
-                <div class="logo-and-title">
-               
-                 <div class="rounded-image">
-                        <div class="logo-wrapper">
-                            <?php the_company_logo(); ?>
+                    <a href="<?php the_job_permalink(); ?>" class="job-listing-link">
+                        <div class="logo-and-title">
+                            <div class="rounded-image">
+                                <div class="logo-wrapper"><?php the_company_logo(); ?></div>
+                            </div>
+                            <div class="recent-job-content">
+                                <div>
+                                    <h3 class="recent-job-title"><?php the_title(); ?> | <?php the_company_name(); ?></h3>
+                                    <?php the_job_location(); ?>
+                                </div>
+                                <p class="recent-job-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
+                            </div>
                         </div>
-                    </div>
-                  
-
-                    <div class="recent-job-content">
-                        <div>
-                            <h3 class="recent-job-title">
-                            <?php the_title(); ?> | <?php the_company_name(); ?>
-                            </h3>
-                             <?php the_job_location(); ?>
-                            
-                          
-                             </div>
-                       
-                        <p class="recent-job-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
-                    </div>
-
-                    <div class="recent-job-company">
-                    
-                    </div>
-                   
-                    
-                   
                     </a>
                 </li>
-              
             <?php endwhile;
-            wp_reset_postdata(); // Reset the query
+            wp_reset_postdata();
         else : ?>
-
             <li class="no-jobs-found">No recent jobs found.</li>
         <?php endif; ?>
     </ul>
@@ -179,34 +92,15 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 <div class="job-contact-form">
     <h2>Stel een vraag over deze vacature</h2>
     <form action="" method="post" id="job-contact-form">
-
-    <div class="form-group">
-        <input type="text" id="first_name" name="first_name" placeholder="Voornaam" required>
-        <input type="email" id="email" name="email" placeholder="Email"  required>
-    </div>
+        <div class="form-group">
+            <input type="text" id="first_name" name="first_name" placeholder="Voornaam" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
         <textarea id="message" name="message" rows="5" placeholder="Type hier je vraag" required></textarea>
-
         <input type="hidden" name="job_id" value="<?php echo esc_attr($post->ID); ?>">
         <button type="submit" name="submit_question">Verstuur Vraag</button>
     </form>
 </div>
-
-
-<!--
-<div class="custom-bottom-section">
-<p>
-    Maak een account aan in onze database!
-</p>
-<button>
-    Account aanmaken
-</button>
-</div>
--->
-
-
-
-</body>
-</html>
 
 
 
@@ -224,8 +118,33 @@ a.google_map_link {
     font-size: 15px;
 }
 
+.custom-top-section {
+    background-color: #0a6b8d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 18px;
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Adjust left margin for full stretch */
+    position: relative; /* Ensure proper stacking */
+    left: 0; /* Ensure it aligns with the viewport */
+    display: flex; 
+}
 
 
+.custom-top-section p {
+    color: white;
+    text-align: center;
+    font-family: "Balgin Bold", sans-serif;
+    font-size: 18px;
+    margin-left: auto; 
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px; 
+}
 
 .button-top-section {
     background-color: #e0d0e1;
@@ -315,15 +234,12 @@ h1.entry-title {
 
 /* Single Job Listing Container */
 .single_job_listing {
-    width: 960px; 
-    max-width: 100%; /* Set the maximum width */
-    min-width: 320px; /* Set the minimum width */
-    margin: 0 auto; /* Center it if the width is less than 100% */
-    padding: 24px; /* Optional: Add some padding */
+    max-width: 80%;
     margin: 40px auto;
-    background: white;
+    background: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15); /* Darker and stronger shadow effect */  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker and stronger shadow effect */
+    padding: 25px;
 }
 
 .cover-image-top {
@@ -400,7 +316,7 @@ h1.entry-title {
 .job_description {
     font-family: Poppins;  
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
     color: #333;
     margin-top: 20px !important; 
@@ -497,6 +413,10 @@ input.application_button.button:hover {
     padding: 5px;
 }
 
+    .recent-jobs-container {
+        width: 100%; /* Default to full width */
+        margin: 0 auto; /* Center it if the width is less than 100% */
+    }
 
     .single_job_listing .job-application .application_button {
         width: 100%;
@@ -536,10 +456,8 @@ input.application_button.button:hover {
 }
 
 .recent-jobs-container {
-    width: 960px; 
-    max-width: 100%; /* Set the maximum width */
-    min-width: 320px; /* Set the minimum width */
-    margin: 0 auto; /* Center it if the width is less than 100% */
+    max-width: 80%;
+    margin: 40px auto;
     
 }
 
@@ -548,13 +466,16 @@ input.application_button.button:hover {
     padding: 0;
 }
 
-
+.recent-job-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 
 
 .recent-job-item {
     background: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15); /* Darker and stronger shadow effect */   
+    border: 1px solid #0a6b8d;
     decoration: none; 
     margin-top: 15px; 
     margin-bottom: 15px;   
@@ -562,10 +483,6 @@ input.application_button.button:hover {
     padding: 20px;
     justify-content: left; /* Center other flex items */
     align-items: left; /* Align items vertically */
-}
-
-.recent-job-item:hover {
-    border: 1px solid #0A6B8D; /* aangepast */
 }
 
 .recent-job-content {
@@ -606,12 +523,11 @@ a.job-listing-link {
     max-width: 50%;
     border-radius: 0%;
     object-fit: cover;
-    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     border-radius: 5px;
     margin: auto; 
     padding: 2px; 
-    background: #0a6b8d; 
+    background: white; 
 }
 
 .logo-and-title {

@@ -13,7 +13,7 @@ do_action( 'job_manager_job_filters_before', $atts );
 <!-- Title above the search fields -->
 <div class="filter-header" style="padding: 0 20px 10px 20px;">
       <h2>
-            Search the All Open Positions!
+            Explore All Open Sustainability Jobs!
       </h2>
     <p>
         Or <a href="https://sustainablejobs.com/sustainability-jobs-newsletter/" target="_blank" rel="noopener noreferrer">sign up for the job newsletter! 📩</a>
@@ -113,7 +113,22 @@ jQuery(document).ready(function($) {
     font-family: Poppins; 
     font-size: 15px;
     color: #333333;
+    margin-top: 15px;
+}
+
+.filter-header h2 {
+    font-family: Balgin Bold; 
+    font-size: 20px;
+    color: #333333;
     margin-bottom: 10px;
+     font-family: Balgin Bold; 
+    font-size: 25px;
+    color: #333333;
+    
+    display: inline;
+    background: linear-gradient(transparent 60%, #E0D0E1 60%);
+    font-weight: bold;
+    border-radius: 2px;
 }
 
 

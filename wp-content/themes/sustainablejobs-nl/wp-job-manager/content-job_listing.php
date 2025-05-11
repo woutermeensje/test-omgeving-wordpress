@@ -193,7 +193,7 @@ a.google_map_link {
         padding: 20px;
     }
 
-    .job-logo {
+    .job-logo img {
         margin-left: 0;
     }
 
