@@ -8,6 +8,9 @@ wp_enqueue_script( 'wp-job-manager-ajax-filters' );
 do_action( 'job_manager_job_filters_before', $atts );
 ?>
 
+<body>
+    
+
 <form class="job_filters">
 
    <!-- Titel boven de zoekvelden -->
@@ -43,6 +46,8 @@ do_action( 'job_manager_job_filters_before', $atts );
     </div>
 
 </form>
+
+</body>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -129,14 +134,15 @@ jQuery(document).ready(function($) {
     border-radius: 2px;
 }
 
-.filter-header a.unstyled-newsletter-link {
+body .filter-header a.unstyled-newsletter-link {
     color: #0a6b8d;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: 400;
     font-family: "Poppins", sans-serif;
 }
 
-.filter-header a.unstyled-newsletter-link:hover {
+
+body .filter-header a.unstyled-newsletter-link:hover {
     color: var(--color-roze) !important;
     text-decoration: none; 
 }
