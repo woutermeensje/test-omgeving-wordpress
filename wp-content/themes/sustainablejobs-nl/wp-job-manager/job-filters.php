@@ -129,13 +129,11 @@ jQuery(document).ready(function($) {
     border-radius: 2px;
 }
 
-/* Linkstijl buiten Elementor */
 .filter-header a.unstyled-newsletter-link {
-    color: #0a6b8d !important;
+    color: #0a6b8d;
     text-decoration: underline;
     font-weight: 400;
-    font-family: Poppins, sans-serif;
-
+    font-family: "Poppins", sans-serif;
 }
 
 .filter-header a.unstyled-newsletter-link:hover {

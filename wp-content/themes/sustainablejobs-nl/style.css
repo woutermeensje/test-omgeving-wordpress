@@ -104,33 +104,6 @@ h5 {
     color: #333333; 
 }
 
-/* Basic Link Styling */
-a {
-    color: #3a98b8; /* Default blue */
-    text-decoration: none !important; 
-    font-weight: 400; /* Makes the link bold */
-}
-
-/* Hover State */
-a:hover {
-    color: #1aa5d6; /* Darker blue on hover */
-
-}
-
-/* Visited Link */
-a:visited {
-    color: #6c757d; /* Grayish color for visited links */
-}
-
-/* Active Link */
-a:active {
-    color: #1aa5d6; /* Red when the link is active (clicked) */
-    text-decoration: none;
-}
-
-/* Focused Link */
-
-
 /* Styling Specific Links */
 .special {
     color: #28a745; /* Green for a special link */
