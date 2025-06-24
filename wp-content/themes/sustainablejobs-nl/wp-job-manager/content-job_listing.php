@@ -1,4 +1,3 @@
-
 <li class="job-listing-simple" <?php job_listing_class(); ?>>
     <div class="job-logo">
         <?php the_company_logo(); ?>
@@ -21,12 +20,12 @@
             ?>
             <span class="job-location"><?php the_job_location(); ?></span>
             <span class="job-type">
-                <?php if (get_option('job_manager_enable_types')) : ?>
-                    <?php $types = wpjm_get_the_job_types(); ?>
-                    <?php if (!empty($types)) : foreach ($types as $type) : ?>
-                        <?php echo esc_html($type->name); ?>
-                    <?php endforeach; endif; ?>
-                <?php endif; ?>
+                <?php
+                if (get_option('job_manager_enable_types')) {
+                    // Gebruik nieuwe functie voor weergave (de oude is deprecated)
+                    wpjm_the_job_types();
+                }
+                ?>
             </span>
         </div>
         <div class="job-description">
@@ -39,24 +38,22 @@
 
 
 <style>
-
-
-    .job-listing-simple {
+.job-listing-simple {
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 16px;
     margin: 0 auto 28px auto;
     width: 90%;
-    border: 1px solid white;
-    background-color: #ffffff;
+    border: 1px solid var(--color-bg);
+    background-color: var(--color-bg);
     border-radius: 5px;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
     transition: all 0.2s ease-in-out;
 }
 
 .job-listing-simple:hover { 
-        border: 1px solid #0A6B8D; /* aangepast */
+    border: 1px solid var(--color-primary);
 }
 
 /* Logo blok */
@@ -67,9 +64,8 @@
     width: 100px;
     height: 100px;
     margin-left: -50px;
-    background-color: white;
+    background-color: var(--color-bg);
 }
-
 
 .job-logo img {
     width: 100px;
@@ -78,11 +74,10 @@
     border-radius: 5px;
     padding: 6px;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-border);
     transition: all 0.2s ease-in-out;
-    background-color: white;
+    background-color: var(--color-bg);
 }
-
 
 /* Details blok */
 .job-details {
@@ -96,12 +91,12 @@
 .job-title {
     font-size: 20px;
     line-height: 1.2;
-    color: #333333;
+    color: var(--color-text);
     margin-bottom: 5px;
 }
 
 .job-title a {
-    color: #333333;
+    color: var(--color-text);
     text-decoration: none;
     transition: color 0.2s ease-in-out;
     font-family: 'Inter', sans-serif;
@@ -109,8 +104,8 @@
 }
 
 .job-title a:hover {
-    color: #0A6B8D;
-    text-decoration: underline;
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
 /* Meta info */
@@ -119,14 +114,13 @@
     margin-top: 5px;
 }
 
-
 .company-name {
     font-family: Poppins, sans-serif;
     font-weight: 700;
     font-size: 12px; 
-    color: #0a6b8d;
-    border: 1px solid #0a6b8d;
-    background-color: #E0D0E1;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-tertiary);
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer; 
@@ -137,39 +131,38 @@ a.google_map_link {
     font-family: Poppins, sans-serif;
     font-weight: 700;
     font-size: 12px; 
-    color: #0a6b8d;
-    border: 1px solid #0a6b8d;
-    background-color: #b9d1b3;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-accent);
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
     margin-right: 5px; 
+    text-decoration: none; 
 }
 
 .job-type {
     font-family: Poppins, sans-serif;
     font-weight: 700;
     font-size: 12px; 
-    color: #b9d1b3;
-    border: 1px solid #0a6b8d;
-    background-color: #0a6b8d;
+    color: var(--color-accent);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer; 
     margin-right: 5px;
 }
 
-
 /* Beschrijving */
 .job-description {
     font-size: 14px; 
     line-height: 1.7;
-    color: #333333;
+    color: var(--color-text);
     font-family: Poppins, sans-serif;
     max-width: 100%;
     font-weight: 200;
 }
-
 
 .job-title-line {
     display: flex;
@@ -182,9 +175,10 @@ a.google_map_link {
 .job-date {
     font-family: Poppins, sans-serif;
     font-size: 12px;
-    color: #0a6b8d;
-    font-weight: 2ß00;
+    color: var(--color-primary);
+    font-weight: 200;
 }
+
 /* Responsief design */
 @media only screen and (max-width: 768px) {
     .job-listing-simple {
@@ -209,5 +203,4 @@ a.google_map_link {
        display: none; 
     }
 }
-
 </style>

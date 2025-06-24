@@ -89,18 +89,6 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
     </ul>
 </div>
 
-<div class="job-contact-form">
-    <h2>Stel een vraag over deze vacature</h2>
-    <form action="" method="post" id="job-contact-form">
-        <div class="form-group">
-            <input type="text" id="first_name" name="first_name" placeholder="Voornaam" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-        </div>
-        <textarea id="message" name="message" rows="5" placeholder="Type hier je vraag" required></textarea>
-        <input type="hidden" name="job_id" value="<?php echo esc_attr($post->ID); ?>">
-        <button type="submit" name="submit_question">Verstuur Vraag</button>
-    </form>
-</div>
 
 
 
@@ -221,9 +209,6 @@ input[type=text]:focus {outline:none;}
     font-family: Poppins;
     opacity: 0.7; /* Adjust the opacity */
 }
-
-
-
 
 
 h1.entry-title {
@@ -561,119 +546,4 @@ a.job-listing-link {
     font-size: 18px;
     margin: auto; 
 }
-
-
-.job-contact-form {
-    max-width: 80%;
-    margin: 40px auto;
-    background: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker and stronger shadow effect */
-    padding: 25px;
-    width: 50%; 
-}
-
-.job-contact-form h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #0a6b8d;
-}
-
-.job-contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.job-contact-form input,
-.job-contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.job-contact-form button {
-    background-color: #0a6b8d;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.job-contact-form button:hover {
-    background-color: #0073a9;
-}
-
-.form-group {
-    display: flex;
-    justify-content: space-between;
-    gap: 5px; /* Add space between the input fields */
-
-}
-
-.job-contact-form h2 {
-    font-family: Balgin Bold;
-    font-size: 20px;
-}
-
-.form-group input {
-    flex: 1; /* Each input takes equal space */
-    max-width: 50%; /* Ensure inputs are 50% of the container width */
-    padding: 10px; /* Add padding inside inputs */
-    font-size: 16px; /* Set font size */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Round input corners */
-    box-sizing: border-box; /* Include padding in width */
-}
-
-.job-contact-form button {
-    background-color: #0a6b8d; /* Blue background color */
-    color: white; /* White text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Add padding inside the button */
-    font-size: 16px; /* Font size for the button text */
-    font-family: Balgin Bold; /* Font family */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-/* Hover effect */
-.job-contact-form button:hover {
-    background-color: #0073a9; /* Darker blue on hover */
-    color: white; /* Ensure text remains visible */
-}
-
-.job-apply-button a {
-    padding: 15px; 
-    background: #e0d0e1;
-    color: #0a6b8d;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-family: Balgin Bold;
-    text-decoration: none; 
-    border: 2px solid #0a6b8d;
-}
-
-
-.job-apply-button a:hover {
-    padding: 15px; 
-    background: white;
-    color: #0a6b8d; ;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-family: Balgin Bold;
-    text-decoration: none; 
-    border: 1px solid #0a6b8d
-}
-
-
-
-
 </style>
-

@@ -1,103 +1,128 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
-}
+if (!defined('ABSPATH')) exit;
 
-wp_enqueue_script( 'wp-job-manager-ajax-filters' );
-
-do_action( 'job_manager_job_filters_before', $atts );
+wp_enqueue_script('wp-job-manager-ajax-filters');
+do_action('job_manager_job_filters_before', $atts);
 ?>
 
-<body>
-    
-
 <form class="job_filters">
+    <?php do_action('job_manager_job_filters_start', $atts); ?>
 
-   <!-- Titel boven de zoekvelden -->
-   <div class="filter-header" style="padding: 0 20px 10px 20px;">
-        <h2>
-            Bekijk alle Duurzame Vacatures in ons Netwerk!
-        </h2>
+    <div class="filter-header" style="padding: 0 20px 10px 20px;">
+        <h2>Bekijk alle Duurzame Vacatures in ons Netwerk!</h2>
         <p>
-            Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief</a>
-! 
+            Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief</a>!
         </p>
     </div>
+
     <div class="search-basic">
+        <?php do_action('job_manager_job_filters_search_jobs_start', $atts); ?>
+
         <div class="search_keywords">
-            <input 
-                type="text" 
-                name="search_keywords" 
-                id="search_keywords" 
-                placeholder="Functienaam, sector of onderwerp.." 
-                value="<?php echo esc_attr( $keywords ); ?>" 
-            />
+            <input type="text" name="search_keywords" id="search_keywords" placeholder="Functienaam, sector of onderwerp.." value="<?php echo esc_attr($keywords); ?>" />
         </div>
 
         <div class="search_location">
-            <input 
-                type="text" 
-                name="search_location" 
-                id="search_location" 
-                placeholder="Stad of plaats" 
-                value="<?php echo esc_attr( $location ); ?>" 
-            />
+            <input type="text" name="search_location" id="search_location" placeholder="Stad of plaats" value="<?php echo esc_attr($location); ?>" />
         </div>
+
+        <?php do_action('job_manager_job_filters_search_jobs_end', $atts); ?>
     </div>
 
+    <div class="categorie_box">
+        <?php if ($categories) : ?>
+            <?php foreach ($categories as $category) : ?>
+                <input type="hidden" name="search_categories[]" value="<?php echo esc_attr(sanitize_title($category)); ?>" />
+            <?php endforeach; ?>
+        <?php elseif ($show_categories && !is_tax('job_listing_category') && get_terms(['taxonomy' => 'job_listing_category'])) : ?>
+            <div class="search_categories">
+                <?php if ($show_category_multiselect) : ?>
+                    <?php job_manager_dropdown_categories([
+                        'taxonomy'     => 'job_listing_category',
+                        'hierarchical' => 1,
+                        'name'         => 'search_categories',
+                        'orderby'      => 'name',
+                        'selected'     => $selected_category,
+                        'hide_empty'   => true
+                    ]); ?>
+                <?php else : ?>
+                    <?php job_manager_dropdown_categories([
+                        'taxonomy'        => 'job_listing_category',
+                        'hierarchical'    => 1,
+                        'show_option_all' => __('Alle categorieën', 'wp-job-manager'),
+                        'name'            => 'search_categories',
+                        'orderby'         => 'name',
+                        'selected'        => $selected_category,
+                        'multiple'        => false,
+                        'hide_empty'      => true
+                    ]); ?>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
+        </div>
+        <!--
+        ✅ Dienstverband filter
+        <div class="job_types">
+            <select name="filter_job_types[]" id="filter_job_types" class="js-select2-multi job_types" data-placeholder="Dienstverband" multiple="multiple">
+            <?php foreach (get_job_listing_types() as $type) : ?>
+                <option value="<?php echo esc_attr($type->slug); ?>"><?php echo esc_html($type->name); ?></option>
+            <?php endforeach; ?>
+            </select>
+        </div>
+        -->
+    
 </form>
 
-</body>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.job_filters');
-    const keywordInput = document.getElementById('search_keywords');
-    const locationInput = document.getElementById('search_location');
-
-    [keywordInput, locationInput].forEach(input => {
-        input.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                form.dispatchEvent(new Event('submit', { bubbles: true }));
-            }
-        });
-    });
-});
-</script>
-
-
-
-<?php do_action( 'job_manager_job_filters_after', $atts ); ?>
-<noscript>
-    <?php esc_html_e( 'Your browser does not support JavaScript, or it is disabled. JavaScript must be enabled in order to view listings.', 'wp-job-manager' ); ?>
-</noscript>
+<?php do_action('job_manager_job_filters_after', $atts); ?>
 
 <script>
 jQuery(document).ready(function($) {
-    $('#search_sectors').select2({
-        placeholder: 'Sectoren',
-        allowClear: true
-    });
-
-    $('#select-category').select2({
-        placeholder: 'Type baan',
-        allowClear: true
-    });
-
-    $('#search_regios').select2({
-        placeholder: 'Select a regio',
-        allowClear: true
-    });
-
-    $('#search_job_names').select2({
-        placeholder: 'Beroep',
-        allowClear: true
+    $('#filter_job_types').select2({
+        placeholder: 'Dienstverband',
+        allowClear: true,
+        width: '100%'
     });
 });
 </script>
 
+
+
+
 <style>
+
+
+/* Container */
+.search_categories {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Dropdown veld zelf */
+.search_categories select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* afgeronde hoeken */
+    background-color: white;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Placeholder tekst (werkt alleen in combinatie met select2 of met :invalid + required) */
+.search_categories select:invalid {
+    color: #999;
+}
+
+/* Focus staat */
+.search_categories select:focus {
+    border-color: #0a6b8d;
+    box-shadow: 0 2px 8px rgba(10, 107, 141, 0.25);
+    outline: none;
+}
+
 /* Container blijft 100% breed */
 .job_filters {
     width: 90%;
@@ -226,4 +251,39 @@ body .filter-header a.unstyled-newsletter-link:hover {
     color: #0a6b8d;
     pointer-events: none;
 }
+
+
+
+    .categories-box {
+        width: 90%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .categorie {     
+    }
+
+.categorie a {
+        font-family: Poppins, sans-serif;
+        font-weight: 700;
+        font-size: 14px; 
+        color: var(--color-primary) !important;
+        border: 1px solid var(--color-primary);
+        background-color: var(--color-tertiary);
+        border-radius: 50px;
+        padding: 10px 14px;
+        cursor: pointer; 
+        margin-right: 8px;
+        margin-left: 8px;
+}
+
+.categorie a:hover {
+  background-color: var(--color-primary);
+  color: white !important;
+    border: 2px solid var(--color-tertiary);
+
+}
+
 </style>

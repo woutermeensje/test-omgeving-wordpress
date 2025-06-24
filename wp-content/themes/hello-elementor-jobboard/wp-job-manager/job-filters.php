@@ -90,7 +90,6 @@ jQuery(document).ready(function($) {
     });
 });
 </script>
-
 <style>
 /* Container blijft 100% breed */
 .job_filters {
@@ -99,10 +98,9 @@ jQuery(document).ready(function($) {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: white;
-    border: 1px solid #0a6b8d;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-primary);
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
-
 }
 
 .filter-header {
@@ -110,37 +108,31 @@ jQuery(document).ready(function($) {
 }
 
 .filter-header p {
-    font-family: Poppins; 
+    font-family: Poppins;
     font-size: 15px;
-    color: #333333;
+    color: var(--color-text);
     margin-top: 15px;
 }
 
 .filter-header h2 {
-    font-family: Balgin Bold; 
-    font-size: 20px;
-    color: #333333;
-    margin-bottom: 10px;
-     font-family: Balgin Bold; 
+    font-family: Balgin Bold;
     font-size: 25px;
-    color: #333333;
-    
+    color: var(--color-text);
+    margin-bottom: 10px;
     display: inline;
-    background: linear-gradient(transparent 60%, #E0D0E1 60%);
+    background: linear-gradient(transparent 60%, var(--color-tertiary) 60%);
     font-weight: bold;
     border-radius: 2px;
 }
 
-
 /* Flexbox voor de twee velden */
 .search-basic {
-    display: flex; 
+    display: flex;
     justify-content: left;
     gap: 20px;
     padding: 0 20px;
 }
 
-/* Beide velden naast elkaar */
 .search_location,
 .search_keywords {
     flex-basis: 50%;
@@ -154,37 +146,37 @@ jQuery(document).ready(function($) {
 @media (max-width: 768px) {
     .search-basic {
         flex-direction: column;
-        align-items: center;
+        
     }
 
     .search-basic > div {
-        max-width: 90%;
-        flex-basis: 90%;
+        max-width: 100%;
+        flex-basis: 1000%;
     }
 }
 
 /* Inputvelden gestyled met schaduw en icon ruimte */
 .search-basic input[type="text"] {
     width: 100%;
-    padding: 12px 14px 12px 38px; /* ruimte voor icoon links */
+    padding: 12px 14px 12px 38px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border-light);
     border-radius: 0;
-    background-color: white;
-    color: #222;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .search-basic input[type="text"]::placeholder {
-    color: #777;
+    color: var(--color-text-muted);
 }
 
 /* Focus state */
 .search-basic input[type="text"]:focus {
     outline: none;
-    border-color: #0a6b8d;
-    box-shadow: 0 2px 8px rgba(10, 107, 141, 0.25);
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(10, 107, 141, 0.25); /* Primaire kleur met transparantie */
 }
 
 /* Vergrootglas icoon */
@@ -195,7 +187,7 @@ jQuery(document).ready(function($) {
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    color: #0a6b8d;
+    color: var(--color-primary);
     pointer-events: none;
 }
 
@@ -207,7 +199,7 @@ jQuery(document).ready(function($) {
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    color: #0a6b8d;
+    color: var(--color-primary);
     pointer-events: none;
 }
 </style>

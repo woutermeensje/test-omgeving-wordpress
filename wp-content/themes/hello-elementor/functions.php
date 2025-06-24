@@ -272,3 +272,24 @@ if ( ! function_exists( 'hello_elementor_body_open' ) ) {
 require HELLO_THEME_PATH . '/theme.php';
 
 HelloTheme\Theme::instance();
+
+
+add_action('init', function() {
+    if (!taxonomy_exists('job_listing_category')) {
+        register_taxonomy('job_listing_category', 'job_listing', [
+            'labels' => [
+                'name' => __('Vacaturecategorieën', 'wp-job-manager'),
+                'singular_name' => __('Vacaturecategorie', 'wp-job-manager'),
+                'add_new_item' => __('Nieuwe categorie toevoegen', 'wp-job-manager'),
+                'edit_item' => __('Categorie bewerken', 'wp-job-manager'),
+                'search_items' => __('Categorie zoeken', 'wp-job-manager'),
+                'all_items' => __('Alle categorieën', 'wp-job-manager'),
+            ],
+            'hierarchical' => true,
+            'show_ui' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true,
+            'rewrite' => ['slug' => 'vacature-categorie'],
+        ]);
+    }
+}, 20); // LET OP: na WP Job Manager laden
