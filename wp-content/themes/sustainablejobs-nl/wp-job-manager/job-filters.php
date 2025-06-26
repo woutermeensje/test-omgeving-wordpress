@@ -87,22 +87,49 @@ do_action('job_manager_job_filters_before', $atts);
 <?php do_action('job_manager_job_filters_after', $atts); ?>
 
 
-<script>
-jQuery(document).ready(function($) {
-    $('#filter_job_types').select2({
-        placeholder: 'Selecteer dienstverband',
-        allowClear: true,
-        width: '100%'
-    });
+<style>
+/* Container */
+.select2-container .select2-selection--multiple {
+  background-color: white;
+  border: 0.5px solid #333333;
+  border-radius: 50px;
+  padding: 4px;
+  min-height: 38px;
+  font-family: Poppins;
+  font-weight: 700;
+  max-width: 100%;  
+}
 
-    $('#search_categories').select2({
-        placeholder: 'Selecteer categorie',
-        allowClear: true,
-        width: '100%'
-    });
-});
-</script>
+/* Geselecteerde tags */
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #0a6b8d;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 2px 6px;
+  margin: 2px;
+}
 
+/* Placeholder stijl */
+.select2-container--default .select2-selection--multiple .select2-selection__rendered::before {
+  content: attr(data-placeholder);
+  color: #333333;
+  font-family: Poppins;
+  font-weight: 700;
+  padding-left: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Alleen tonen als er nog niets is geselecteerd */
+.select2-container--default .select2-selection--multiple .select2-selection__rendered:has(.select2-selection__choice)::before {
+  content: none;
+}
+
+
+
+</style>
 
 
 <style>
