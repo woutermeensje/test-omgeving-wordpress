@@ -92,39 +92,6 @@ jQuery(document).ready(function($) {
 <style>
 
 
-.categorie_box {
-    display: flex;
-    gap: 20px;
-    padding: 0 20px;
-    width: 100%;
-}
-
-.categorie_box label {
-    display: none;
-}
-
-.categorie_box {
-    width: 50%; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.search_categories {
-     width: 50%; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .categorie_box {
-        padding: 0 20px;
-    }
-}
-
 /* Container blijft 100% breed */
 .job_filters {
     width: 90%;
