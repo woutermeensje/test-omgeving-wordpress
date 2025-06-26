@@ -29,7 +29,9 @@ do_action('job_manager_job_filters_before', $atts);
         <?php do_action('job_manager_job_filters_search_jobs_end', $atts); ?>
     </div>
 
-    <div class="categorie_box">
+    <div class="filter-box">
+
+     <div class="categorie_filter">
         <?php if ($categories) : ?>
             <?php foreach ($categories as $category) : ?>
                 <input type="hidden" name="search_categories[]" value="<?php echo esc_attr(sanitize_title($category)); ?>" />
@@ -61,25 +63,40 @@ do_action('job_manager_job_filters_before', $atts);
         <?php endif; ?>
 
         </div>
-        <!--
-        ✅ Dienstverband filter
-        <div class="job_types">
-            <select name="filter_job_types[]" id="filter_job_types" class="js-select2-multi job_types" data-placeholder="Dienstverband" multiple="multiple">
-            <?php foreach (get_job_listing_types() as $type) : ?>
-                <option value="<?php echo esc_attr($type->slug); ?>"><?php echo esc_html($type->name); ?></option>
-            <?php endforeach; ?>
-            </select>
-        </div>
-        -->
+
     
+    <!--
+        <div class="job_types">
+        <select name="filter_job_types" id="filter_job_types" class="job_types" data-placeholder="Dienstverband">
+         <option value=""><?php _e('Selecteer dienstverband', 'wp-job-manager'); ?></option>
+         <?php foreach (get_job_listing_types() as $type) : ?>
+             <option value="<?php echo esc_attr($type->slug); ?>"><?php echo esc_html($type->name); ?></option>
+         <?php endforeach; ?>
+        </select>
+    </div>
+    -->
+
+
+
+    </div>
+
+
+
 </form>
 
 <?php do_action('job_manager_job_filters_after', $atts); ?>
 
+
 <script>
 jQuery(document).ready(function($) {
     $('#filter_job_types').select2({
-        placeholder: 'Dienstverband',
+        placeholder: 'Selecteer dienstverband',
+        allowClear: true,
+        width: '100%'
+    });
+
+    $('#search_categories').select2({
+        placeholder: 'Selecteer categorie',
         allowClear: true,
         width: '100%'
     });
@@ -88,10 +105,21 @@ jQuery(document).ready(function($) {
 
 
 
-
 <style>
 
+.filter-box {
+    padding: 20px;
+    display: flex; 
+}
 
+.categories_filter {
+    width: 50%; 
+
+}
+
+.job_types {
+    width: 50%; 
+}
 /* Container blijft 100% breed */
 .job_filters {
     width: 90%;

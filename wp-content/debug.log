@@ -41697,3 +41697,6 @@ Stack trace:
 [26-Jun-2025 08:13:21 UTC]   Automatic theme updates starting...
 [26-Jun-2025 08:13:21 UTC]   Automatic theme updates complete.
 [26-Jun-2025 08:13:21 UTC] Automatic updates complete.
+[26-Jun-2025 08:36:54 UTC] PHP Fatal error:  Out of memory (allocated 10485760) (tried to allocate 32768 bytes) in /var/www/html/wp-content/plugins/elementor-pro/modules/gallery/widgets/gallery.php on line 1013
+[26-Jun-2025 08:36:54 UTC] PHP Fatal error:  Out of memory (allocated 10485760) (tried to allocate 61440 bytes) in /var/www/html/wp-includes/functions.php on line 5427
+[26-Jun-2025 08:36:54 UTC] PHP Fatal error:  Unknown: Cannot use output buffering in output buffering display handlers in Unknown on line 0
