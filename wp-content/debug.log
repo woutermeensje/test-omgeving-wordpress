@@ -41688,3 +41688,12 @@ Stack trace:
 [24-Jun-2025 14:28:07 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1618
 [24-Jun-2025 14:31:17 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
 [24-Jun-2025 14:31:17 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[24-Jun-2025 15:29:59 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor/includes/template-library/data/controller.php on line 8
+[24-Jun-2025 15:32:00 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor/includes/template-library/data/controller.php on line 8
+[25-Jun-2025 05:32:53 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1627
+[26-Jun-2025 08:13:20 UTC] Automatic updates starting...
+[26-Jun-2025 08:13:21 UTC]   Automatic plugin updates starting...
+[26-Jun-2025 08:13:21 UTC]   Automatic plugin updates complete.
+[26-Jun-2025 08:13:21 UTC]   Automatic theme updates starting...
+[26-Jun-2025 08:13:21 UTC]   Automatic theme updates complete.
+[26-Jun-2025 08:13:21 UTC] Automatic updates complete.

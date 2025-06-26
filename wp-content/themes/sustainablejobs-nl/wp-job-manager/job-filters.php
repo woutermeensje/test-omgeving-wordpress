@@ -92,35 +92,37 @@ jQuery(document).ready(function($) {
 <style>
 
 
-/* Container */
+.categorie_box {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.categorie_box label {
+    display: none;
+}
+
+.categorie_box {
+    width: 50%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .search_categories {
-    width: 100%;
-    margin-top: 10px;
+     width: 50%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Dropdown veld zelf */
-.search_categories select {
-    width: 100%;
-    padding: 12px 14px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px; /* afgeronde hoeken */
-    background-color: white;
-    color: #222;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Placeholder tekst (werkt alleen in combinatie met select2 of met :invalid + required) */
-.search_categories select:invalid {
-    color: #999;
-}
-
-/* Focus staat */
-.search_categories select:focus {
-    border-color: #0a6b8d;
-    box-shadow: 0 2px 8px rgba(10, 107, 141, 0.25);
-    outline: none;
+@media (max-width: 768px) {
+    .categorie_box {
+        padding: 0 20px;
+    }
 }
 
 /* Container blijft 100% breed */
