@@ -62,6 +62,17 @@ do_action('job_manager_job_filters_before', $atts);
             </div>
         <?php endif; ?>
 
+        job_manager_dropdown_categories([
+    'taxonomy'        => 'job_listing_category',
+    'hierarchical'    => 1,
+    'show_option_none' => __('Kies een categorie', 'wp-job-manager'), // <-- dit is de 'placeholder'
+    'name'            => 'search_categories',
+    'orderby'         => 'name',
+    'selected'        => $selected_category,
+    'multiple'        => false,
+    'hide_empty'      => true
+]);
+
         </div>
 
     
