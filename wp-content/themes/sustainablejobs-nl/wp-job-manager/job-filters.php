@@ -30,113 +30,253 @@ do_action('job_manager_job_filters_before', $atts);
     </div>
 
     <div class="filter-box">
-
-     <div class="categorie_filter">
-        <?php if ($categories) : ?>
-            <?php foreach ($categories as $category) : ?>
-                <input type="hidden" name="search_categories[]" value="<?php echo esc_attr(sanitize_title($category)); ?>" />
-            <?php endforeach; ?>
-        <?php elseif ($show_categories && !is_tax('job_listing_category') && get_terms(['taxonomy' => 'job_listing_category'])) : ?>
-            <div class="search_categories">
-                <?php if ($show_category_multiselect) : ?>
-                    <?php job_manager_dropdown_categories([
-                        'taxonomy'     => 'job_listing_category',
-                        'hierarchical' => 1,
-                        'name'         => 'search_categories',
-                        'orderby'      => 'name',
-                        'selected'     => $selected_category,
-                        'hide_empty'   => true
-                    ]); ?>
-                <?php else : ?>
-                    <?php job_manager_dropdown_categories([
-                        'taxonomy'        => 'job_listing_category',
-                        'hierarchical'    => 1,
-                        'show_option_all' => __('Alle categorieën', 'wp-job-manager'),
-                        'name'            => 'search_categories',
-                        'orderby'         => 'name',
-                        'selected'        => $selected_category,
-                        'multiple'        => false,
-                        'hide_empty'      => true
-                    ]); ?>
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
-
-        job_manager_dropdown_categories([
-    'taxonomy'        => 'job_listing_category',
-    'hierarchical'    => 1,
-    'show_option_none' => __('Kies een categorie', 'wp-job-manager'), // <-- dit is de 'placeholder'
-    'name'            => 'search_categories',
-    'orderby'         => 'name',
-    'selected'        => $selected_category,
-    'multiple'        => false,
-    'hide_empty'      => true
-]);
-
+    
+            <div class="job_type">
+            <select name="filter_job_types" id="filter_job_types" class="job_types" data-placeholder="🧑‍💼 Dienstverband">
+                <option value=""><?php _e('Selecteer dienstverband', 'wp-job-manager'); ?></option>
+                <?php foreach (get_job_listing_types() as $type) : ?>
+                    <option value="<?php echo esc_attr($type->slug); ?>"><?php echo esc_html($type->name); ?></option>
+                <?php endforeach; ?>
+            </select>
         </div>
 
-    
-    <!--
-        <div class="job_types">
-        <select name="filter_job_types" id="filter_job_types" class="job_types" data-placeholder="Dienstverband">
-         <option value=""><?php _e('Selecteer dienstverband', 'wp-job-manager'); ?></option>
-         <?php foreach (get_job_listing_types() as $type) : ?>
-             <option value="<?php echo esc_attr($type->slug); ?>"><?php echo esc_html($type->name); ?></option>
-         <?php endforeach; ?>
+    <div class="job_certificering">
+        <select name="filter_certificering" id="filter_certificering" class="job_certificering" data-placeholder="🏅 Certificering">
+            <option value=""><?php _e('Selecteer certificering', 'wp-job-manager'); ?></option>
+            <?php foreach (get_terms(['taxonomy' => 'certificering', 'hide_empty' => true]) as $term) : ?>
+                <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+            <?php endforeach; ?>
         </select>
     </div>
-    -->
 
 
+        <div class="job_company">
+            <select name="filter_job_company" id="filter_job_company" class="job_company" data-placeholder="🏢 Organisatie">
+                <option value=""><?php _e('💼 Selecteer organisatie', 'wp-job-manager'); ?></option>
+                <?php foreach (get_terms(['taxonomy' => 'job_company', 'hide_empty' => true]) as $term) : ?>
+                    <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
 
+        <div class="job_tag">
+            <select name="filter_job_tag" id="filter_job_tag" class="job_tag" data-placeholder="📌 Tags">
+                <option value=""><?php _e('Selecteer tag', 'wp-job-manager'); ?></option>
+                <?php foreach (get_terms(['taxonomy' => 'job_tag', 'hide_empty' => true]) as $term) : ?>
+                    <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+        <div class="job_sector">
+            <select name="filter_job_sector" id="filter_job_sector" class="job_sector" data-placeholder="🌱 Sector">
+                <option value=""><?php _e('Selecteer sector', 'wp-job-manager'); ?></option>
+                <?php foreach (get_terms(['taxonomy' => 'job_sector', 'hide_empty' => true]) as $term) : ?>
+                    <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
     </div>
-
-
-
 </form>
 
 <?php do_action('job_manager_job_filters_after', $atts); ?>
 
+<script>
+jQuery(document).ready(function($) {
+    // Initialiseer Select2
+    $('#filter_certificering, #filter_job_types, #filter_job_company, #filter_job_tag, #filter_job_sector').select2({
+        width: '100%',
+        allowClear: true,
+        placeholder: function() {
+            return $(this).data('placeholder');
+        }
+    });
+
+    // Submit bij wijziging
+    $('#filter_certificering, #filter_job_types, #filter_job_company, #filter_job_tag, #filter_job_sector').on('change', function() {
+        $('.job_filters').trigger('submit');
+    });
+
+    $('.job_filters').on('submit', function(e) {
+        e.preventDefault();
+        $(this).trigger('update_results', [1, false]);
+    });
+});
+
+</script>
+
 
 <style>
-/* Container */
+    .filter-box > .job_category {
+    flex: 1 1 18%;
+    min-width: 160px;
+}
+
+.job_category select {
+    width: 100%;
+}
+
+
+/* ===== FILTER KNOP STIJLING ZOALS DE SCREENSHOT ===== */
+.select2-container--default .select2-selection--single {
+    border-radius: 50px !important;
+    border: 1px solid #e3cfe2  !important;
+    background-color: #fcfbfa;
+    padding: 8px 16px;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 40px -5px #ddd inset;
+    transition: all 0.2s ease;
+}
+
+/* Placeholder dikgedrukt */
+.select2-selection__placeholder {
+    color: #000;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tekst binnen geselecteerde filter */
+.select2-selection__rendered {
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 2px;
+}
+
+/* Pijl rechts: zwart, iets groter */
+.select2-selection__arrow b {
+    border-color: #111 transparent transparent transparent !important;
+    border-width: 6px 5px 0 5px !important;
+}
+
+</style>
+
+<style>
+
+/* Zet de filter-box netjes in een rij met gelijke breedte */
+.filter-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+
+/* Alle filter-items krijgen gelijke breedte */
+.filter-box > div {
+    flex: 1 1 18%; /* ongeveer 5 op een rij, pas aan naar wens */
+    min-width: 160px;
+}
+
+/* Select2 containers vullen de volledige breedte */
+.select2-container {
+    width: 100% !important;
+}
+
+/* ========== ALGEMENE INPUT & SELECT2-STYLING ========== */
+.job_filters select,
+.select2-container .select2-selection--single,
 .select2-container .select2-selection--multiple {
-  background-color: white;
-  border: 0.5px solid #333333;
-  border-radius: 50px;
-  padding: 4px;
-  min-height: 38px;
-  font-family: Poppins;
-  font-weight: 700;
-  max-width: 100%;  
+    background-color: white;
+    padding: 12px 14px;
+    min-height: 44px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.10);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Geselecteerde tags */
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    color: #333;
+    line-height: 1.3;
+    padding-left: 2px;
+}
+
+/* Placeholder-stijl */
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #777;
+    font-weight: 400;
+}
+
+/* Tags binnen multiple select */
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #0a6b8d;
-  color: white;
-  border: none;
-  border-radius: 2px;
-  padding: 2px 6px;
-  margin: 2px;
+    background-color: #0a6b8d;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 2px 6px;
+    margin: 2px;
+    font-size: 13px;
 }
 
-/* Placeholder stijl */
-.select2-container--default .select2-selection--multiple .select2-selection__rendered::before {
-  content: attr(data-placeholder);
-  color: #333333;
-  font-family: Poppins;
-  font-weight: 700;
-  padding-left: 6px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+/* Pijl (dropdown icoon) */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+    right: 10px;
 }
 
-/* Alleen tonen als er nog niets is geselecteerd */
-.select2-container--default .select2-selection--multiple .select2-selection__rendered:has(.select2-selection__choice)::before {
-  content: none;
+/* Focus state */
+.select2-container--default .select2-selection--single:focus,
+.select2-container--default .select2-selection--multiple:focus {
+    border-color: #0a6b8d !important;
+    box-shadow: 0 0 0 2px rgba(10, 107, 141, 0.2);
+    outline: none;
 }
+
+
+
+.filter-box select,
+.filter-box .select2-container {
+    margin-top: 4px;
+}
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .filter-box {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .filter-box > div {
+        width: 100% !important;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .search-basic {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 20px;
+    }
+
+    .search-basic > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .search-basic input[type="text"] {
+        width: 100%;
+    }
+}
+
 
 
 

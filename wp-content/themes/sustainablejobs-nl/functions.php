@@ -1,5 +1,4 @@
 <?php
-// Exit if accessed directly
 if (!defined('ABSPATH')) exit;
 
 /**
@@ -52,44 +51,77 @@ add_action('init', function () {
 
     register_taxonomy('job_tag', 'job_listing', [
         'label' => 'Tags',
-        'hierarchical' => false,
+        'hierarchical' => true,
         'show_ui' => true,
         'show_admin_column' => true,
         'show_in_rest' => true,
         'rewrite' => ['slug' => 'tag'],
     ]);
+
+    register_taxonomy('job_sector', 'job_listing', [
+        'label' => 'Sectors',
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'show_in_rest' => true,
+        'rewrite' => ['slug' => 'sector'],
+    ]);
+
+    // ✅ Register extra custom taxonomies
+register_taxonomy('certificering', 'job_listing', [
+    'label' => 'Certificeringen',
+    'hierarchical' => true,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'show_in_rest' => true,
+    'rewrite' => ['slug' => 'certificering'],
+]);
 });
 
-add_filter('job_manager_get_listings_custom_filter', function ($query_args, $args) {
 
-    // Tags
-    if (!empty($args['filter_job_tag'])) {
-        $query_args['tax_query'][] = [
-            'taxonomy' => 'job_tag',
-            'field'    => 'slug',
-            'terms'    => explode(',', sanitize_text_field($args['filter_job_tag'])),
-            'operator' => 'IN',
-        ];
+
+add_filter('get_job_listings_query_args', function ($query_args, $args) {
+    // ✅ Parse de 'form_data' string uit de AJAX-aanvraag
+    if (isset($_POST['form_data'])) {
+        parse_str($_POST['form_data'], $parsed);
+        foreach ($parsed as $key => $value) {
+            $_POST[$key] = $value;
+        }
+        error_log('🧩 Parsed form_data: ' . print_r($parsed, true));
     }
 
-    // Organisaties
-    if (!empty($args['filter_job_company'])) {
-        $query_args['tax_query'][] = [
-            'taxonomy' => 'job_company',
-            'field'    => 'slug',
-            'terms'    => explode(',', sanitize_text_field($args['filter_job_company'])),
-            'operator' => 'IN',
-        ];
+    // Debug: laat zien wat er binnenkomt via POST
+    error_log('🔍 WPJM POST filterdata: ' . print_r($_POST, true));
+
+    // ✅ Ondersteunde custom taxonomieën
+    $custom_taxonomies = [
+        'filter_job_tag'       => 'job_tag',
+        'filter_job_sector'    => 'job_sector',
+        'filter_job_company'   => 'job_company',
+        'filter_job_types'     => 'job_listing_type', // standaard job types
+        'filter_certificering' => 'certificering',     // nieuwe custom tax
+    ];
+
+    // ✅ Voeg tax_query toe als filters niet leeg zijn
+    foreach ($custom_taxonomies as $filter_key => $taxonomy) {
+        if (!empty($_POST[$filter_key])) {
+            $terms = (array) $_POST[$filter_key];
+            $terms = array_map('sanitize_title', $terms);
+
+            if (!empty($terms)) {
+                $query_args['tax_query'][] = [
+                    'taxonomy' => $taxonomy,
+                    'field'    => 'slug',
+                    'terms'    => $terms,
+                    'operator' => 'IN',
+                ];
+            }
+        }
     }
 
-    // ✅ Dienstverband / Job Types
-    if (!empty($args['filter_job_types'])) {
-        $query_args['tax_query'][] = [
-            'taxonomy' => 'job_listing_type',
-            'field'    => 'slug',
-            'terms'    => array_map('sanitize_title', (array) $args['filter_job_types']),
-            'operator' => 'IN',
-        ];
+    // Debug: laat zien wat WP Query zal gebruiken
+    if (!empty($query_args['tax_query'])) {
+        error_log('📦 tax_query opgebouwd: ' . print_r($query_args['tax_query'], true));
     }
 
     return $query_args;
