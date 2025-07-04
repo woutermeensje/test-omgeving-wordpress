@@ -126,3 +126,33 @@ add_filter('get_job_listings_query_args', function ($query_args, $args) {
 
     return $query_args;
 }, 10, 2);
+
+add_filter('job_manager_get_listings_shortcode_args', function($atts){
+    $custom_filters = [
+        'filter_job_company'   => 'job_company',
+        'filter_job_tag'       => 'job_tag',
+        'filter_job_sector'    => 'job_sector',
+        'filter_certificering' => 'certificering',
+        'filter_job_types'     => 'job_listing_type',
+    ];
+
+    $tax_query = [];
+
+    foreach ($custom_filters as $shortcode_attr => $taxonomy) {
+        if (!empty($atts[$shortcode_attr])) {
+            $tax_query[] = [
+                'taxonomy' => $taxonomy,
+                'field'    => 'slug',
+                'terms'    => array_map('sanitize_title', (array)$atts[$shortcode_attr]),
+            ];
+        }
+    }
+
+    if (!empty($tax_query)) {
+        $atts['tax_query'] = $tax_query;
+    }
+
+    return $atts;
+}, 10, 1);
+
+
