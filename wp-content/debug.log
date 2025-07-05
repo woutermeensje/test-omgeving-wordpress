@@ -46506,3 +46506,174 @@ Stack trace:
     [filter_job_sector] => 
 )
 
+[04-Jul-2025 20:43:39 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[04-Jul-2025 20:43:39 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[04-Jul-2025 20:44:51 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[04-Jul-2025 20:44:51 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[04-Jul-2025 20:44:51 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[04-Jul-2025 20:45:42 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[04-Jul-2025 20:45:42 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[04-Jul-2025 20:48:43 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[04-Jul-2025 20:48:43 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[04-Jul-2025 20:49:40 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[04-Jul-2025 20:49:40 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[04-Jul-2025 20:49:43 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[04-Jul-2025 20:49:43 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[04-Jul-2025 20:49:48 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[04-Jul-2025 20:49:48 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[05-Jul-2025 06:14:05 UTC] Automatic updates starting...
+[05-Jul-2025 06:14:05 UTC]   Automatic plugin updates starting...
+[05-Jul-2025 06:14:05 UTC]   Automatic plugin updates complete.
+[05-Jul-2025 06:14:05 UTC]   Automatic theme updates starting...
+[05-Jul-2025 06:14:05 UTC]   Automatic theme updates complete.
+[05-Jul-2025 06:14:05 UTC] Automatic updates complete.
+[05-Jul-2025 17:24:30 UTC] Automatic updates starting...
+[05-Jul-2025 17:24:30 UTC]   Automatic plugin updates starting...
+[05-Jul-2025 17:24:30 UTC]   Automatic plugin updates complete.
+[05-Jul-2025 17:24:30 UTC]   Automatic theme updates starting...
+[05-Jul-2025 17:24:30 UTC]   Automatic theme updates complete.
+[05-Jul-2025 17:24:30 UTC] Automatic updates complete.
+[05-Jul-2025 17:26:27 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor/includes/template-library/manager.php on line 790
+[05-Jul-2025 17:28:11 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor-pro/license/api.php on line 588
+[05-Jul-2025 17:28:22 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[05-Jul-2025 17:28:22 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+

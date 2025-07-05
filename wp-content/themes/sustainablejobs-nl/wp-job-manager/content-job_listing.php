@@ -1,6 +1,5 @@
 <li class="job-listing-simple" <?php job_listing_class(); ?>>
-
-
+    
     <div class="job-logo">
         <?php the_company_logo(); ?>
     </div>
@@ -57,11 +56,6 @@
 .job-listing-simple:hover { 
     border: 1px solid var(--color-primary);
 }
-
-.job_listing.job_listing-featured .job-listing-simple {
-    background-color: #83b6b0;
-}
-
 
 /* Logo blok */
 .job-logo {
