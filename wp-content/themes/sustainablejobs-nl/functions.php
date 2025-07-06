@@ -205,3 +205,26 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
 
     return $atts;
 }, 10, 1);
+
+
+add_filter('job_manager_get_listings', function($jobs, $query_args) {
+    if (!empty($query_args['tax_query'])) {
+        add_filter('get_job_listings_custom_filter', function($query) use ($query_args) {
+            if (!isset($query['tax_query'])) {
+                $query['tax_query'] = [];
+            }
+            $query['tax_query'] = array_merge($query['tax_query'], $query_args['tax_query']);
+            return $query;
+        });
+    }
+
+    return $jobs;
+}, 10, 2);
+
+
+add_action('pre_get_posts', function($query) {
+    if (!is_admin() && $query->is_main_query() && isset($query->query_vars['post_type']) && $query->query_vars['post_type'] === 'job_listing') {
+        error_log('👉 WP_Query tax_query: ' . print_r($query->query_vars['tax_query'], true));
+    }
+});
+
