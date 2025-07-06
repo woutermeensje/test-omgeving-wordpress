@@ -176,7 +176,8 @@ add_filter('get_job_listings_query_args', function ($query_args, $args) {
     return $query_args;
 }, 10, 2);
 
-// ✅ Shortcode support voor custom taxonomieën
+
+
 add_filter('job_manager_get_listings_shortcode_args', function($atts){
     $custom_filters = [
         'job_company'       => 'job_company',
@@ -188,12 +189,12 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
 
     $tax_query = [];
 
-    foreach ($custom_filters as $shortcode_attr => $taxonomy) {
-        if (!empty($atts[$shortcode_attr])) {
+    foreach ($custom_filters as $attr => $taxonomy) {
+        if (!empty($atts[$attr])) {
             $tax_query[] = [
                 'taxonomy' => $taxonomy,
                 'field'    => 'slug',
-                'terms'    => array_map('sanitize_title', explode(',', $atts[$shortcode_attr])),
+                'terms'    => array_map('sanitize_title', explode(',', $atts[$attr])),
                 'operator' => 'IN',
             ];
         }
@@ -207,19 +208,25 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
 }, 10, 1);
 
 
+
 add_filter('job_manager_get_listings', function($jobs, $query_args) {
     if (!empty($query_args['tax_query'])) {
         add_filter('get_job_listings_custom_filter', function($query) use ($query_args) {
             if (!isset($query['tax_query'])) {
                 $query['tax_query'] = [];
             }
+
             $query['tax_query'] = array_merge($query['tax_query'], $query_args['tax_query']);
+
+            error_log('📌 get_job_listings_custom_filter tax_query: ' . print_r($query['tax_query'], true));
+
             return $query;
         });
     }
 
     return $jobs;
 }, 10, 2);
+
 
 
 add_action('pre_get_posts', function($query) {
