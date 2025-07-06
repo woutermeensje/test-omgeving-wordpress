@@ -167,11 +167,13 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 .single_job_listing {
     max-width: 100%;
-    margin: 40px auto;
+    width: 900px; 
+    margin: 20px auto;
     background: var(--color-bg);
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
     padding: 25px;
+    border: 1px solid var(--color-border);
 }
 
 .meta-information-single {
@@ -245,9 +247,11 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 <style>
+
+
 .recent-jobs-list {
-    padding: 0;
-    margin: 0;
+    width: 900px; 
+    margin: 24px auto;
 }
 
 .job-listing-simple {
@@ -255,8 +259,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
     align-items: center;
     gap: 20px;
     padding: 16px;
-    margin: 0 auto 28px auto;
-    width: 90%;
+    margin: 20px auto;
     border: 1px solid var(--color-bg);
     background-color: var(--color-bg);
     border-radius: 5px;
@@ -411,5 +414,28 @@ a.google_map_link {
     .job-date {
         display: none;
     }
+}
+
+h1.entry-title {
+    display: none; 
+}
+
+</style>
+
+
+<style>
+    html {
+  --color-primary: #0A6B8D;
+  --color-secondary: #92E9AB;
+  --color-tertiary: #E0D0E1;
+  --color-accent: #b9d1b3;
+  --color-text: #333333;
+  --color-text-muted: #777777;
+  --color-bg: #ffffff;
+  --color-bg-light: #f8f8f8;
+  --color-border: #e0e0e0;
+  --color-border-light: #cccccc;
+  --color-success: #28a745;
+  --color-success-hover: #155724;
 }
 </style>

@@ -16,8 +16,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('inter-font', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap', [], null);
     wp_enqueue_style('custom-fonts', get_stylesheet_directory_uri() . '/fonts/fonts.css');
     wp_enqueue_style('child-gf-styles', get_stylesheet_directory_uri() . '/css/gravity-forms.css');
-    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', ['hello-elementor', 'parent-style'], wp_get_theme()->get('Version'));
-
 });
 
 
@@ -131,13 +129,61 @@ add_filter('get_job_listings_query_args', function ($query_args, $args) {
     return $query_args;
 }, 10, 2);
 
-add_filter('job_manager_get_listings_shortcode_args', function($atts){
-    $custom_filters = [
-        'filter_job_company'   => 'job_company',
+
+
+// ✅ Verwerk filterdata vanuit AJAX of standaard formulier
+add_filter('get_job_listings_query_args', function ($query_args, $args) {
+    // ✅ Parse de 'form_data' string uit de AJAX-aanvraag (voor frontend filters)
+    if (isset($_POST['form_data'])) {
+        parse_str($_POST['form_data'], $parsed);
+        foreach ($parsed as $key => $value) {
+            $_POST[$key] = $value;
+        }
+    }
+
+    // ✅ Custom filters (voor frontend)
+    $custom_taxonomies = [
         'filter_job_tag'       => 'job_tag',
         'filter_job_sector'    => 'job_sector',
-        'filter_certificering' => 'certificering',
+        'filter_job_company'   => 'job_company',
         'filter_job_types'     => 'job_listing_type',
+        'filter_certificering' => 'certificering',
+    ];
+
+    foreach ($custom_taxonomies as $filter_key => $taxonomy) {
+        if (!empty($_POST[$filter_key])) {
+            $terms = (array) $_POST[$filter_key];
+            $terms = array_map('sanitize_title', $terms);
+
+            $query_args['tax_query'][] = [
+                'taxonomy' => $taxonomy,
+                'field'    => 'slug',
+                'terms'    => $terms,
+                'operator' => 'IN',
+            ];
+        }
+    }
+
+    // ✅ Voeg tax_query van de shortcode toe
+    if (!empty($args['tax_query'])) {
+        if (empty($query_args['tax_query'])) {
+            $query_args['tax_query'] = [];
+        }
+
+        $query_args['tax_query'] = array_merge($query_args['tax_query'], $args['tax_query']);
+    }
+
+    return $query_args;
+}, 10, 2);
+
+// ✅ Shortcode support voor custom taxonomieën
+add_filter('job_manager_get_listings_shortcode_args', function($atts){
+    $custom_filters = [
+        'job_company'       => 'job_company',
+        'job_tag'           => 'job_tag',
+        'job_sector'        => 'job_sector',
+        'certificering'     => 'certificering',
+        'job_listing_type'  => 'job_listing_type',
     ];
 
     $tax_query = [];
@@ -147,7 +193,8 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
             $tax_query[] = [
                 'taxonomy' => $taxonomy,
                 'field'    => 'slug',
-                'terms'    => array_map('sanitize_title', (array)$atts[$shortcode_attr]),
+                'terms'    => array_map('sanitize_title', explode(',', $atts[$shortcode_attr])),
+                'operator' => 'IN',
             ];
         }
     }
@@ -158,5 +205,3 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
 
     return $atts;
 }, 10, 1);
-
-
