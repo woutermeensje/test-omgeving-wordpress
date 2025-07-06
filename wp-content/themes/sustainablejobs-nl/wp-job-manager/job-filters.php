@@ -3,6 +3,25 @@ if (!defined('ABSPATH')) exit;
 
 wp_enqueue_script('wp-job-manager-ajax-filters');
 do_action('job_manager_job_filters_before', $atts);
+
+// 👇 Alle geselecteerde waarden ophalen
+$selected = [
+    'job_company'     => [],
+    'job_tag'         => [],
+    'job_sector'      => [],
+    'job_types'       => [],
+    'certificering'   => [],
+];
+
+foreach ($selected as $key => &$value) {
+    if (!empty($_GET[$key])) {
+        $value = (array) $_GET[$key];
+    } elseif (!empty($atts[$key])) {
+        $value = explode(',', $atts[$key]);
+    } elseif (!empty($_POST['filter_' . $key])) {
+        $value = (array) $_POST['filter_' . $key];
+    }
+}
 ?>
 
 <form class="job_filters">
@@ -10,9 +29,7 @@ do_action('job_manager_job_filters_before', $atts);
 
     <div class="filter-header" style="padding: 0 20px 10px 20px;">
         <h2>Bekijk alle Duurzame Vacatures in ons Netwerk!</h2>
-        <p>
-            Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief</a>!
-        </p>
+        <p>Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief</a>!</p>
     </div>
 
     <div class="search-basic">
@@ -30,31 +47,36 @@ do_action('job_manager_job_filters_before', $atts);
     </div>
 
     <div class="filter-box">
-    
-            <div class="job_type">
+
+        <div class="job_type">
             <select name="filter_job_types" id="filter_job_types" class="job_types" data-placeholder="🧑‍💼 Dienstverband">
                 <option value=""><?php _e('Selecteer dienstverband', 'wp-job-manager'); ?></option>
                 <?php foreach (get_job_listing_types() as $type) : ?>
-                    <option value="<?php echo esc_attr($type->slug); ?>"><?php echo esc_html($type->name); ?></option>
+                    <option value="<?php echo esc_attr($type->slug); ?>" <?php selected(in_array($type->slug, $selected['job_types'])); ?>>
+                        <?php echo esc_html($type->name); ?>
+                    </option>
                 <?php endforeach; ?>
             </select>
         </div>
 
-    <div class="job_certificering">
-        <select name="filter_certificering" id="filter_certificering" class="job_certificering" data-placeholder="🏅 Certificering">
-            <option value=""><?php _e('Selecteer certificering', 'wp-job-manager'); ?></option>
-            <?php foreach (get_terms(['taxonomy' => 'certificering', 'hide_empty' => true]) as $term) : ?>
-                <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-
+        <div class="job_certificering">
+            <select name="filter_certificering" id="filter_certificering" class="job_certificering" data-placeholder="🏅 Certificering">
+                <option value=""><?php _e('Selecteer certificering', 'wp-job-manager'); ?></option>
+                <?php foreach (get_terms(['taxonomy' => 'certificering', 'hide_empty' => true]) as $term) : ?>
+                    <option value="<?php echo esc_attr($term->slug); ?>" <?php selected(in_array($term->slug, $selected['certificering'])); ?>>
+                        <?php echo esc_html($term->name); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
 
         <div class="job_company">
             <select name="filter_job_company" id="filter_job_company" class="job_company" data-placeholder="🏢 Organisatie">
                 <option value=""><?php _e('💼 Selecteer organisatie', 'wp-job-manager'); ?></option>
                 <?php foreach (get_terms(['taxonomy' => 'job_company', 'hide_empty' => true]) as $term) : ?>
-                    <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+                    <option value="<?php echo esc_attr($term->slug); ?>" <?php selected(in_array($term->slug, $selected['job_company'])); ?>>
+                        <?php echo esc_html($term->name); ?>
+                    </option>
                 <?php endforeach; ?>
             </select>
         </div>
@@ -63,7 +85,9 @@ do_action('job_manager_job_filters_before', $atts);
             <select name="filter_job_tag" id="filter_job_tag" class="job_tag" data-placeholder="📌 Tags">
                 <option value=""><?php _e('Selecteer tag', 'wp-job-manager'); ?></option>
                 <?php foreach (get_terms(['taxonomy' => 'job_tag', 'hide_empty' => true]) as $term) : ?>
-                    <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+                    <option value="<?php echo esc_attr($term->slug); ?>" <?php selected(in_array($term->slug, $selected['job_tag'])); ?>>
+                        <?php echo esc_html($term->name); ?>
+                    </option>
                 <?php endforeach; ?>
             </select>
         </div>
@@ -72,7 +96,9 @@ do_action('job_manager_job_filters_before', $atts);
             <select name="filter_job_sector" id="filter_job_sector" class="job_sector" data-placeholder="🌱 Sector">
                 <option value=""><?php _e('Selecteer sector', 'wp-job-manager'); ?></option>
                 <?php foreach (get_terms(['taxonomy' => 'job_sector', 'hide_empty' => true]) as $term) : ?>
-                    <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+                    <option value="<?php echo esc_attr($term->slug); ?>" <?php selected(in_array($term->slug, $selected['job_sector'])); ?>>
+                        <?php echo esc_html($term->name); ?>
+                    </option>
                 <?php endforeach; ?>
             </select>
         </div>
@@ -80,6 +106,8 @@ do_action('job_manager_job_filters_before', $atts);
 </form>
 
 <?php do_action('job_manager_job_filters_after', $atts); ?>
+
+
 
 <script>
 jQuery(document).ready(function($) {

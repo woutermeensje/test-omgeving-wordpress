@@ -198,6 +198,8 @@ a.google_map_link {
 
     .job-meta {
         font-size: 0.95rem;
+        line-height: 1.5;
+        
     }
 
     .job-date {

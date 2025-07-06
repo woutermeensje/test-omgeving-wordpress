@@ -48756,3 +48756,849 @@ Stack trace:
     [filter_job_sector] => 
 )
 
+[06-Jul-2025 12:27:29 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 12:27:29 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=freelance&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 12:27:29 UTC] 📦 tax_query opgebouwd: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_listing_type
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => freelance
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[06-Jul-2025 14:33:18 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:33:18 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:34:40 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:34:40 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:36:12 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:36:12 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:38:57 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:38:57 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:43 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => full-time
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:43 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=full-time&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => full-time
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:43 UTC] 📦 tax_query opgebouwd: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_listing_type
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => full-time
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[06-Jul-2025 14:41:44 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:44 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:47 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => milieu
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:47 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=milieu&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => milieu
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:47 UTC] 📦 tax_query opgebouwd: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_company
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => milieu
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[06-Jul-2025 14:41:49 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:49 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:51 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => natuurmonumenten
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:51 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=natuurmonumenten&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => natuurmonumenten
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:51 UTC] 📦 tax_query opgebouwd: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_company
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => natuurmonumenten
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[06-Jul-2025 14:41:53 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:41:53 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:44:02 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:44:02 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:49:13 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:49:13 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:53:11 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:53:11 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:53:15 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:53:15 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:53:31 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:53:31 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:56:44 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:56:44 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:56:48 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:56:48 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:56:51 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 14:56:51 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:01:34 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:01:35 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:01:37 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => temporary
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:01:37 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=temporary&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => temporary
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:01:40 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:01:40 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:08:36 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor-pro/license/api.php on line 584
+[06-Jul-2025 15:08:38 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor/includes/template-library/manager.php on line 765
+[06-Jul-2025 15:12:31 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:12:31 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:12:36 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:12:36 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:12:39 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:12:39 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:12:41 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:12:41 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
