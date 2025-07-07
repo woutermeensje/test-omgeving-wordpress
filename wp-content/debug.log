@@ -49632,3 +49632,1748 @@ Stack trace:
     [filter_job_sector] => 
 )
 
+[06-Jul-2025 15:24:27 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:27 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:30 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:30 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:35 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => inner-smile-certified
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:35 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=inner-smile-certified&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => inner-smile-certified
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:37 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:37 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:38 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:24:38 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:28:25 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:28:25 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:28:30 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:28:31 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=freelance&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:28:32 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:28:32 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:54:48 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[06-Jul-2025 15:54:48 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 05:24:26 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 05:24:26 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 05:24:30 UTC] Automatic updates starting...
+[07-Jul-2025 05:24:31 UTC]   Automatic plugin updates starting...
+[07-Jul-2025 05:24:31 UTC]   Automatic plugin updates complete.
+[07-Jul-2025 05:24:31 UTC]   Automatic theme updates starting...
+[07-Jul-2025 05:24:31 UTC]   Automatic theme updates complete.
+[07-Jul-2025 05:24:31 UTC] Automatic updates complete.
+[07-Jul-2025 05:24:33 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 05:24:33 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:34 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => milieu
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:34 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=milieu&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => milieu
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:35 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:35 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:38 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:38 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=freelance&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:40 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:40 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:42 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => inner-smile-certified
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:42 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=inner-smile-certified&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => inner-smile-certified
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:43 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:43 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:44 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => energietransitie
+)
+
+[07-Jul-2025 09:20:44 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=energietransitie
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => energietransitie
+)
+
+[07-Jul-2025 09:20:46 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 09:20:46 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:13:43 UTC] Automatic updates starting...
+[07-Jul-2025 11:13:43 UTC]   Automatic plugin updates starting...
+[07-Jul-2025 11:13:43 UTC]   Automatic plugin updates complete.
+[07-Jul-2025 11:13:43 UTC]   Automatic theme updates starting...
+[07-Jul-2025 11:13:43 UTC]   Automatic theme updates complete.
+[07-Jul-2025 11:13:43 UTC] Automatic updates complete.
+[07-Jul-2025 11:13:45 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:13:45 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:14:01 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:14:01 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:26:50 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:26:50 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:27:19 UTC] PHP Fatal error:  Out of memory (allocated 10485760) (tried to allocate 45056 bytes) in /var/www/html/wp-content/plugins/elementor-pro/plugin.php on line 194
+[07-Jul-2025 11:27:19 UTC] PHP Fatal error:  Out of memory (allocated 10485760) (tried to allocate 61440 bytes) in /var/www/html/wp-includes/functions.php on line 5427
+[07-Jul-2025 11:27:19 UTC] PHP Fatal error:  Unknown: Cannot use output buffering in output buffering display handlers in Unknown on line 0
+[07-Jul-2025 11:27:27 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:27:27 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:28:16 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:28:16 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:48:00 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:48:01 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:49:05 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:49:05 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:52:15 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 11:52:15 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:05:22 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:05:22 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:06:35 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:06:35 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:07:44 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:07:44 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:08:00 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:08:00 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:08:16 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:08:16 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:08:47 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:08:47 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:09:11 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:09:11 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:20:59 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:20:59 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:21:02 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 163
+[07-Jul-2025 12:21:02 UTC] 👉 WP_Query tax_query: 
+[07-Jul-2025 12:21:02 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 12:21:02 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 12:25:14 UTC] PHP Parse error:  syntax error, unexpected 'import_arcadis_jobs_to_wpjm' (T_STRING) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 228
+[07-Jul-2025 12:25:14 UTC] PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[07-Jul-2025 12:25:14 UTC] PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[07-Jul-2025 12:25:20 UTC] PHP Parse error:  syntax error, unexpected 'import_arcadis_jobs_to_wpjm' (T_STRING) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 228
+[07-Jul-2025 12:25:33 UTC] PHP Parse error:  syntax error, unexpected 'import_arcadis_jobs_to_wpjm' (T_STRING) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 228
+[07-Jul-2025 12:25:41 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:25:41 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:25:46 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:25:47 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:25:48 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:25:51 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:25:54 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:25:54 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:16 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:19 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:22 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:22 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:28 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:32 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:40 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 287
+[07-Jul-2025 12:26:51 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:26:51 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:27:27 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 231
+[07-Jul-2025 12:27:30 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 231
+[07-Jul-2025 12:27:34 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 231
+[07-Jul-2025 12:28:48 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:28:48 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:33:23 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:33:23 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:43:53 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:43:53 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:45:28 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:28 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:30 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:45:30 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:53:23 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:53:23 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:55:31 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:55:31 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:55:52 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:55:52 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:56:27 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:56:27 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:56:38 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:56:38 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:57:46 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor-pro/license/api.php on line 280
+[07-Jul-2025 12:57:47 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:47 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1591
+[07-Jul-2025 12:57:47 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:47 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:47 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:47 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:47 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:48 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:48 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:48 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:48 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:48 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:48 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:48 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1649
+[07-Jul-2025 12:57:49 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1618
+[07-Jul-2025 12:57:50 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1635
+[07-Jul-2025 12:57:50 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1627
+[07-Jul-2025 12:57:50 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1635
+[07-Jul-2025 12:59:05 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:59:05 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:59:08 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 163
+[07-Jul-2025 12:59:08 UTC] 👉 WP_Query tax_query: 
+[07-Jul-2025 12:59:08 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 12:59:08 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 12:59:19 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 12:59:19 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:04:45 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:04:45 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:04:50 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 163
+[07-Jul-2025 13:04:50 UTC] 👉 WP_Query tax_query: 
+[07-Jul-2025 13:04:50 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 13:04:50 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 13:08:51 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:08:51 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:09:50 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:09:50 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:10:00 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 163
+[07-Jul-2025 13:10:00 UTC] 👉 WP_Query tax_query: 
+[07-Jul-2025 13:10:00 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 13:10:00 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[07-Jul-2025 13:25:29 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 234
+[07-Jul-2025 13:25:30 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 234
+[07-Jul-2025 13:25:46 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 234
+[07-Jul-2025 13:25:46 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 234
+[07-Jul-2025 13:26:31 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 234
+[07-Jul-2025 13:26:36 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 234
+[07-Jul-2025 13:26:47 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:26:47 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:44:02 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:44:02 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:48:19 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:48:19 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:48:23 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:48:23 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:48:55 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:48:55 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:50:14 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[07-Jul-2025 13:50:14 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
