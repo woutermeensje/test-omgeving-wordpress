@@ -4,22 +4,32 @@ if (!defined('ABSPATH')) exit;
 wp_enqueue_script('wp-job-manager-ajax-filters');
 do_action('job_manager_job_filters_before', $atts);
 
-// 👇 Alle geselecteerde waarden ophalen
+// ✅ Vul $selected met waarden vanuit: $_GET > $_POST > Shortcode
 $selected = [
-    'job_company'     => [],
-    'job_tag'         => [],
-    'job_sector'      => [],
-    'job_types'       => [],
-    'certificering'   => [],
+    'job_company'   => [],
+    'job_tag'       => [],
+    'job_sector'    => [],
+    'job_types'     => [],
+    'certificering' => [],
 ];
 
+$shortcode_atts = shortcode_atts([
+    'job_company' => '',
+    'job_tag' => '',
+    'job_sector' => '',
+    'job_listing_type' => '',
+    'certificering' => '',
+], $atts);
+
 foreach ($selected as $key => &$value) {
+    $shortcode_key = $key === 'job_types' ? 'job_listing_type' : $key;
+
     if (!empty($_GET[$key])) {
         $value = (array) $_GET[$key];
-    } elseif (!empty($atts[$key])) {
-        $value = explode(',', $atts[$key]);
     } elseif (!empty($_POST['filter_' . $key])) {
         $value = (array) $_POST['filter_' . $key];
+    } elseif (!empty($shortcode_atts[$shortcode_key])) {
+        $value = explode(',', sanitize_text_field($shortcode_atts[$shortcode_key]));
     }
 }
 ?>
@@ -108,7 +118,6 @@ foreach ($selected as $key => &$value) {
 <?php do_action('job_manager_job_filters_after', $atts); ?>
 
 
-
 <script>
 jQuery(document).ready(function($) {
     // Initialiseer Select2
@@ -120,18 +129,23 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // Submit bij wijziging
+    // Trigger AJAX filter update bij wijziging van selectievakjes
     $('#filter_certificering, #filter_job_types, #filter_job_company, #filter_job_tag, #filter_job_sector').on('change', function() {
         $('.job_filters').trigger('submit');
     });
 
+    // Zorg dat formulierverzending de WPJM-filters activeert
     $('.job_filters').on('submit', function(e) {
         e.preventDefault();
-        $(this).trigger('update_results', [1, false]);
+        if (typeof job_manager_job_filters !== 'undefined') {
+            job_manager_job_filters.filter_jobs(); // ✅ Bel de officiële WPJM functie
+        } else {
+            console.warn('job_manager_job_filters niet gevonden!');
+        }
     });
 });
-
 </script>
+
 
 
 <style>

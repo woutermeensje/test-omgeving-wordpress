@@ -81,6 +81,9 @@ add_action('init', function () {
  * ✅ Shortcode filters: [jobs job_company="bowers" job_sector="klimaatadaptatie"]
  */
 add_filter('job_manager_get_listings_shortcode_args', function($atts){
+    global $sj_job_shortcode_atts;
+    $sj_job_shortcode_atts = $atts;
+
     $custom_filters = [
         'job_company'       => 'job_company',
         'job_tag'           => 'job_tag',
@@ -113,6 +116,8 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
  * ✅ Combine AJAX filterdata + shortcode tax_query
  */
 add_filter('get_job_listings_query_args', function ($query_args, $args) {
+    global $sj_job_shortcode_atts;
+
     if (isset($_POST['form_data'])) {
         parse_str($_POST['form_data'], $parsed);
         foreach ($parsed as $key => $value) {
@@ -145,11 +150,25 @@ add_filter('get_job_listings_query_args', function ($query_args, $args) {
         }
     }
 
-    if (!empty($args['tax_query'])) {
-        if (empty($query_args['tax_query'])) {
-            $query_args['tax_query'] = [];
+    if (!empty($sj_job_shortcode_atts) && empty($_POST['form_data'])) {
+        foreach ($custom_taxonomies as $filter_key => $taxonomy) {
+            $key = str_replace('filter_', '', $filter_key);
+            if (!empty($sj_job_shortcode_atts[$key])) {
+                $terms = explode(',', sanitize_text_field($sj_job_shortcode_atts[$key]));
+                $query_args['tax_query'][] = [
+                    'taxonomy' => $taxonomy,
+                    'field'    => 'slug',
+                    'terms'    => $terms,
+                    'operator' => 'IN',
+                ];
+            }
         }
-        $query_args['tax_query'] = array_merge($query_args['tax_query'], $args['tax_query']);
+    }
+
+    if (!empty($query_args['tax_query'])) {
+        error_log('📦 TAX_QUERY in get_job_listings_query_args: ' . print_r($query_args['tax_query'], true));
+    } else {
+        error_log('📭 Geen tax_query aanwezig in get_job_listings_query_args');
     }
 
     return $query_args;
@@ -166,96 +185,3 @@ add_action('pre_get_posts', function($query) {
 
 
 
-function import_filtered_arcadis_jobs_to_wpjm() {
-    $skills = ['Renewable Energy', 'Sustainability'];
-    $max_per_skill = 30;
-    $inserted = 0;
-
-    foreach ($skills as $skill) {
-        $start = 0;
-
-        do {
-            $skill_param = urlencode($skill);
-            $url = "https://jobs.arcadis.com/api/apply/v2/jobs?domain=arcadis.com&location=netherlands&skill=$skill_param&num=10&start=$start";
-            $response = wp_remote_get($url);
-
-            if (is_wp_error($response)) break;
-
-            $data = json_decode(wp_remote_retrieve_body($response), true);
-            if (empty($data['positions'])) break;
-
-            foreach ($data['positions'] as $job) {
-                $title       = $job['name'];
-                $external_id = $job['id'];
-                $location    = $job['location'] ?? 'Netherlands';
-                $job_url     = $job['canonicalPositionUrl'] ?? '';
-                $job_type    = $job['work_location_option'] ?? '';
-
-                // Skip als al bestaat
-                $existing = get_posts([
-                    'post_type'   => 'job_listing',
-                    'meta_query'  => [[
-                        'key'     => '_arcadis_id',
-                        'value'   => (string) $external_id,
-                        'compare' => '='
-                    ]],
-                    'post_status' => 'any',
-                    'numberposts' => 1,
-                ]);
-                if ($existing) continue;
-
-                // Voeg toe als concept
-                $post_id = wp_insert_post([
-                    'post_title'   => wp_strip_all_tags($title),
-                    'post_content' => '', // Nog geen beschrijving
-                    'post_type'    => 'job_listing',
-                    'post_status'  => 'draft',
-                ]);
-
-                if ($post_id && !is_wp_error($post_id)) {
-                    update_post_meta($post_id, '_job_location', $location);
-                    update_post_meta($post_id, '_application', $job_url);
-                    update_post_meta($post_id, '_arcadis_id', (string) $external_id);
-                    update_post_meta($post_id, '_job_posted', date('Y-m-d'));
-
-                    // Taxonomieën koppelen
-                    wp_set_object_terms($post_id, ['Engineering', 'Duurzaamheid', 'Energietransitie'], 'job_sector');
-                    wp_set_object_terms($post_id, 'Arcadis Nederland', 'job_company');
-                    wp_set_object_terms($post_id, 'uitgelichte werkgever', 'job_tag');
-
-                    // Job type (optioneel, op basis van work_location_option)
-                    if ($job_type === 'onsite') {
-                        wp_set_object_terms($post_id, 'full-time', 'job_type');
-                    } elseif ($job_type === 'hybrid') {
-                        wp_set_object_terms($post_id, 'part-time', 'job_type');
-                    } elseif ($job_type === 'remote_local') {
-                        wp_set_object_terms($post_id, 'remote', 'job_type');
-                    }
-                }
-
-                $inserted++;
-            }
-
-            $start += 10;
-            if ($inserted >= $max_per_skill) break;
-
-        } while (count($data['positions']) === 10);
-    }
-
-    return "$inserted duurzame vacatures geïmporteerd als concept.";
-}
-
-
-add_action('admin_menu', function() {
-    add_menu_page(
-        'Import Duurzame Arcadis Jobs',
-        'Import Arcadis',
-        'manage_options',
-        'import-arcadis',
-        function() {
-            echo '<div class="wrap"><h1>Duurzame Arcadis Vacatures Importeren</h1>';
-            echo '<p>' . import_filtered_arcadis_jobs_to_wpjm() . '</p>';
-            echo '</div>';
-        }
-    );
-});
