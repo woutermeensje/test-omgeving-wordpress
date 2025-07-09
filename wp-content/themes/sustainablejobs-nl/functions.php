@@ -183,5 +183,13 @@ add_action('pre_get_posts', function($query) {
     }
 });
 
-
-
+// Add custom default attributes to the jobs shortcode
+add_filter('job_manager_output_jobs_defaults', function($defaults) {
+    $defaults['job_company'] = '';
+    $defaults['job_tag'] = '';
+    $defaults['job_sector'] = '';
+    $defaults['certificering'] = '';
+    $defaults['job_listing_type'] = '';
+    
+    return $defaults;
+});

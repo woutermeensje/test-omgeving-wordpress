@@ -53913,3 +53913,148 @@ Stack trace:
 )
 
 [09-Jul-2025 09:36:37 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 09:37:43 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:37:43 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:37:43 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 11:03:04 UTC] Automatic updates starting...
+[09-Jul-2025 11:03:04 UTC]   Automatic plugin updates starting...
+[09-Jul-2025 11:03:04 UTC]   Automatic plugin updates complete.
+[09-Jul-2025 11:03:04 UTC]   Automatic theme updates starting...
+[09-Jul-2025 11:03:05 UTC]   Automatic theme updates complete.
+[09-Jul-2025 11:03:05 UTC] Automatic updates complete.
+[09-Jul-2025 12:31:57 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 12:31:57 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 12:31:57 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 12:32:00 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 12:32:00 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 12:32:00 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_company
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => bowers
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[09-Jul-2025 12:32:04 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 12:32:04 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 12:32:04 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
