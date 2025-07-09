@@ -40,45 +40,14 @@ add_filter('job_manager_locate_template', function ($template, $template_name) {
  * ✅ REGISTER CUSTOM TAXONOMIES
  */
 add_action('init', function () {
-    register_taxonomy('job_company', 'job_listing', [
-        'label' => 'Organisaties',
-        'hierarchical' => true,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'show_in_rest' => true,
-        'rewrite' => ['slug' => 'organisatie'],
-    ]);
-
-    register_taxonomy('job_tag', 'job_listing', [
-        'label' => 'Tags',
-        'hierarchical' => true,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'show_in_rest' => true,
-        'rewrite' => ['slug' => 'tag'],
-    ]);
-
-    register_taxonomy('job_sector', 'job_listing', [
-        'label' => 'Sectors',
-        'hierarchical' => true,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'show_in_rest' => true,
-        'rewrite' => ['slug' => 'sector'],
-    ]);
-
-    register_taxonomy('certificering', 'job_listing', [
-        'label' => 'Certificeringen',
-        'hierarchical' => true,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'show_in_rest' => true,
-        'rewrite' => ['slug' => 'certificering'],
-    ]);
+    register_taxonomy('job_company', 'job_listing', ['label' => 'Organisaties', 'hierarchical' => true, 'show_ui' => true, 'show_admin_column' => true, 'show_in_rest' => true, 'rewrite' => ['slug' => 'organisatie'],]);
+    register_taxonomy('job_tag', 'job_listing', ['label' => 'Tags', 'hierarchical' => true, 'show_ui' => true, 'show_admin_column' => true, 'show_in_rest' => true, 'rewrite' => ['slug' => 'tag'],]);
+    register_taxonomy('job_sector', 'job_listing', ['label' => 'Sectors', 'hierarchical' => true, 'show_ui' => true, 'show_admin_column' => true, 'show_in_rest' => true, 'rewrite' => ['slug' => 'sector'],]);
+    register_taxonomy('certificering', 'job_listing', ['label' => 'Certificeringen', 'hierarchical' => true, 'show_ui' => true, 'show_admin_column' => true, 'show_in_rest' => true, 'rewrite' => ['slug' => 'certificering'],]);
 });
 
 /**
- * ✅ Shortcode filters: [jobs job_company="bowers" job_sector="klimaatadaptatie"]
+ * ✅ Shortcode filters: Handles initial page load AND prepares data for JavaScript
  */
 add_filter('job_manager_get_listings_shortcode_args', function($atts){
     global $sj_job_shortcode_atts;
@@ -93,6 +62,7 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
     ];
 
     $tax_query = [];
+    $filters_to_pass_to_js = [];
 
     foreach ($custom_filters as $attr => $taxonomy) {
         if (!empty($atts[$attr])) {
@@ -102,11 +72,30 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
                 'terms'    => array_map('sanitize_title', explode(',', $atts[$attr])),
                 'operator' => 'IN',
             ];
+            
+            $form_input_name = 'filter_' . $taxonomy;
+            $filters_to_pass_to_js[$form_input_name] = sanitize_title(explode(',', $atts[$attr])[0]);
         }
     }
 
     if (!empty($tax_query)) {
         $atts['tax_query'] = $tax_query;
+    }
+    
+    if ( ! empty( $filters_to_pass_to_js ) ) {
+        wp_enqueue_script(
+            'sjn-wpjm-shortcode-fix', 
+            get_stylesheet_directory_uri() . '/js/wpjm-shortcode-fix.js', 
+            [ 'jquery', 'job-manager-ajax-filters' ],
+            '2.0.0', // New version to guarantee no caching
+            true
+        );
+        
+        wp_localize_script(
+            'sjn-wpjm-shortcode-fix', 
+            'sjn_shortcode_filters',
+            $filters_to_pass_to_js 
+        );
     }
 
     return $atts;
@@ -116,18 +105,6 @@ add_filter('job_manager_get_listings_shortcode_args', function($atts){
  * ✅ Combine AJAX filterdata + shortcode tax_query
  */
 add_filter('get_job_listings_query_args', function ($query_args, $args) {
-    global $sj_job_shortcode_atts;
-
-    if (isset($_POST['form_data'])) {
-        parse_str($_POST['form_data'], $parsed);
-        foreach ($parsed as $key => $value) {
-            $_POST[$key] = $value;
-        }
-        error_log('🧩 Parsed form_data: ' . print_r($parsed, true));
-    }
-
-    error_log('🔍 WPJM POST filterdata: ' . print_r($_POST, true));
-
     $custom_taxonomies = [
         'filter_job_tag'       => 'job_tag',
         'filter_job_sector'    => 'job_sector',
@@ -135,12 +112,11 @@ add_filter('get_job_listings_query_args', function ($query_args, $args) {
         'filter_job_types'     => 'job_listing_type',
         'filter_certificering' => 'certificering',
     ];
-
+    
     foreach ($custom_taxonomies as $filter_key => $taxonomy) {
         if (!empty($_POST[$filter_key])) {
             $terms = (array) $_POST[$filter_key];
             $terms = array_map('sanitize_title', $terms);
-
             $query_args['tax_query'][] = [
                 'taxonomy' => $taxonomy,
                 'field'    => 'slug',
@@ -149,39 +125,6 @@ add_filter('get_job_listings_query_args', function ($query_args, $args) {
             ];
         }
     }
-
-    if (!empty($sj_job_shortcode_atts) && empty($_POST['form_data'])) {
-        foreach ($custom_taxonomies as $filter_key => $taxonomy) {
-            $key = str_replace('filter_', '', $filter_key);
-            if (!empty($sj_job_shortcode_atts[$key])) {
-                $terms = explode(',', sanitize_text_field($sj_job_shortcode_atts[$key]));
-                $query_args['tax_query'][] = [
-                    'taxonomy' => $taxonomy,
-                    'field'    => 'slug',
-                    'terms'    => $terms,
-                    'operator' => 'IN',
-                ];
-            }
-        }
-    }
-
-    if (!empty($query_args['tax_query'])) {
-        error_log('📦 TAX_QUERY in get_job_listings_query_args: ' . print_r($query_args['tax_query'], true));
-    } else {
-        error_log('📭 Geen tax_query aanwezig in get_job_listings_query_args');
-    }
-
+    
     return $query_args;
 }, 10, 2);
-
-/**
- * ✅ Debug WP_Query inhoud
- */
-add_action('pre_get_posts', function($query) {
-    if (!is_admin() && $query->is_main_query() && isset($query->query_vars['post_type']) && $query->query_vars['post_type'] === 'job_listing') {
-        error_log('👉 WP_Query tax_query: ' . print_r($query->query_vars['tax_query'], true));
-    }
-});
-
-
-
