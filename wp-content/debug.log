@@ -53175,3 +53175,741 @@ Stack trace:
 [08-Jul-2025 11:23:49 UTC]   Automatic theme updates starting...
 [08-Jul-2025 11:23:49 UTC]   Automatic theme updates complete.
 [08-Jul-2025 11:23:49 UTC] Automatic updates complete.
+[09-Jul-2025 06:03:51 UTC] Automatic updates starting...
+[09-Jul-2025 06:03:52 UTC]   Automatic plugin updates starting...
+[09-Jul-2025 06:03:52 UTC]   Automatic plugin updates complete.
+[09-Jul-2025 06:03:52 UTC]   Automatic theme updates starting...
+[09-Jul-2025 06:03:52 UTC]   Automatic theme updates complete.
+[09-Jul-2025 06:03:52 UTC] Automatic updates complete.
+[09-Jul-2025 07:31:27 UTC] PHP Warning:  require(/var/www/html/wp-content/themes/sustainablejobs-nl/wp-job-manager/content-job_listing.php): failed to open stream: No such file or directory in /var/www/html/wp-includes/template.php on line 812
+[09-Jul-2025 07:31:27 UTC] PHP Fatal error:  require(): Failed opening required '/var/www/html/wp-content/themes/sustainablejobs-nl/wp-job-manager/content-job_listing.php' (include_path='.:') in /var/www/html/wp-includes/template.php on line 812
+[09-Jul-2025 07:31:31 UTC] PHP Warning:  require(/var/www/html/wp-content/themes/sustainablejobs-nl/wp-job-manager/content-job_listing.php): failed to open stream: No such file or directory in /var/www/html/wp-includes/template.php on line 812
+[09-Jul-2025 07:31:31 UTC] PHP Fatal error:  require(): Failed opening required '/var/www/html/wp-content/themes/sustainablejobs-nl/wp-job-manager/content-job_listing.php' (include_path='.:') in /var/www/html/wp-includes/template.php on line 812
+[09-Jul-2025 08:32:32 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:32 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:32 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:32:38 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:38 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:38 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:32:40 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:40 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:40 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_company
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => bowers
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[09-Jul-2025 08:32:45 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:45 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:32:45 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:33:17 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:17 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:17 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:33:23 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:23 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:23 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:33:34 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:34 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:34 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:33:36 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:36 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:36 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:33:39 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:39 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:33:39 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:34:17 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:34:17 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 08:34:17 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 08:56:52 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor/includes/template-library/manager.php on line 691
+[09-Jul-2025 08:57:24 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1627
+[09-Jul-2025 08:58:53 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 08:58:53 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 08:59:26 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 08:59:26 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:00:54 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:00:54 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:01:27 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:01:27 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:03:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:03:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:03:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:03:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:06:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:06:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:06:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:06:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:08:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:08:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:08:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:08:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:11:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:11:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:11:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:11:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:13:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:13:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:14:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:14:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:16:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:16:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:16:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:16:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:18:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:18:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:19:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:19:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:21:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:21:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:22:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:22:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:23:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:23:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:24:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:24:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:26:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:26:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:27:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:27:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:28:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:28:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:29:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:29:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:31:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:31:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:32:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:32:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:33:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:33:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:34:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_display.php on line 3481
+[09-Jul-2025 09:34:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 24576 bytes) in /var/www/html/wp-content/plugins/elementor/includes/autoloader.php on line 296
+[09-Jul-2025 09:34:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 61440 bytes) in /var/www/html/wp-content/plugins/wp-job-manager/includes/class-wp-job-manager.php on line 223
+[09-Jul-2025 09:34:29 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 12288 bytes) in /var/www/html/wp-content/plugins/elementor/includes/utils.php on line 210
+[09-Jul-2025 09:34:42 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:42 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:42 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 09:34:45 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:45 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:45 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_company
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => bowers
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[09-Jul-2025 09:34:47 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:47 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:47 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 09:34:49 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => inner-smile-certified
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:49 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=inner-smile-certified&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => inner-smile-certified
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:49 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_tag
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => inner-smile-certified
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[09-Jul-2025 09:34:50 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:50 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:50 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 09:34:52 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:52 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=freelance&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => freelance
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:52 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_listing_type
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => freelance
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[09-Jul-2025 09:34:54 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:54 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:34:54 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[09-Jul-2025 09:36:35 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => part-time
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:36:35 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=part-time&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => part-time
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:36:35 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_listing_type
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => part-time
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[09-Jul-2025 09:36:37 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:36:37 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[09-Jul-2025 09:36:37 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
