@@ -7,7 +7,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
 
 
 
-<body>
+
     
 <div>
     <div class="single_job_listing">
@@ -100,7 +100,7 @@ if ( job_manager_user_can_view_job_listing( $post->ID ) ) : ?>
         <?php endif; ?>
     </ul>
 </div>
-</body>
+
 
 
 <style>
@@ -423,19 +423,3 @@ h1.entry-title {
 </style>
 
 
-<style>
-    html {
-  --color-primary: #0A6B8D;
-  --color-secondary: #92E9AB;
-  --color-tertiary: #E0D0E1;
-  --color-accent: #b9d1b3;
-  --color-text: #333333;
-  --color-text-muted: #777777;
-  --color-bg: #ffffff;
-  --color-bg-light: #f8f8f8;
-  --color-border: #e0e0e0;
-  --color-border-light: #cccccc;
-  --color-success: #28a745;
-  --color-success-hover: #155724;
-}
-</style>

@@ -54335,3 +54335,344 @@ Stack trace:
 
 )
 
+[10-Jul-2025 12:53:38 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 12:53:38 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 12:53:38 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 12:53:50 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 12:53:50 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 12:53:50 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 12:57:22 UTC] Automatic updates starting...
+[10-Jul-2025 12:57:22 UTC]   Automatic plugin updates starting...
+[10-Jul-2025 12:57:22 UTC]   Automatic plugin updates complete.
+[10-Jul-2025 12:57:22 UTC]   Automatic theme updates starting...
+[10-Jul-2025 12:57:22 UTC]   Automatic theme updates complete.
+[10-Jul-2025 12:57:22 UTC] Automatic updates complete.
+[10-Jul-2025 12:57:32 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 12:57:32 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 12:57:32 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 12:57:35 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 12:57:35 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 12:57:35 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 12:57:35 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 12:57:49 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 12:57:49 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 12:57:49 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 12:57:49 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 13:49:04 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 13:49:04 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 13:49:04 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 14:25:34 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:25:34 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:25:34 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:25:34 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:25:53 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:25:53 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:25:53 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:25:53 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:26:19 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:26:19 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:26:20 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:26:20 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:26:20 UTC] PHP Fatal error:  Out of memory (allocated 4194304) (tried to allocate 4194304 bytes) in /var/www/html/wp-content/plugins/elementor/includes/template-library/manager.php on line 505
+[10-Jul-2025 14:26:27 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1638
+[10-Jul-2025 14:26:29 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1638
+[10-Jul-2025 14:26:30 UTC] PHP Fatal error:  Out of memory (allocated 2097152) (tried to allocate 2097152 bytes) in /var/www/html/wp-content/plugins/gravityforms/form_detail.php on line 1627
+[10-Jul-2025 14:26:37 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:26:37 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:26:37 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 14:26:38 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:26:38 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:26:38 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:26:38 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:26:39 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:26:39 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:26:39 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:26:39 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:28:20 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:28:20 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:28:21 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:28:21 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:28:25 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:28:25 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:28:26 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:28:26 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:28:44 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:28:44 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:28:44 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 14:28:54 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:28:54 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:28:54 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:28:54 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:29:01 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:29:01 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:29:01 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:29:01 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:29:02 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:29:02 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:29:03 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:29:03 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:29:14 UTC] PHP Notice:  Undefined index: tax_query in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 182
+[10-Jul-2025 14:29:14 UTC] 👉 WP_Query tax_query: 
+[10-Jul-2025 14:29:14 UTC] PHP Deprecated:  Function the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:29:14 UTC] PHP Deprecated:  Function get_the_job_type is <strong>deprecated</strong> since version 1.27.0! Use wpjm_get_the_job_types instead. in /var/www/html/wp-includes/functions.php on line 6085
+[10-Jul-2025 14:29:39 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:29:39 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:29:39 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 14:29:48 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:29:48 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:29:48 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[10-Jul-2025 14:30:54 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:30:54 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[10-Jul-2025 14:30:54 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args

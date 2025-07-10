@@ -193,3 +193,130 @@ add_filter('job_manager_output_jobs_defaults', function($defaults) {
     
     return $defaults;
 });
+
+
+
+add_action('arcadis_weekly_job_import', 'import_arcadis_jobs');
+function import_arcadis_jobs() {
+    $skills = ['Renewable Energy', 'Environmental Consulting', 'Sustainability'];
+    $domain = 'arcadis.com';
+
+    foreach ($skills as $skill) {
+        $url = 'https://jobs.arcadis.com/api/apply/v2/jobs?domain=' . urlencode($domain) . '&location=netherlands&skill=' . urlencode($skill) . '&num=50';
+        $response = wp_remote_get($url);
+
+        if (is_wp_error($response)) {
+            error_log('Arcadis API request error: ' . $response->get_error_message());
+            continue;
+        }
+
+        $body = wp_remote_retrieve_body($response);
+        $data = json_decode($body, true);
+
+        if (!empty($data['positions'])) {
+            foreach ($data['positions'] as $job) {
+                $job_title = $job['name'];
+                $job_url = $job['canonicalPositionUrl'];
+                $job_location = $job['location'];
+                $job_id = $job['id'];
+
+                // Dubbele check
+                $existing = get_posts([
+                    'post_type' => 'job_listing',
+                    'meta_key' => '_arcadis_job_id',
+                    'meta_value' => $job_id,
+                    'posts_per_page' => 1,
+                    'post_status' => ['draft', 'publish']
+                ]);
+
+                if ($existing) continue;
+
+                $post_id = wp_insert_post([
+                    'post_title' => wp_strip_all_tags($job_title),
+                    'post_type' => 'job_listing',
+                    'post_status' => 'draft',
+                ]);
+
+                if (is_wp_error($post_id)) {
+                    error_log('Fout bij aanmaken vacature: ' . $post_id->get_error_message());
+                    continue;
+                }
+
+                update_post_meta($post_id, '_arcadis_job_id', $job_id);
+                update_post_meta($post_id, '_job_location', $job_location);
+                update_post_meta($post_id, '_application', $job_url);
+                update_post_meta($post_id, '_company_name', 'Arcadis');
+                update_post_meta($post_id, '_job_sector', sanitize_title($skill));
+
+                // Voorlopig een placeholder description totdat Arcadis toestemming geeft
+                wp_update_post([
+                    'ID' => $post_id,
+                    'post_content' => 'Bekijk deze vacature op de website van Arcadis: ' . $job_url
+                ]);
+            }
+        }
+    }
+}
+
+// ✅ Cron job 1x per week
+if (!wp_next_scheduled('arcadis_weekly_job_import')) {
+    wp_schedule_event(time(), 'weekly', 'arcadis_weekly_job_import');
+}
+
+
+
+// ✅ Jackling XML Job Feed Importer
+add_action('jackling_weekly_job_import', 'import_jackling_jobs');
+
+function import_jackling_jobs() {
+    $url = 'https://jackling.nl/xml-jobs-feed/';
+    $response = wp_remote_get($url);
+
+    if (is_wp_error($response)) return;
+
+    $xml = simplexml_load_string(wp_remote_retrieve_body($response));
+    if (!$xml) return;
+
+    foreach ($xml->job as $job) {
+        $external_id = (string) $job->id;
+
+        // Skip als vacature al bestaat
+        $existing = get_posts([
+            'post_type' => 'job_listing',
+            'meta_key' => '_jackling_job_id',
+            'meta_value' => $external_id,
+            'posts_per_page' => 1,
+            'post_status' => ['draft', 'publish']
+        ]);
+        if ($existing) continue;
+
+        $post_id = wp_insert_post([
+            'post_title'   => wp_strip_all_tags((string) $job->title),
+            'post_content' => wp_kses_post((string) $job->description),
+            'post_type'    => 'job_listing',
+            'post_status'  => 'draft',
+        ]);
+
+        if ($post_id && !is_wp_error($post_id)) {
+            update_post_meta($post_id, '_jackling_job_id', $external_id);
+            update_post_meta($post_id, '_job_location', (string) $job->location);
+            update_post_meta($post_id, '_application', (string) $job->link);
+            update_post_meta($post_id, '_company_name', 'Jackling');
+
+            // Voeg taxonomieën toe
+            wp_set_object_terms($post_id, 'Jackling', 'job_company');
+            wp_set_object_terms($post_id, 'uitgelichte werkgever', 'job_tag');
+            wp_set_object_terms($post_id, ['techniek', 'bouw'], 'job_sector');
+
+            $type = strtolower((string) $job->type);
+            if (in_array($type, ['fulltime', 'parttime', 'freelance'])) {
+                wp_set_object_terms($post_id, $type, 'job_type');
+            }
+        }
+    }
+}
+
+// ✅ Cronjob activeren als die nog niet bestaat
+if (!wp_next_scheduled('jackling_weekly_job_import')) {
+    wp_schedule_event(time(), 'weekly', 'jackling_weekly_job_import');
+}
