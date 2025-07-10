@@ -366,7 +366,7 @@ label {
 }
 
 .filter-header h2 {
-    font-family: Balgin Bold; 
+    font-family: 'Inter', sans-serif;
     font-size: 25px;
     color: #333333;
     margin-bottom: 15px;
