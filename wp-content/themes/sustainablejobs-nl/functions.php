@@ -229,72 +229,9 @@ add_filter('job_manager_output_jobs_defaults', function($defaults) {
 
 
 
-add_action('arcadis_weekly_job_import', 'import_arcadis_jobs');
-function import_arcadis_jobs() {
-    $skills = ['Renewable Energy', 'Environmental Consulting', 'Sustainability'];
-    $domain = 'arcadis.com';
-
-    foreach ($skills as $skill) {
-        $url = 'https://jobs.arcadis.com/api/apply/v2/jobs?domain=' . urlencode($domain) . '&location=netherlands&skill=' . urlencode($skill) . '&num=50';
-        $response = wp_remote_get($url);
-
-        if (is_wp_error($response)) {
-            error_log('Arcadis API request error: ' . $response->get_error_message());
-            continue;
-        }
-
-        $body = wp_remote_retrieve_body($response);
-        $data = json_decode($body, true);
-
-        if (!empty($data['positions'])) {
-            foreach ($data['positions'] as $job) {
-                $job_title = $job['name'];
-                $job_url = $job['canonicalPositionUrl'];
-                $job_location = $job['location'];
-                $job_id = $job['id'];
-
-                // Dubbele check
-                $existing = get_posts([
-                    'post_type' => 'job_listing',
-                    'meta_key' => '_arcadis_job_id',
-                    'meta_value' => $job_id,
-                    'posts_per_page' => 1,
-                    'post_status' => ['draft', 'publish']
-                ]);
-
-                if ($existing) continue;
-
-                $post_id = wp_insert_post([
-                    'post_title' => wp_strip_all_tags($job_title),
-                    'post_type' => 'job_listing',
-                    'post_status' => 'draft',
-                ]);
-
-                if (is_wp_error($post_id)) {
-                    error_log('Fout bij aanmaken vacature: ' . $post_id->get_error_message());
-                    continue;
-                }
-
-                update_post_meta($post_id, '_arcadis_job_id', $job_id);
-                update_post_meta($post_id, '_job_location', $job_location);
-                update_post_meta($post_id, '_application', $job_url);
-                update_post_meta($post_id, '_company_name', 'Arcadis');
-                update_post_meta($post_id, '_job_sector', sanitize_title($skill));
-
-                // Voorlopig een placeholder description totdat Arcadis toestemming geeft
-                wp_update_post([
-                    'ID' => $post_id,
-                    'post_content' => 'Bekijk deze vacature op de website van Arcadis: ' . $job_url
-                ]);
-            }
-        }
-    }
-}
-
-// ✅ Cron job 1x per week
-if (!wp_next_scheduled('arcadis_weekly_job_import')) {
-    wp_schedule_event(time(), 'weekly', 'arcadis_weekly_job_import');
-}
+// ✅ Include custom import scripts
+require_once get_stylesheet_directory() . '/inc/arcadis-import.php';
+require_once get_stylesheet_directory() . '/inc/jackling-import.php';
 
 
 
