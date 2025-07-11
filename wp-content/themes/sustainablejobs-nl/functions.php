@@ -230,8 +230,9 @@ add_filter('job_manager_output_jobs_defaults', function($defaults) {
 
 
 // ✅ Include custom import scripts
-require_once get_stylesheet_directory() . '/inc/arcadis-import.php';
-require_once get_stylesheet_directory() . '/inc/jackling-import.php';
+// require_once get_stylesheet_directory() . '/inc/bowers-import.php';
+// require_once get_stylesheet_directory() . '/inc/arcadis-import.php';
+// require_once get_stylesheet_directory() . '/inc/jackling-import.php';
 
 
 
