@@ -160,3 +160,151 @@ h4, h5 {
     color: var(--color-text);
     line-height: 1.5;
 }
+
+
+/** * Styling voor de bedrijfspagina filter. 
+ */
+
+
+
+form#bedrijfspagina-filter-form {
+     width: 90%;
+    padding: 24px; 
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #0a6b8d;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+} 
+
+.filter-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+/* Zet de filter-box netjes in een rij met gelijke breedte */
+.filter-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+
+/* Alle filter-items krijgen gelijke breedte */
+.filter-box > div {
+    flex: 1 1 18%; /* ongeveer 5 op een rij, pas aan naar wens */
+    min-width: 160px;
+}
+
+/* Select2 containers vullen de volledige breedte */
+.select2-container {
+    width: 100% !important;
+}
+
+/* ========== ALGEMENE INPUT & SELECT2-STYLING ========== */
+.job_filters select,
+.select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple {
+    background-color: white;
+    padding: 12px 14px;
+    min-height: 44px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.10);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    color: #333;
+    line-height: 1.3;
+    padding-left: 2px;
+}
+
+/* Placeholder-stijl */
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #777;
+    font-weight: 400;
+}
+
+/* Tags binnen multiple select */
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #0a6b8d;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 2px 6px;
+    margin: 2px;
+    font-size: 13px;
+}
+
+/* Pijl (dropdown icoon) */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+    right: 10px;
+}
+
+/* Focus state */
+.select2-container--default .select2-selection--single:focus,
+.select2-container--default .select2-selection--multiple:focus {
+    border-color: #0a6b8d !important;
+    box-shadow: 0 0 0 2px rgba(10, 107, 141, 0.2);
+    outline: none;
+}
+
+
+
+.filter-box select,
+.filter-box .select2-container {
+    margin-top: 4px;
+}
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .filter-box {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .filter-box > div {
+        width: 100% !important;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .search-basic {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 20px;
+    }
+
+    .search-basic > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .search-basic input[type="text"] {
+        width: 100%;
+    }
+}

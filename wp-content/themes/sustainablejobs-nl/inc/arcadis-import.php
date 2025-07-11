@@ -50,3 +50,19 @@ function import_arcadis_jobs() {
 if (!wp_next_scheduled('arcadis_weekly_job_import')) {
     wp_schedule_event(time(), 'weekly', 'arcadis_weekly_job_import');
 }
+
+
+// ✅ Adminpagina om Arcadis vacatures handmatig te importeren
+add_action('admin_menu', function () {
+    add_menu_page(
+        'Import Arcadis Jobs',
+        'Import Arcadis',
+        'manage_options',
+        'import-arcadis',
+        function () {
+            echo '<div class="wrap"><h1>Arcadis Vacatures Importeren</h1>';
+            echo '<p>' . import_arcadis_jobs() . '</p>';
+            echo '</div>';
+        }
+    );
+});
