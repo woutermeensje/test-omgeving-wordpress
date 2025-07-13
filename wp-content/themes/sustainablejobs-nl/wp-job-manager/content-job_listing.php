@@ -15,7 +15,7 @@
             $terms = wp_get_post_terms(get_the_ID(), 'job_company');
             if (!empty($terms) && !is_wp_error($terms)) {
                 foreach ($terms as $term) {
-                    echo '<span class="company-name">' . esc_html($term->name) . '</span>';
+                    echo '<a style="text-decoration: none;" class="company-name" href="' . esc_url(home_url('/vacatures/' . sanitize_title($term->name))) . '">' . esc_html($term->name) . '</a>';
                 }
             }
             ?>
