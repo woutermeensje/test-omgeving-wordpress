@@ -160,57 +160,45 @@ h4, h5 {
     color: var(--color-text);
     line-height: 1.5;
 }
+/* ✅ Styling voor de bedrijfspagina filter */
 
-
-/** * Styling voor de bedrijfspagina filter. 
- */
-
-
-
-form#bedrijfspagina-filter-form {
-     width: 90%;
+form.company_filter-form {
+    width: 90%;
     padding: 24px; 
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     background-color: white;
     border: 1px solid #0a6b8d;
     box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
-} 
+}
 
-.filter-box {
+.company_filter-box {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
-
-/* Zet de filter-box netjes in een rij met gelijke breedte */
-.filter-box {
-    display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    padding: 20px;
+    margin: 20px 0;
 }
 
-/* Alle filter-items krijgen gelijke breedte */
-.filter-box > div {
-    flex: 1 1 18%; /* ongeveer 5 op een rij, pas aan naar wens */
+.filter-text-h1 h1 {
+    font-size: 28px;
+    color: #333 !important;
+    margin-bottom: 10px;
+    font-family: 'Balgin Bold', sans-serif !important;
+}
+
+
+.company_filter-box > .company_filter-field {
+    flex: 1 1 22%;
     min-width: 160px;
 }
 
-/* Select2 containers vullen de volledige breedte */
+/* Select2 containers */
 .select2-container {
     width: 100% !important;
 }
 
-/* ========== ALGEMENE INPUT & SELECT2-STYLING ========== */
-.job_filters select,
+/* Algemene styling van select en input */
+.company_filter-form select,
 .select2-container .select2-selection--single,
 .select2-container .select2-selection--multiple {
     background-color: white;
@@ -224,21 +212,18 @@ form#bedrijfspagina-filter-form {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered,
-.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+.select2-container--default .select2-selection__rendered {
     color: #333;
     line-height: 1.3;
     padding-left: 2px;
 }
 
-/* Placeholder-stijl */
-.select2-container--default .select2-selection--single .select2-selection__placeholder {
+.select2-selection__placeholder {
     color: #777;
     font-weight: 400;
 }
 
-/* Tags binnen multiple select */
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-selection__choice {
     background-color: #0a6b8d;
     color: white;
     border: none;
@@ -248,13 +233,11 @@ form#bedrijfspagina-filter-form {
     font-size: 13px;
 }
 
-/* Pijl (dropdown icoon) */
-.select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-selection__arrow {
     height: 100%;
     right: 10px;
 }
 
-/* Focus state */
 .select2-container--default .select2-selection--single:focus,
 .select2-container--default .select2-selection--multiple:focus {
     border-color: #0a6b8d !important;
@@ -262,49 +245,110 @@ form#bedrijfspagina-filter-form {
     outline: none;
 }
 
-
-
-.filter-box select,
-.filter-box .select2-container {
-    margin-top: 4px;
+/* Zoekveld styling */
+.company_filter-keywords input[type="text"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background-color: white;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-label {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    display: block;
-    font-family: 'Poppins', sans-serif;
+
+.company_filter-keywords input[type="text"]::placeholder {
+    color: #777;
 }
 
+.company_filter-keywords input[type="text"]:focus {
+    outline: none;
+    border-color: #0a6b8d;
+    box-shadow: 0 2px 8px rgba(10, 107, 141, 0.25);
+}
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    .filter-box {
-        display: flex;
+    .company_filter-box {
         flex-direction: column;
-        gap: 16px;
         padding: 20px;
     }
 
-    .filter-box > div {
+    .company_filter-box > .company_filter-field {
         width: 100% !important;
     }
 
-    .select2-container {
-        width: 100% !important;
-    }
-
-    .search-basic {
+    .company_filter-search {
         flex-direction: column;
         gap: 16px;
         padding: 0 20px;
     }
 
-    .search-basic > div {
+    .company_filter-search > div {
         width: 100%;
         max-width: 100%;
     }
 
-    .search-basic input[type="text"] {
+    .company_filter-search input[type="text"] {
         width: 100%;
     }
+}
+
+
+/* Bedrijven Output */
+
+.bedrijf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    width: 90%; 
+    max-width: 1800px; 
+    margin: 0 auto;
+}
+
+.bedrijf-item {
+    background: var(--color-bg);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+}
+
+.bedrijf-item:hover {
+    
+    border: 1px solid var(--color-primary);
+   
+}
+
+.bedrijf-title {
+    font-family: 'Balgin Bold', sans-serif;
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.bedrijf-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.bedrijf-sector {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 12px; 
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-tertiary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
 }

@@ -6,12 +6,19 @@ if (!defined('ABSPATH')) exit;
  * Toont filterformulier en lijst met pagina's die gekoppeld zijn aan job_company e.d.
  */
 
-// Enqueue JS + CSS
+// Enqueue scripts en styles
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', ['jquery'], null, true);
     wp_enqueue_style('select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css');
+    wp_enqueue_script('select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', ['jquery'], null, true);
 
-    wp_enqueue_script('bedrijfspagina-filters', get_stylesheet_directory_uri() . '/inc/bedrijfspagina-filters.js', ['jquery', 'select2-js'], null, true);
+    wp_enqueue_script(
+        'bedrijfspagina-filters',
+        get_stylesheet_directory_uri() . '/inc/bedrijfspagina-filters.js',
+        ['jquery', 'select2-js'],
+        null,
+        true
+    );
+
     wp_localize_script('bedrijfspagina-filters', 'bedrijf_filter_ajax', [
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
@@ -21,49 +28,42 @@ add_action('wp_enqueue_scripts', function () {
 function bedrijfspagina_filter_shortcode() {
     ob_start(); ?>
 
-
-
-  <form class="company_filter-form" id="bedrijfspagina-filter-form">
-
-     <div class="r" style="">
-        <h1>Bekijk alle Duurzame Vacatures in ons Netwerk!</h1>
-        <p>Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank" class="">vacature nieuwsbrief</a>!</p>
-    </div>
-
-    <div class="company_filter-search">
-        <div class="company_filter-keywords">
-            <input type="text" name="search_keywords" id="company_filter_keywords" placeholder="Bedrijfsnaam..." />
+    <form class="company_filter-form" id="bedrijfspagina-filter-form">
+        <div class="filter-text-h1">
+            <h1>Doorzoek alle Duurzame Organisaties in ons netwerk</h1>
+            <p>Of schrijf je in voor de <a href="https://sustainablejobs.nl/nieuwsbrief/" target="_blank">vacature nieuwsbrief</a>!</p>
         </div>
-    </div>
 
-    <div class="company_filter-box">
-        <?php
-        $taxonomies = [
-            'job_company'    => '🏢 Organisatie',
-            'job_sector'     => '🌱 Sector',
-            'certificering'  => '🏅 Certificering',
-            'job_tag'        => '📌 Tags',
-        ];
-        foreach ($taxonomies as $taxonomy => $label) {
-            $terms = get_terms(['taxonomy' => $taxonomy, 'hide_empty' => false]);
-            if (!empty($terms)) {
-                echo "<div class='company_filter-field company_filter-{$taxonomy}'>";
-                echo "<select name='filter_{$taxonomy}[]' id='company_filter_{$taxonomy}' class='company_filter-select company_filter-{$taxonomy}' multiple='multiple' data-placeholder='{$label}'>";
-                foreach ($terms as $term) {
-                    echo "<option value='" . esc_attr($term->slug) . "'>" . esc_html($term->name) . "</option>";
+        <div class="company_filter-search">
+            <div class="company_filter-keywords">
+                <input type="text" name="search_keywords" id="company_filter_keywords" placeholder="Bedrijfsnaam..." />
+            </div>
+        </div>
+
+        <div class="company_filter-box">
+            <?php
+            $taxonomies = [
+                'job_company'    => '🏢 Organisatie',
+                'job_sector'     => '🌱 Sector',
+                'certificering'  => '🏅 Certificering',
+                'job_tag'        => '📌 Tags',
+            ];
+            foreach ($taxonomies as $taxonomy => $label) {
+                $terms = get_terms(['taxonomy' => $taxonomy, 'hide_empty' => false]);
+                if (!empty($terms)) {
+                    echo "<div class='company_filter-field company_filter-{$taxonomy}'>";
+                    echo "<select name='filter_{$taxonomy}[]' id='company_filter_{$taxonomy}' class='company_filter-select company_filter-{$taxonomy}' multiple='multiple' data-placeholder='{$label}'>";
+                    foreach ($terms as $term) {
+                        echo "<option value='" . esc_attr($term->slug) . "'>" . esc_html($term->name) . "</option>";
+                    }
+                    echo "</select></div>";
                 }
-                echo "</select></div>";
             }
-        }
-        ?>
-    </div>
-</form>
+            ?>
+        </div>
+    </form>
 
-<style>
-    
-</style>
-
-<div id="bedrijf-resultaten"></div>
+    <div id="bedrijf-resultaten"></div>
 
     <?php
     return ob_get_clean();
@@ -122,19 +122,46 @@ function filter_bedrijfspaginas_ajax() {
     $query = new WP_Query($args);
 
     ob_start();
-    if ($query->have_posts()) {
-        echo "<ul class='bedrijf-list'>";
-        while ($query->have_posts()) : $query->the_post();
-            echo "<li><a href='" . get_permalink() . "'>" . get_the_title() . "</a></li>";
-        endwhile;
-        echo "</ul>";
-    } else {
-        echo "<p>Geen bedrijven gevonden.</p>";
-    }
+if ($query->have_posts()) {
+    echo "<div class='bedrijf-grid'>";
+    while ($query->have_posts()) : $query->the_post();
+        $title = get_the_title();
+        $permalink = get_permalink();
+
+        $sectors = wp_get_post_terms(get_the_ID(), 'job_sector', ['fields' => 'names']);
+        $certificeringen = wp_get_post_terms(get_the_ID(), 'certificering', ['fields' => 'names']);
+        $tags = wp_get_post_terms(get_the_ID(), 'job_tag', ['fields' => 'names']);
+
+        echo "<div class='bedrijf-item'>";
+        echo "<h3 class='bedrijf-title'>{$title}</h3>";
+
+        // Taxonomieën in één blokje
+        echo "<div class='bedrijf-taxonomies'>";
+        if (!empty($sectors)) {
+            echo "<span class='bedrijf-sector'><strong>Sector:</strong> " . implode(', ', $sectors) . "</span><br />";
+        }
+        if (!empty($certificeringen)) {
+            echo "<span class='bedrijf-certificering'><strong>Certificering:</strong> " . implode(', ', $certificeringen) . "</span><br />";
+        }
+        if (!empty($tags)) {
+            echo "<span class='bedrijf-tags'><strong>Tags:</strong> " . implode(', ', $tags) . "</span>";
+        }
+        echo "</div>";
+
+        echo "<a class='bedrijf-button' href='{$permalink}'>Bekijk organisatie</a>";
+        echo "</div>";
+    endwhile;
+    echo "</div>";
+} else {
+    echo "<p>Geen bedrijven gevonden.</p>";
+}
+
+
     wp_reset_postdata();
 
     echo ob_get_clean();
     wp_die();
 }
+
 
 

@@ -1,5 +1,6 @@
-jQuery(document).ready(function($) {
-    $('#filter_job_company, #filter_job_sector, #filter_certificering, #filter_job_tag').select2({
+jQuery(document).ready(function ($) {
+    // ✅ Select2 initialiseren
+    $('.company_filter-select').select2({
         width: '100%',
         allowClear: true,
         placeholder: function () {
@@ -7,19 +8,21 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $('#bedrijfspagina-filter-form').on('change input', 'input, select', function () {
-        const formData = $('#bedrijfspagina-filter-form').serialize();
-
-        $.ajax({
-            url: bedrijf_filter_ajax.ajaxurl,
-            type: 'POST',
-            data: formData + '&action=filter_bedrijfspaginas',
-            success: function(response) {
-                $('#bedrijf-resultaten').html(response);
-            }
-        });
+    // ✅ Formulier automatisch filteren bij wijziging
+    $('#bedrijfspagina-filter-form').on('change', 'select, input', function () {
+        filterBedrijfspaginas();
     });
 
-    // Trigger initial load
-    $('#bedrijfspagina-filter-form').trigger('change');
+    // ✅ Initieel laden
+    filterBedrijfspaginas();
+
+    function filterBedrijfspaginas() {
+        var data = $('#bedrijfspagina-filter-form').serialize();
+        $.post(bedrijf_filter_ajax.ajaxurl, {
+            action: 'filter_bedrijfspaginas',
+            ...Object.fromEntries(new URLSearchParams(data))
+        }, function (response) {
+            $('#bedrijf-resultaten').html(response);
+        });
+    }
 });
