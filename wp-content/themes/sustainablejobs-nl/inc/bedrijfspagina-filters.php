@@ -122,39 +122,37 @@ function filter_bedrijfspaginas_ajax() {
     $query = new WP_Query($args);
 
     ob_start();
-if ($query->have_posts()) {
-    echo "<div class='bedrijf-grid'>";
-    while ($query->have_posts()) : $query->the_post();
-        $title = get_the_title();
-        $permalink = get_permalink();
+    if ($query->have_posts()) {
+        echo "<div class='bedrijf-grid'>";
+        while ($query->have_posts()) : $query->the_post();
+            $title = get_the_title();
+            $permalink = get_permalink();
 
-        $sectors = wp_get_post_terms(get_the_ID(), 'job_sector', ['fields' => 'names']);
-        $certificeringen = wp_get_post_terms(get_the_ID(), 'certificering', ['fields' => 'names']);
-        $tags = wp_get_post_terms(get_the_ID(), 'job_tag', ['fields' => 'names']);
+            $sectors = wp_get_post_terms(get_the_ID(), 'job_sector', ['fields' => 'names']);
+            $certificeringen = wp_get_post_terms(get_the_ID(), 'certificering', ['fields' => 'names']);
+            $tags = wp_get_post_terms(get_the_ID(), 'job_tag', ['fields' => 'names']);
 
-        echo "<div class='bedrijf-item'>";
-        echo "<h3 class='bedrijf-title'>{$title}</h3>";
+            echo "<a href='{$permalink}' class='bedrijf-item'>";
+                echo "<h3 class='bedrijf-title'>{$title}</h3>";
 
-        // Taxonomieën in één blokje
-        echo "<div class='bedrijf-taxonomies'>";
-        if (!empty($sectors)) {
-            echo "<span class='bedrijf-sector'><strong>Sector:</strong> " . implode(', ', $sectors) . "</span><br />";
-        }
-        if (!empty($certificeringen)) {
-            echo "<span class='bedrijf-certificering'><strong>Certificering:</strong> " . implode(', ', $certificeringen) . "</span><br />";
-        }
-        if (!empty($tags)) {
-            echo "<span class='bedrijf-tags'><strong>Tags:</strong> " . implode(', ', $tags) . "</span>";
-        }
+                echo "<div class='bedrijf-taxonomies'>";
+                if (!empty($sectors)) {
+                    echo "<span class='bedrijf-sector'>" . implode(', ', $sectors) . "</span><br />";
+                }
+                if (!empty($certificeringen)) {
+                    echo "<span class='bedrijf-certificering'>" . implode(', ', $certificeringen) . "</span><br />";
+                }
+                if (!empty($tags)) {
+                    echo "<span class='bedrijf-tags'>" . implode(', ', $tags) . "</span>";
+                }
+                echo "</div>";
+            echo "</a>";
+        endwhile;
         echo "</div>";
+    } else {
+        echo "<p>Geen bedrijven gevonden.</p>";
+    }
 
-        echo "<a class='bedrijf-button' href='{$permalink}'>Bekijk organisatie</a>";
-        echo "</div>";
-    endwhile;
-    echo "</div>";
-} else {
-    echo "<p>Geen bedrijven gevonden.</p>";
-}
 
 
     wp_reset_postdata();

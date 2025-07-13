@@ -73,6 +73,15 @@ p {
     color: var(--color-text);
 }
 
+/* Geef styling aan linkjes binnen een specifieke container, bijvoorbeeld .custom-links */
+a.bedrijf-item {
+    text-decoration: none !important;
+    font-family: Poppins, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    color: var(--color-text) !important;
+}
+
 li {
     font-family: Poppins;
     font-size: 15px;
@@ -202,7 +211,7 @@ form.company_filter-form {
 .select2-container .select2-selection--single,
 .select2-container .select2-selection--multiple {
     background-color: white;
-    padding: 12px 14px;
+    padding: 4px 4px;
     min-height: 44px;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
@@ -340,6 +349,14 @@ form.company_filter-form {
     transition: background-color 0.3s ease;
 }
 
+.bedrijf-taxonomies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .bedrijf-sector {
     font-family: Poppins, sans-serif;
     font-weight: 700;
@@ -351,4 +368,36 @@ form.company_filter-form {
     padding: 5px 10px;
     cursor: pointer; 
     margin-right: 5px;
+}
+
+.bedrijf-certificering {
+font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 12px; 
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-tertiary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
+}
+
+.bedrijf-tags {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 12px; 
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-tertiary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
+}
+
+.bedrijf-sector,
+.bedrijf-certificering,
+.bedrijf-tags {
+    margin-bottom: 10px;
 }
