@@ -111,6 +111,7 @@ add_action('init', function () {
 });
 
 
+
 /**
  * ✅ Koppel WP Job Manager taxonomieën aan pages
  */
@@ -179,6 +180,8 @@ add_filter('get_job_listings_query_args', function ($query_args, $args) {
         'filter_job_company'   => 'job_company',
         'filter_job_types'     => 'job_listing_type',
         'filter_certificering' => 'certificering',
+        'filter_job_listing_category' => 'job_listing_category',
+
     ];
 
     foreach ($custom_taxonomies as $filter_key => $taxonomy) {

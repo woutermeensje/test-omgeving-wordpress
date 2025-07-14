@@ -11,6 +11,8 @@ $selected = [
     'job_sector'    => [],
     'job_types'     => [],
     'certificering' => [],
+    'job_listing_category' => [],
+
 ];
 
 $shortcode_atts = shortcode_atts([
@@ -19,6 +21,8 @@ $shortcode_atts = shortcode_atts([
     'job_sector' => '',
     'job_listing_type' => '',
     'certificering' => '',
+    'job_listing_category' => '',
+
 ], $atts);
 
 foreach ($selected as $key => &$value) {
@@ -68,6 +72,18 @@ foreach ($selected as $key => &$value) {
                 <?php endforeach; ?>
             </select>
         </div>
+
+        <div class="job_category">
+    <select name="filter_job_listing_category" id="filter_job_listing_category" class="job_category" data-placeholder="📂 Categorie">
+        <option value=""><?php _e('Selecteer categorie', 'wp-job-manager'); ?></option>
+        <?php foreach (get_terms(['taxonomy' => 'job_listing_category', 'hide_empty' => true]) as $term) : ?>
+            <option value="<?php echo esc_attr($term->slug); ?>" <?php selected(in_array($term->slug, $selected['job_listing_category'])); ?>>
+                <?php echo esc_html($term->name); ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+</div>
+
 
         <div class="job_certificering">
             <select name="filter_certificering" id="filter_certificering" class="job_certificering" data-placeholder="🏅 Certificering">
@@ -121,7 +137,7 @@ foreach ($selected as $key => &$value) {
 <script>
 jQuery(document).ready(function($) {
     // Initialiseer Select2
-    $('#filter_certificering, #filter_job_types, #filter_job_company, #filter_job_tag, #filter_job_sector').select2({
+    $('#filter_job_listing_category, #filter_certificering, #filter_job_types, #filter_job_company, #filter_job_tag, #filter_job_sector').select2({
         width: '100%',
         allowClear: true,
         placeholder: function() {
@@ -130,7 +146,7 @@ jQuery(document).ready(function($) {
     });
 
     // Trigger AJAX filter update bij wijziging van selectievakjes
-    $('#filter_certificering, #filter_job_types, #filter_job_company, #filter_job_tag, #filter_job_sector').on('change', function() {
+    $('#filter_job_listing_category, #filter_certificering, #filter_job_types, #filter_job_company, #filter_job_tag, #filter_job_sector').on('change', function() {
         $('.job_filters').trigger('submit');
     });
 
@@ -210,8 +226,8 @@ jQuery(document).ready(function($) {
 
 /* Alle filter-items krijgen gelijke breedte */
 .filter-box > div {
-    flex: 1 1 18%; /* ongeveer 5 op een rij, pas aan naar wens */
-    min-width: 160px;
+    flex: 1 1 calc(100% / 6 - 16px)  !important;
+    min-width: 120px !important;
 }
 
 /* Select2 containers vullen de volledige breedte */
