@@ -1,3 +1,188 @@
+<style>
+    .company_filter-form {
+        width: 90%;
+        margin: 30px auto;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #0a6b8d;
+        box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.15);
+    }
+
+    .company_filter-form .filter-text-h1 h1 {
+        font-size: 24px;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 10px;
+        background: linear-gradient(transparent 60%, #E0D0E1 60%);
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    .company_filter-form .filter-text-h1 p {
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .company_filter-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .company_filter-field {
+        flex: 1 1 calc(25% - 16px);
+        min-width: 160px;
+    }
+
+    .company_filter-select {
+        width: 100%;
+    }
+
+    /* Stijl select2 container single & multiple */
+    .select2-container--default .select2-selection--single,
+    .select2-container--default .select2-selection--multiple {
+        border-radius: 50px !important;
+        border: 1px solid #e3cfe2 !important;
+        background-color: #fff !important;
+        padding: 8px 16px !important;
+        min-height: 44px !important;
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        box-shadow: 0 10px 40px -5px #ddd inset !important;
+        display: flex !important;
+        align-items: center !important;
+        position: relative;
+    }
+
+    /* Placeholder tekst stijl */
+    .select2-selection__placeholder {
+        color: #000 !important;
+        font-weight: 700 !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    /* Geselecteerde tekst */
+    .select2-selection__rendered {
+        font-weight: 700 !important;
+        font-family: 'Poppins', sans-serif !important;
+        padding-left: 2px !important;
+        line-height: 1.4 !important;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Pijltje rechterkant */
+    .select2-selection__arrow {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+    }
+
+    .select2-selection__arrow b {
+        border-color: #111 transparent transparent transparent !important;
+        border-style: solid;
+        border-width: 6px 5px 0 5px !important;
+        height: 0;
+        width: 0;
+        display: inline-block;
+    }
+
+ .bedrijf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* precies 3 kolommen */
+    gap: 24px;
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1400px;
+    width: 95%; 
+}
+
+.bedrijf-item {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 40px 10px -5px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.bedrijf-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 6px 24px rgba(10, 107, 141, 0.12);
+}
+
+.bedrijf-title {
+    font-family: 'Balgin Bold', sans-serif;
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.bedrijf-taxonomies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.bedrijf-taxonomies span {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background-color: #f0f8f8;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+}
+
+.bedrijf-button {
+    align-self: flex-start;
+    padding: 10px 18px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bedrijf-button:hover {
+    background-color: #065a73;
+}
+
+
+    @media (max-width: 768px) {
+        .company_filter-box {
+            flex-direction: column;
+        }
+
+        .company_filter-field {
+            width: 100%;
+        }
+
+        .bedrijf-item {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+
+
 <?php
 if (!defined('ABSPATH')) exit;
 
@@ -23,6 +208,7 @@ add_action('wp_enqueue_scripts', function () {
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
 });
+
 
 // Shortcode functie
 function bedrijfspagina_filter_shortcode() {
@@ -63,11 +249,17 @@ function bedrijfspagina_filter_shortcode() {
         </div>
     </form>
 
+
+
     <div id="bedrijf-resultaten"></div>
 
     <?php
     return ob_get_clean();
 }
+
+
+
+
 add_shortcode('bedrijfspagina_filter', 'bedrijfspagina_filter_shortcode');
 
 // AJAX-handler
