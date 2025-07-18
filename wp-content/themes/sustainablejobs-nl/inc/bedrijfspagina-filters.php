@@ -144,20 +144,37 @@ function filter_bedrijfspaginas_ajax() {
 
                 echo "<div class='bedrijf-taxonomies'>";
                 if (!empty($sectors)) {
-                    echo "<span class='bedrijf-sector'>" . implode(', ', $sectors) . "</span><br />";
+
+                    foreach ($sectors as $sector) {
+                        echo "<div class='bedrijfs-sector'>{$sector}</div>";
+                    }
                 }
                 if (!empty($certificeringen)) {
-                    echo "<span class='bedrijf-certificering'>" . implode(', ', $certificeringen) . "</span><br />";
+                     
+                    foreach ($certificeringen as $certificering) {
+                        echo "<div class='bedrijf-certificering'>{$certificering}</div>";
+                    }
                 }
                 if (!empty($tags)) {
-                    echo "<span class='bedrijf-tags'>" . implode(', ', $tags) . "</span>";
+                    
+                    foreach ($tags as $tag) {
+                        echo "<div class='bedrijf-tags'>{$tag}</div>";
+                    }
                 }
                 echo "</div>";
             echo "</a>";
         endwhile;
         echo "</div>";
     } else {
-        echo "<p>Geen bedrijven gevonden.</p>";
+        echo "
+        <div class='no-results'>
+        <h2>Geen resultaten gevonden</h2>
+        <p>
+        Er zijn geen bedrijven gevonden die aan jouw voorwaarden voldoen. Het is tevens mogelijk om jouw organisatie in dit overzicht te krijgen, een premium bedrijfspagina aan te maken of jouw bedrijfspagina te bewerken.
+        </p>
+        <button class='bedrijf-reset-filter'>Bedrijfspagina aanmaken
+        </button>
+        </div>";
     }
 
 

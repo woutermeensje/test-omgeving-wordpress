@@ -59300,3 +59300,478 @@ Error occurred at line 4108 in Function <code>handle_error</code>. Error message
 )
 
 [14-Jul-2025 19:19:24 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[14-Jul-2025 19:21:56 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[14-Jul-2025 19:21:56 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[14-Jul-2025 19:21:56 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[14-Jul-2025 19:22:03 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[14-Jul-2025 19:22:03 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[14-Jul-2025 19:22:03 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[14-Jul-2025 19:32:11 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[14-Jul-2025 19:32:11 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[14-Jul-2025 19:32:11 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[15-Jul-2025 02:27:06 UTC] Automatic updates starting...
+[15-Jul-2025 02:27:07 UTC]   Automatic plugin updates starting...
+[15-Jul-2025 02:27:07 UTC]   Automatic plugin updates complete.
+[15-Jul-2025 02:27:07 UTC]   Automatic theme updates starting...
+[15-Jul-2025 02:27:07 UTC]   Automatic theme updates complete.
+[15-Jul-2025 02:27:07 UTC] Automatic updates complete.
+[18-Jul-2025 12:36:04 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 12:36:04 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 12:36:04 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[18-Jul-2025 12:41:09 UTC] Automatic updates starting...
+[18-Jul-2025 12:41:09 UTC]   Automatic plugin updates starting...
+[18-Jul-2025 12:41:09 UTC]   Automatic plugin updates complete.
+[18-Jul-2025 12:41:09 UTC]   Automatic theme updates starting...
+[18-Jul-2025 12:41:09 UTC]   Automatic theme updates complete.
+[18-Jul-2025 12:41:09 UTC] Automatic updates complete.
+[18-Jul-2025 12:41:19 UTC] [BOWERS IMPORT] Vacature toegevoegd: ID 1233, Titel: Service en mutatie Timmerman &#8211; Rotterdam
+[18-Jul-2025 12:41:19 UTC] [BOWERS IMPORT] Vacature toegevoegd: ID 1234, Titel: Timmerman Service en Onderhoud &#8211; Rotterdam
+[18-Jul-2025 12:41:19 UTC] [BOWERS IMPORT] Vacature toegevoegd: ID 1235, Titel: Technisch Administratief Medewerker Berkel en Rodenrijs
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15403 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15402 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15401 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15400 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15399 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15398 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15397 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15396 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15395 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15394 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15393 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15392 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15391 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15390 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15389 bestaat al, overslaan.
+[18-Jul-2025 12:41:24 UTC] [BOWERS IMPORT] Vacature 15388 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15387 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15386 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15385 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15384 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15383 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15382 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15381 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15380 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15379 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15378 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15377 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15376 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15375 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15374 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15373 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15372 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15369 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15368 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15367 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15366 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15365 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15364 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15363 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15362 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15361 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15360 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15359 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15358 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15357 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15356 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15355 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15354 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15353 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15352 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15351 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15350 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15349 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15348 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15347 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15346 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15345 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15344 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15343 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15342 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15341 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15340 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15339 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15338 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15337 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15336 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15335 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15334 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15333 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15332 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15331 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15330 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15329 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15328 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15327 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15326 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15325 bestaat al, overslaan.
+[18-Jul-2025 12:41:25 UTC] [BOWERS IMPORT] Vacature 15324 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15323 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15322 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15321 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15320 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15319 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15318 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15317 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15316 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15315 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15314 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15313 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15312 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15310 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15307 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15305 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15304 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15302 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15299 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15298 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15297 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15296 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15295 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15293 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15292 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15291 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15290 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15289 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15287 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15285 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15284 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15283 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15282 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15281 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15280 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15279 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15278 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15277 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15276 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15275 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15274 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15273 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15272 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15271 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15270 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15269 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15268 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15267 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15266 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15265 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15264 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15263 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15262 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15261 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15260 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15259 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15258 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15257 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15256 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15254 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15253 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15252 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15251 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15250 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15249 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15248 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15247 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15244 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15243 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15240 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15239 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15238 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15237 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15236 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15235 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15234 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15233 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15232 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15231 bestaat al, overslaan.
+[18-Jul-2025 12:41:26 UTC] [BOWERS IMPORT] Vacature 15230 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15227 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15225 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15224 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15222 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15221 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15220 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15219 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15218 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15217 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15215 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15214 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15213 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15212 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15211 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15205 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15204 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15203 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15202 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15201 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15200 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15199 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15198 bestaat al, overslaan.
+[18-Jul-2025 12:41:27 UTC] [BOWERS IMPORT] Vacature 15197 bestaat al, overslaan.
+[18-Jul-2025 12:41:28 UTC] Filter data: Array
+(
+    [action] => filter_bedrijfspaginas
+    [search_keywords] => 
+)
+
+[18-Jul-2025 12:41:33 UTC] Filter data: Array
+(
+    [action] => filter_bedrijfspaginas
+    [search_keywords] => 
+)
+
+[18-Jul-2025 12:52:08 UTC] PHP Notice:  Trying to get property 'title' of non-object in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 905
+[18-Jul-2025 12:57:58 UTC] PHP Notice:  Trying to get property 'title' of non-object in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 905
+[18-Jul-2025 13:02:54 UTC] PHP Notice:  Trying to get property 'title' of non-object in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 905
+[18-Jul-2025 13:06:57 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 179
+[18-Jul-2025 13:07:02 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 179
+[18-Jul-2025 13:07:06 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 179
+[18-Jul-2025 13:08:26 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:08:26 UTC] PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[18-Jul-2025 13:08:26 UTC] PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[18-Jul-2025 13:08:52 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:08:52 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:08:57 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:09:08 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:09:22 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:09:22 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:09:39 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 13:09:39 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 13:09:39 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  Use of undefined constant bedrijfspagina - assumed 'bedrijfspagina' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  Division by zero in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  Use of undefined constant aanmaken - assumed 'aanmaken' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:22 UTC] PHP Warning:  Division by zero in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:35 UTC] PHP Notice:  Trying to get property 'title' of non-object in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 905
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  Use of undefined constant bedrijfspagina - assumed 'bedrijfspagina' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  Division by zero in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  Use of undefined constant aanmaken - assumed 'aanmaken' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:43 UTC] PHP Warning:  Division by zero in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:10:59 UTC] PHP Notice:  Trying to get property 'title' of non-object in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 905
+[18-Jul-2025 13:12:38 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:13:00 UTC] PHP Parse error:  syntax error, unexpected 'bedrijf' (T_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:13:07 UTC] PHP Parse error:  syntax error, unexpected '" class="' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 166
+[18-Jul-2025 13:14:21 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 13:14:21 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 13:14:21 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[18-Jul-2025 13:16:26 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 13:16:26 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[18-Jul-2025 13:16:26 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[18-Jul-2025 13:21:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php on line 164

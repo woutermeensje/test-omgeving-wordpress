@@ -8,6 +8,11 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    // ✅ Formulier submit blokkeren
+    $('#bedrijfspagina-filter-form').on('submit', function (e) {
+        e.preventDefault(); // voorkomt pagina-herlaad
+    });
+
     // ✅ Formulier automatisch filteren bij wijziging
     $('#bedrijfspagina-filter-form').on('change', 'select, input', function () {
         filterBedrijfspaginas();
