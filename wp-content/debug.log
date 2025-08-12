@@ -63042,3 +63042,503 @@ Stack trace:
 [26-Jul-2025 11:20:34 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
 [26-Jul-2025 11:20:34 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
 [26-Jul-2025 11:20:34 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:02 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:02 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:02 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:03 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:03 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:03 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:04 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:04 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:04 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:06 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:06 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:06 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:32 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:32 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:32 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:33 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:33 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:33 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:33 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:33 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:33 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:23:35 UTC] PHP Warning:  include(/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php): failed to open stream: No such file or directory in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:35 UTC] PHP Warning:  include(): Failed opening '/var/www/html/wp-content/themes/sustainablejobs-nl/functions.php' for inclusion (include_path='.:') in /var/www/html/wp-settings.php on line 668
+[26-Jul-2025 11:23:35 UTC] PHP Warning:  file_get_contents(/var/www/html/wp-content/themes/sustainablejobs-nl/style.css): failed to open stream: No such file or directory in /var/www/html/wp-includes/functions.php on line 6864
+[26-Jul-2025 11:25:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:25:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:25:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:25:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:25:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:25:50 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:25:50 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:25:50 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:25:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:25:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:25:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:25:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:25:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:28:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:28:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:28:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:28:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:28:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:28:23 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:28:23 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:28:23 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:28:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:28:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:28:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:28:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:28:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:29:02 UTC] PHP Warning:  require_once(/var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php): failed to open stream: No such file or directory in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 264
+[26-Jul-2025 11:29:02 UTC] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php' (include_path='.:') in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 264
+[26-Jul-2025 11:29:12 UTC] PHP Warning:  require_once(/var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php): failed to open stream: No such file or directory in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 264
+[26-Jul-2025 11:29:12 UTC] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php' (include_path='.:') in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 264
+[26-Jul-2025 11:29:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[26-Jul-2025 11:29:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[26-Jul-2025 11:29:12 UTC] PHP Warning:  require_once(/var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php): failed to open stream: No such file or directory in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 264
+[26-Jul-2025 11:29:12 UTC] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php' (include_path='.:') in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 264
+[26-Jul-2025 11:29:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:29:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:29:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:29:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:29:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:29:30 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:29:30 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:29:30 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:29:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:29:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:29:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:29:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:29:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:30:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:30:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:30:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:30:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:30:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:30:49 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:30:49 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:30:49 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:30:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:30:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:30:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:30:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:30:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:31:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:31:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:31:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:31:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:31:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:31:03 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:03 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:03 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:31:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:31:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:31:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:31:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:31:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:31:06 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => b-corp
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:06 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=b-corp&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => b-corp
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:06 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => certificering
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => b-corp
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[26-Jul-2025 11:31:07 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:07 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:07 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:31:11 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:11 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=bowers&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => bowers
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:11 UTC] 📦 TAX_QUERY in get_job_listings_query_args: Array
+(
+    [0] => Array
+        (
+            [taxonomy] => job_company
+            [field] => slug
+            [terms] => Array
+                (
+                    [0] => bowers
+                )
+
+            [operator] => IN
+        )
+
+)
+
+[26-Jul-2025 11:31:12 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:12 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:12 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:31:36 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:36 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:31:36 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:31:48 UTC] PHP Warning:  filemtime(): stat failed for /var/www/html/wp-content/themes/sustainablejobs-nl/css/bedrijfspagina-filter.css in /var/www/html/wp-content/themes/sustainablejobs-nl/functions.php on line 61
+[26-Jul-2025 11:31:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:31:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:31:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:31:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:31:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:32:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-login.php on line 508
+[26-Jul-2025 11:32:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-login.php on line 524
+[26-Jul-2025 11:32:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:32:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-login.php on line 508
+[26-Jul-2025 11:32:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-login.php on line 524
+[26-Jul-2025 11:32:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:32:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/pluggable.php on line 1093
+[26-Jul-2025 11:32:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/pluggable.php on line 1094
+[26-Jul-2025 11:32:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/pluggable.php on line 1095
+[26-Jul-2025 11:32:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:32:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:32:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:32:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:32:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
+[26-Jul-2025 11:32:23 UTC] 🧩 Parsed form_data: Array
+(
+    [search_keywords] => 
+    [search_location] => 
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:32:23 UTC] 🔍 WPJM POST filterdata: Array
+(
+    [lang] => 
+    [search_keywords] => 
+    [search_location] => 
+    [per_page] => 10
+    [orderby] => featured
+    [featured_first] => false
+    [order] => DESC
+    [page] => 1
+    [show_pagination] => false
+    [form_data] => search_keywords=&search_location=&filter_job_types=&filter_job_listing_category=&filter_certificering=&filter_job_company=&filter_job_tag=&filter_job_sector=
+    [filter_job_types] => 
+    [filter_job_listing_category] => 
+    [filter_certificering] => 
+    [filter_job_company] => 
+    [filter_job_tag] => 
+    [filter_job_sector] => 
+)
+
+[26-Jul-2025 11:32:23 UTC] 📭 Geen tax_query aanwezig in get_job_listings_query_args
+[26-Jul-2025 11:32:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 27
+[26-Jul-2025 11:32:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/admin-ajax.php on line 28
+[26-Jul-2025 11:32:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 6995
+[26-Jul-2025 11:32:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-admin/includes/misc.php on line 1438
+[26-Jul-2025 11:32:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/sustainablejobs-nl/inc/bedrijfspagina-filters.php:190) in /var/www/html/wp-includes/functions.php on line 7108
