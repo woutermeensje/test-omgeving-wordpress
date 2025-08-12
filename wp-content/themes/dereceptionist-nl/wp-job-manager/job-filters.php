@@ -19,8 +19,7 @@ do_action( 'job_manager_job_filters_before', $atts );
             Vacatures & Opdrachten voor Receptionisten!
         </h2>
         <p>
-            Of schrijf je in voor de <a href="https://dereceptionist.nl/vacature-nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief</a>
-! 
+            Of schrijf je in voor de <a href="https://dereceptionist.nl/vacature-nieuwsbrief/" target="_blank" class="unstyled-newsletter-link">vacature nieuwsbrief!</a> 
         </p>
     </div>
     <div class="search-basic">
@@ -123,7 +122,7 @@ jQuery(document).ready(function($) {
 }
 
 body .filter-header h2 {
-    font-family: Balgin Bold;
+    font-family: Inter;
     font-size: 25px;
     color: var(--color-text);
     margin-bottom: 15px;
