@@ -51,18 +51,6 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 
-
-add_action('wp_enqueue_scripts', function () {
-    if (is_singular() && has_shortcode(get_post()->post_content, 'bedrijfspagina_filter')) {
-        wp_enqueue_style(
-            'bedrijfspagina-filter-style',
-            get_stylesheet_directory_uri() . '/css/bedrijfspagina-filter.css',
-            [],
-            filemtime(get_stylesheet_directory() . '/css/bedrijfspagina-filter.css')
-        );
-    }
-});
-
 /**
  * ✅ WP JOB MANAGER: TEMPLATE OVERRIDES
  */
